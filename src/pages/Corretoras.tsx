@@ -18,6 +18,12 @@ import octafxLogo from "@/assets/octafx.jpeg";
 import tickmillLogo from "@/assets/tickmill.jpeg";
 import plus500Logo from "@/assets/plus500.jpeg";
 import exnessLogo from "@/assets/exness.jpeg";
+import admiralsLogo from "@/assets/admirals.jpeg";
+import roboforexLogo from "@/assets/roboforex.jpeg";
+import hotforexLogo from "@/assets/hotforex.jpeg";
+import alpariLogo from "@/assets/alpari.jpeg";
+import cityIndexLogo from "@/assets/city-index.jpeg";
+import derivLogo from "@/assets/deriv.jpeg";
 
 const allBrokers = [
   {
@@ -177,7 +183,7 @@ const allBrokers = [
   {
     rank: 15,
     name: "Admirals",
-    logo: pepperstoneLogo,
+    logo: admiralsLogo,
     regulation: "FCA, CySEC, ASIC",
     spread: "0.1 pips",
     minDeposit: "$100",
@@ -188,7 +194,7 @@ const allBrokers = [
   {
     rank: 16,
     name: "RoboForex",
-    logo: icMarketsLogo,
+    logo: roboforexLogo,
     regulation: "IFSC, CySEC, FSCA",
     spread: "0.0 pips",
     minDeposit: "$10",
@@ -199,7 +205,7 @@ const allBrokers = [
   {
     rank: 17,
     name: "HotForex (HFM)",
-    logo: fxtmLogo,
+    logo: hotforexLogo,
     regulation: "FCA, CySEC, FSCA, ASIC",
     spread: "0.1 pips",
     minDeposit: "$5",
@@ -210,7 +216,7 @@ const allBrokers = [
   {
     rank: 18,
     name: "Alpari",
-    logo: pepperstoneLogo,
+    logo: alpariLogo,
     regulation: "FCA, CySEC, FSC",
     spread: "0.3 pips",
     minDeposit: "$5",
@@ -221,7 +227,7 @@ const allBrokers = [
   {
     rank: 19,
     name: "City Index",
-    logo: icMarketsLogo,
+    logo: cityIndexLogo,
     regulation: "FCA, ASIC, MAS",
     spread: "0.5 pips",
     minDeposit: "$0",
@@ -232,7 +238,7 @@ const allBrokers = [
   {
     rank: 20,
     name: "Deriv",
-    logo: xmLogo,
+    logo: derivLogo,
     regulation: "MFSA, FSC, FSA",
     spread: "0.0 pips",
     minDeposit: "$5",
