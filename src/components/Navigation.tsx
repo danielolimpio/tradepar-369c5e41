@@ -15,6 +15,7 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
+    { label: "Home", href: "/" },
     { label: "Corretoras", href: "#corretoras" },
     { label: "Tecnologia", href: "#tecnologia" },
     { label: "Estratégias", href: "#estrategias" },
@@ -37,26 +38,26 @@ const Navigation = () => {
               <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
             <span className="text-xl md:text-2xl font-bold tracking-tight">
-              Trader<span className="text-gradient-bull">par</span>
+              Trade<span className="text-gradient-bull">par</span>
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1 flex-1 justify-center">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group px-4"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </a>
             ))}
-            <Button variant="default" size="sm" className="glow-bull">
-              Começar Agora
-            </Button>
           </div>
+          <Button variant="default" size="sm" className="hidden md:flex glow-bull">
+            Começar Agora
+          </Button>
 
           {/* Mobile Menu Button */}
           <button
