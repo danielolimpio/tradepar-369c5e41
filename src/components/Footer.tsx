@@ -13,17 +13,17 @@ const Footer = () => {
       { label: "Segurança", href: "#seguranca" },
     ],
     Recursos: [
-      { label: "Blog", href: "#" },
+      { label: "Blog", href: "/blog" },
       { label: "Tutoriais", href: "#" },
       { label: "Ferramentas", href: "#" },
       { label: "API", href: "#" },
       { label: "Comunidade", href: "#" },
     ],
     Legal: [
-      { label: "Termos de Uso", href: "#" },
-      { label: "Política de Privacidade", href: "#" },
-      { label: "Disclaimer", href: "#" },
-      { label: "Contato", href: "#" },
+      { label: "Termos de Uso", href: "/termos-de-uso" },
+      { label: "Política de Privacidade", href: "/politica-privacidade" },
+      { label: "Disclaimer", href: "/disclaimer" },
+      { label: "Contato", href: "/contato" },
     ],
   };
 
