@@ -1,6 +1,7 @@
 import { Shield, TrendingUp, Star, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import icMarketsLogo from "@/assets/ic-markets.jpeg";
 import pepperstoneLogo from "@/assets/pepperstone.jpeg";
 import xmLogo from "@/assets/xm.jpeg";
@@ -142,10 +143,12 @@ const BrokerRanking = () => {
 
         {/* Footer CTA */}
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-border hover:bg-accent">
-            Ver Todas as Corretoras
-            <TrendingUp className="ml-2 h-4 w-4" />
-          </Button>
+          <Link to="/corretoras">
+            <Button size="lg" variant="outline" className="border-border hover:bg-accent">
+              Ver Todas as Corretoras
+              <TrendingUp className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
