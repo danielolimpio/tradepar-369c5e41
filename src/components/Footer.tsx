@@ -5,6 +5,7 @@ const Footer = () => {
 
   const footerLinks = {
     Navegação: [
+      { label: "Home", href: "/" },
       { label: "Corretoras", href: "#corretoras" },
       { label: "Tecnologia", href: "#tecnologia" },
       { label: "Estratégias", href: "#estrategias" },
@@ -40,10 +41,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4 group">
+            <a href="/" className="flex items-center gap-2 mb-4 group">
               <TrendingUp className="h-7 w-7 text-primary transition-transform group-hover:scale-110" />
               <span className="text-2xl font-bold">
-                Trader<span className="text-gradient-bull">par</span>
+                Trade<span className="text-gradient-bull">par</span>
               </span>
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-sm">
@@ -101,12 +102,17 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-border">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} Traderpar. Todos os direitos reservados.
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Feito para traders, por traders.
+        <div className="flex flex-col items-center justify-center gap-2 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground text-center">
+            © Copyright {currentYear} | Tradepar | Todos os direitos reservados | Desenvolvido por{" "}
+            <a 
+              href="https://danielolimpio.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              DanielOlimpio
+            </a>
           </p>
         </div>
       </div>

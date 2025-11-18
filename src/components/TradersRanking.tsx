@@ -1,11 +1,14 @@
-import { TrendingUp, Award, BarChart3, Users } from "lucide-react";
+import { TrendingUp, Award, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import trader1 from "@/assets/trader-1.jpg";
+import trader2 from "@/assets/trader-2.jpg";
+import trader3 from "@/assets/trader-3.jpg";
 
 const topTraders = [
   {
     rank: 1,
     name: "Carlos M.",
-    avatar: "🥇",
+    avatar: trader1,
     return: "+187.3%",
     drawdown: "12.4%",
     trades: 342,
@@ -16,7 +19,7 @@ const topTraders = [
   {
     rank: 2,
     name: "Ana S.",
-    avatar: "🥈",
+    avatar: trader2,
     return: "+154.8%",
     drawdown: "8.2%",
     trades: 189,
@@ -27,7 +30,7 @@ const topTraders = [
   {
     rank: 3,
     name: "Pedro L.",
-    avatar: "🥉",
+    avatar: trader3,
     return: "+132.1%",
     drawdown: "15.6%",
     trades: 456,
@@ -56,59 +59,65 @@ const TradersRanking = () => {
         </div>
 
         {/* Trader Cards */}
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-5xl mx-auto space-y-6">
           {topTraders.map((trader) => (
-            <div
-              key={trader.rank}
-              className="group bg-card border border-border rounded-xl p-6 hover-lift hover:border-destructive/40 transition-all"
-            >
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                {/* Rank & Avatar */}
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-destructive/10 text-xl font-bold text-destructive border border-destructive/20">
-                    {trader.rank}
+            <div key={trader.rank} className="flex items-center gap-4">
+              {/* Rank Badge - Outside */}
+              <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-lg bg-background border-2 border-destructive text-xl font-bold text-destructive">
+                {trader.rank}º
+              </div>
+              
+              {/* Trader Card */}
+              <div className="flex-1 group bg-card border border-border rounded-xl p-6 hover-lift hover:border-destructive/40 transition-all">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                  {/* Avatar */}
+                  <div className="flex-shrink-0">
+                    <img 
+                      src={trader.avatar} 
+                      alt={trader.name}
+                      className="w-24 h-24 object-cover rounded-lg border-2 border-border"
+                    />
                   </div>
-                  <div className="text-4xl">{trader.avatar}</div>
+
+                  {/* Info */}
+                  <div className="flex-1 space-y-4">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="text-xl font-bold">{trader.name}</h3>
+                      {trader.verified && (
+                        <Badge variant="outline" className="border-primary/30 text-primary">
+                          <TrendingUp className="h-3 w-3 mr-1" />
+                          Verificado
+                        </Badge>
+                      )}
+                      <Badge variant="secondary">{trader.strategy}</Badge>
+                    </div>
+
+                    {/* Stats Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div className="space-y-1">
+                        <p className="text-xs text-muted-foreground">Retorno</p>
+                        <p className="text-lg font-bold text-primary">{trader.return}</p>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="text-xs text-muted-foreground">Drawdown</p>
+                        <p className="text-lg font-bold text-destructive">{trader.drawdown}</p>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="text-xs text-muted-foreground">Win Rate</p>
+                        <p className="text-lg font-bold">{trader.winRate}</p>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="text-xs text-muted-foreground">Trades</p>
+                        <p className="text-lg font-bold">{trader.trades}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <button className="px-6 py-2 rounded-lg border border-destructive/30 text-destructive hover:bg-destructive hover:text-destructive-foreground transition-all font-medium text-sm whitespace-nowrap">
+                    Ver Perfil
+                  </button>
                 </div>
-
-                {/* Info */}
-                <div className="flex-1 space-y-4">
-                  <div className="flex flex-wrap items-center gap-3">
-                    <h3 className="text-xl font-bold">{trader.name}</h3>
-                    {trader.verified && (
-                      <Badge variant="outline" className="border-primary/30 text-primary">
-                        <TrendingUp className="h-3 w-3 mr-1" />
-                        Verificado
-                      </Badge>
-                    )}
-                    <Badge variant="secondary">{trader.strategy}</Badge>
-                  </div>
-
-                  {/* Stats Grid */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="space-y-1">
-                      <p className="text-xs text-muted-foreground">Retorno</p>
-                      <p className="text-lg font-bold text-primary">{trader.return}</p>
-                    </div>
-                    <div className="space-y-1">
-                      <p className="text-xs text-muted-foreground">Drawdown</p>
-                      <p className="text-lg font-bold text-destructive">{trader.drawdown}</p>
-                    </div>
-                    <div className="space-y-1">
-                      <p className="text-xs text-muted-foreground">Win Rate</p>
-                      <p className="text-lg font-bold">{trader.winRate}</p>
-                    </div>
-                    <div className="space-y-1">
-                      <p className="text-xs text-muted-foreground">Trades</p>
-                      <p className="text-lg font-bold">{trader.trades}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* CTA */}
-                <button className="px-4 py-2 bg-transparent border border-destructive/30 rounded-lg text-sm font-medium hover:bg-destructive hover:text-destructive-foreground transition-colors">
-                  Ver Perfil
-                </button>
               </div>
             </div>
           ))}

@@ -38,12 +38,16 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="w-full sm:w-auto glow-bull group">
-              Explorar Corretoras
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Button size="lg" className="w-full sm:w-auto glow-bull group" asChild>
+              <a href="/corretoras">
+                Explorar Corretoras
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto border-border hover:bg-accent">
-              Ver Estratégias
+            <Button size="lg" variant="outline" className="w-full sm:w-auto border-border hover:bg-accent" asChild>
+              <a href="#estrategias">
+                Ver Estratégias
+              </a>
             </Button>
           </div>
 
