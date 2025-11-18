@@ -6,6 +6,10 @@ import icMarketsLogo from "@/assets/ic-markets.jpeg";
 import pepperstoneLogo from "@/assets/pepperstone.jpeg";
 import xmLogo from "@/assets/xm.jpeg";
 import fxtmLogo from "@/assets/fxtm.jpeg";
+import igGroupLogo from "@/assets/ig-group.jpeg";
+import saxoBankLogo from "@/assets/saxo-bank.jpeg";
+import interactiveBrokersLogo from "@/assets/interactive-brokers.jpeg";
+import cmcMarketsLogo from "@/assets/cmc-markets.jpeg";
 
 const brokers = [
   {

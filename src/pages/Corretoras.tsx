@@ -8,12 +8,22 @@ import icMarketsLogo from "@/assets/ic-markets.jpeg";
 import pepperstoneLogo from "@/assets/pepperstone.jpeg";
 import xmLogo from "@/assets/xm.jpeg";
 import fxtmLogo from "@/assets/fxtm.jpeg";
+import igGroupLogo from "@/assets/ig-group.jpeg";
+import saxoBankLogo from "@/assets/saxo-bank.jpeg";
+import interactiveBrokersLogo from "@/assets/interactive-brokers.jpeg";
+import cmcMarketsLogo from "@/assets/cmc-markets.jpeg";
+import fpMarketsLogo from "@/assets/fp-markets.jpeg";
+import avatradeLogo from "@/assets/avatrade.jpeg";
+import octafxLogo from "@/assets/octafx.jpeg";
+import tickmillLogo from "@/assets/tickmill.jpeg";
+import plus500Logo from "@/assets/plus500.jpeg";
+import exnessLogo from "@/assets/exness.jpeg";
 
 const allBrokers = [
   {
     rank: 1,
     name: "IG Group",
-    logo: icMarketsLogo,
+    logo: igGroupLogo,
     regulation: "FCA, ASIC, CySEC, CFTC/NFA",
     spread: "0.0 pips",
     minDeposit: "£0",
@@ -24,7 +34,7 @@ const allBrokers = [
   {
     rank: 2,
     name: "Saxo Bank",
-    logo: pepperstoneLogo,
+    logo: saxoBankLogo,
     regulation: "FCA, ASIC, FINMA, CySEC",
     spread: "0.1 pips",
     minDeposit: "€10,000",
@@ -35,7 +45,7 @@ const allBrokers = [
   {
     rank: 3,
     name: "Interactive Brokers",
-    logo: xmLogo,
+    logo: interactiveBrokersLogo,
     regulation: "FCA, SEC/CFTC, ASIC, SFC",
     spread: "0.0 pips",
     minDeposit: "$0",
@@ -46,7 +56,7 @@ const allBrokers = [
   {
     rank: 4,
     name: "CMC Markets",
-    logo: fxtmLogo,
+    logo: cmcMarketsLogo,
     regulation: "FCA, ASIC, MAS, CySEC",
     spread: "0.0 pips",
     minDeposit: "£0",
@@ -79,7 +89,7 @@ const allBrokers = [
   {
     rank: 7,
     name: "FP Markets",
-    logo: fxtmLogo,
+    logo: fpMarketsLogo,
     regulation: "ASIC, CySEC, FSCA",
     spread: "0.0 pips",
     minDeposit: "$100",
@@ -101,7 +111,7 @@ const allBrokers = [
   {
     rank: 9,
     name: "AvaTrade",
-    logo: icMarketsLogo,
+    logo: avatradeLogo,
     regulation: "ASIC, CySEC, FSA, FSCA",
     spread: "0.9 pips",
     minDeposit: "$100",
@@ -112,7 +122,7 @@ const allBrokers = [
   {
     rank: 10,
     name: "OctaFX",
-    logo: pepperstoneLogo,
+    logo: octafxLogo,
     regulation: "FSA, FSCA, FSC",
     spread: "0.1 pips",
     minDeposit: "$25",
@@ -123,7 +133,7 @@ const allBrokers = [
   {
     rank: 11,
     name: "Tickmill",
-    logo: fxtmLogo,
+    logo: tickmillLogo,
     regulation: "FCA, CySEC, FSA",
     spread: "0.0 pips",
     minDeposit: "$100",
@@ -134,7 +144,7 @@ const allBrokers = [
   {
     rank: 12,
     name: "Plus500",
-    logo: xmLogo,
+    logo: plus500Logo,
     regulation: "FCA, ASIC, CySEC, FSC",
     spread: "0.6 pips",
     minDeposit: "$100",
@@ -145,7 +155,7 @@ const allBrokers = [
   {
     rank: 13,
     name: "Exness",
-    logo: icMarketsLogo,
+    logo: exnessLogo,
     regulation: "FCA, CySEC, FSA, FSCA",
     spread: "0.0 pips",
     minDeposit: "$10",
@@ -178,7 +188,7 @@ const allBrokers = [
   {
     rank: 16,
     name: "RoboForex",
-    logo: xmLogo,
+    logo: icMarketsLogo,
     regulation: "IFSC, CySEC, FSCA",
     spread: "0.0 pips",
     minDeposit: "$10",
@@ -189,7 +199,7 @@ const allBrokers = [
   {
     rank: 17,
     name: "HotForex (HFM)",
-    logo: icMarketsLogo,
+    logo: fxtmLogo,
     regulation: "FCA, CySEC, FSCA, ASIC",
     spread: "0.1 pips",
     minDeposit: "$5",
@@ -200,7 +210,7 @@ const allBrokers = [
   {
     rank: 18,
     name: "Alpari",
-    logo: fxtmLogo,
+    logo: pepperstoneLogo,
     regulation: "FCA, CySEC, FSC",
     spread: "0.3 pips",
     minDeposit: "$5",
@@ -211,7 +221,7 @@ const allBrokers = [
   {
     rank: 19,
     name: "City Index",
-    logo: pepperstoneLogo,
+    logo: icMarketsLogo,
     regulation: "FCA, ASIC, MAS",
     spread: "0.5 pips",
     minDeposit: "$0",
