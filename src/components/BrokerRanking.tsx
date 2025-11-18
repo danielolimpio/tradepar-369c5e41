@@ -75,9 +75,9 @@ const BrokerRanking = () => {
         {/* Broker Cards */}
         <div className="max-w-5xl mx-auto space-y-6">
           {brokers.map((broker) => (
-            <div key={broker.rank} className="flex items-start gap-4">
+            <div key={broker.rank} className="flex items-center gap-4">
               {/* Rank Badge - Outside */}
-              <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-bull text-xl font-bold text-primary-foreground shadow-glow-bull">
+              <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-lg bg-background border-2 border-bull text-xl font-bold text-foreground">
                 {broker.rank}º
               </div>
               
