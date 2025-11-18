@@ -77,7 +77,7 @@ const BrokerRanking = () => {
           {brokers.map((broker) => (
             <div key={broker.rank} className="flex items-center gap-4">
               {/* Rank Badge - Outside */}
-              <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-lg bg-background border-2 border-bull text-xl font-bold text-foreground">
+              <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-lg bg-background border-2 border-bull text-xl font-bold text-bull">
                 {broker.rank}º
               </div>
               
