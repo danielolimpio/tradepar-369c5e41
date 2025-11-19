@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Corretoras from "./pages/Corretoras";
 import Traders from "./pages/Traders";
+import Tecnologia from "./pages/Tecnologia";
+import Estrategias from "./pages/Estrategias";
+import Seguranca from "./pages/Seguranca";
 import TermosDeUso from "./pages/TermosDeUso";
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import Disclaimer from "./pages/Disclaimer";
@@ -25,6 +28,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/corretoras" element={<Corretoras />} />
           <Route path="/traders" element={<Traders />} />
+          <Route path="/tecnologia" element={<Tecnologia />} />
+          <Route path="/estrategias" element={<Estrategias />} />
+          <Route path="/seguranca" element={<Seguranca />} />
           <Route path="/termos-de-uso" element={<TermosDeUso />} />
           <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

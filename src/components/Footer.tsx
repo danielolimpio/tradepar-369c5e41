@@ -7,10 +7,10 @@ const Footer = () => {
     Navegação: [
       { label: "Home", href: "/" },
       { label: "Corretoras", href: "/corretoras" },
-      { label: "Tecnologia", href: "#tecnologia" },
-      { label: "Estratégias", href: "#estrategias" },
+      { label: "Tecnologia", href: "/tecnologia" },
+      { label: "Estratégias", href: "/estrategias" },
       { label: "Traders", href: "/traders" },
-      { label: "Segurança", href: "#seguranca" },
+      { label: "Segurança", href: "/seguranca" },
     ],
     Recursos: [
       { label: "Blog", href: "/blog" },
