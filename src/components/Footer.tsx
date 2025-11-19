@@ -6,10 +6,10 @@ const Footer = () => {
   const footerLinks = {
     Navegação: [
       { label: "Home", href: "/" },
-      { label: "Corretoras", href: "#corretoras" },
+      { label: "Corretoras", href: "/corretoras" },
       { label: "Tecnologia", href: "#tecnologia" },
       { label: "Estratégias", href: "#estrategias" },
-      { label: "Traders", href: "#traders" },
+      { label: "Traders", href: "/traders" },
       { label: "Segurança", href: "#seguranca" },
     ],
     Recursos: [
