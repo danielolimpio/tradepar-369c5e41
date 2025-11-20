@@ -78,22 +78,24 @@ const CorretoraDetalhe = () => {
         { name: "MAS", country: "Cingapura", license: "CMS100747", status: "Ativa", compensation: "Não aplicável" },
       ],
       globalPresence: {
-        offices: 12,
+        offices: 15,
         countriesServed: 180,
         mainOffices: [
           "Copenhague (Sede Principal)",
           "Londres (Reino Unido)",
-          "Cingapura",
+          "Paris (França)",
+          "Singapura",
           "Zurique (Suíça)",
-          "Paris (França)"
+          "Hong Kong",
+          "Tóquio (Japão)"
         ]
       },
       metrics: {
         activeClients: "1,2 milhões+",
-        monthlyVolume: "$4,5 trilhões USD",
+        monthlyVolume: "$60 bilhões USD",
         marketCap: "Empresa Privada",
         annualProfit: "€320 milhões (2024)",
-        monthlyTraffic: "6,2 milhões de visitas",
+        monthlyTraffic: "4,5 milhões de visitas",
         yearsActive: "33 anos"
       }
     },
@@ -289,16 +291,16 @@ const CorretoraDetalhe = () => {
         { label: "Depósito Mínimo", value: "$2.000 (conta Classic)" },
         { label: "Spread EUR/USD", value: "A partir de 0,9 pips" },
         { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:200 (profissional)" },
-        { label: "Comissão", value: "A partir de $5 por operação" },
+        { label: "Comissão", value: "Varia por ativo. Para ações: a partir de $0,005 por ação. Para forex: sem comissão — apenas spread." },
         { label: "Swap Overnight", value: "Variável (competitivo)" },
         { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
-        { label: "Expert Advisors", value: "Suporte via API" },
-        { label: "Scalping", value: "Permitido" }
+        { label: "Expert Advisors", value: "Sim — via OpenAPI" },
+        { label: "Scalping", value: "Sim (sem restrição)" }
       ],
       paymentMethods: [
-        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$2.000 - sem limite" },
-        { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
-        { method: "Transferência Internacional", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" }
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "$0", limits: "$2.000 - sem limite" },
+        { method: "Transferência Bancária", time: "1-3 dias", fees: "$0", limits: "Sem limite" },
+        { method: "Transferência Internacional (SWIFT)", time: "3-5 dias", fees: "$0", limits: "Sem limite" }
       ]
     },
     "interactive-brokers": {
