@@ -15,6 +15,7 @@ const brokers = [
   {
     rank: 1,
     name: "IG Group",
+    slug: "ig-group",
     logo: igGroupLogo,
     regulation: "FCA, ASIC, CySEC, CFTC/NFA",
     spread: "0.0 pips",
@@ -26,6 +27,7 @@ const brokers = [
   {
     rank: 2,
     name: "Saxo Bank",
+    slug: "saxo-bank",
     logo: saxoBankLogo,
     regulation: "FCA, ASIC, FINMA, CySEC",
     spread: "0.1 pips",
@@ -37,6 +39,7 @@ const brokers = [
   {
     rank: 3,
     name: "Interactive Brokers",
+    slug: "interactive-brokers",
     logo: interactiveBrokersLogo,
     regulation: "FCA, SEC/CFTC, ASIC, SFC",
     spread: "0.0 pips",
@@ -48,6 +51,7 @@ const brokers = [
   {
     rank: 4,
     name: "CMC Markets",
+    slug: "cmc-markets",
     logo: cmcMarketsLogo,
     regulation: "FCA, ASIC, MAS, CySEC",
     spread: "0.0 pips",
@@ -137,10 +141,12 @@ const BrokerRanking = () => {
                   </div>
 
                   {/* CTA */}
-                  <Button variant="outline" size="sm" className="flex-shrink-0 border-primary/30 hover:bg-primary hover:text-primary-foreground">
-                    Ver Detalhes
-                    <ArrowUpRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link to={`/corretoras/${broker.slug}`}>
+                    <Button variant="outline" size="sm" className="flex-shrink-0 border-primary/30 hover:bg-primary hover:text-primary-foreground">
+                      Ver Detalhes
+                      <ArrowUpRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
