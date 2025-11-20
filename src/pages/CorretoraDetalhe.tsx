@@ -103,11 +103,11 @@ const CorretoraDetalhe = () => {
         fullName: "Interactive Brokers Group, Inc.",
         founded: "1978",
         headquarters: "Greenwich, Connecticut, EUA",
-        ceo: "Milan Galik",
+        ceo: "Thomas Peterffy (fundador e CEO desde 1978)",
         stockCode: "NASDAQ: IBKR",
         website: "https://www.interactivebrokers.com",
         email: "help@interactivebrokers.com",
-        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+15 idiomas"],
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Russo", "Chinês", "Japonês", "+12 idiomas"],
         rating: 4.6,
         verified: true,
         lastUpdate: "Novembro de 2025"
@@ -119,22 +119,24 @@ const CorretoraDetalhe = () => {
         { name: "ASIC", country: "Austrália", license: "453554", status: "Ativa", compensation: "Não aplicável" },
       ],
       globalPresence: {
-        offices: 14,
+        offices: 20,
         countriesServed: 200,
         mainOffices: [
           "Greenwich, CT (Sede Principal)",
           "Chicago (EUA)",
           "Londres (Reino Unido)",
           "Hong Kong",
-          "Sydney (Austrália)"
+          "Singapura",
+          "Sydney (Austrália)",
+          "Frankfurt (Alemanha)"
         ]
       },
       metrics: {
         activeClients: "2,8 milhões+",
-        monthlyVolume: "$35 bilhões USD (dia)",
-        marketCap: "$52 bilhões USD",
-        annualProfit: "$2,1 bilhões (2024)",
-        monthlyTraffic: "12 milhões de visitas",
+        monthlyVolume: "$1,2 trilhão USD (dia)",
+        marketCap: "$50 bilhões USD",
+        annualProfit: "$1,8 bilhão USD (2024)",
+        monthlyTraffic: "8 milhões de visitas",
         yearsActive: "47 anos"
       }
     },
@@ -299,11 +301,11 @@ const CorretoraDetalhe = () => {
     },
     "interactive-brokers": {
       platforms: [
-        { name: "TWS (Trader Workstation)", available: true },
-        { name: "IBKR Mobile", available: true },
-        { name: "Client Portal", available: true },
-        { name: "API Trading", available: true },
-        { name: "TradingView (integração)", available: true }
+        { name: "TWS (Trader Workstation) — desktop", available: true },
+        { name: "IBKR Mobile — iOS/Android", available: true },
+        { name: "Client Portal — web", available: true },
+        { name: "API Trading — Python, Java, C#", available: true },
+        { name: "Integração com TradingView", available: true }
       ],
       instruments: [
         { type: "Forex", count: "105+ pares" },
@@ -314,19 +316,20 @@ const CorretoraDetalhe = () => {
         { type: "Títulos", count: "1 milhão+" }
       ],
       tradingConditions: [
-        { label: "Depósito Mínimo", value: "$0 (sem mínimo)" },
+        { label: "Depósito Mínimo", value: "$0" },
         { label: "Spread EUR/USD", value: "A partir de 0,2 pips" },
-        { label: "Alavancagem Máxima", value: "1:50 (varia por região)" },
-        { label: "Comissão", value: "A partir de $0,0005 por ação" },
-        { label: "Taxas de Juros", value: "Benchmark -0,5% a 1,5%" },
-        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
-        { label: "API Access", value: "Sim (gratuito)" },
-        { label: "Scalping", value: "Permitido" }
+        { label: "Alavancagem Máxima", value: "1:50 (EUA), 1:200 (UE), 1:30 (Austrália)" },
+        { label: "Comissão", value: "A partir de $0,0005 por ação ou $0,20 por contrato" },
+        { label: "Swap Overnight", value: "Sim (varia por ativo e região)" },
+        { label: "Tamanho Mínimo", value: "Lotes fracionários para ações; 0,01 lote forex" },
+        { label: "EA/Robôs", value: "Sim — via APIs (não MT4/MT5)" },
+        { label: "Scalping", value: "Sim (sem restrição)" }
       ],
       paymentMethods: [
-        { method: "Transferência ACH (EUA)", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
-        { method: "Transferência Bancária", time: "1-4 dias úteis", fees: "Gratuito (depósito)", limits: "Sem limite" },
-        { method: "Cheque", time: "5-7 dias úteis", fees: "$1", limits: "Sem limite" }
+        { method: "Transferência ACH (EUA)", time: "1–2 dias", fees: "$0", limits: "Sem limite" },
+        { method: "Transferência Bancária (SWIFT)", time: "3–5 dias", fees: "$0 (acima de $100); $10 (abaixo)", limits: "Sem limite" },
+        { method: "Cheque (EUA)", time: "5–7 dias", fees: "$0", limits: "Sem limite" },
+        { method: "Cartões (limitado)", time: "Imediato", fees: "Variável", limits: "$10.000/mês" }
       ]
     },
     "cmc-markets": {
@@ -442,7 +445,7 @@ const CorretoraDetalhe = () => {
       { year: "2007", event: "IPO na NASDAQ (IBKR)" },
       { year: "2015", event: "Lançamento do IBKR Lite com comissões zero" },
       { year: "2021", event: "Adição de trading de criptomoedas" },
-      { year: "2025", event: "Mais de 2,8 milhões de clientes e $430 bilhões em ativos" }
+      { year: "2025", event: "Mais de 2,8 milhões de clientes e $430 bilhões em ativos sob custódia" }
     ],
     "cmc-markets": [
       { year: "1989", event: "Fundação em Londres por Peter Cruddas como CMC (Currency Management Corporation)" },
@@ -522,27 +525,23 @@ const CorretoraDetalhe = () => {
     "interactive-brokers": [
       {
         question: "A Interactive Brokers é segura?",
-        answer: "Sim, a Interactive Brokers é extremamente segura e é considerada uma das corretoras mais sólidas financeiramente do mundo. É regulada pela SEC e FINRA nos EUA, FCA no Reino Unido e ASIC na Austrália. Com mais de $430 bilhões em ativos de clientes e 47 anos de história, oferece compensação de até $500.000 por conta nos EUA (incluindo $250.000 em dinheiro)."
-      },
-      {
-        question: "Qual é o depósito mínimo?",
-        answer: "A Interactive Brokers não exige depósito mínimo para abrir conta. Porém, para acessar todos os recursos e mercados, é recomendado ter pelo menos $2.000. Para contas de margem, o mínimo regulatório nos EUA é $2.000. Para contas Portfolio Margin, o mínimo é $110.000."
+        answer: "Sim. É regulamentada por autoridades de nível 1 (SEC, FINRA, FCA, ASIC) e mantém fundos segregados. Além disso, oferece proteção de saldo negativo para clientes europeus e australianos. Com mais de $430 bilhões em ativos de clientes e 47 anos de história, oferece compensação de até $500.000 por conta nos EUA (incluindo $250.000 em dinheiro via SIPC)."
       },
       {
         question: "Brasileiros podem investir pela Interactive Brokers?",
-        answer: "Sim, a Interactive Brokers aceita clientes brasileiros e é uma das corretoras internacionais mais populares no Brasil. O processo de abertura de conta é online, mas requer nível intermediário de inglês. É necessário ter CPF, documentos válidos e conhecimento sobre investimentos internacionais e declaração no Imposto de Renda."
+        answer: "Sim. Brasileiros podem abrir conta internacional diretamente no site oficial. Não há escritório local, mas o suporte em português está disponível via e-mail e telefone. É necessário ter CPF, documentos válidos e conhecimento sobre investimentos internacionais e declaração no Imposto de Renda."
       },
       {
         question: "Quais mercados posso acessar?",
-        answer: "A Interactive Brokers oferece acesso a mais de 150 mercados em 33 países. Você pode negociar ações, opções, futuros, forex, títulos, fundos mútuos e ETFs nas principais bolsas mundiais (NYSE, NASDAQ, LSE, Euronext, TSE, HKEX, etc). É a maior variedade de mercados entre todas as corretoras."
+        answer: "Mais de 150 mercados globais, incluindo ações, forex, futuros, opções, títulos e criptomoedas. Você pode negociar nas principais bolsas mundiais (NYSE, NASDAQ, LSE, Euronext, TSE, HKEX, etc). É a maior variedade de mercados entre todas as corretoras."
       },
       {
         question: "Como funcionam as comissões?",
-        answer: "A Interactive Brokers oferece dois planos: IBKR Lite (sem comissões para ações e ETFs dos EUA, mas sem acesso a todos os mercados) e IBKR Pro (comissões ultra baixas a partir de $0,0005 por ação, com acesso total a todos os mercados). Para forex, spreads começam em 0,2 pips. É uma das corretoras mais baratas do mercado."
+        answer: "Comissões a partir de $0,0005 por ação ou $0,20 por contrato de futuro. Para forex, sem comissão — apenas spread. A Interactive Brokers oferece dois planos: IBKR Lite (sem comissões para ações e ETFs dos EUA) e IBKR Pro (comissões ultra baixas com acesso total a todos os mercados)."
       },
       {
         question: "Existe conta demo?",
-        answer: "Sim, a Interactive Brokers oferece conta demo gratuita (Paper Trading) com $1.000.000 virtuais, válida indefinidamente. A conta demo usa a mesma plataforma TWS da conta real, com dados de mercado em tempo real e acesso a todos os instrumentos e funcionalidades."
+        answer: "Sim. A conta demo gratuita permite testar todas as funcionalidades da plataforma TWS por 30 dias. A conta demo (Paper Trading) oferece $1.000.000 virtuais, com dados de mercado em tempo real e acesso a todos os instrumentos."
       }
     ],
     "cmc-markets": [
