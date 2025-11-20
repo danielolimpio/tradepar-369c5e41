@@ -796,7 +796,7 @@ const CorretoraDetalhe = () => {
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Múltiplas Regulamentações de Nível 1</h3>
                       <p className="text-muted-foreground text-sm">
-                        A IG Group é regulamentada pelas autoridades financeiras mais rigorosas do mundo, garantindo os mais altos padrões de proteção ao investidor.
+                        A {brokerData.name} é regulamentada pelas autoridades financeiras mais rigorosas do mundo, garantindo os mais altos padrões de proteção ao investidor.
                       </p>
                     </div>
                   </div>
@@ -1060,7 +1060,7 @@ const CorretoraDetalhe = () => {
               <Card>
                 <CardHeader>
                   <CardTitle>Instrumentos Disponíveis</CardTitle>
-                  <CardDescription>Mais de 17.000 instrumentos para diversificar seu portfólio</CardDescription>
+                  <CardDescription>Ampla variedade de instrumentos para diversificar seu portfólio</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
@@ -1265,7 +1265,7 @@ const CorretoraDetalhe = () => {
                     <span className="text-sm text-muted-foreground">— Maria S., Brasil • 15/11/2025</span>
                   </div>
                   <p className="text-sm">
-                    "Uso a IG há 3 anos e nunca tive problemas. Plataforma estável, spreads competitivos e saques sempre dentro do prazo. O suporte em português é excelente."
+                    "Uso a {brokerData.name} há 3 anos e nunca tive problemas. Plataforma estável, spreads competitivos e saques sempre dentro do prazo. O suporte em português é excelente."
                   </p>
                 </div>
 
@@ -1365,10 +1365,10 @@ const CorretoraDetalhe = () => {
                   </TableHeader>
                   <TableBody>
                     {competitors.map((competitor, index) => (
-                      <TableRow key={index} className={competitor.name === "IG Group" ? "bg-primary/10" : ""}>
+                      <TableRow key={index} className={competitor.name === brokerData.name ? "bg-primary/10" : ""}>
                         <TableCell className="font-semibold">
                           {competitor.name}
-                          {competitor.name === "IG Group" && (
+                          {competitor.name === brokerData.name && (
                             <Badge className="ml-2 bg-primary/20 text-primary border-primary/30">
                               Esta Corretora
                             </Badge>
@@ -1391,28 +1391,28 @@ const CorretoraDetalhe = () => {
                 <div className="mt-6 p-4 bg-accent rounded-lg">
                   <h3 className="font-semibold mb-3 flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    Por que escolher a IG Group?
+                    Por que escolher a {brokerData.name}?
                   </h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span><strong>51 anos de história:</strong> Uma das corretoras mais antigas e confiáveis do mundo</span>
+                      <span><strong>{metrics.yearsActive} de história:</strong> Experiência comprovada no mercado financeiro global</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span><strong>17.000+ instrumentos:</strong> A maior variedade de ativos para diversificação</span>
+                      <span><strong>Variedade de instrumentos:</strong> Amplo acesso a ativos globais para diversificação</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span><strong>Regulamentação Tier-1:</strong> FCA, ASIC, BaFin e outras autoridades de prestígio</span>
+                      <span><strong>Regulamentação Tier-1:</strong> {regulations.map(r => r.name).join(", ")} e outras autoridades de prestígio</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span><strong>Sem depósito mínimo:</strong> Comece a investir com o valor que desejar</span>
+                      <span><strong>Plataformas avançadas:</strong> Tecnologia de ponta para todos os estilos de trading</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span><strong>Educação gratuita:</strong> Academia IG com cursos, webinars e materiais exclusivos</span>
+                      <span><strong>Suporte multilíngue:</strong> Atendimento em português e {brokerData.languages.length - 1}+ idiomas</span>
                     </li>
                   </ul>
                 </div>
@@ -1447,7 +1447,7 @@ const CorretoraDetalhe = () => {
               <CardContent className="p-12">
                 <h2 className="text-3xl font-bold mb-4">Pronto para começar?</h2>
                 <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Abra uma conta demo gratuita ou comece a negociar com dinheiro real. Junte-se a mais de 350.000 traders em todo o mundo que confiam na IG Group.
+                  Abra uma conta demo gratuita ou comece a negociar com dinheiro real. Junte-se a {metrics.activeClients} traders em todo o mundo que confiam na {brokerData.name}.
                 </p>
                 
                 <div className="flex flex-wrap justify-center gap-4">
