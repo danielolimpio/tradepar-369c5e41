@@ -88,7 +88,7 @@ const BrokerRanking = () => {
               
               {/* Broker Card */}
               <div className="flex-1 group bg-card border border-border rounded-xl p-6 hover-lift hover:border-primary/40 transition-all">
-                <div className="flex items-center justify-between gap-6">
+                <div className="flex items-center gap-6">
                   {/* Logo */}
                   <div className="flex-shrink-0">
                     <img 
@@ -98,22 +98,22 @@ const BrokerRanking = () => {
                     />
                   </div>
 
-                  {/* Info */}
-                  <div className="flex-1 flex items-center gap-8">
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center gap-2 mb-2">
-                        <h3 className="text-xl font-bold">{broker.name}</h3>
-                        {broker.verified && (
-                          <Badge variant="outline" className="border-primary/30 text-primary text-xs">
-                            <Shield className="h-3 w-3 mr-1" />
-                            Verificada
-                          </Badge>
-                        )}
-                        <Badge variant="secondary" className="text-xs">{broker.highlight}</Badge>
-                      </div>
+                  {/* Info Section */}
+                  <div className="flex-1 min-w-0">
+                    {/* Title and Badges */}
+                    <div className="flex items-center gap-2 mb-4">
+                      <h3 className="text-xl font-bold">{broker.name}</h3>
+                      {broker.verified && (
+                        <Badge variant="outline" className="border-primary/30 text-primary text-xs">
+                          <Shield className="h-3 w-3 mr-1" />
+                          Verificada
+                        </Badge>
+                      )}
+                      <Badge variant="secondary" className="text-xs">{broker.highlight}</Badge>
                     </div>
 
-                    <div className="flex-1 grid grid-cols-4 gap-6 text-sm">
+                    {/* Stats Row */}
+                    <div className="grid grid-cols-4 gap-6">
                       <div>
                         <p className="text-muted-foreground mb-1 text-xs">Regulamentação</p>
                         <p className="font-medium text-sm">{broker.regulation}</p>
