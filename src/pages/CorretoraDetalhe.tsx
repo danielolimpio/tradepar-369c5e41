@@ -7,8 +7,12 @@ import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Helmet } from "react-helmet";
+import { useParams } from "react-router-dom";
 
 const CorretoraDetalhe = () => {
+  const { brokerSlug } = useParams<{ brokerSlug: string }>();
+  const currentSlug = brokerSlug || "ig-group";
+
   const brokerData = {
     name: "IG Group",
     fullName: "IG Group Holdings plc",
@@ -24,14 +28,14 @@ const CorretoraDetalhe = () => {
     lastUpdate: "Novembro de 2025"
   };
 
-  const regulations = [
+  let regulations = [
     { name: "FCA", country: "Reino Unido", license: "113942", status: "Ativa", compensation: "£85.000" },
     { name: "ASIC", country: "Austrália", license: "220440", status: "Ativa", compensation: "Não aplicável" },
     { name: "BaFin", country: "Alemanha", license: "148759", status: "Ativa", compensation: "€100.000" },
     { name: "MAS", country: "Cingapura", license: "CMS100896", status: "Ativa", compensation: "Não aplicável" },
   ];
 
-  const globalPresence = {
+  let globalPresence = {
     offices: 15,
     countriesServed: 170,
     mainOffices: [
@@ -43,7 +47,7 @@ const CorretoraDetalhe = () => {
     ]
   };
 
-  const metrics = {
+  let metrics = {
     activeClients: "350.000+",
     monthlyVolume: "$2,8 trilhões USD",
     marketCap: "£3,2 bilhões",
@@ -137,36 +141,54 @@ const CorretoraDetalhe = () => {
   return (
     <>
       <Helmet>
-        <title>IG Group — Perfil Completo 2025 | Spreads, Depósito Mínimo e Avaliação | TradePar</title>
-        <meta name="description" content="Descubra tudo sobre IG Group em 2025: regulamentação FCA/ASIC, spreads a partir de 0,6 pips, sem depósito mínimo, segurança e avaliações reais. Guia completo para traders brasileiros." />
-        <meta name="keywords" content="IG Group, corretora forex, trading, spreads, depósito mínimo, regulamentação FCA, ASIC, avaliação IG Group, melhor corretora forex" />
-        <link rel="canonical" href="https://tradepar.com.br/corretoras/ig-group" />
-        
-        <meta property="og:title" content="IG Group — Perfil Completo 2025 | Análise Detalhada" />
-        <meta property="og:description" content="Análise completa da IG Group: fundada em 1974, regulada pela FCA, spreads competitivos, 17.000+ ativos disponíveis." />
+        <title>{`${brokerData.name} — Perfil Completo 2025 | Spreads, Depósito Mínimo e Avaliação | TradePar`}</title>
+        <meta
+          name="description"
+          content={`Descubra tudo sobre ${brokerData.name} em 2025: regulamentação, spreads, depósito mínimo, segurança e avaliações reais. Guia completo para traders brasileiros.`}
+        />
+        <meta
+          name="keywords"
+          content={`${brokerData.name}, corretora forex, trading, spreads, depósito mínimo, regulamentação, avaliação ${brokerData.name}, melhor corretora forex`}
+        />
+        <link
+          rel="canonical"
+          href={`https://tradepar.com.br/corretoras/${brokerSlug || "ig-group"}`}
+        />
+
+        <meta
+          property="og:title"
+          content={`${brokerData.name} — Perfil Completo 2025 | Análise Detalhada`}
+        />
+        <meta
+          property="og:description"
+          content={`Análise completa da ${brokerData.name}: fundada em ${brokerData.founded}, regulada por autoridades globais e com condições competitivas.`}
+        />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tradepar.com.br/corretoras/ig-group" />
-        
+        <meta
+          property="og:url"
+          content={`https://tradepar.com.br/corretoras/${brokerSlug || "ig-group"}`}
+        />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Review",
-            "itemReviewed": {
+            itemReviewed: {
               "@type": "FinancialService",
-              "name": "IG Group",
-              "description": "Corretora de Forex e CFDs regulamentada internacionalmente",
-              "url": "https://www.ig.com"
+              name: brokerData.name,
+              description: `Corretora de Forex e CFDs regulamentada internacionalmente: ${brokerData.fullName}`,
+              url: brokerData.website,
             },
-            "reviewRating": {
+            reviewRating: {
               "@type": "Rating",
-              "ratingValue": "4.8",
-              "bestRating": "5"
+              ratingValue: brokerData.rating.toString(),
+              bestRating: "5",
             },
-            "author": {
+            author: {
               "@type": "Organization",
-              "name": "TradePar"
+              name: "TradePar",
             },
-            "datePublished": "2025-11-20"
+            datePublished: "2025-11-20",
           })}
         </script>
       </Helmet>
