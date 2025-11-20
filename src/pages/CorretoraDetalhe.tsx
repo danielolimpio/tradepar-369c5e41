@@ -430,8 +430,8 @@ const CorretoraDetalhe = () => {
     "saxo-bank": [
       { year: "1992", event: "Fundação em Copenhague por Lars Seier Christensen e Kim Fournais" },
       { year: "1998", event: "Lançamento da primeira plataforma de trading multi-ativo online" },
-      { year: "2000", event: "Expansão para mercados asiáticos com escritório em Cingapura" },
-      { year: "2006", event: "Abertura de escritórios em Londres e Paris" },
+      { year: "2006", event: "Expansão para mercados asiáticos com escritório em Singapura" },
+      { year: "2008", event: "Abertura de escritórios em Londres e Paris" },
       { year: "2012", event: "Lançamento do SaxoTraderGO, plataforma de próxima geração" },
       { year: "2017", event: "Parceria estratégica com Geely Group da China" },
       { year: "2021", event: "Lançamento de trading de criptomoedas e ETFs temáticos" },
@@ -498,28 +498,28 @@ const CorretoraDetalhe = () => {
     ],
     "saxo-bank": [
       {
-        question: "A Saxo Bank é segura e confiável?",
-        answer: "Sim, a Saxo Bank é altamente confiável e está entre as corretoras mais seguras globalmente. É regulada pela FSA dinamarquesa, FCA britânica, ASIC australiana e MAS de Cingapura. Com mais de 30 anos de história e parcerias com grandes instituições financeiras, a Saxo Bank oferece segregação total de fundos e compensação de até €20.000 na Europa."
+        question: "A Saxo Bank é segura?",
+        answer: "Sim. É regulamentada por autoridades de nível 1 (FSA, FCA, ASIC) e mantém fundos segregados. Além disso, oferece proteção de saldo negativo para clientes europeus e australianos."
       },
       {
         question: "Qual é o depósito mínimo na Saxo Bank?",
-        answer: "O depósito mínimo para conta Classic é de $2.000 USD. Para a conta Platinum, o mínimo é $200.000. Existe também a conta VIP que requer $1 milhão ou mais. Cada tipo de conta oferece diferentes níveis de spreads, comissões e serviços premium."
+        answer: "O depósito mínimo é de $2.000 para contas Classic. Para contas Professional, o depósito mínimo é de $10.000."
       },
       {
         question: "Brasileiros podem abrir conta na Saxo Bank?",
-        answer: "Sim, a Saxo Bank aceita clientes brasileiros através de sua entidade europeia. O processo de abertura de conta é totalmente online, disponível em português, e requer documentos de identificação válidos (passaporte ou RG) e comprovante de residência recente."
+        answer: "Sim. Brasileiros podem abrir conta internacional diretamente no site oficial. Não há escritório local, mas o suporte em português está disponível via e-mail e telefone."
       },
       {
         question: "Quais plataformas de trading a Saxo Bank oferece?",
-        answer: "A Saxo Bank oferece três plataformas principais: SaxoTraderGO (web e mobile, ideal para traders ativos), SaxoTraderPRO (plataforma desktop avançada para profissionais) e SaxoInvestor (para investidores de longo prazo). Todas incluem ferramentas profissionais de análise, gráficos e execução rápida."
+        answer: "SaxoTraderGO, SaxoTraderPRO, SaxoInvestor e TradingView (integração)."
       },
       {
         question: "A Saxo Bank oferece conta demo?",
-        answer: "Sim, a Saxo Bank oferece conta demo gratuita com $100.000 virtuais, válida por 20 dias. A conta demo replica completamente as plataformas reais, permitindo testar todas as funcionalidades, instrumentos e estratégias antes de investir capital real."
+        answer: "Sim. A conta demo gratuita permite testar todas as funcionalidades da plataforma SaxoTraderGO por 30 dias."
       },
       {
         question: "Quais são as taxas e comissões?",
-        answer: "As comissões variam por tipo de conta e instrumento. Para forex, spreads começam em 0,9 pips no EUR/USD. Para ações, comissões começam em $5 por ordem (conta Classic). A Saxo Bank tem estrutura de preços escalonada: quanto maior o volume de trading, menores as comissões."
+        answer: "Comissões variáveis por ativo. Para ações, a partir de $0,005 por ação. Para forex, sem comissão — apenas spread."
       }
     ],
     "interactive-brokers": [
