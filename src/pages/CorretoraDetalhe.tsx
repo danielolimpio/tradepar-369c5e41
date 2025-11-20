@@ -895,7 +895,7 @@ const CorretoraDetalhe = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-4xl font-bold text-primary">51</p>
+                  <p className="text-4xl font-bold text-primary">{metrics.yearsActive}</p>
                   <p className="text-sm text-muted-foreground mt-2">Décadas de experiência e confiança</p>
                 </CardContent>
               </Card>
