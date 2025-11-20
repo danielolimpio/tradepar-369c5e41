@@ -1001,14 +1001,56 @@ const CorretoraDetalhe = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
-                    <p className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">Copy Trading:</strong> Sim, através da plataforma própria IG
-                    </p>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      <strong className="text-foreground">Auto Trading:</strong> Suporte a Expert Advisors (EAs) no MT4
-                    </p>
-                  </div>
+                  {currentSlug === "ig-group" && (
+                    <div className="mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                      <p className="text-sm text-muted-foreground">
+                        <strong className="text-foreground">Copy Trading:</strong> Sim, através da plataforma própria IG
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        <strong className="text-foreground">Auto Trading:</strong> Suporte a Expert Advisors (EAs) no MT4
+                      </p>
+                    </div>
+                  )}
+                  {currentSlug === "saxo-bank" && (
+                    <div className="mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                      <p className="text-sm text-muted-foreground">
+                        <strong className="text-foreground">Copy Trading:</strong> Não disponível
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        <strong className="text-foreground">Auto Trading:</strong> Suporte via OpenAPI para algoritmos personalizados
+                      </p>
+                    </div>
+                  )}
+                  {currentSlug === "interactive-brokers" && (
+                    <div className="mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                      <p className="text-sm text-muted-foreground">
+                        <strong className="text-foreground">Copy Trading:</strong> Não disponível
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        <strong className="text-foreground">Auto Trading:</strong> Suporte completo via API (Python, Java, C++)
+                      </p>
+                    </div>
+                  )}
+                  {currentSlug === "cmc-markets" && (
+                    <div className="mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                      <p className="text-sm text-muted-foreground">
+                        <strong className="text-foreground">Copy Trading:</strong> Não disponível
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        <strong className="text-foreground">Auto Trading:</strong> Suporte a Expert Advisors (EAs) no MT4
+                      </p>
+                    </div>
+                  )}
+                  {currentSlug === "pepperstone" && (
+                    <div className="mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                      <p className="text-sm text-muted-foreground">
+                        <strong className="text-foreground">Copy Trading:</strong> Disponível via TradingView e cTrader Copy
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        <strong className="text-foreground">Auto Trading:</strong> Suporte a Expert Advisors em MT4, MT5 e cTrader
+                      </p>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
 
@@ -1104,7 +1146,7 @@ const CorretoraDetalhe = () => {
 
                 <div className="mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
                   <p className="text-sm">
-                    <strong>Nota Importante:</strong> Os saques devem ser feitos para a mesma conta/método usado no depósito inicial, conforme regulamentações anti-lavagem de dinheiro (AML). Não há taxas de processamento cobradas pela IG Group.
+                    <strong>Nota Importante:</strong> Os saques devem ser feitos para a mesma conta/método usado no depósito inicial, conforme regulamentações anti-lavagem de dinheiro (AML). Não há taxas de processamento cobradas pela {brokerData.name}.
                   </p>
                 </div>
               </CardContent>
@@ -1139,7 +1181,7 @@ const CorretoraDetalhe = () => {
                     <HeadphonesIcon className="w-6 h-6 text-primary" />
                     <div>
                       <p className="font-semibold">E-mail</p>
-                      <p className="text-sm text-muted-foreground">support@ig.com</p>
+                      <p className="text-sm text-muted-foreground">{brokerData.email}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -1152,7 +1194,7 @@ const CorretoraDetalhe = () => {
                 <CardContent className="space-y-3">
                   <div className="flex items-center gap-2 p-3 bg-accent rounded-lg">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Academia IG (cursos gratuitos)</span>
+                    <span>Centro educacional (cursos gratuitos)</span>
                   </div>
                   <div className="flex items-center gap-2 p-3 bg-accent rounded-lg">
                     <CheckCircle className="w-5 h-5 text-primary" />
@@ -1265,8 +1307,8 @@ const CorretoraDetalhe = () => {
             
             <Card>
               <CardHeader>
-                <CardTitle>Linha do Tempo: 1974 - 2025</CardTitle>
-                <CardDescription>51 anos de inovação e crescimento no mercado financeiro</CardDescription>
+                <CardTitle>Linha do Tempo: {brokerData.founded} - 2025</CardTitle>
+                <CardDescription>{metrics.yearsActive} de inovação e crescimento no mercado financeiro</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
