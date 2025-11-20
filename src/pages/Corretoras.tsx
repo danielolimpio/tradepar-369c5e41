@@ -29,6 +29,7 @@ const allBrokers = [
   {
     rank: 1,
     name: "IG Group",
+    slug: "ig-group",
     logo: igGroupLogo,
     regulation: "FCA, ASIC, CySEC, CFTC/NFA",
     spread: "0.0 pips",
@@ -40,6 +41,7 @@ const allBrokers = [
   {
     rank: 2,
     name: "Saxo Bank",
+    slug: "saxo-bank",
     logo: saxoBankLogo,
     regulation: "FCA, ASIC, FINMA, CySEC",
     spread: "0.1 pips",
@@ -51,6 +53,7 @@ const allBrokers = [
   {
     rank: 3,
     name: "Interactive Brokers",
+    slug: "interactive-brokers",
     logo: interactiveBrokersLogo,
     regulation: "FCA, SEC/CFTC, ASIC, SFC",
     spread: "0.0 pips",
@@ -62,6 +65,7 @@ const allBrokers = [
   {
     rank: 4,
     name: "CMC Markets",
+    slug: "cmc-markets",
     logo: cmcMarketsLogo,
     regulation: "FCA, ASIC, MAS, CySEC",
     spread: "0.0 pips",
@@ -73,6 +77,7 @@ const allBrokers = [
   {
     rank: 5,
     name: "Pepperstone",
+    slug: "pepperstone",
     logo: pepperstoneLogo,
     regulation: "ASIC, FCA, CySEC, DFSA",
     spread: "0.0 pips",
@@ -84,6 +89,7 @@ const allBrokers = [
   {
     rank: 6,
     name: "IC Markets",
+    slug: "ic-markets",
     logo: icMarketsLogo,
     regulation: "ASIC, CySEC, FSA",
     spread: "0.0 pips",
@@ -95,6 +101,7 @@ const allBrokers = [
   {
     rank: 7,
     name: "FP Markets",
+    slug: "fp-markets",
     logo: fpMarketsLogo,
     regulation: "ASIC, CySEC, FSCA",
     spread: "0.0 pips",
@@ -106,6 +113,7 @@ const allBrokers = [
   {
     rank: 8,
     name: "XM Group",
+    slug: "xm-group",
     logo: xmLogo,
     regulation: "CySEC, ASIC, FSCA",
     spread: "0.6 pips",
@@ -117,6 +125,7 @@ const allBrokers = [
   {
     rank: 9,
     name: "AvaTrade",
+    slug: "avatrade",
     logo: avatradeLogo,
     regulation: "ASIC, CySEC, FSA, FSCA",
     spread: "0.9 pips",
@@ -128,6 +137,7 @@ const allBrokers = [
   {
     rank: 10,
     name: "OctaFX",
+    slug: "octafx",
     logo: octafxLogo,
     regulation: "FSA, FSCA, FSC",
     spread: "0.1 pips",
@@ -139,6 +149,7 @@ const allBrokers = [
   {
     rank: 11,
     name: "Tickmill",
+    slug: "tickmill",
     logo: tickmillLogo,
     regulation: "FCA, CySEC, FSA",
     spread: "0.0 pips",
@@ -150,6 +161,7 @@ const allBrokers = [
   {
     rank: 12,
     name: "Plus500",
+    slug: "plus500",
     logo: plus500Logo,
     regulation: "FCA, ASIC, CySEC, FSC",
     spread: "0.6 pips",
@@ -161,6 +173,7 @@ const allBrokers = [
   {
     rank: 13,
     name: "Exness",
+    slug: "exness",
     logo: exnessLogo,
     regulation: "FCA, CySEC, FSA, FSCA",
     spread: "0.0 pips",
@@ -172,6 +185,7 @@ const allBrokers = [
   {
     rank: 14,
     name: "FXTM",
+    slug: "fxtm",
     logo: fxtmLogo,
     regulation: "FCA, CySEC, FSCA, FSC",
     spread: "0.8 pips",
@@ -183,6 +197,7 @@ const allBrokers = [
   {
     rank: 15,
     name: "Admirals",
+    slug: "admirals",
     logo: admiralsLogo,
     regulation: "FCA, CySEC, ASIC",
     spread: "0.1 pips",
@@ -194,6 +209,7 @@ const allBrokers = [
   {
     rank: 16,
     name: "RoboForex",
+    slug: "roboforex",
     logo: roboforexLogo,
     regulation: "IFSC, CySEC, FSCA",
     spread: "0.0 pips",
@@ -205,6 +221,7 @@ const allBrokers = [
   {
     rank: 17,
     name: "HotForex (HFM)",
+    slug: "hotforex-hfm",
     logo: hotforexLogo,
     regulation: "FCA, CySEC, FSCA, ASIC",
     spread: "0.1 pips",
@@ -216,6 +233,7 @@ const allBrokers = [
   {
     rank: 18,
     name: "Alpari",
+    slug: "alpari",
     logo: alpariLogo,
     regulation: "FCA, CySEC, FSC",
     spread: "0.3 pips",
@@ -227,6 +245,7 @@ const allBrokers = [
   {
     rank: 19,
     name: "City Index",
+    slug: "city-index",
     logo: cityIndexLogo,
     regulation: "FCA, ASIC, MAS",
     spread: "0.5 pips",
@@ -238,6 +257,7 @@ const allBrokers = [
   {
     rank: 20,
     name: "Deriv",
+    slug: "deriv",
     logo: derivLogo,
     regulation: "MFSA, FSC, FSA",
     spread: "0.0 pips",
@@ -335,10 +355,12 @@ const Corretoras = () => {
                       </div>
 
                       {/* CTA */}
-                      <Button variant="outline" className="group/btn border-primary/30 hover:bg-primary hover:text-primary-foreground">
-                        Ver Detalhes
-                        <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                      </Button>
+                      <Link to={`/corretoras/${broker.slug}`}>
+                        <Button variant="outline" className="group/btn border-primary/30 hover:bg-primary hover:text-primary-foreground">
+                          Ver Detalhes
+                          <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
