@@ -146,11 +146,11 @@ const CorretoraDetalhe = () => {
         fullName: "CMC Markets plc",
         founded: "1989",
         headquarters: "Londres, Reino Unido",
-        ceo: "Lord Cruddas",
+        ceo: "Joe Healey",
         stockCode: "LSE: CMCX",
         website: "https://www.cmcmarkets.com",
         email: "support@cmcmarkets.com",
-        languages: ["Português", "Inglês", "Alemão", "Francês", "Italiano", "+12 idiomas"],
+        languages: ["Português", "Inglês", "Alemão", "Francês", "Espanhol", "Russo", "Chinês", "Japonês", "Árabe", "+6 idiomas"],
         rating: 4.5,
         verified: true,
         lastUpdate: "Novembro de 2025"
@@ -162,22 +162,24 @@ const CorretoraDetalhe = () => {
         { name: "MAS", country: "Cingapura", license: "CMS100133", status: "Ativa", compensation: "Não aplicável" },
       ],
       globalPresence: {
-        offices: 11,
+        offices: 14,
         countriesServed: 175,
         mainOffices: [
           "Londres (Sede Principal)",
           "Sydney (Austrália)",
           "Frankfurt (Alemanha)",
-          "Cingapura",
-          "Auckland (Nova Zelândia)"
+          "Singapura",
+          "Auckland (Nova Zelândia)",
+          "Nova York (EUA)",
+          "Hong Kong"
         ]
       },
       metrics: {
         activeClients: "180.000+",
-        monthlyVolume: "$1,5 trilhões USD",
-        marketCap: "£850 milhões",
+        monthlyVolume: "$40 bilhões USD",
+        marketCap: "£1,2 bilhões",
         annualProfit: "£285 milhões (2024)",
-        monthlyTraffic: "5,8 milhões de visitas",
+        monthlyTraffic: "4,2 milhões de visitas",
         yearsActive: "36 anos"
       }
     },
@@ -547,27 +549,27 @@ const CorretoraDetalhe = () => {
     "cmc-markets": [
       {
         question: "A CMC Markets é segura?",
-        answer: "Sim, a CMC Markets é uma corretora segura e confiável, regulada pela FCA (Reino Unido), ASIC (Austrália) e BaFin (Alemanha). Está listada na Bolsa de Londres desde 2016 (LSE: CMCX). Com mais de 36 anos de história e 180.000 clientes ativos, oferece segregação de fundos e compensação de até £85.000 no Reino Unido e €100.000 na Alemanha."
+        answer: "Sim. É regulamentada por autoridades de nível 1 (FCA, ASIC, BaFin) e mantém fundos segregados. Além disso, oferece proteção de saldo negativo para clientes europeus e australianos."
       },
       {
-        question: "Qual é o depósito mínimo?",
-        answer: "A CMC Markets não exige depósito mínimo para abrir conta. No entanto, o valor mínimo de depósito recomendado é $250 para começar a negociar adequadamente e gerenciar riscos. Para contas profissionais, não há mínimo específico."
+        question: "Qual é o depósito mínimo na CMC Markets?",
+        answer: "O depósito mínimo é de $0 — você pode começar a negociar com qualquer valor."
       },
       {
-        question: "Brasileiros podem abrir conta?",
-        answer: "Sim, a CMC Markets aceita clientes brasileiros através de sua entidade europeia ou australiana. O processo é 100% online, disponível em português. É necessário ter mais de 18 anos, documentos válidos (RG/CNH e comprovante de residência) e passar por verificação KYC (Know Your Customer)."
+        question: "Brasileiros podem abrir conta na CMC Markets?",
+        answer: "Sim. Brasileiros podem abrir conta internacional diretamente no site oficial. Não há escritório local, mas o suporte em português está disponível via e-mail e telefone."
       },
       {
-        question: "Quais plataformas estão disponíveis?",
-        answer: "A CMC Markets oferece sua plataforma proprietária Next Generation (web e mobile), MetaTrader 4, TradingView (integração) e a plataforma CMC Invest para investimento em ações reais. A Next Generation é premiada e oferece mais de 115 indicadores técnicos, gráficos avançados e execução rápida."
+        question: "Quais plataformas de trading a CMC Markets oferece?",
+        answer: "Next Generation, MetaTrader 4, CMC Invest e TradingView (integração)."
       },
       {
-        question: "Existe conta demo?",
-        answer: "Sim, a CMC Markets oferece conta demo gratuita com $10.000 virtuais, válida por 30 dias (renovável). A conta demo replica todas as funcionalidades da conta real, incluindo acesso a mais de 12.000 instrumentos, gráficos profissionais e dados de mercado em tempo real."
+        question: "A CMC Markets oferece conta demo?",
+        answer: "Sim. A conta demo gratuita permite testar todas as funcionalidades da plataforma Next Generation por 30 dias."
       },
       {
-        question: "Quais são os spreads e comissões?",
-        answer: "A CMC Markets oferece spreads competitivos: EUR/USD a partir de 0,7 pips, GBP/USD 0,9 pips. Para CFDs de ações, não há comissão adicional (spread incluso). A conta CMC Invest (ações reais) cobra comissão de $10 para ações americanas e £10 para ações britânicas. Não há taxas de inatividade nos primeiros 12 meses."
+        question: "Quais são as taxas e comissões?",
+        answer: "Para CFDs, não há comissão — apenas spread. Para ações reais (via CMC Invest), a comissão é a partir de $0,005 por ação."
       }
     ],
     "pepperstone": [
