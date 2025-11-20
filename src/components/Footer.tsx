@@ -1,4 +1,5 @@
-import { TrendingUp, Mail, Twitter, Youtube, Github } from "lucide-react";
+import { Mail, Twitter, Youtube, Github } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -41,11 +42,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <a href="/" className="flex items-center gap-2 mb-4 group">
-              <TrendingUp className="h-7 w-7 text-primary transition-transform group-hover:scale-110" />
-              <span className="text-2xl font-bold">
-                Trade<span className="text-gradient-bull">par</span>
-              </span>
+            <a href="/" className="flex items-center mb-4 group">
+              <img 
+                src={logo} 
+                alt="Tradepar Logo" 
+                className="h-8 w-auto transition-transform group-hover:scale-105"
+              />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-sm">
               O portal de referência em forex com rankings de corretoras verificadas, estratégias profissionais

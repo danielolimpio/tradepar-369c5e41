@@ -46,7 +46,7 @@ const SecurityGuide = () => {
         </div>
 
         {/* Security Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto mb-12 sm:mb-16">
           {securityChecks.map((check, index) => {
             const Icon = check.icon;
             const isGood = check.type === "good";
@@ -54,23 +54,23 @@ const SecurityGuide = () => {
             return (
               <div
                 key={index}
-                className={`group bg-card border rounded-xl p-6 hover-lift transition-all ${
+                className={`group bg-card border rounded-xl p-4 sm:p-6 hover-lift transition-all ${
                   isGood 
                     ? "border-primary/20 hover:border-primary/40" 
                     : "border-destructive/20 hover:border-destructive/40"
                 }`}
               >
-                <div className="flex items-start gap-4">
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center border ${
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center border ${
                     isGood
                       ? "bg-primary/10 border-primary/20 text-primary"
                       : "bg-destructive/10 border-destructive/20 text-destructive"
                   }`}>
-                    <Icon className="h-6 w-6" />
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-2">{check.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <h3 className="text-base sm:text-lg font-bold mb-2">{check.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                       {check.description}
                     </p>
                   </div>
@@ -83,13 +83,13 @@ const SecurityGuide = () => {
         {/* Checklist Section */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-primary/5 to-transparent border border-primary/20 rounded-2xl p-8 md:p-12">
-            <div className="flex items-start gap-6 mb-8">
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center">
-                <Shield className="h-8 w-8 text-primary" />
+            <div className="flex items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
+              <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center">
+                <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-3">Checklist do Trader Consciente</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Checklist do Trader Consciente</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
                   Antes de depositar em qualquer corretora, certifique-se de:
                 </p>
               </div>

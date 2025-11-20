@@ -78,64 +78,66 @@ const BrokerRanking = () => {
         </div>
 
         {/* Broker Cards */}
-        <div className="max-w-5xl mx-auto space-y-6">
+        <div className="max-w-5xl mx-auto space-y-4">
           {brokers.map((broker) => (
-            <div key={broker.rank} className="flex items-center gap-4">
+            <div key={broker.rank} className="flex items-start gap-2 sm:gap-4">
               {/* Rank Badge - Outside */}
-              <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-lg bg-background border-2 border-bull text-xl font-bold text-bull">
+              <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-lg bg-background border-2 border-bull text-lg sm:text-xl font-bold text-bull">
                 {broker.rank}º
               </div>
               
               {/* Broker Card */}
-              <div className="flex-1 group bg-card border border-border rounded-xl p-6 hover-lift hover:border-primary/40 transition-all">
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                  {/* Logo */}
-                  <div className="flex-shrink-0">
-                    <img 
-                      src={broker.logo} 
-                      alt={broker.name}
-                      className="w-24 h-24 object-contain rounded-lg"
-                    />
-                  </div>
-
-                  {/* Info */}
-                  <div className="flex-1 space-y-3">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-xl font-bold">{broker.name}</h3>
-                      {broker.verified && (
-                        <Badge variant="outline" className="border-primary/30 text-primary">
-                          <Shield className="h-3 w-3 mr-1" />
-                          Verificada
-                        </Badge>
-                      )}
-                      <Badge variant="secondary">{broker.highlight}</Badge>
+              <div className="flex-1 group bg-card border border-border rounded-xl p-4 sm:p-6 hover-lift hover:border-primary/40 transition-all">
+                <div className="flex flex-col gap-4 sm:gap-6">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    {/* Logo */}
+                    <div className="flex-shrink-0">
+                      <img 
+                        src={broker.logo} 
+                        alt={broker.name}
+                        className="w-16 h-16 sm:w-24 sm:h-24 object-contain rounded-lg"
+                      />
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                      <div>
-                        <p className="text-muted-foreground mb-1">Regulamentação</p>
-                        <p className="font-medium">{broker.regulation}</p>
+                    {/* Info */}
+                    <div className="flex-1 space-y-3 w-full">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="text-lg sm:text-xl font-bold">{broker.name}</h3>
+                        {broker.verified && (
+                          <Badge variant="outline" className="border-primary/30 text-primary text-xs">
+                            <Shield className="h-3 w-3 mr-1" />
+                            Verificada
+                          </Badge>
+                        )}
+                        <Badge variant="secondary" className="text-xs">{broker.highlight}</Badge>
                       </div>
-                      <div>
-                        <p className="text-muted-foreground mb-1">Spread Mín.</p>
-                        <p className="font-medium text-primary">{broker.spread}</p>
-                      </div>
-                      <div>
-                        <p className="text-muted-foreground mb-1">Depósito Mín.</p>
-                        <p className="font-medium">{broker.minDeposit}</p>
-                      </div>
-                      <div>
-                        <p className="text-muted-foreground mb-1">Avaliação</p>
-                        <div className="flex items-center gap-1">
-                          <Star className="h-4 w-4 fill-primary text-primary" />
-                          <span className="font-medium">{broker.rating}</span>
+
+                      <div className="grid grid-cols-2 gap-3 text-sm">
+                        <div>
+                          <p className="text-muted-foreground mb-1 text-xs">Regulamentação</p>
+                          <p className="font-medium text-xs sm:text-sm">{broker.regulation}</p>
+                        </div>
+                        <div>
+                          <p className="text-muted-foreground mb-1 text-xs">Spread Mín.</p>
+                          <p className="font-medium text-primary text-xs sm:text-sm">{broker.spread}</p>
+                        </div>
+                        <div>
+                          <p className="text-muted-foreground mb-1 text-xs">Depósito Mín.</p>
+                          <p className="font-medium text-xs sm:text-sm">{broker.minDeposit}</p>
+                        </div>
+                        <div>
+                          <p className="text-muted-foreground mb-1 text-xs">Avaliação</p>
+                          <div className="flex items-center gap-1">
+                            <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-primary text-primary" />
+                            <span className="font-medium text-xs sm:text-sm">{broker.rating}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   {/* CTA */}
-                  <Button variant="outline" className="group/btn border-primary/30 hover:bg-primary hover:text-primary-foreground">
+                  <Button variant="outline" size="sm" className="w-full sm:w-auto group/btn border-primary/30 hover:bg-primary hover:text-primary-foreground">
                     Ver Detalhes
                     <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                   </Button>
