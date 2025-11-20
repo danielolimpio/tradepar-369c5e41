@@ -13,84 +13,396 @@ const CorretoraDetalhe = () => {
   const { brokerSlug } = useParams<{ brokerSlug: string }>();
   const currentSlug = brokerSlug || "ig-group";
 
-  const brokerData = {
-    name: "IG Group",
-    fullName: "IG Group Holdings plc",
-    founded: "1974",
-    headquarters: "Londres, Reino Unido",
-    ceo: "June Felix",
-    stockCode: "LSE: IGG",
-    website: "https://www.ig.com",
-    email: "support@ig.com",
-    languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+15 idiomas"],
-    rating: 4.8,
-    verified: true,
-    lastUpdate: "Novembro de 2025"
+  // Database de corretoras
+  const brokersDatabase: Record<string, any> = {
+    "ig-group": {
+      brokerData: {
+        name: "IG Group",
+        fullName: "IG Group Holdings plc",
+        founded: "1974",
+        headquarters: "Londres, Reino Unido",
+        ceo: "June Felix",
+        stockCode: "LSE: IGG",
+        website: "https://www.ig.com",
+        email: "support@ig.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+15 idiomas"],
+        rating: 4.8,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "113942", status: "Ativa", compensation: "£85.000" },
+        { name: "ASIC", country: "Austrália", license: "220440", status: "Ativa", compensation: "Não aplicável" },
+        { name: "BaFin", country: "Alemanha", license: "148759", status: "Ativa", compensation: "€100.000" },
+        { name: "MAS", country: "Cingapura", license: "CMS100896", status: "Ativa", compensation: "Não aplicável" },
+      ],
+      globalPresence: {
+        offices: 15,
+        countriesServed: 170,
+        mainOffices: [
+          "Londres (Sede Principal)",
+          "Chicago (EUA)",
+          "Cingapura",
+          "Sydney (Austrália)",
+          "Joanesburgo (África do Sul)"
+        ]
+      },
+      metrics: {
+        activeClients: "350.000+",
+        monthlyVolume: "$2,8 trilhões USD",
+        marketCap: "£3,2 bilhões",
+        annualProfit: "£467 milhões (2024)",
+        monthlyTraffic: "8,5 milhões de visitas",
+        yearsActive: "51 anos"
+      }
+    },
+    "saxo-bank": {
+      brokerData: {
+        name: "Saxo Bank",
+        fullName: "Saxo Bank A/S",
+        founded: "1992",
+        headquarters: "Copenhague, Dinamarca",
+        ceo: "Kim Fournais",
+        stockCode: "Empresa Privada",
+        website: "https://www.saxobank.com",
+        email: "support@saxobank.com",
+        languages: ["Português", "Inglês", "Dinamarquês", "Alemão", "Francês", "+20 idiomas"],
+        rating: 4.7,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FSA", country: "Dinamarca", license: "8171", status: "Ativa", compensation: "€20.000" },
+        { name: "FCA", country: "Reino Unido", license: "551422", status: "Ativa", compensation: "£85.000" },
+        { name: "ASIC", country: "Austrália", license: "398628", status: "Ativa", compensation: "Não aplicável" },
+        { name: "MAS", country: "Cingapura", license: "CMS100747", status: "Ativa", compensation: "Não aplicável" },
+      ],
+      globalPresence: {
+        offices: 12,
+        countriesServed: 180,
+        mainOffices: [
+          "Copenhague (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Cingapura",
+          "Zurique (Suíça)",
+          "Paris (França)"
+        ]
+      },
+      metrics: {
+        activeClients: "1,2 milhões+",
+        monthlyVolume: "$4,5 trilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "€320 milhões (2024)",
+        monthlyTraffic: "6,2 milhões de visitas",
+        yearsActive: "33 anos"
+      }
+    },
+    "interactive-brokers": {
+      brokerData: {
+        name: "Interactive Brokers",
+        fullName: "Interactive Brokers Group, Inc.",
+        founded: "1978",
+        headquarters: "Greenwich, Connecticut, EUA",
+        ceo: "Milan Galik",
+        stockCode: "NASDAQ: IBKR",
+        website: "https://www.interactivebrokers.com",
+        email: "help@interactivebrokers.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+15 idiomas"],
+        rating: 4.6,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "SEC", country: "Estados Unidos", license: "8-47257", status: "Ativa", compensation: "$500.000" },
+        { name: "FINRA", country: "Estados Unidos", license: "BD-36418", status: "Ativa", compensation: "$500.000" },
+        { name: "FCA", country: "Reino Unido", license: "208159", status: "Ativa", compensation: "£85.000" },
+        { name: "ASIC", country: "Austrália", license: "453554", status: "Ativa", compensation: "Não aplicável" },
+      ],
+      globalPresence: {
+        offices: 14,
+        countriesServed: 200,
+        mainOffices: [
+          "Greenwich, CT (Sede Principal)",
+          "Chicago (EUA)",
+          "Londres (Reino Unido)",
+          "Hong Kong",
+          "Sydney (Austrália)"
+        ]
+      },
+      metrics: {
+        activeClients: "2,8 milhões+",
+        monthlyVolume: "$35 bilhões USD (dia)",
+        marketCap: "$52 bilhões USD",
+        annualProfit: "$2,1 bilhões (2024)",
+        monthlyTraffic: "12 milhões de visitas",
+        yearsActive: "47 anos"
+      }
+    },
+    "cmc-markets": {
+      brokerData: {
+        name: "CMC Markets",
+        fullName: "CMC Markets plc",
+        founded: "1989",
+        headquarters: "Londres, Reino Unido",
+        ceo: "Lord Cruddas",
+        stockCode: "LSE: CMCX",
+        website: "https://www.cmcmarkets.com",
+        email: "support@cmcmarkets.com",
+        languages: ["Português", "Inglês", "Alemão", "Francês", "Italiano", "+12 idiomas"],
+        rating: 4.5,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "173730", status: "Ativa", compensation: "£85.000" },
+        { name: "ASIC", country: "Austrália", license: "238054", status: "Ativa", compensation: "Não aplicável" },
+        { name: "BaFin", country: "Alemanha", license: "154814", status: "Ativa", compensation: "€100.000" },
+        { name: "MAS", country: "Cingapura", license: "CMS100133", status: "Ativa", compensation: "Não aplicável" },
+      ],
+      globalPresence: {
+        offices: 11,
+        countriesServed: 175,
+        mainOffices: [
+          "Londres (Sede Principal)",
+          "Sydney (Austrália)",
+          "Frankfurt (Alemanha)",
+          "Cingapura",
+          "Auckland (Nova Zelândia)"
+        ]
+      },
+      metrics: {
+        activeClients: "180.000+",
+        monthlyVolume: "$1,5 trilhões USD",
+        marketCap: "£850 milhões",
+        annualProfit: "£285 milhões (2024)",
+        monthlyTraffic: "5,8 milhões de visitas",
+        yearsActive: "36 anos"
+      }
+    },
+    "pepperstone": {
+      brokerData: {
+        name: "Pepperstone",
+        fullName: "Pepperstone Group Limited",
+        founded: "2010",
+        headquarters: "Melbourne, Austrália",
+        ceo: "Tamas Szabo",
+        stockCode: "Empresa Privada",
+        website: "https://www.pepperstone.com",
+        email: "support@pepperstone.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+12 idiomas"],
+        rating: 4.7,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "ASIC", country: "Austrália", license: "414530", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FCA", country: "Reino Unido", license: "684312", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "388/20", status: "Ativa", compensation: "€20.000" },
+        { name: "BaFin", country: "Alemanha", license: "151148", status: "Ativa", compensation: "€100.000" },
+      ],
+      globalPresence: {
+        offices: 8,
+        countriesServed: 170,
+        mainOffices: [
+          "Melbourne (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Limassol (Chipre)",
+          "Dubai (EAU)",
+          "Nairóbi (Quênia)"
+        ]
+      },
+      metrics: {
+        activeClients: "400.000+",
+        monthlyVolume: "$3,2 trilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "7,5 milhões de visitas",
+        yearsActive: "15 anos"
+      }
+    }
   };
 
-  let regulations = [
-    { name: "FCA", country: "Reino Unido", license: "113942", status: "Ativa", compensation: "£85.000" },
-    { name: "ASIC", country: "Austrália", license: "220440", status: "Ativa", compensation: "Não aplicável" },
-    { name: "BaFin", country: "Alemanha", license: "148759", status: "Ativa", compensation: "€100.000" },
-    { name: "MAS", country: "Cingapura", license: "CMS100896", status: "Ativa", compensation: "Não aplicável" },
-  ];
+  // Obter dados da corretora atual
+  const currentBroker = brokersDatabase[currentSlug] || brokersDatabase["ig-group"];
+  const brokerData = currentBroker.brokerData;
+  let regulations = currentBroker.regulations;
+  let globalPresence = currentBroker.globalPresence;
+  let metrics = currentBroker.metrics;
 
-  let globalPresence = {
-    offices: 15,
-    countriesServed: 170,
-    mainOffices: [
-      "Londres (Sede Principal)",
-      "Chicago (EUA)",
-      "Cingapura",
-      "Sydney (Austrália)",
-      "Joanesburgo (África do Sul)"
-    ]
+  // Dados específicos de plataformas, instrumentos, condições por corretora
+  const platformsDatabase: Record<string, any> = {
+    "ig-group": {
+      platforms: [
+        { name: "Plataforma Própria IG", available: true },
+        { name: "MetaTrader 4", available: true },
+        { name: "ProRealTime", available: true },
+        { name: "L2 Dealer", available: true },
+        { name: "TradingView", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "80+ pares" },
+        { type: "Ações", count: "17.000+" },
+        { type: "Índices", count: "90+" },
+        { type: "Commodities", count: "50+" },
+        { type: "Criptomoedas", count: "15+" },
+        { type: "ETFs", count: "3.000+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$0 (sem mínimo)" },
+        { label: "Spread EUR/USD", value: "A partir de 0,6 pips" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:200 (profissional)" },
+        { label: "Comissão", value: "A partir de $0 (depende do tipo de conta)" },
+        { label: "Swap Overnight", value: "Variável (ver site)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$250 - sem limite" },
+        { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" }
+      ]
+    },
+    "saxo-bank": {
+      platforms: [
+        { name: "SaxoTraderGO", available: true },
+        { name: "SaxoTraderPRO", available: true },
+        { name: "SaxoInvestor", available: true },
+        { name: "TradingView", available: true },
+        { name: "API Trading", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "185+ pares" },
+        { type: "Ações", count: "19.000+" },
+        { type: "Índices", count: "100+" },
+        { type: "Commodities", count: "60+" },
+        { type: "Criptomoedas", count: "20+" },
+        { type: "Títulos", count: "3.500+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$2.000 (conta Classic)" },
+        { label: "Spread EUR/USD", value: "A partir de 0,9 pips" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:200 (profissional)" },
+        { label: "Comissão", value: "A partir de $5 por operação" },
+        { label: "Swap Overnight", value: "Variável (competitivo)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Suporte via API" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$2.000 - sem limite" },
+        { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Transferência Internacional", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" }
+      ]
+    },
+    "interactive-brokers": {
+      platforms: [
+        { name: "TWS (Trader Workstation)", available: true },
+        { name: "IBKR Mobile", available: true },
+        { name: "Client Portal", available: true },
+        { name: "API Trading", available: true },
+        { name: "TradingView (integração)", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "105+ pares" },
+        { type: "Ações", count: "150+ mercados globais" },
+        { type: "Índices", count: "100+" },
+        { type: "Futuros", count: "350+" },
+        { type: "Opções", count: "1,2 milhões+" },
+        { type: "Títulos", count: "1 milhão+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$0 (sem mínimo)" },
+        { label: "Spread EUR/USD", value: "A partir de 0,2 pips" },
+        { label: "Alavancagem Máxima", value: "1:50 (varia por região)" },
+        { label: "Comissão", value: "A partir de $0,0005 por ação" },
+        { label: "Taxas de Juros", value: "Benchmark -0,5% a 1,5%" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "API Access", value: "Sim (gratuito)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Transferência ACH (EUA)", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Transferência Bancária", time: "1-4 dias úteis", fees: "Gratuito (depósito)", limits: "Sem limite" },
+        { method: "Cheque", time: "5-7 dias úteis", fees: "$1", limits: "Sem limite" }
+      ]
+    },
+    "cmc-markets": {
+      platforms: [
+        { name: "Next Generation", available: true },
+        { name: "MetaTrader 4", available: true },
+        { name: "CMC Invest", available: true },
+        { name: "TradingView", available: true },
+        { name: "API Trading", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "330+ pares" },
+        { type: "Ações", count: "12.000+" },
+        { type: "Índices", count: "100+" },
+        { type: "Commodities", count: "110+" },
+        { type: "Criptomoedas", count: "25+" },
+        { type: "Treasuries", count: "45+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$0 (sem mínimo)" },
+        { label: "Spread EUR/USD", value: "A partir de 0,7 pips" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:500 (profissional)" },
+        { label: "Comissão", value: "$0 em CFDs (spread incluso)" },
+        { label: "Swap Overnight", value: "Variável (competitivo)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$250 - sem limite" },
+        { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$250 - $5.000" },
+        { method: "ApplePay", time: "Instantâneo", fees: "Gratuito", limits: "$250 - $5.000" }
+      ]
+    },
+    "pepperstone": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "cTrader", available: true },
+        { name: "TradingView", available: true },
+        { name: "API Trading", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "60+ pares" },
+        { type: "Ações CFDs", count: "1.300+" },
+        { type: "Índices", count: "25+" },
+        { type: "Commodities", count: "22+" },
+        { type: "Criptomoedas", count: "20+" },
+        { type: "ETFs", count: "100+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$200" },
+        { label: "Spread EUR/USD", value: "A partir de 0,6 pips (Standard)" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:500 (profissional)" },
+        { label: "Comissão", value: "$0 (Standard) / $3,5 por lote (Razor)" },
+        { label: "Swap Overnight", value: "Variável (ver site)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4/MT5)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$200 - sem limite" },
+        { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$200 - $10.000" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$200 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$200 - $10.000" }
+      ]
+    }
   };
 
-  let metrics = {
-    activeClients: "350.000+",
-    monthlyVolume: "$2,8 trilhões USD",
-    marketCap: "£3,2 bilhões",
-    annualProfit: "£467 milhões (2024)",
-    monthlyTraffic: "8,5 milhões de visitas",
-    yearsActive: "51 anos"
-  };
-
-  const platforms = [
-    { name: "Plataforma Própria IG", available: true },
-    { name: "MetaTrader 4", available: true },
-    { name: "ProRealTime", available: true },
-    { name: "L2 Dealer", available: true },
-    { name: "TradingView", available: true }
-  ];
-
-  const instruments = [
-    { type: "Forex", count: "80+ pares" },
-    { type: "Ações", count: "17.000+" },
-    { type: "Índices", count: "90+" },
-    { type: "Commodities", count: "50+" },
-    { type: "Criptomoedas", count: "15+" },
-    { type: "ETFs", count: "3.000+" }
-  ];
-
-  const tradingConditions = [
-    { label: "Depósito Mínimo", value: "$0 (sem mínimo)" },
-    { label: "Spread EUR/USD", value: "A partir de 0,6 pips" },
-    { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:200 (profissional)" },
-    { label: "Comissão", value: "A partir de $0 (depende do tipo de conta)" },
-    { label: "Swap Overnight", value: "Variável (ver site)" },
-    { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
-    { label: "Expert Advisors", value: "Sim (MT4)" },
-    { label: "Scalping", value: "Permitido" }
-  ];
-
-  const paymentMethods = [
-    { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$250 - sem limite" },
-    { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
-    { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
-    { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
-    { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" }
-  ];
+  const currentPlatformData = platformsDatabase[currentSlug] || platformsDatabase["ig-group"];
+  const platforms = currentPlatformData.platforms;
+  const instruments = currentPlatformData.instruments;
+  const tradingConditions = currentPlatformData.tradingConditions;
+  const paymentMethods = currentPlatformData.paymentMethods;
 
   const competitors = [
     { name: "IG Group", spread: "0,6", minDeposit: "$0", regulation: "FCA, ASIC, BaFin", rating: "4.8" },
@@ -100,43 +412,195 @@ const CorretoraDetalhe = () => {
     { name: "Pepperstone", spread: "0,6", minDeposit: "$200", regulation: "FCA, ASIC, CySEC", rating: "4.7" }
   ];
 
-  const timeline = [
-    { year: "1974", event: "Fundação da IG Index por Stuart Wheeler" },
-    { year: "2000", event: "Lançamento da primeira plataforma online de trading" },
-    { year: "2003", event: "Expansão internacional: abertura de escritório em Chicago" },
-    { year: "2008", event: "Aquisição da corretora americana FuturesBetting" },
-    { year: "2016", event: "Listagem na Bolsa de Londres (LSE: IGG)" },
-    { year: "2019", event: "Aquisição da plataforma de investimentos Tastytrade" },
-    { year: "2023", event: "Lançamento de trading de criptomoedas em 14 países" },
-    { year: "2025", event: "Mais de 350.000 clientes ativos em 170+ países" }
-  ];
+  // Database de timelines e FAQs por corretora
+  const timelineDatabase: Record<string, any> = {
+    "ig-group": [
+      { year: "1974", event: "Fundação da IG Index por Stuart Wheeler" },
+      { year: "2000", event: "Lançamento da primeira plataforma online de trading" },
+      { year: "2003", event: "Expansão internacional: abertura de escritório em Chicago" },
+      { year: "2008", event: "Aquisição da corretora americana FuturesBetting" },
+      { year: "2016", event: "Listagem na Bolsa de Londres (LSE: IGG)" },
+      { year: "2019", event: "Aquisição da plataforma de investimentos Tastytrade" },
+      { year: "2023", event: "Lançamento de trading de criptomoedas em 14 países" },
+      { year: "2025", event: "Mais de 350.000 clientes ativos em 170+ países" }
+    ],
+    "saxo-bank": [
+      { year: "1992", event: "Fundação em Copenhague por Lars Seier Christensen e Kim Fournais" },
+      { year: "1998", event: "Lançamento da primeira plataforma de trading multi-ativo online" },
+      { year: "2000", event: "Expansão para mercados asiáticos com escritório em Cingapura" },
+      { year: "2006", event: "Abertura de escritórios em Londres e Paris" },
+      { year: "2012", event: "Lançamento do SaxoTraderGO, plataforma de próxima geração" },
+      { year: "2017", event: "Parceria estratégica com Geely Group da China" },
+      { year: "2021", event: "Lançamento de trading de criptomoedas e ETFs temáticos" },
+      { year: "2025", event: "Mais de 1,2 milhões de clientes em 180+ países" }
+    ],
+    "interactive-brokers": [
+      { year: "1978", event: "Fundação como Timber Hill por Thomas Peterffy" },
+      { year: "1990", event: "Desenvolvimento de sistema automatizado de negociação de opções" },
+      { year: "1993", event: "Lançamento da primeira plataforma eletrônica de trading (TWS)" },
+      { year: "2001", event: "Expansão internacional com escritórios na Europa e Ásia" },
+      { year: "2007", event: "IPO na NASDAQ (IBKR)" },
+      { year: "2015", event: "Lançamento do IBKR Lite com comissões zero" },
+      { year: "2021", event: "Adição de trading de criptomoedas" },
+      { year: "2025", event: "Mais de 2,8 milhões de clientes e $430 bilhões em ativos" }
+    ],
+    "cmc-markets": [
+      { year: "1989", event: "Fundação em Londres por Peter Cruddas como CMC (Currency Management Corporation)" },
+      { year: "1996", event: "Lançamento da primeira plataforma de trading online para CFDs" },
+      { year: "2000", event: "Expansão internacional: escritórios na Austrália e Alemanha" },
+      { year: "2005", event: "Lançamento da plataforma Next Generation" },
+      { year: "2016", event: "IPO na Bolsa de Londres (LSE: CMCX)" },
+      { year: "2019", event: "Lançamento do CMC Invest para investimento em ações reais" },
+      { year: "2022", event: "Integração com TradingView e expansão de criptomoedas" },
+      { year: "2025", event: "Mais de 180.000 clientes ativos globalmente" }
+    ],
+    "pepperstone": [
+      { year: "2010", event: "Fundação em Melbourne, Austrália, por Owen Kerr e Joe Davenport" },
+      { year: "2012", event: "Licenciamento pela ASIC e expansão para mercados europeus" },
+      { year: "2015", event: "Lançamento da plataforma cTrader para traders profissionais" },
+      { year: "2017", event: "Abertura de escritório em Londres e licenciamento pela FCA" },
+      { year: "2020", event: "Licenciamento pela CySEC e BaFin na Europa" },
+      { year: "2021", event: "Lançamento de trading de criptomoedas e ações CFDs" },
+      { year: "2024", event: "Parceria estratégica com TradingView" },
+      { year: "2025", event: "Mais de 400.000 clientes ativos em 170+ países" }
+    ]
+  };
 
-  const faqs = [
-    {
-      question: "A IG Group é segura?",
-      answer: "Sim, a IG Group é uma das corretoras mais seguras do mundo. Está regulada pela FCA (Reino Unido), ASIC (Austrália), BaFin (Alemanha) e outras autoridades importantes. A empresa é listada na Bolsa de Londres desde 2016 e oferece segregação de fundos, garantindo que o dinheiro dos clientes seja mantido separado dos fundos operacionais da empresa."
-    },
-    {
-      question: "Posso abrir conta no Brasil?",
-      answer: "Sim, a IG Group aceita clientes brasileiros. O processo de abertura de conta é 100% online e pode ser feito em português. É necessário ter mais de 18 anos e fornecer documentos de identificação válidos (RG ou CNH e comprovante de residência)."
-    },
-    {
-      question: "Como faço para sacar meus lucros?",
-      answer: "Os saques podem ser solicitados a qualquer momento através da área de cliente. A IG Group processa saques para a mesma conta/método usado no depósito. Saques por cartão e carteiras eletrônicas são processados em até 2 horas úteis, enquanto transferências bancárias levam 1-3 dias úteis. Não há taxas de saque."
-    },
-    {
-      question: "A IG Group oferece conta demo?",
-      answer: "Sim, a IG Group oferece conta demo gratuita com $20.000 virtuais, válida por tempo ilimitado. A conta demo replica todas as funcionalidades da conta real, permitindo que você teste estratégias sem risco antes de investir dinheiro real."
-    },
-    {
-      question: "Qual é o depósito mínimo?",
-      answer: "A IG Group não exige depósito mínimo para abrir conta. No entanto, para começar a negociar, é recomendado ter pelo menos $250-$500 para gerenciar adequadamente o risco e aproveitar as oportunidades do mercado."
-    },
-    {
-      question: "Existe risco de perder mais do que eu investi?",
-      answer: "Para contas de varejo na Europa e Austrália, a IG Group oferece proteção de saldo negativo, garantindo que você não possa perder mais do que o saldo da sua conta. No entanto, é importante lembrar que 75% dos clientes perdem dinheiro ao negociar CFDs. Negocie com responsabilidade."
-    }
-  ];
+  const faqsDatabase: Record<string, any> = {
+    "ig-group": [
+      {
+        question: "A IG Group é segura?",
+        answer: "Sim, a IG Group é uma das corretoras mais seguras do mundo. Está regulada pela FCA (Reino Unido), ASIC (Austrália), BaFin (Alemanha) e outras autoridades importantes. A empresa é listada na Bolsa de Londres desde 2016 e oferece segregação de fundos, garantindo que o dinheiro dos clientes seja mantido separado dos fundos operacionais da empresa."
+      },
+      {
+        question: "Posso abrir conta no Brasil?",
+        answer: "Sim, a IG Group aceita clientes brasileiros. O processo de abertura de conta é 100% online e pode ser feito em português. É necessário ter mais de 18 anos e fornecer documentos de identificação válidos (RG ou CNH e comprovante de residência)."
+      },
+      {
+        question: "Como faço para sacar meus lucros?",
+        answer: "Os saques podem ser solicitados a qualquer momento através da área de cliente. A IG Group processa saques para a mesma conta/método usado no depósito. Saques por cartão e carteiras eletrônicas são processados em até 2 horas úteis, enquanto transferências bancárias levam 1-3 dias úteis. Não há taxas de saque."
+      },
+      {
+        question: "A IG Group oferece conta demo?",
+        answer: "Sim, a IG Group oferece conta demo gratuita com $20.000 virtuais, válida por tempo ilimitado. A conta demo replica todas as funcionalidades da conta real, permitindo que você teste estratégias sem risco antes de investir dinheiro real."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "A IG Group não exige depósito mínimo para abrir conta. No entanto, para começar a negociar, é recomendado ter pelo menos $250-$500 para gerenciar adequadamente o risco e aproveitar as oportunidades do mercado."
+      },
+      {
+        question: "Existe risco de perder mais do que eu investi?",
+        answer: "Para contas de varejo na Europa e Austrália, a IG Group oferece proteção de saldo negativo, garantindo que você não possa perder mais do que o saldo da sua conta. No entanto, é importante lembrar que 75% dos clientes perdem dinheiro ao negociar CFDs. Negocie com responsabilidade."
+      }
+    ],
+    "saxo-bank": [
+      {
+        question: "A Saxo Bank é segura e confiável?",
+        answer: "Sim, a Saxo Bank é altamente confiável e está entre as corretoras mais seguras globalmente. É regulada pela FSA dinamarquesa, FCA britânica, ASIC australiana e MAS de Cingapura. Com mais de 30 anos de história e parcerias com grandes instituições financeiras, a Saxo Bank oferece segregação total de fundos e compensação de até €20.000 na Europa."
+      },
+      {
+        question: "Qual é o depósito mínimo na Saxo Bank?",
+        answer: "O depósito mínimo para conta Classic é de $2.000 USD. Para a conta Platinum, o mínimo é $200.000. Existe também a conta VIP que requer $1 milhão ou mais. Cada tipo de conta oferece diferentes níveis de spreads, comissões e serviços premium."
+      },
+      {
+        question: "Brasileiros podem abrir conta na Saxo Bank?",
+        answer: "Sim, a Saxo Bank aceita clientes brasileiros através de sua entidade europeia. O processo de abertura de conta é totalmente online, disponível em português, e requer documentos de identificação válidos (passaporte ou RG) e comprovante de residência recente."
+      },
+      {
+        question: "Quais plataformas de trading a Saxo Bank oferece?",
+        answer: "A Saxo Bank oferece três plataformas principais: SaxoTraderGO (web e mobile, ideal para traders ativos), SaxoTraderPRO (plataforma desktop avançada para profissionais) e SaxoInvestor (para investidores de longo prazo). Todas incluem ferramentas profissionais de análise, gráficos e execução rápida."
+      },
+      {
+        question: "A Saxo Bank oferece conta demo?",
+        answer: "Sim, a Saxo Bank oferece conta demo gratuita com $100.000 virtuais, válida por 20 dias. A conta demo replica completamente as plataformas reais, permitindo testar todas as funcionalidades, instrumentos e estratégias antes de investir capital real."
+      },
+      {
+        question: "Quais são as taxas e comissões?",
+        answer: "As comissões variam por tipo de conta e instrumento. Para forex, spreads começam em 0,9 pips no EUR/USD. Para ações, comissões começam em $5 por ordem (conta Classic). A Saxo Bank tem estrutura de preços escalonada: quanto maior o volume de trading, menores as comissões."
+      }
+    ],
+    "interactive-brokers": [
+      {
+        question: "A Interactive Brokers é segura?",
+        answer: "Sim, a Interactive Brokers é extremamente segura e é considerada uma das corretoras mais sólidas financeiramente do mundo. É regulada pela SEC e FINRA nos EUA, FCA no Reino Unido e ASIC na Austrália. Com mais de $430 bilhões em ativos de clientes e 47 anos de história, oferece compensação de até $500.000 por conta nos EUA (incluindo $250.000 em dinheiro)."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "A Interactive Brokers não exige depósito mínimo para abrir conta. Porém, para acessar todos os recursos e mercados, é recomendado ter pelo menos $2.000. Para contas de margem, o mínimo regulatório nos EUA é $2.000. Para contas Portfolio Margin, o mínimo é $110.000."
+      },
+      {
+        question: "Brasileiros podem investir pela Interactive Brokers?",
+        answer: "Sim, a Interactive Brokers aceita clientes brasileiros e é uma das corretoras internacionais mais populares no Brasil. O processo de abertura de conta é online, mas requer nível intermediário de inglês. É necessário ter CPF, documentos válidos e conhecimento sobre investimentos internacionais e declaração no Imposto de Renda."
+      },
+      {
+        question: "Quais mercados posso acessar?",
+        answer: "A Interactive Brokers oferece acesso a mais de 150 mercados em 33 países. Você pode negociar ações, opções, futuros, forex, títulos, fundos mútuos e ETFs nas principais bolsas mundiais (NYSE, NASDAQ, LSE, Euronext, TSE, HKEX, etc). É a maior variedade de mercados entre todas as corretoras."
+      },
+      {
+        question: "Como funcionam as comissões?",
+        answer: "A Interactive Brokers oferece dois planos: IBKR Lite (sem comissões para ações e ETFs dos EUA, mas sem acesso a todos os mercados) e IBKR Pro (comissões ultra baixas a partir de $0,0005 por ação, com acesso total a todos os mercados). Para forex, spreads começam em 0,2 pips. É uma das corretoras mais baratas do mercado."
+      },
+      {
+        question: "Existe conta demo?",
+        answer: "Sim, a Interactive Brokers oferece conta demo gratuita (Paper Trading) com $1.000.000 virtuais, válida indefinidamente. A conta demo usa a mesma plataforma TWS da conta real, com dados de mercado em tempo real e acesso a todos os instrumentos e funcionalidades."
+      }
+    ],
+    "cmc-markets": [
+      {
+        question: "A CMC Markets é segura?",
+        answer: "Sim, a CMC Markets é uma corretora segura e confiável, regulada pela FCA (Reino Unido), ASIC (Austrália) e BaFin (Alemanha). Está listada na Bolsa de Londres desde 2016 (LSE: CMCX). Com mais de 36 anos de história e 180.000 clientes ativos, oferece segregação de fundos e compensação de até £85.000 no Reino Unido e €100.000 na Alemanha."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "A CMC Markets não exige depósito mínimo para abrir conta. No entanto, o valor mínimo de depósito recomendado é $250 para começar a negociar adequadamente e gerenciar riscos. Para contas profissionais, não há mínimo específico."
+      },
+      {
+        question: "Brasileiros podem abrir conta?",
+        answer: "Sim, a CMC Markets aceita clientes brasileiros através de sua entidade europeia ou australiana. O processo é 100% online, disponível em português. É necessário ter mais de 18 anos, documentos válidos (RG/CNH e comprovante de residência) e passar por verificação KYC (Know Your Customer)."
+      },
+      {
+        question: "Quais plataformas estão disponíveis?",
+        answer: "A CMC Markets oferece sua plataforma proprietária Next Generation (web e mobile), MetaTrader 4, TradingView (integração) e a plataforma CMC Invest para investimento em ações reais. A Next Generation é premiada e oferece mais de 115 indicadores técnicos, gráficos avançados e execução rápida."
+      },
+      {
+        question: "Existe conta demo?",
+        answer: "Sim, a CMC Markets oferece conta demo gratuita com $10.000 virtuais, válida por 30 dias (renovável). A conta demo replica todas as funcionalidades da conta real, incluindo acesso a mais de 12.000 instrumentos, gráficos profissionais e dados de mercado em tempo real."
+      },
+      {
+        question: "Quais são os spreads e comissões?",
+        answer: "A CMC Markets oferece spreads competitivos: EUR/USD a partir de 0,7 pips, GBP/USD 0,9 pips. Para CFDs de ações, não há comissão adicional (spread incluso). A conta CMC Invest (ações reais) cobra comissão de $10 para ações americanas e £10 para ações britânicas. Não há taxas de inatividade nos primeiros 12 meses."
+      }
+    ],
+    "pepperstone": [
+      {
+        question: "A Pepperstone é confiável e segura?",
+        answer: "Sim, a Pepperstone é altamente confiável. É regulada pela ASIC (Austrália), FCA (Reino Unido), CySEC (Chipre) e BaFin (Alemanha). Com mais de 15 anos de operação e 400.000 clientes ativos, oferece segregação de fundos em bancos tier-1 e compensação de até £85.000 (Reino Unido) e €20.000 (Chipre). É uma das corretoras forex mais populares globalmente."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "O depósito mínimo na Pepperstone é de $200 USD (ou equivalente em outras moedas). Este valor é acessível para traders iniciantes, mas é recomendado ter pelo menos $500-$1.000 para gerenciar adequadamente o risco e aproveitar as oportunidades do mercado forex e CFDs."
+      },
+      {
+        question: "Brasileiros podem abrir conta?",
+        answer: "Sim, a Pepperstone aceita clientes brasileiros através de sua entidade europeia (Chipre) ou australiana. O processo de abertura é 100% online, disponível em português. É necessário ter mais de 18 anos, CPF, documento de identificação válido (RG ou CNH) e comprovante de residência recente."
+      },
+      {
+        question: "Qual a diferença entre conta Standard e Razor?",
+        answer: "A conta Standard tem spreads a partir de 1,0 pip no EUR/USD e não cobra comissão. A conta Razor oferece spreads crus (raw) a partir de 0,0 pips, mas cobra comissão de $3,50 por lote negociado (ida e volta). A Razor é ideal para traders de volume médio/alto e scalpers. Ambas oferecem as mesmas plataformas e instrumentos."
+      },
+      {
+        question: "Existe conta demo?",
+        answer: "Sim, a Pepperstone oferece conta demo gratuita com $50.000 virtuais, sem limite de tempo. A conta demo está disponível para MT4, MT5 e cTrader, replicando todas as funcionalidades da conta real, incluindo spreads reais, dados de mercado e execução. É perfeita para testar estratégias sem risco."
+      },
+      {
+        question: "Quais plataformas de trading estão disponíveis?",
+        answer: "A Pepperstone oferece MetaTrader 4 (MT4), MetaTrader 5 (MT5), cTrader e integração com TradingView. Todas as plataformas estão disponíveis em versões desktop, web e mobile. A escolha depende do seu estilo: MT4/MT5 para EAs e análise técnica avançada, cTrader para execução institucional e interface moderna."
+      }
+    ]
+  };
+
+  const timeline = timelineDatabase[currentSlug] || timelineDatabase["ig-group"];
+  const faqs = faqsDatabase[currentSlug] || faqsDatabase["ig-group"];
 
   return (
     <>
