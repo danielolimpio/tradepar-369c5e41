@@ -54,37 +54,37 @@ const StrategiesSection = () => {
         </div>
 
         {/* Strategy Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {strategies.map((strategy, index) => {
             const Icon = strategy.icon;
             
             return (
               <div
                 key={index}
-                className="group bg-card border border-border rounded-xl p-6 hover-lift hover:border-primary/40 transition-all relative overflow-hidden"
+                className="group bg-card border border-border rounded-xl p-4 sm:p-6 hover-lift hover:border-primary/40 transition-all relative overflow-hidden"
               >
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 
                 {/* Content */}
-                <div className="relative z-10 space-y-4">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 group-hover:glow-bull transition-all">
-                    <Icon className="h-6 w-6 text-primary" />
+                <div className="relative z-10 space-y-3 sm:space-y-4">
+                  <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 border border-primary/20 group-hover:glow-bull transition-all">
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
                   
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{strategy.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <h3 className="text-lg sm:text-xl font-bold mb-2">{strategy.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                       {strategy.description}
                     </p>
                   </div>
 
-                  <div className="space-y-2 pt-4 border-t border-border">
-                    <div className="flex justify-between text-sm">
+                  <div className="space-y-2 pt-3 sm:pt-4 border-t border-border">
+                    <div className="flex justify-between text-xs sm:text-sm">
                       <span className="text-muted-foreground">Timeframe</span>
                       <span className="font-medium">{strategy.timeframe}</span>
                     </div>
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-xs sm:text-sm">
                       <span className="text-muted-foreground">Risco</span>
                       <span className={`font-medium ${
                         strategy.risk === "Alto" ? "text-destructive" : 
@@ -94,7 +94,7 @@ const StrategiesSection = () => {
                         {strategy.risk}
                       </span>
                     </div>
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-xs sm:text-sm">
                       <span className="text-muted-foreground">Para</span>
                       <span className="font-medium">{strategy.suitable}</span>
                     </div>

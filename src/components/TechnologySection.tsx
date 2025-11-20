@@ -51,7 +51,7 @@ const TechnologySection = () => {
         </div>
 
         {/* Platform Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {platforms.map((platform, index) => {
             const Icon = platform.icon;
             const isPrimary = platform.color === "primary";
@@ -63,20 +63,20 @@ const TechnologySection = () => {
               >
                 <div className={`absolute inset-0 bg-gradient-to-br from-${platform.color}/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity`} />
                 
-                <CardHeader>
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-${platform.color}/10 border border-${platform.color}/20 mb-4`}>
-                    <Icon className={`h-6 w-6 text-${platform.color}`} />
+                <CardHeader className="p-4 sm:p-6">
+                  <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-${platform.color}/10 border border-${platform.color}/20 mb-3 sm:mb-4`}>
+                    <Icon className={`h-5 w-5 sm:h-6 sm:w-6 text-${platform.color}`} />
                   </div>
-                  <CardTitle className="text-2xl">{platform.title}</CardTitle>
-                  <CardDescription className="text-base">
+                  <CardTitle className="text-xl sm:text-2xl">{platform.title}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base">
                     {platform.description}
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent>
+                <CardContent className="p-4 sm:p-6 pt-0">
                   <ul className="space-y-2">
                     {platform.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <li key={i} className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
                         <div className={`w-1.5 h-1.5 rounded-full bg-${platform.color}`} />
                         {feature}
                       </li>

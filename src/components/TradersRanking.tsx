@@ -59,62 +59,64 @@ const TradersRanking = () => {
         </div>
 
         {/* Trader Cards */}
-        <div className="max-w-5xl mx-auto space-y-6">
+        <div className="max-w-5xl mx-auto space-y-4">
           {topTraders.map((trader) => (
-            <div key={trader.rank} className="flex items-center gap-4">
+            <div key={trader.rank} className="flex items-start gap-2 sm:gap-4">
               {/* Rank Badge - Outside */}
-              <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-lg bg-background border-2 border-destructive text-xl font-bold text-destructive">
+              <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-lg bg-background border-2 border-destructive text-lg sm:text-xl font-bold text-destructive">
                 {trader.rank}º
               </div>
               
               {/* Trader Card */}
-              <div className="flex-1 group bg-card border border-border rounded-xl p-6 hover-lift hover:border-destructive/40 transition-all">
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                  {/* Avatar */}
-                  <div className="flex-shrink-0">
-                    <img 
-                      src={trader.avatar} 
-                      alt={trader.name}
-                      className="w-24 h-24 object-cover rounded-lg border-2 border-border"
-                    />
-                  </div>
-
-                  {/* Info */}
-                  <div className="flex-1 space-y-4">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-xl font-bold">{trader.name}</h3>
-                      {trader.verified && (
-                        <Badge variant="outline" className="border-primary/30 text-primary">
-                          <TrendingUp className="h-3 w-3 mr-1" />
-                          Verificado
-                        </Badge>
-                      )}
-                      <Badge variant="secondary">{trader.strategy}</Badge>
+              <div className="flex-1 group bg-card border border-border rounded-xl p-4 sm:p-6 hover-lift hover:border-destructive/40 transition-all">
+                <div className="flex flex-col gap-4 sm:gap-6">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    {/* Avatar */}
+                    <div className="flex-shrink-0">
+                      <img 
+                        src={trader.avatar} 
+                        alt={trader.name}
+                        className="w-16 h-16 sm:w-24 sm:h-24 object-cover rounded-lg border-2 border-border"
+                      />
                     </div>
 
-                    {/* Stats Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      <div className="space-y-1">
-                        <p className="text-xs text-muted-foreground">Retorno</p>
-                        <p className="text-lg font-bold text-primary">{trader.return}</p>
+                    {/* Info */}
+                    <div className="flex-1 space-y-3 w-full">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="text-lg sm:text-xl font-bold">{trader.name}</h3>
+                        {trader.verified && (
+                          <Badge variant="outline" className="border-primary/30 text-primary text-xs">
+                            <TrendingUp className="h-3 w-3 mr-1" />
+                            Verificado
+                          </Badge>
+                        )}
+                        <Badge variant="secondary" className="text-xs">{trader.strategy}</Badge>
                       </div>
-                      <div className="space-y-1">
-                        <p className="text-xs text-muted-foreground">Drawdown</p>
-                        <p className="text-lg font-bold text-destructive">{trader.drawdown}</p>
-                      </div>
-                      <div className="space-y-1">
-                        <p className="text-xs text-muted-foreground">Win Rate</p>
-                        <p className="text-lg font-bold">{trader.winRate}</p>
-                      </div>
-                      <div className="space-y-1">
-                        <p className="text-xs text-muted-foreground">Trades</p>
-                        <p className="text-lg font-bold">{trader.trades}</p>
+
+                      {/* Stats Grid */}
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground">Retorno</p>
+                          <p className="text-sm sm:text-lg font-bold text-primary">{trader.return}</p>
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground">Drawdown</p>
+                          <p className="text-sm sm:text-lg font-bold text-destructive">{trader.drawdown}</p>
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground">Win Rate</p>
+                          <p className="text-sm sm:text-lg font-bold">{trader.winRate}</p>
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground">Trades</p>
+                          <p className="text-sm sm:text-lg font-bold">{trader.trades}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   {/* CTA */}
-                  <button className="px-6 py-2 rounded-lg border border-destructive/30 text-destructive hover:bg-destructive hover:text-destructive-foreground transition-all font-medium text-sm whitespace-nowrap">
+                  <button className="w-full sm:w-auto px-6 py-2 rounded-lg border border-destructive/30 text-destructive hover:bg-destructive hover:text-destructive-foreground transition-all font-medium text-sm">
                     Ver Perfil
                   </button>
                 </div>

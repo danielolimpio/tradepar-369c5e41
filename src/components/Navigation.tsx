@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { TrendingUp, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,14 +33,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="relative">
-              <TrendingUp className="h-7 w-7 md:h-8 md:w-8 text-primary transition-transform group-hover:scale-110" />
-              <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <span className="text-xl md:text-2xl font-bold tracking-tight">
-              Trade<span className="text-gradient-bull">par</span>
-            </span>
+          <a href="/" className="flex items-center group">
+            <img 
+              src={logo} 
+              alt="Tradepar Logo" 
+              className="h-8 w-auto md:h-10 transition-transform group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Navigation */}
