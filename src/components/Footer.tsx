@@ -14,10 +14,10 @@ const Footer = () => {
     ],
     Recursos: [
       { label: "Blog", href: "/blog" },
-      { label: "Tutoriais", href: "#" },
-      { label: "Ferramentas", href: "#" },
-      { label: "API", href: "#" },
-      { label: "Comunidade", href: "#" },
+      { label: "Tutoriais", href: "/tutoriais" },
+      { label: "Ferramentas", href: "/ferramentas" },
+      { label: "API", href: "/api" },
+      { label: "Comunidade", href: "/comunidade" },
     ],
     Legal: [
       { label: "Termos de Uso", href: "/termos-de-uso" },

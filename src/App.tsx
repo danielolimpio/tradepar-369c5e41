@@ -14,6 +14,10 @@ import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import Disclaimer from "./pages/Disclaimer";
 import Blog from "./pages/Blog";
 import Contato from "./pages/Contato";
+import Tutoriais from "./pages/Tutoriais";
+import Ferramentas from "./pages/Ferramentas";
+import API from "./pages/API";
+import Comunidade from "./pages/Comunidade";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +40,10 @@ const App = () => (
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/tutoriais" element={<Tutoriais />} />
+          <Route path="/ferramentas" element={<Ferramentas />} />
+          <Route path="/api" element={<API />} />
+          <Route path="/comunidade" element={<Comunidade />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
