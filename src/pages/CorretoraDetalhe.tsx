@@ -786,6 +786,281 @@ const CorretoraDetalhe = () => {
         { method: "Perfect Money", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
         { method: "Criptomoedas (Bitcoin)", time: "1-2 horas", fees: "Taxa da rede", limits: "Equivalente a $25+" }
       ]
+    },
+    "tickmill": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "WebTrader", available: true },
+        { name: "Mobile Apps", available: true },
+        { name: "VPS Service", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "80+ pares" },
+        { type: "Ações", count: "150+" },
+        { type: "Índices", count: "12+" },
+        { type: "Commodities", count: "15+" },
+        { type: "Criptomoedas", count: "10+" },
+        { type: "Títulos", count: "12+" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "0.0 pips (Pro)" },
+        { label: "Alavancagem", value: "Até 1:500" },
+        { label: "Comissão", value: "$6 por lote (Pro)" },
+        { label: "Lote Mínimo", value: "0,01 lotes" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - sem limite" },
+        { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+        { method: "FasaPay", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $5.000" }
+      ]
+    },
+    "plus500": {
+      platforms: [
+        { name: "Plus500 WebTrader (Própria)", available: true },
+        { name: "Plus500 Windows App", available: true },
+        { name: "Mobile Apps (iOS/Android)", available: true },
+        { name: "Tablet Apps", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "60+ pares" },
+        { type: "Ações CFDs", count: "2.400+" },
+        { type: "Índices", count: "30+" },
+        { type: "Commodities", count: "25+" },
+        { type: "Criptomoedas", count: "18+" },
+        { type: "ETFs", count: "100+" },
+        { type: "Opções", count: "250+" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "0.8 pips (fixo)" },
+        { label: "Alavancagem", value: "Até 1:30 (varejo)" },
+        { label: "Comissão", value: "Sem comissão" },
+        { label: "Lote Mínimo", value: "Variável por ativo" },
+        { label: "Financiamento Overnight", value: "Aplicável" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $40.000" },
+        { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $20.000" },
+        { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $20.000" },
+        { method: "Apple Pay", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" }
+      ]
+    },
+    "exness": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "Exness Terminal", available: true },
+        { name: "WebTrader", available: true },
+        { name: "Mobile Apps", available: true },
+        { name: "Exness Trade App", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "107+ pares" },
+        { type: "Metais", count: "10+" },
+        { type: "Energias", count: "3+" },
+        { type: "Índices", count: "11+" },
+        { type: "Ações", count: "95+" },
+        { type: "Criptomoedas", count: "35+" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "0.0 pips (Raw)" },
+        { label: "Alavancagem", value: "Ilimitada" },
+        { label: "Comissão", value: "$3.50 por lote (Raw)" },
+        { label: "Lote Mínimo", value: "0,01 lotes" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$10 - sem limite" },
+        { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Perfect Money", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
+        { method: "Bitcoin", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" }
+      ]
+    },
+    "fxtm": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "FXTM Trader", available: true },
+        { name: "WebTrader", available: true },
+        { name: "Mobile Apps", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "60+ pares" },
+        { type: "Metais", count: "5+" },
+        { type: "Energias", count: "3+" },
+        { type: "Índices", count: "13+" },
+        { type: "Ações", count: "180+" },
+        { type: "Criptomoedas", count: "15+" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "1.3 pips (Standard)" },
+        { label: "Alavancagem", value: "Até 1:1000" },
+        { label: "Comissão", value: "$5 por lote (ECN)" },
+        { label: "Lote Mínimo", value: "0,01 lotes" },
+        { label: "Copy Trading", value: "Disponível" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$10 - sem limite" },
+        { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
+        { method: "FasaPay", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $5.000" }
+      ]
+    },
+    "admirals": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "MetaTrader Supreme Edition", available: true },
+        { name: "WebTrader", available: true },
+        { name: "Mobile Apps", available: true },
+        { name: "Admirals Connect (Social)", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "80+ pares" },
+        { type: "Índices", count: "35+" },
+        { type: "Commodities", count: "20+" },
+        { type: "Ações", count: "4.500+" },
+        { type: "ETFs", count: "300+" },
+        { type: "Criptomoedas", count: "50+" },
+        { type: "Títulos", count: "25+" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "0.0 pips (Zero)" },
+        { label: "Alavancagem", value: "Até 1:500" },
+        { label: "Comissão", value: "$3 por lote (Zero)" },
+        { label: "Lote Mínimo", value: "0,01 lotes" },
+        { label: "Ações Reais", value: "Disponível" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$25 - sem limite" },
+        { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
+        { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" }
+      ]
+    },
+    "tickmill": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "WebTrader", available: true },
+        { name: "Mobile Apps", available: true },
+        { name: "VPS Service", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "80+ pares" },
+        { type: "Índices", count: "12" },
+        { type: "Commodities", count: "15" },
+        { type: "Ações", count: "150+" },
+        { type: "Criptomoedas", count: "10" },
+        { type: "Títulos", count: "12" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "0.0 pips (Pro)" },
+        { label: "Alavancagem", value: "Até 1:500" },
+        { label: "Comissão", value: "$6/lote" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100+" },
+        { method: "Transferência Bancária", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill/Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$100-$10k" }
+      ]
+    },
+    "plus500": {
+      platforms: [
+        { name: "Plus500 WebTrader", available: true },
+        { name: "Plus500 Windows", available: true },
+        { name: "Mobile Apps", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "60+ pares" },
+        { type: "Ações CFDs", count: "2.400+" },
+        { type: "Índices", count: "30" },
+        { type: "Criptomoedas", count: "18" },
+        { type: "ETFs", count: "100+" },
+        { type: "Opções", count: "250+" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "0.8 pips (fixo)" },
+        { label: "Alavancagem", value: "1:30" },
+        { label: "Comissão", value: "Sem comissão" }
+      ],
+      paymentMethods: [
+        { method: "Cartão/PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$100-$40k" },
+        { method: "Transferência", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" }
+      ]
+    },
+    "exness": {
+      platforms: [
+        { name: "MT4/MT5", available: true },
+        { name: "Exness Terminal", available: true },
+        { name: "Exness Trade App", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "107 pares" },
+        { type: "Metais", count: "10" },
+        { type: "Criptomoedas", count: "35" },
+        { type: "Ações", count: "95" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "0.0 pips" },
+        { label: "Alavancagem", value: "Ilimitada" },
+        { label: "Comissão", value: "$3.50/lote" }
+      ],
+      paymentMethods: [
+        { method: "Cartão/Bitcoin", time: "Instantâneo", fees: "Gratuito", limits: "$10+" },
+        { method: "Transferência", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" }
+      ]
+    },
+    "fxtm": {
+      platforms: [
+        { name: "MT4/MT5", available: true },
+        { name: "FXTM Trader", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "60 pares" },
+        { type: "Ações", count: "180" },
+        { type: "Criptomoedas", count: "15" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "1.3 pips" },
+        { label: "Alavancagem", value: "1:1000" },
+        { label: "Copy Trading", value: "Disponível" }
+      ],
+      paymentMethods: [
+        { method: "Cartão", time: "Instantâneo", fees: "Gratuito", limits: "$10+" },
+        { method: "Transferência", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" }
+      ]
+    },
+    "admirals": {
+      platforms: [
+        { name: "MT4/MT5", available: true },
+        { name: "MT Supreme Edition", available: true },
+        { name: "Admirals Connect", available: true }
+      ],
+      instruments: [
+        { type: "Ações", count: "4.500+" },
+        { type: "Forex", count: "80 pares" },
+        { type: "ETFs", count: "300+" },
+        { type: "Criptomoedas", count: "50" }
+      ],
+      tradingConditions: [
+        { label: "Spread EUR/USD", value: "0.0 pips" },
+        { label: "Alavancagem", value: "1:500" },
+        { label: "Ações Reais", value: "Sim" }
+      ],
+      paymentMethods: [
+        { method: "Cartão/PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$25+" },
+        { method: "Transferência", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" }
+      ]
     }
   };
 
@@ -1165,6 +1440,563 @@ const CorretoraDetalhe = () => {
       {
         question: "Posso negociar criptomoedas na OctaFX?",
         answer: "Sim, a OctaFX oferece trading de CFDs de 30+ criptomoedas, incluindo Bitcoin, Ethereum e outras altcoins populares. Também aceita depósitos em Bitcoin."
+      }
+    ],
+    "tickmill": {
+      brokerData: {
+        name: "Tickmill",
+        fullName: "Tickmill Group",
+        founded: "2014",
+        headquarters: "Londres, Reino Unido",
+        ceo: "Martin Breuer",
+        stockCode: "Empresa Privada",
+        website: "https://www.tickmill.com",
+        email: "support@tickmill.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+10 idiomas"],
+        rating: 4.6,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "717270", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "278/15", status: "Ativa", compensation: "€20.000" },
+        { name: "FSA", country: "Seychelles", license: "SD008", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSC", country: "Maurício", license: "C116016172", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 8,
+        countriesServed: 180,
+        mainOffices: [
+          "Londres (Sede Principal)",
+          "Limassol (Chipre)",
+          "Seychelles",
+          "Maurício",
+          "Dubai (EAU)"
+        ]
+      },
+      metrics: {
+        activeClients: "500.000+",
+        monthlyVolume: "$850 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "3,8 milhões de visitas",
+        yearsActive: "11 anos"
+      }
+    },
+    "plus500": {
+      brokerData: {
+        name: "Plus500",
+        fullName: "Plus500 Ltd.",
+        founded: "2008",
+        headquarters: "Haifa, Israel",
+        ceo: "David Zruia",
+        stockCode: "LSE: PLUS",
+        website: "https://www.plus500.com",
+        email: "support@plus500.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+30 idiomas"],
+        rating: 4.5,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "509909", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "250/14", status: "Ativa", compensation: "€20.000" },
+        { name: "ASIC", country: "Austrália", license: "417727", status: "Ativa", compensation: "Não aplicável" },
+        { name: "MAS", country: "Cingapura", license: "CMS100648", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 10,
+        countriesServed: 50,
+        mainOffices: [
+          "Haifa (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Limassol (Chipre)",
+          "Sydney (Austrália)",
+          "Cingapura"
+        ]
+      },
+      metrics: {
+        activeClients: "25 milhões+",
+        monthlyVolume: "$2,2 trilhões USD",
+        marketCap: "£2,1 bilhões",
+        annualProfit: "$450 milhões (2024)",
+        monthlyTraffic: "12 milhões de visitas",
+        yearsActive: "17 anos"
+      }
+    },
+    "exness": {
+      brokerData: {
+        name: "Exness",
+        fullName: "Exness Group",
+        founded: "2008",
+        headquarters: "Limassol, Chipre",
+        ceo: "Petr Valov",
+        stockCode: "Empresa Privada",
+        website: "https://www.exness.com",
+        email: "support@exness.com",
+        languages: ["Português", "Inglês", "Espanhol", "Chinês", "Árabe", "+15 idiomas"],
+        rating: 4.7,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "730729", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "178/12", status: "Ativa", compensation: "€20.000" },
+        { name: "FSA", country: "Seychelles", license: "SD025", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSC", country: "Ilhas Virgens Britânicas", license: "SIBA/L/20/1133", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 12,
+        countriesServed: 180,
+        mainOffices: [
+          "Limassol (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Dubai (EAU)",
+          "Hong Kong",
+          "Seychelles",
+          "Bangkok (Tailândia)"
+        ]
+      },
+      metrics: {
+        activeClients: "2,5 milhões+",
+        monthlyVolume: "$5,5 trilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "45 milhões de visitas",
+        yearsActive: "17 anos"
+      }
+    },
+    "fxtm": {
+      brokerData: {
+        name: "FXTM",
+        fullName: "ForexTime Limited",
+        founded: "2011",
+        headquarters: "Limassol, Chipre",
+        ceo: "Andrey Dashin",
+        stockCode: "Empresa Privada",
+        website: "https://www.forextime.com",
+        email: "support@forextime.com",
+        languages: ["Português", "Inglês", "Espanhol", "Árabe", "Chinês", "+15 idiomas"],
+        rating: 4.5,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "777911", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "185/12", status: "Ativa", compensation: "€20.000" },
+        { name: "FSCA", country: "África do Sul", license: "46614", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSC", country: "Maurício", license: "C113012295", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 9,
+        countriesServed: 180,
+        mainOffices: [
+          "Limassol (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Lagos (Nigéria)",
+          "Cidade do Cabo (África do Sul)",
+          "Dubai (EAU)"
+        ]
+      },
+      metrics: {
+        activeClients: "3,5 milhões+",
+        monthlyVolume: "$1,8 trilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "8,2 milhões de visitas",
+        yearsActive: "14 anos"
+      }
+    },
+    "admirals": {
+      brokerData: {
+        name: "Admirals",
+        fullName: "Admiral Markets Group AS",
+        founded: "2001",
+        headquarters: "Tallinn, Estônia",
+        ceo: "Sergei Bogatenkov",
+        stockCode: "Empresa Privada",
+        website: "https://www.admiralmarkets.com",
+        email: "support@admiralmarkets.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+20 idiomas"],
+        rating: 4.6,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "595450", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "201/13", status: "Ativa", compensation: "€20.000" },
+        { name: "ASIC", country: "Austrália", license: "410681", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSA", country: "Estônia", license: "4.1-1/46", status: "Ativa", compensation: "€20.000" }
+      ],
+      globalPresence: {
+        offices: 14,
+        countriesServed: 160,
+        mainOffices: [
+          "Tallinn (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Limassol (Chipre)",
+          "Sydney (Austrália)",
+          "Berlim (Alemanha)",
+          "Madrid (Espanha)"
+        ]
+      },
+      metrics: {
+        activeClients: "1,5 milhões+",
+        monthlyVolume: "$900 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "€180 milhões (2024)",
+        monthlyTraffic: "5,5 milhões de visitas",
+        yearsActive: "24 anos"
+      }
+    }
+  };
+
+  // Dados adicionados aos databases principais acima
+      { name: "MetaTrader 4", available: true },
+      { name: "MetaTrader 5", available: true },
+      { name: "WebTrader", available: true },
+      { name: "Mobile Apps", available: true },
+      { name: "VPS Service", available: true }
+    ],
+    "plus500": [
+      { name: "Plus500 WebTrader (Própria)", available: true },
+      { name: "Plus500 Windows App", available: true },
+      { name: "Plus500 Mobile Apps", available: true },
+      { name: "Plus500 Tablet Apps", available: true }
+    ],
+    "exness": [
+      { name: "MetaTrader 4", available: true },
+      { name: "MetaTrader 5", available: true },
+      { name: "Exness Terminal", available: true },
+      { name: "WebTrader", available: true },
+      { name: "Mobile Apps", available: true },
+      { name: "Exness Trade App", available: true }
+    ],
+    "fxtm": [
+      { name: "MetaTrader 4", available: true },
+      { name: "MetaTrader 5", available: true },
+      { name: "FXTM Trader", available: true },
+      { name: "WebTrader", available: true },
+      { name: "Mobile Apps", available: true }
+    ],
+    "admirals": [
+      { name: "MetaTrader 4", available: true },
+      { name: "MetaTrader 5", available: true },
+      { name: "MetaTrader Supreme Edition", available: true },
+      { name: "WebTrader", available: true },
+      { name: "Mobile Apps", available: true },
+      { name: "Admirals Connect (Social)", available: true }
+    ]
+  };
+
+  const instrumentsDatabase: Record<string, any> = {
+    "tickmill": [
+      { category: "Pares de Moedas", quantity: 80, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Índices", quantity: 12, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Commodities", quantity: 15, examples: "Ouro, Prata, Petróleo, Gás Natural" },
+      { category: "Ações", quantity: 150, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "Criptomoedas", quantity: 10, examples: "Bitcoin, Ethereum, Litecoin, Ripple" },
+      { category: "Títulos", quantity: 12, examples: "US Treasury, German Bunds, UK Gilts" }
+    ],
+    "plus500": [
+      { category: "Pares de Moedas", quantity: 60, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Índices", quantity: 30, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Commodities", quantity: 25, examples: "Ouro, Prata, Petróleo, Gás Natural" },
+      { category: "Ações", quantity: 2400, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "Criptomoedas", quantity: 18, examples: "Bitcoin, Ethereum, Litecoin, Ripple" },
+      { category: "ETFs", quantity: 100, examples: "SPY, QQQ, GLD, IWM" },
+      { category: "Opções", quantity: 250, examples: "S&P 500 Options, ETF Options" }
+    ],
+    "exness": [
+      { category: "Pares de Moedas", quantity: 107, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Metais", quantity: 10, examples: "Ouro, Prata, Paládio, Platina" },
+      { category: "Energias", quantity: 3, examples: "Petróleo WTI, Petróleo Brent, Gás Natural" },
+      { category: "Índices", quantity: 11, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Ações", quantity: 95, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "Criptomoedas", quantity: 35, examples: "Bitcoin, Ethereum, Litecoin, Ripple" }
+    ],
+    "fxtm": [
+      { category: "Pares de Moedas", quantity: 60, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Metais", quantity: 5, examples: "Ouro, Prata, Paládio, Platina" },
+      { category: "Energias", quantity: 3, examples: "Petróleo WTI, Petróleo Brent, Gás Natural" },
+      { category: "Índices", quantity: 13, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Ações", quantity: 180, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "Criptomoedas", quantity: 15, examples: "Bitcoin, Ethereum, Litecoin, Ripple" }
+    ],
+    "admirals": [
+      { category: "Pares de Moedas", quantity: 80, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Índices", quantity: 35, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Commodities", quantity: 20, examples: "Ouro, Prata, Petróleo, Gás Natural" },
+      { category: "Ações", quantity: 4500, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "ETFs", quantity: 300, examples: "SPY, QQQ, GLD, IWM" },
+      { category: "Criptomoedas", quantity: 50, examples: "Bitcoin, Ethereum, Litecoin, Ripple" },
+      { category: "Títulos", quantity: 25, examples: "US Treasury, German Bunds, UK Gilts" }
+    ]
+  };
+
+  const tradingConditionsDatabase: Record<string, any> = {
+    "tickmill": [
+      { condition: "Spread EUR/USD", classic: "1.6 pips", pro: "0.6 pips", vip: "0.0 pips" },
+      { condition: "Comissão por lote", classic: "$0", pro: "$0", vip: "$4" },
+      { condition: "Alavancagem", classic: "1:500", pro: "1:500", vip: "1:500" },
+      { condition: "Tamanho Mínimo", classic: "0.01 lote", pro: "0.01 lote", vip: "0.01 lote" },
+      { condition: "Execução", classic: "Market", pro: "Market", vip: "Raw Spread" }
+    ],
+    "plus500": [
+      { condition: "Spread EUR/USD", retail: "0.8 pips (fixo)", professional: "0.6 pips (fixo)", detail: "Spread variável" },
+      { condition: "Comissão", retail: "Sem comissão", professional: "Sem comissão", detail: "Incluído no spread" },
+      { condition: "Alavancagem", retail: "1:30 (varejo)", professional: "1:300 (profissional)", detail: "ESMA compliance" },
+      { condition: "Tamanho Mínimo", retail: "Variável por ativo", professional: "Variável por ativo", detail: "Micro lotes" },
+      { condition: "Financiamento Overnight", retail: "Aplicável", professional: "Aplicável", detail: "Taxas variáveis" }
+    ],
+    "exness": [
+      { condition: "Spread EUR/USD", standard: "1.0 pips", pro: "0.7 pips", raw: "0.0 pips" },
+      { condition: "Comissão por lote", standard: "$0", pro: "$0", raw: "$3.50" },
+      { condition: "Alavancagem", standard: "Ilimitada", pro: "Ilimitada", raw: "Ilimitada" },
+      { condition: "Tamanho Mínimo", standard: "0.01 lote", pro: "0.01 lote", raw: "0.01 lote" },
+      { condition: "Execução", standard: "Instant", pro: "Market", raw: "Market" }
+    ],
+    "fxtm": [
+      { condition: "Spread EUR/USD", standard: "1.3 pips", ecn: "0.1 pips", ecnzero: "0.0 pips" },
+      { condition: "Comissão por lote", standard: "$0", ecn: "$5", ecnzero: "$7" },
+      { condition: "Alavancagem", standard: "1:1000", ecn: "1:1000", ecnzero: "1:500" },
+      { condition: "Tamanho Mínimo", standard: "0.01 lote", ecn: "0.01 lote", ecnzero: "0.01 lote" },
+      { condition: "Depósito Mínimo", standard: "$10", ecn: "$500", ecnzero: "$500" }
+    ],
+    "admirals": [
+      { condition: "Spread EUR/USD", trade: "0.5 pips", zero: "0.0 pips", invest: "N/A" },
+      { condition: "Comissão por lote", trade: "$0", zero: "$3", invest: "0,02%" },
+      { condition: "Alavancagem Forex", trade: "1:500", zero: "1:500", invest: "1:5" },
+      { condition: "Tamanho Mínimo", trade: "0.01 lote", zero: "0.01 lote", invest: "1 ação" },
+      { condition: "Depósito Mínimo", trade: "$25", zero: "$100", invest: "$1" }
+    ]
+  };
+
+  const paymentMethodsDatabase: Record<string, any> = {
+    "tickmill": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - sem limite" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+      { method: "FasaPay", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $5.000" }
+    ],
+    "plus500": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $40.000" },
+      { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $20.000" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $20.000" },
+      { method: "Apple Pay", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" }
+    ],
+    "exness": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$10 - sem limite" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Perfect Money", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
+      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
+      { method: "Bitcoin", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" }
+    ],
+    "fxtm": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$10 - sem limite" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
+      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
+      { method: "FasaPay", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $5.000" }
+    ],
+    "admirals": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$25 - sem limite" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
+      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
+      { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" }
+    ]
+  };
+
+  const timelineDatabase: Record<string, any> = {
+    "tickmill": [
+      { year: "2014", event: "Fundação da Tickmill no Reino Unido" },
+      { year: "2015", event: "Licenciamento pela FCA e CySEC" },
+      { year: "2016", event: "Expansão global com escritório em Seychelles" },
+      { year: "2017", event: "Lançamento de contas ECN Raw Spread" },
+      { year: "2018", event: "Abertura de escritório em Dubai e licenciamento no Oriente Médio" },
+      { year: "2020", event: "Introdução de VPS gratuito para traders ativos" },
+      { year: "2022", event: "Expansão para mercados emergentes na África e Ásia" },
+      { year: "2025", event: "Mais de 500.000 clientes ativos globalmente" }
+    ],
+    "plus500": [
+      { year: "2008", event: "Fundação da Plus500 em Haifa, Israel" },
+      { year: "2009", event: "Licenciamento pela CySEC" },
+      { year: "2013", event: "IPO na Bolsa de Londres (LSE)" },
+      { year: "2014", event: "Licenciamento pela FCA do Reino Unido" },
+      { year: "2015", event: "Expansão para mercado australiano com licença ASIC" },
+      { year: "2017", event: "Alcance de 10 milhões de clientes registrados" },
+      { year: "2019", event: "Patrocínio do time de futebol Atlético de Madrid" },
+      { year: "2021", event: "Expansão de instrumentos para mais de 2.800 ativos" },
+      { year: "2025", event: "Mais de 25 milhões de usuários registrados" }
+    ],
+    "exness": [
+      { year: "2008", event: "Fundação da Exness no Chipre" },
+      { year: "2011", event: "Licenciamento pela CySEC" },
+      { year: "2013", event: "Expansão para Ásia com escritório em Hong Kong" },
+      { year: "2015", event: "Introdução de alavancagem ilimitada" },
+      { year: "2016", event: "Lançamento do programa de afiliados global" },
+      { year: "2018", event: "Licenciamento pela FCA do Reino Unido" },
+      { year: "2020", event: "Expansão massiva para mercados emergentes" },
+      { year: "2022", event: "Alcance de $5 trilhões USD em volume mensal" },
+      { year: "2025", event: "Mais de 2,5 milhões de clientes ativos" }
+    ],
+    "fxtm": [
+      { year: "2011", event: "Fundação da FXTM (ForexTime)" },
+      { year: "2012", event: "Licenciamento pela CySEC" },
+      { year: "2013", event: "Lançamento do programa Invest e Copy Trading" },
+      { year: "2015", event: "Licenciamento pela FCA do Reino Unido" },
+      { year: "2017", event: "Expansão significativa na África e Oriente Médio" },
+      { year: "2018", event: "Licenciamento pela FSCA na África do Sul" },
+      { year: "2020", event: "Alcance de 3 milhões de clientes registrados" },
+      { year: "2023", event: "Expansão de programas educacionais com webinars semanais" },
+      { year: "2025", event: "Mais de 3,5 milhões de clientes globalmente" }
+    ],
+    "admirals": [
+      { year: "2001", event: "Fundação da Admiral Markets na Estônia" },
+      { year: "2010", event: "Licenciamento pela CySEC e expansão europeia" },
+      { year: "2013", event: "Lançamento do MetaTrader Supreme Edition" },
+      { year: "2015", event: "Licenciamento pela FCA do Reino Unido" },
+      { year: "2017", event: "Expansão para mercado australiano com ASIC" },
+      { year: "2018", event: "Rebranding para Admirals" },
+      { year: "2020", event: "Lançamento da plataforma Admirals Connect (Social Trading)" },
+      { year: "2022", event: "Expansão de oferta de ações para 4.500+ instrumentos" },
+      { year: "2025", event: "Mais de 1,5 milhões de clientes em 160 países" }
+    ]
+  };
+
+  const faqsDatabase: Record<string, any> = {
+    "tickmill": [
+      {
+        question: "A Tickmill é segura e confiável?",
+        answer: "Sim, a Tickmill é confiável. Fundada em 2014, é regulada pela FCA (Reino Unido), CySEC (Chipre), FSA (Seychelles) e FSC (Maurício). Com 11 anos de operação e mais de 500.000 clientes, oferece segregação de fundos e compensação de até £85.000 no Reino Unido e €20.000 em Chipre."
+      },
+      {
+        question: "Qual é o depósito mínimo na Tickmill?",
+        answer: "O depósito mínimo varia por tipo de conta: $100 para Classic, $100 para Pro, e $50.000 para VIP. A conta Pro é a mais popular entre traders intermediários e avançados."
+      },
+      {
+        question: "Brasileiros podem abrir conta na Tickmill?",
+        answer: "Sim, a Tickmill aceita clientes brasileiros. O processo de abertura é 100% online com suporte em português. É necessário ter mais de 18 anos, CPF e documentos válidos."
+      },
+      {
+        question: "Quais plataformas de trading a Tickmill oferece?",
+        answer: "MetaTrader 4, MetaTrader 5, WebTrader e aplicativos mobile para iOS e Android. Também oferece VPS gratuito para traders ativos."
+      },
+      {
+        question: "A Tickmill oferece conta ECN?",
+        answer: "Sim, a conta VIP oferece condições ECN com spreads a partir de 0.0 pips e comissão de $4 por lote. É ideal para scalpers e traders de alta frequência."
+      },
+      {
+        question: "Quais são os spreads na Tickmill?",
+        answer: "Os spreads variam por tipo de conta: Classic (1.6 pips), Pro (0.6 pips) e VIP (0.0 pips + comissão). A conta Pro oferece o melhor equilíbrio entre spread e custo total."
+      }
+    ],
+    "plus500": [
+      {
+        question: "A Plus500 é segura e confiável?",
+        answer: "Sim, a Plus500 é altamente confiável. Fundada em 2008 e listada na Bolsa de Londres (LSE: PLUS), é regulada pela FCA (Reino Unido), CySEC (Chipre), ASIC (Austrália) e MAS (Cingapura). Com 17 anos de operação e mais de 25 milhões de usuários, oferece segregação de fundos e compensação de até £85.000 no Reino Unido."
+      },
+      {
+        question: "Qual é o depósito mínimo na Plus500?",
+        answer: "O depósito mínimo é de $100 USD. A conta é simples e sem comissões, com spreads fixos incluídos no preço."
+      },
+      {
+        question: "Brasileiros podem abrir conta na Plus500?",
+        answer: "Sim, a Plus500 aceita clientes brasileiros. O processo de abertura é 100% online com suporte em português. É necessário ter mais de 18 anos, CPF e documentos válidos."
+      },
+      {
+        question: "Quais plataformas de trading a Plus500 oferece?",
+        answer: "Plus500 oferece sua plataforma proprietária disponível como WebTrader, aplicativo Windows e mobile apps para iOS e Android. A plataforma é conhecida por sua simplicidade e interface intuitiva."
+      },
+      {
+        question: "A Plus500 cobra comissões?",
+        answer: "Não, a Plus500 não cobra comissões de trading. Os custos estão incluídos nos spreads fixos. No entanto, há taxa de inatividade de $10/mês após 3 meses sem atividade."
+      },
+      {
+        question: "Posso negociar ações reais na Plus500?",
+        answer: "Não, a Plus500 oferece apenas CFDs (Contratos por Diferença) sobre ações, não permite compra de ações reais. Isso significa que você especula sobre o preço sem possuir o ativo subjacente."
+      }
+    ],
+    "exness": [
+      {
+        question: "A Exness é segura e confiável?",
+        answer: "Sim, a Exness é confiável. Fundada em 2008, é regulada pela FCA (Reino Unido), CySEC (Chipre), FSA (Seychelles) e FSC (Ilhas Virgens Britânicas). Com 17 anos de operação e mais de 2,5 milhões de clientes, processa mais de $5 trilhões USD em volume mensal."
+      },
+      {
+        question: "Qual é o depósito mínimo na Exness?",
+        answer: "O depósito mínimo é de apenas $10 USD (ou equivalente em R$), um dos mais baixos do mercado, tornando-a acessível para traders iniciantes."
+      },
+      {
+        question: "Brasileiros podem abrir conta na Exness?",
+        answer: "Sim, a Exness aceita clientes brasileiros. O processo de abertura é 100% online com suporte em português. É necessário ter mais de 18 anos, CPF e documentos válidos."
+      },
+      {
+        question: "O que é alavancagem ilimitada da Exness?",
+        answer: "A Exness oferece alavancagem ilimitada (1:∞) para traders qualificados após passar por um período de teste. Isso permite maximizar o potencial de lucro, mas também aumenta significativamente o risco."
+      },
+      {
+        question: "Quais plataformas de trading a Exness oferece?",
+        answer: "MetaTrader 4, MetaTrader 5, Exness Terminal (plataforma proprietária), Exness Trade App e WebTrader. Todas disponíveis em desktop e mobile."
+      },
+      {
+        question: "A Exness cobra taxas de saque?",
+        answer: "Não, a Exness não cobra taxas de depósito ou saque. Os saques são processados geralmente em algumas horas, sendo uma das corretoras mais rápidas nesse aspecto."
+      }
+    ],
+    "fxtm": [
+      {
+        question: "A FXTM é segura e confiável?",
+        answer: "Sim, a FXTM (ForexTime) é confiável. Fundada em 2011, é regulada pela FCA (Reino Unido), CySEC (Chipre), FSCA (África do Sul) e FSC (Maurício). Com 14 anos de operação e mais de 3,5 milhões de clientes, oferece segregação de fundos e múltiplas proteções."
+      },
+      {
+        question: "Qual é o depósito mínimo na FXTM?",
+        answer: "O depósito mínimo é de apenas $10 USD para contas Standard, $500 para contas ECN e ECN Zero. A FXTM é uma das corretoras mais acessíveis para iniciantes."
+      },
+      {
+        question: "Brasileiros podem abrir conta na FXTM?",
+        answer: "Sim, a FXTM aceita clientes brasileiros. O processo de abertura é 100% online com suporte em português. É necessário ter mais de 18 anos, CPF e documentos válidos."
+      },
+      {
+        question: "Quais plataformas de trading a FXTM oferece?",
+        answer: "MetaTrader 4, MetaTrader 5, FXTM Trader (app proprietário) e WebTrader. Também oferece programas de Copy Trading através do FXTM Invest."
+      },
+      {
+        question: "A FXTM oferece Copy Trading?",
+        answer: "Sim, através do FXTM Invest você pode copiar automaticamente as estratégias de traders experientes. É uma ótima opção para iniciantes aprenderem enquanto investem."
+      },
+      {
+        question: "Quais são os spreads na FXTM?",
+        answer: "Os spreads variam por tipo de conta: Standard (a partir de 1.3 pips), ECN (a partir de 0.1 pips + $5 comissão), e ECN Zero (0.0 pips + $7 comissão)."
+      }
+    ],
+    "admirals": [
+      {
+        question: "A Admirals é segura e confiável?",
+        answer: "Sim, a Admirals (anteriormente Admiral Markets) é confiável. Fundada em 2001, é regulada pela FCA (Reino Unido), CySEC (Chipre), ASIC (Austrália) e FSA (Estônia). Com 24 anos de operação e mais de 1,5 milhões de clientes, oferece segregação de fundos e compensação de até £85.000 no Reino Unido."
+      },
+      {
+        question: "Qual é o depósito mínimo na Admirals?",
+        answer: "O depósito mínimo varia por tipo de conta: $25 para Trade.MT4 e Trade.MT5, $100 para Zero.MT4 e Zero.MT5, e apenas $1 para Invest.MT5 (ações reais)."
+      },
+      {
+        question: "Brasileiros podem abrir conta na Admirals?",
+        answer: "Sim, a Admirals aceita clientes brasileiros. O processo de abertura é 100% online com suporte em português. É necessário ter mais de 18 anos, CPF e documentos válidos."
+      },
+      {
+        question: "Quais plataformas de trading a Admirals oferece?",
+        answer: "MetaTrader 4, MetaTrader 5, MetaTrader Supreme Edition (plugin exclusivo), WebTrader e Admirals Connect para social trading. Todas disponíveis em desktop e mobile."
+      },
+      {
+        question: "Posso comprar ações reais na Admirals?",
+        answer: "Sim! A conta Invest.MT5 permite comprar ações reais de mais de 4.500 empresas globais com comissão de apenas 0,02% por transação. Você se torna acionista real, com direito a dividendos."
+      },
+      {
+        question: "O que é o MetaTrader Supreme Edition?",
+        answer: "É um plugin exclusivo da Admirals que adiciona mais de 60 funcionalidades extras ao MT4/MT5, incluindo mini terminal, matriz de correlação, alertas de trade e muito mais. É gratuito para clientes Admirals."
       }
     ]
   };
