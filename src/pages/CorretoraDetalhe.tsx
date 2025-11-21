@@ -225,6 +225,212 @@ const CorretoraDetalhe = () => {
         monthlyTraffic: "7,5 milhões de visitas",
         yearsActive: "15 anos"
       }
+    },
+    "ic-markets": {
+      brokerData: {
+        name: "IC Markets",
+        fullName: "International Capital Markets Pty Ltd",
+        founded: "2007",
+        headquarters: "Sydney, Austrália",
+        ceo: "Andrew Budzinski",
+        stockCode: "Empresa Privada",
+        website: "https://www.icmarkets.com",
+        email: "support@icmarkets.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Chinês", "Árabe", "+15 idiomas"],
+        rating: 4.8,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "ASIC", country: "Austrália", license: "335692", status: "Ativa", compensation: "Não aplicável" },
+        { name: "CySEC", country: "Chipre", license: "362/18", status: "Ativa", compensation: "€20.000" },
+        { name: "FSA", country: "Seychelles", license: "SD018", status: "Ativa", compensation: "Não aplicável" },
+        { name: "SCB", country: "Bahamas", license: "SIA-F220", status: "Ativa", compensation: "Não aplicável" },
+      ],
+      globalPresence: {
+        offices: 6,
+        countriesServed: 200,
+        mainOffices: [
+          "Sydney (Sede Principal)",
+          "Limassol (Chipre)",
+          "Nassau (Bahamas)",
+          "Victoria (Seychelles)",
+          "Londres (Reino Unido)"
+        ]
+      },
+      metrics: {
+        activeClients: "180.000+",
+        monthlyVolume: "$1,4 trilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "5,8 milhões de visitas",
+        yearsActive: "18 anos"
+      }
+    },
+    "fp-markets": {
+      brokerData: {
+        name: "FP Markets",
+        fullName: "First Prudential Markets Pty Ltd",
+        founded: "2005",
+        headquarters: "Sydney, Austrália",
+        ceo: "Craig Allison",
+        stockCode: "Empresa Privada",
+        website: "https://www.fpmarkets.com",
+        email: "support@fpmarkets.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Chinês", "Tailandês", "Vietnamita", "+8 idiomas"],
+        rating: 4.7,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "ASIC", country: "Austrália", license: "286354", status: "Ativa", compensation: "Não aplicável" },
+        { name: "CySEC", country: "Chipre", license: "371/18", status: "Ativa", compensation: "€20.000" },
+        { name: "FSCA", country: "África do Sul", license: "50926", status: "Ativa", compensation: "Não aplicável" },
+      ],
+      globalPresence: {
+        offices: 4,
+        countriesServed: 185,
+        mainOffices: [
+          "Sydney (Sede Principal)",
+          "Limassol (Chipre)",
+          "Melbourne (Austrália)",
+          "Cidade do Cabo (África do Sul)"
+        ]
+      },
+      metrics: {
+        activeClients: "150.000+",
+        monthlyVolume: "$750 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "4,8 milhões de visitas",
+        yearsActive: "20 anos"
+      }
+    },
+    "xm-group": {
+      brokerData: {
+        name: "XM Group",
+        fullName: "Trading Point Holdings Ltd",
+        founded: "2009",
+        headquarters: "Limassol, Chipre",
+        ceo: "Menelaos Menelaou & Constantinos Cleanthous (Co-CEOs)",
+        stockCode: "Empresa Privada",
+        website: "https://www.xm.com",
+        email: "support@xm.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Italiano", "Árabe", "Chinês", "+22 idiomas"],
+        rating: 4.6,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "CySEC", country: "Chipre", license: "120/10", status: "Ativa", compensation: "€20.000" },
+        { name: "ASIC", country: "Austrália", license: "443670", status: "Ativa", compensation: "Não aplicável" },
+        { name: "IFSC", country: "Belize", license: "000261/309", status: "Ativa", compensation: "Não aplicável" },
+        { name: "DFSA", country: "Dubai", license: "F003484", status: "Ativa", compensation: "Não aplicável" },
+      ],
+      globalPresence: {
+        offices: 30,
+        countriesServed: 196,
+        mainOffices: [
+          "Limassol (Sede Principal)",
+          "Sydney (Austrália)",
+          "Londres (Reino Unido)",
+          "Dubai (EAU)",
+          "Cidade de Belize (Belize)",
+          "Atenas (Grécia)"
+        ]
+      },
+      metrics: {
+        activeClients: "10 milhões+",
+        monthlyVolume: "$2,5 trilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "12 milhões de visitas",
+        yearsActive: "16 anos"
+      }
+    },
+    "avatrade": {
+      brokerData: {
+        name: "AvaTrade",
+        fullName: "Ava Trade Ltd",
+        founded: "2006",
+        headquarters: "Dublin, Irlanda",
+        ceo: "Dáire Ferguson",
+        stockCode: "Empresa Privada",
+        website: "https://www.avatrade.com",
+        email: "support@avatrade.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Italiano", "Árabe", "Chinês", "Japonês", "+10 idiomas"],
+        rating: 4.5,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "Central Bank", country: "Irlanda", license: "C53877", status: "Ativa", compensation: "€20.000" },
+        { name: "ASIC", country: "Austrália", license: "406684", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSA", country: "Japão", license: "1574", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSCA", country: "África do Sul", license: "45984", status: "Ativa", compensation: "Não aplicável" },
+        { name: "ADGM", country: "Abu Dhabi", license: "000380", status: "Ativa", compensation: "Não aplicável" },
+      ],
+      globalPresence: {
+        offices: 9,
+        countriesServed: 150,
+        mainOffices: [
+          "Dublin (Sede Principal)",
+          "Sydney (Austrália)",
+          "Tóquio (Japão)",
+          "Milão (Itália)",
+          "Paris (França)",
+          "Abu Dhabi (EAU)"
+        ]
+      },
+      metrics: {
+        activeClients: "400.000+",
+        monthlyVolume: "$1,1 trilhão USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "6,2 milhões de visitas",
+        yearsActive: "19 anos"
+      }
+    },
+    "octafx": {
+      brokerData: {
+        name: "OctaFX",
+        fullName: "Octa Markets Incorporated",
+        founded: "2011",
+        headquarters: "São Vicente e Granadinas",
+        ceo: "Kar Yong Ang",
+        stockCode: "Empresa Privada",
+        website: "https://www.octafx.com",
+        email: "support@octafx.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Tailandês", "Chinês", "Vietnamita", "+20 idiomas"],
+        rating: 4.4,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FSC", country: "Maurício", license: "GB21027161", status: "Ativa", compensation: "Não aplicável" },
+        { name: "CySEC", country: "Chipre", license: "240/14", status: "Ativa", compensation: "€20.000" },
+        { name: "FCA", country: "Reino Unido", license: "FRN 600990", status: "Ativa", compensation: "£85.000" },
+      ],
+      globalPresence: {
+        offices: 10,
+        countriesServed: 180,
+        mainOffices: [
+          "Kingstown (Sede Principal)",
+          "Port Louis (Maurício)",
+          "Limassol (Chipre)",
+          "Londres (Reino Unido)",
+          "Kuala Lumpur (Malásia)",
+          "Lagos (Nigéria)"
+        ]
+      },
+      metrics: {
+        activeClients: "12 milhões+",
+        monthlyVolume: "$1,8 trilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "9,5 milhões de visitas",
+        yearsActive: "14 anos"
+      }
     }
   };
 
@@ -402,6 +608,184 @@ const CorretoraDetalhe = () => {
         { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$200 - $10.000" },
         { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$200 - $10.000" }
       ]
+    },
+    "ic-markets": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "cTrader", available: true },
+        { name: "IC Social (Copy Trading)", available: true },
+        { name: "TradingView", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "60+ pares" },
+        { type: "Ações CFDs", count: "2.100+" },
+        { type: "Índices", count: "24+" },
+        { type: "Commodities", count: "22+" },
+        { type: "Criptomoedas", count: "11+" },
+        { type: "Futuros", count: "13+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$200" },
+        { label: "Spread EUR/USD", value: "A partir de 0,0 pips (Raw Spread)" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:500 (profissional)" },
+        { label: "Comissão", value: "$3 por lote (Raw Spread) / $0 (Standard)" },
+        { label: "Swap Overnight", value: "Variável (competitivo)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4/MT5/cTrader)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$200 - sem limite" },
+        { method: "Transferência Bancária", time: "1-2 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$200 - $10.000" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$200 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$200 - $10.000" },
+        { method: "UnionPay", time: "Instantâneo", fees: "Gratuito", limits: "$200 - $5.000" }
+      ]
+    },
+    "fp-markets": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "cTrader", available: true },
+        { name: "IRESS", available: true },
+        { name: "TradingView", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "60+ pares" },
+        { type: "Ações CFDs", count: "10.000+" },
+        { type: "Índices", count: "19+" },
+        { type: "Commodities", count: "16+" },
+        { type: "Criptomoedas", count: "10+" },
+        { type: "Títulos", count: "3+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$50 (Standard) / $100 (Raw)" },
+        { label: "Spread EUR/USD", value: "A partir de 0,0 pips (Raw)" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:500 (profissional)" },
+        { label: "Comissão", value: "$3 por lote (Raw) / $0 (Standard)" },
+        { label: "Swap Overnight", value: "Variável (competitivo)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4/MT5/cTrader)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$50 - sem limite" },
+        { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$50 - $5.000" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$50 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$50 - $10.000" },
+        { method: "BPAY", time: "1-2 dias", fees: "Gratuito", limits: "Sem limite" }
+      ]
+    },
+    "xm-group": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "WebTrader", available: true },
+        { name: "Mobile Apps (iOS/Android)", available: true },
+        { name: "Autochartist", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "57+ pares" },
+        { type: "Ações CFDs", count: "1.400+" },
+        { type: "Índices", count: "29+" },
+        { type: "Commodities", count: "8+" },
+        { type: "Metais Preciosos", count: "4+" },
+        { type: "Energias", count: "5+" },
+        { type: "Criptomoedas", count: "31+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$5" },
+        { label: "Spread EUR/USD", value: "A partir de 0,6 pips (Standard) / 0,0 pips (Zero)" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:1000 (profissional)" },
+        { label: "Comissão", value: "$0 (Standard) / variável (Zero)" },
+        { label: "Swap Overnight", value: "Variável (ver site)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4/MT5)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$5 - sem limite" },
+        { method: "Transferência Bancária", time: "2-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" },
+        { method: "Perfect Money", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" },
+        { method: "WebMoney", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" }
+      ]
+    },
+    "avatrade": {
+      platforms: [
+        { name: "AvaTradeGO", available: true },
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "WebTrader", available: true },
+        { name: "DupliTrade (Copy Trading)", available: true },
+        { name: "AvaSocial", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "55+ pares" },
+        { type: "Ações CFDs", count: "600+" },
+        { type: "Índices", count: "30+" },
+        { type: "Commodities", count: "20+" },
+        { type: "Criptomoedas", count: "50+" },
+        { type: "ETFs", count: "150+" },
+        { type: "Títulos", count: "15+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$100" },
+        { label: "Spread EUR/USD", value: "A partir de 0,9 pips" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:400 (profissional)" },
+        { label: "Comissão", value: "$0 (spread incluso)" },
+        { label: "Swap Overnight", value: "Variável (ver site)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4/MT5)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - sem limite" },
+        { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+        { method: "WebMoney", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $5.000" }
+      ]
+    },
+    "octafx": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "OctaTrader (Própria)", available: true },
+        { name: "WebTrader", available: true },
+        { name: "Mobile Apps", available: true },
+        { name: "Copy Trading", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "40+ pares" },
+        { type: "Ações CFDs", count: "150+" },
+        { type: "Índices", count: "11+" },
+        { type: "Commodities", count: "6+" },
+        { type: "Metais", count: "2+" },
+        { type: "Criptomoedas", count: "30+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$25" },
+        { label: "Spread EUR/USD", value: "A partir de 0,6 pips" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:1000 (profissional)" },
+        { label: "Comissão", value: "$0 (spread incluso)" },
+        { label: "Swap Overnight", value: "Variável (ver site)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4/MT5)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$25 - sem limite" },
+        { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
+        { method: "Perfect Money", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
+        { method: "Criptomoedas (Bitcoin)", time: "1-2 horas", fees: "Taxa da rede", limits: "Equivalente a $25+" }
+      ]
     }
   };
 
@@ -470,6 +854,59 @@ const CorretoraDetalhe = () => {
       { year: "2021", event: "Lançamento de trading de criptomoedas e ações CFDs" },
       { year: "2024", event: "Parceria estratégica com TradingView" },
       { year: "2025", event: "Mais de 400.000 clientes ativos em 170+ países" }
+    ],
+    "ic-markets": [
+      { year: "2007", event: "Fundação em Sydney, Austrália" },
+      { year: "2009", event: "Lançamento do MetaTrader 4 com spreads interbancários" },
+      { year: "2013", event: "Introdução da plataforma cTrader" },
+      { year: "2015", event: "Expansão internacional com licenciamento CySEC" },
+      { year: "2018", event: "Lançamento do MetaTrader 5" },
+      { year: "2020", event: "Introdução do IC Social (Copy Trading)" },
+      { year: "2022", event: "Lançamento de trading de criptomoedas" },
+      { year: "2025", event: "Mais de 180.000 clientes em 200+ países" }
+    ],
+    "fp-markets": [
+      { year: "2005", event: "Fundação em Sydney, Austrália, por Matthew Murphie" },
+      { year: "2010", event: "Licenciamento pela ASIC" },
+      { year: "2014", event: "Lançamento da plataforma cTrader" },
+      { year: "2016", event: "Introdução do MetaTrader 5" },
+      { year: "2018", event: "Expansão europeia com licenciamento CySEC" },
+      { year: "2020", event: "Lançamento da plataforma IRESS para trading de ações" },
+      { year: "2022", event: "Expansão na África do Sul com licenciamento FSCA" },
+      { year: "2025", event: "Comemoração de 20 anos com mais de 150.000 clientes globalmente" }
+    ],
+    "xm-group": [
+      { year: "2009", event: "Fundação em Limassol, Chipre, como Trading Point" },
+      { year: "2011", event: "Licenciamento pela CySEC" },
+      { year: "2013", event: "Expansão internacional com escritórios na Ásia" },
+      { year: "2015", event: "Licenciamento pela ASIC na Austrália" },
+      { year: "2017", event: "Abertura de escritório em Dubai com licença DFSA" },
+      { year: "2020", event: "Lançamento de trading de criptomoedas com 31+ pares" },
+      { year: "2022", event: "Integração com TradingView" },
+      { year: "2024", event: "Comemoração de 15 anos com prêmios globais" },
+      { year: "2025", event: "Mais de 10 milhões de clientes em 196+ países" }
+    ],
+    "avatrade": [
+      { year: "2006", event: "Fundação em Dublin, Irlanda, como AvaFX" },
+      { year: "2009", event: "Rebranding para AvaTrade e expansão global" },
+      { year: "2011", event: "Licenciamento pelo Banco Central da Irlanda" },
+      { year: "2013", event: "Lançamento do DupliTrade (Copy Trading)" },
+      { year: "2015", event: "Licenciamento pela ASIC e FSA do Japão" },
+      { year: "2017", event: "Lançamento da plataforma móvel AvaTradeGO" },
+      { year: "2020", event: "Expansão de criptomoedas para 50+ instrumentos" },
+      { year: "2022", event: "Lançamento do AvaSocial" },
+      { year: "2025", event: "Mais de 400.000 clientes em 150+ países" }
+    ],
+    "octafx": [
+      { year: "2011", event: "Fundação em São Vicente e Granadinas" },
+      { year: "2014", event: "Licenciamento pela CySEC" },
+      { year: "2016", event: "Expansão internacional com escritório em Maurício" },
+      { year: "2018", event: "Licenciamento pelo FSC de Maurício" },
+      { year: "2019", event: "Lançamento da plataforma OctaTrader proprietária" },
+      { year: "2021", event: "Introdução de Copy Trading e expansão na África" },
+      { year: "2022", event: "Licenciamento pela FCA do Reino Unido" },
+      { year: "2023", event: "Lançamento de trading de criptomoedas com 30+ pares" },
+      { year: "2025", event: "Mais de 12 milhões de clientes registrados globalmente" }
     ]
   };
 
@@ -598,6 +1035,136 @@ const CorretoraDetalhe = () => {
       {
         question: "Quais plataformas de trading estão disponíveis?",
         answer: "A Pepperstone oferece MetaTrader 4 (MT4), MetaTrader 5 (MT5), cTrader e integração com TradingView. Todas as plataformas estão disponíveis em versões desktop, web e mobile. A escolha depende do seu estilo: MT4/MT5 para EAs e análise técnica avançada, cTrader para execução institucional e interface moderna."
+      }
+    ],
+    "ic-markets": [
+      {
+        question: "A IC Markets é segura e confiável?",
+        answer: "Sim, a IC Markets é altamente confiável. Fundada em 2007, é regulada pela ASIC (Austrália), CySEC (Chipre), FSA (Seychelles) e SCB (Bahamas). Com mais de 18 anos de operação e 180.000 clientes ativos, oferece segregação de fundos em bancos tier-1. É conhecida por spreads ultra baixos e execução institucional."
+      },
+      {
+        question: "Qual é o depósito mínimo na IC Markets?",
+        answer: "O depósito mínimo é de $200 USD (ou equivalente em outras moedas). Este valor é acessível e permite começar a negociar com gerenciamento de risco adequado."
+      },
+      {
+        question: "Brasileiros podem abrir conta na IC Markets?",
+        answer: "Sim, a IC Markets aceita clientes brasileiros através de sua entidade de Seychelles. O processo de abertura é 100% online. É necessário ter mais de 18 anos, CPF, documento de identificação válido e comprovante de residência."
+      },
+      {
+        question: "Qual a diferença entre conta Raw Spread e Standard?",
+        answer: "A conta Raw Spread oferece spreads crus a partir de 0,0 pips com comissão de $3 por lote. A conta Standard tem spreads a partir de 1,0 pip sem comissão. Raw Spread é ideal para traders de alto volume e scalpers."
+      },
+      {
+        question: "A IC Markets oferece conta demo?",
+        answer: "Sim, oferece conta demo gratuita com $100.000 virtuais, sem limite de tempo, disponível em MT4, MT5 e cTrader."
+      },
+      {
+        question: "Quais plataformas estão disponíveis?",
+        answer: "MetaTrader 4, MetaTrader 5, cTrader, IC Social (Copy Trading) e integração com TradingView. Todas disponíveis em desktop, web e mobile."
+      }
+    ],
+    "fp-markets": [
+      {
+        question: "A FP Markets é segura?",
+        answer: "Sim, a FP Markets é muito segura. Fundada em 2005, é regulada pela ASIC (Austrália), CySEC (Chipre) e FSCA (África do Sul). Com 20 anos de operação e mais de 150.000 clientes, oferece segregação de fundos e compensação de até €20.000 na Europa."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "O depósito mínimo é de apenas $50 para contas Standard e $100 para contas Raw. É um dos depósitos mínimos mais baixos entre corretoras premium."
+      },
+      {
+        question: "Brasileiros podem abrir conta?",
+        answer: "Sim, brasileiros podem abrir conta através da entidade europeia (Chipre) ou australiana. O processo é 100% online com suporte em português disponível."
+      },
+      {
+        question: "Quais plataformas de trading a FP Markets oferece?",
+        answer: "MetaTrader 4, MetaTrader 5, cTrader, IRESS (para ações australianas) e integração com TradingView. Todas com versões desktop, web e mobile."
+      },
+      {
+        question: "A FP Markets oferece acesso a ações reais?",
+        answer: "Sim, através da plataforma IRESS, você pode negociar mais de 10.000 ações reais de bolsas globais, além de CFDs de ações nas outras plataformas."
+      },
+      {
+        question: "Existe conta demo?",
+        answer: "Sim, oferece conta demo gratuita com $100.000 virtuais, sem limite de tempo, disponível em todas as plataformas."
+      }
+    ],
+    "xm-group": [
+      {
+        question: "A XM Group é segura e confiável?",
+        answer: "Sim, a XM Group é altamente confiável. Fundada em 2009, é regulada pela CySEC (Chipre), ASIC (Austrália), IFSC (Belize) e DFSA (Dubai). Com 16 anos de operação e mais de 10 milhões de clientes em 196 países, é uma das maiores corretoras do mundo. Oferece segregação de fundos e compensação de até €20.000."
+      },
+      {
+        question: "Qual é o depósito mínimo na XM?",
+        answer: "O depósito mínimo é de apenas $5 USD, um dos mais baixos do mercado. Isso torna a XM ideal para traders iniciantes que querem começar com capital limitado."
+      },
+      {
+        question: "Brasileiros podem abrir conta na XM?",
+        answer: "Sim, a XM aceita clientes brasileiros. O processo de abertura é 100% online com suporte completo em português. É necessário ter mais de 18 anos, CPF e documentos válidos."
+      },
+      {
+        question: "Quais são os tipos de conta disponíveis?",
+        answer: "A XM oferece contas Micro, Standard e Zero. Micro e Standard têm spreads a partir de 1 pip sem comissão. A conta Zero oferece spreads a partir de 0,0 pips com comissão variável. Todas as contas oferecem alavancagem de até 1:1000 para clientes profissionais."
+      },
+      {
+        question: "A XM oferece bônus de depósito?",
+        answer: "Sim, a XM oferece bônus de boas-vindas de até $30 sem depósito para novos clientes, além de bônus de depósito de até $5.000. Os bônus não podem ser sacados, mas podem ser usados para negociar e os lucros podem ser retirados."
+      },
+      {
+        question: "Quais plataformas de trading estão disponíveis?",
+        answer: "MetaTrader 4 e MetaTrader 5, disponíveis em versões desktop, web e mobile (iOS/Android). Também oferece integração com TradingView e a ferramenta de análise técnica Autochartist."
+      }
+    ],
+    "avatrade": [
+      {
+        question: "A AvaTrade é segura e confiável?",
+        answer: "Sim, a AvaTrade é altamente confiável. Fundada em 2006, é regulada por 9 autoridades globais incluindo Banco Central da Irlanda, ASIC (Austrália), FSA (Japão), FSCA (África do Sul) e ADGM (Abu Dhabi). Com 19 anos de operação e mais de 400.000 clientes, oferece segregação de fundos e compensação de até €20.000 na Europa."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "O depósito mínimo é de $100 USD, tornando acessível para traders iniciantes e intermediários."
+      },
+      {
+        question: "Brasileiros podem abrir conta na AvaTrade?",
+        answer: "Sim, a AvaTrade aceita clientes brasileiros através de sua entidade internacional. O processo é 100% online com suporte parcial em português. É necessário ter mais de 18 anos e documentos válidos."
+      },
+      {
+        question: "Quais plataformas de trading a AvaTrade oferece?",
+        answer: "AvaTradeGO (plataforma proprietária), MetaTrader 4, MetaTrader 5, WebTrader, DupliTrade (Copy Trading) e AvaSocial. Todas com versões desktop, web e mobile."
+      },
+      {
+        question: "A AvaTrade oferece trading automatizado?",
+        answer: "Sim, além de suporte para Expert Advisors (MT4/MT5), a AvaTrade oferece DupliTrade para copy trading automático e integração com várias plataformas de trading automatizado."
+      },
+      {
+        question: "Quais criptomoedas posso negociar?",
+        answer: "A AvaTrade oferece mais de 50 pares de criptomoedas, incluindo Bitcoin, Ethereum, Ripple, Litecoin, e muitas outras. Você negocia CFDs de cripto 24/7 sem possuir os ativos diretamente."
+      }
+    ],
+    "octafx": [
+      {
+        question: "A OctaFX é segura e confiável?",
+        answer: "Sim, a OctaFX é confiável. Fundada em 2011, é regulada pela FSC (Maurício), CySEC (Chipre) e FCA (Reino Unido). Com 14 anos de operação e mais de 12 milhões de clientes registrados, oferece segregação de fundos e compensação de até £85.000 no Reino Unido e €20.000 em Chipre."
+      },
+      {
+        question: "Qual é o depósito mínimo na OctaFX?",
+        answer: "O depósito mínimo é de apenas $25 USD, um dos mais baixos do mercado, tornando-a acessível para traders iniciantes."
+      },
+      {
+        question: "Brasileiros podem abrir conta na OctaFX?",
+        answer: "Sim, a OctaFX aceita clientes brasileiros. O processo de abertura é 100% online com suporte em português. É necessário ter mais de 18 anos, CPF e documentos válidos."
+      },
+      {
+        question: "Quais plataformas de trading a OctaFX oferece?",
+        answer: "MetaTrader 4, MetaTrader 5, OctaTrader (plataforma proprietária) e versões mobile. Também oferece Copy Trading integrado para copiar traders experientes."
+      },
+      {
+        question: "A OctaFX oferece bônus?",
+        answer: "Sim, a OctaFX oferece diversos bônus promocionais, incluindo bônus de depósito e programa de cashback. Os termos variam conforme a promoção ativa. Verifique o site oficial para ofertas atuais."
+      },
+      {
+        question: "Posso negociar criptomoedas na OctaFX?",
+        answer: "Sim, a OctaFX oferece trading de CFDs de 30+ criptomoedas, incluindo Bitcoin, Ethereum e outras altcoins populares. Também aceita depósitos em Bitcoin."
       }
     ]
   };
