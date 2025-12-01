@@ -431,6 +431,211 @@ const CorretoraDetalhe = () => {
         monthlyTraffic: "9,5 milhões de visitas",
         yearsActive: "14 anos"
       }
+    },
+    "tickmill": {
+      brokerData: {
+        name: "Tickmill",
+        fullName: "Tickmill Group",
+        founded: "2014",
+        headquarters: "Londres, Reino Unido",
+        ceo: "Martin Breuer",
+        stockCode: "Empresa Privada",
+        website: "https://www.tickmill.com",
+        email: "support@tickmill.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+10 idiomas"],
+        rating: 4.6,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "717270", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "278/15", status: "Ativa", compensation: "€20.000" },
+        { name: "FSA", country: "Seychelles", license: "SD008", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSC", country: "Maurício", license: "C116016172", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 8,
+        countriesServed: 180,
+        mainOffices: [
+          "Londres (Sede Principal)",
+          "Limassol (Chipre)",
+          "Seychelles",
+          "Maurício",
+          "Dubai (EAU)"
+        ]
+      },
+      metrics: {
+        activeClients: "500.000+",
+        monthlyVolume: "$850 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "3,8 milhões de visitas",
+        yearsActive: "11 anos"
+      }
+    },
+    "plus500": {
+      brokerData: {
+        name: "Plus500",
+        fullName: "Plus500 Ltd.",
+        founded: "2008",
+        headquarters: "Haifa, Israel",
+        ceo: "David Zruia",
+        stockCode: "LSE: PLUS",
+        website: "https://www.plus500.com",
+        email: "support@plus500.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+30 idiomas"],
+        rating: 4.5,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "509909", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "250/14", status: "Ativa", compensation: "€20.000" },
+        { name: "ASIC", country: "Austrália", license: "417727", status: "Ativa", compensation: "Não aplicável" },
+        { name: "MAS", country: "Cingapura", license: "CMS100648", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 10,
+        countriesServed: 50,
+        mainOffices: [
+          "Haifa (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Limassol (Chipre)",
+          "Sydney (Austrália)",
+          "Cingapura"
+        ]
+      },
+      metrics: {
+        activeClients: "25 milhões+",
+        monthlyVolume: "$50 bilhões USD",
+        marketCap: "£1,5 bilhões",
+        annualProfit: "$350 milhões (2024)",
+        monthlyTraffic: "12 milhões de visitas",
+        yearsActive: "17 anos"
+      }
+    },
+    "exness": {
+      brokerData: {
+        name: "Exness",
+        fullName: "Exness Group",
+        founded: "2008",
+        headquarters: "Limassol, Chipre",
+        ceo: "Petr Valov",
+        stockCode: "Empresa Privada",
+        website: "https://www.exness.com",
+        email: "support@exness.com",
+        languages: ["Português", "Inglês", "Espanhol", "Árabe", "Chinês", "+15 idiomas"],
+        rating: 4.7,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "730729", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "178/12", status: "Ativa", compensation: "€20.000" },
+        { name: "FSCA", country: "África do Sul", license: "51024", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSA", country: "Seychelles", license: "SD025", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 12,
+        countriesServed: 190,
+        mainOffices: [
+          "Limassol (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Joanesburgo (África do Sul)",
+          "Dubai (EAU)",
+          "Kuala Lumpur (Malásia)"
+        ]
+      },
+      metrics: {
+        activeClients: "2,5 milhões+",
+        monthlyVolume: "$5 trilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "$900 milhões (2024)",
+        monthlyTraffic: "25 milhões de visitas",
+        yearsActive: "17 anos"
+      }
+    },
+    "fxtm": {
+      brokerData: {
+        name: "FXTM",
+        fullName: "ForexTime Ltd.",
+        founded: "2011",
+        headquarters: "Limassol, Chipre",
+        ceo: "Nicholas Kyriakou",
+        stockCode: "Empresa Privada",
+        website: "https://www.fxtm.com",
+        email: "support@fxtm.com",
+        languages: ["Português", "Inglês", "Espanhol", "Árabe", "Chinês", "+12 idiomas"],
+        rating: 4.5,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "777911", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "185/12", status: "Ativa", compensation: "€20.000" },
+        { name: "FSCA", country: "África do Sul", license: "46614", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSC", country: "Maurício", license: "C113012295", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 10,
+        countriesServed: 180,
+        mainOffices: [
+          "Limassol (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Lagos (Nigéria)",
+          "Joanesburgo (África do Sul)",
+          "Dubai (EAU)"
+        ]
+      },
+      metrics: {
+        activeClients: "3,5 milhões+",
+        monthlyVolume: "$200 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "8 milhões de visitas",
+        yearsActive: "14 anos"
+      }
+    },
+    "admirals": {
+      brokerData: {
+        name: "Admirals",
+        fullName: "Admirals Group AS",
+        founded: "2001",
+        headquarters: "Tallinn, Estônia",
+        ceo: "Sergei Bogatenkov",
+        stockCode: "Empresa Privada",
+        website: "https://www.admirals.com",
+        email: "support@admirals.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+15 idiomas"],
+        rating: 4.6,
+        verified: true,
+        lastUpdate: "Novembro de 2025"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "595450", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "201/13", status: "Ativa", compensation: "€20.000" },
+        { name: "ASIC", country: "Austrália", license: "410681", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSA", country: "Estônia", license: "4.1-1/46", status: "Ativa", compensation: "€20.000" }
+      ],
+      globalPresence: {
+        offices: 14,
+        countriesServed: 160,
+        mainOffices: [
+          "Tallinn (Sede Principal)",
+          "Londres (Reino Unido)",
+          "Limassol (Chipre)",
+          "Sydney (Austrália)",
+          "Madrid (Espanha)"
+        ]
+      },
+      metrics: {
+        activeClients: "1,5 milhões+",
+        monthlyVolume: "$900 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "€180 milhões (2024)",
+        monthlyTraffic: "5,5 milhões de visitas",
+        yearsActive: "24 anos"
+      }
     }
   };
 
@@ -946,122 +1151,6 @@ const CorretoraDetalhe = () => {
         { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" }
       ]
     },
-    "tickmill": {
-      platforms: [
-        { name: "MetaTrader 4", available: true },
-        { name: "MetaTrader 5", available: true },
-        { name: "WebTrader", available: true },
-        { name: "Mobile Apps", available: true },
-        { name: "VPS Service", available: true }
-      ],
-      instruments: [
-        { type: "Forex", count: "80+ pares" },
-        { type: "Índices", count: "12" },
-        { type: "Commodities", count: "15" },
-        { type: "Ações", count: "150+" },
-        { type: "Criptomoedas", count: "10" },
-        { type: "Títulos", count: "12" }
-      ],
-      tradingConditions: [
-        { label: "Spread EUR/USD", value: "0.0 pips (Pro)" },
-        { label: "Alavancagem", value: "Até 1:500" },
-        { label: "Comissão", value: "$6/lote" },
-        { label: "Scalping", value: "Permitido" }
-      ],
-      paymentMethods: [
-        { method: "Cartão Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100+" },
-        { method: "Transferência Bancária", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" },
-        { method: "Skrill/Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$100-$10k" }
-      ]
-    },
-    "plus500": {
-      platforms: [
-        { name: "Plus500 WebTrader", available: true },
-        { name: "Plus500 Windows", available: true },
-        { name: "Mobile Apps", available: true }
-      ],
-      instruments: [
-        { type: "Forex", count: "60+ pares" },
-        { type: "Ações CFDs", count: "2.400+" },
-        { type: "Índices", count: "30" },
-        { type: "Criptomoedas", count: "18" },
-        { type: "ETFs", count: "100+" },
-        { type: "Opções", count: "250+" }
-      ],
-      tradingConditions: [
-        { label: "Spread EUR/USD", value: "0.8 pips (fixo)" },
-        { label: "Alavancagem", value: "1:30" },
-        { label: "Comissão", value: "Sem comissão" }
-      ],
-      paymentMethods: [
-        { method: "Cartão/PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$100-$40k" },
-        { method: "Transferência", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" }
-      ]
-    },
-    "exness": {
-      platforms: [
-        { name: "MT4/MT5", available: true },
-        { name: "Exness Terminal", available: true },
-        { name: "Exness Trade App", available: true }
-      ],
-      instruments: [
-        { type: "Forex", count: "107 pares" },
-        { type: "Metais", count: "10" },
-        { type: "Criptomoedas", count: "35" },
-        { type: "Ações", count: "95" }
-      ],
-      tradingConditions: [
-        { label: "Spread EUR/USD", value: "0.0 pips" },
-        { label: "Alavancagem", value: "Ilimitada" },
-        { label: "Comissão", value: "$3.50/lote" }
-      ],
-      paymentMethods: [
-        { method: "Cartão/Bitcoin", time: "Instantâneo", fees: "Gratuito", limits: "$10+" },
-        { method: "Transferência", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" }
-      ]
-    },
-    "fxtm": {
-      platforms: [
-        { name: "MT4/MT5", available: true },
-        { name: "FXTM Trader", available: true }
-      ],
-      instruments: [
-        { type: "Forex", count: "60 pares" },
-        { type: "Ações", count: "180" },
-        { type: "Criptomoedas", count: "15" }
-      ],
-      tradingConditions: [
-        { label: "Spread EUR/USD", value: "1.3 pips" },
-        { label: "Alavancagem", value: "1:1000" },
-        { label: "Copy Trading", value: "Disponível" }
-      ],
-      paymentMethods: [
-        { method: "Cartão", time: "Instantâneo", fees: "Gratuito", limits: "$10+" },
-        { method: "Transferência", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" }
-      ]
-    },
-    "admirals": {
-      platforms: [
-        { name: "MT4/MT5", available: true },
-        { name: "MT Supreme Edition", available: true },
-        { name: "Admirals Connect", available: true }
-      ],
-      instruments: [
-        { type: "Ações", count: "4.500+" },
-        { type: "Forex", count: "80 pares" },
-        { type: "ETFs", count: "300+" },
-        { type: "Criptomoedas", count: "50" }
-      ],
-      tradingConditions: [
-        { label: "Spread EUR/USD", value: "0.0 pips" },
-        { label: "Alavancagem", value: "1:500" },
-        { label: "Ações Reais", value: "Sim" }
-      ],
-      paymentMethods: [
-        { method: "Cartão/PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$25+" },
-        { method: "Transferência", time: "3-5 dias", fees: "Gratuito", limits: "Sem limite" }
-      ]
-    }
   };
 
   const currentPlatformData = platformsDatabase[currentSlug] || platformsDatabase["ig-group"];
@@ -1182,6 +1271,60 @@ const CorretoraDetalhe = () => {
       { year: "2022", event: "Licenciamento pela FCA do Reino Unido" },
       { year: "2023", event: "Lançamento de trading de criptomoedas com 30+ pares" },
       { year: "2025", event: "Mais de 12 milhões de clientes registrados globalmente" }
+    ],
+    "tickmill": [
+      { year: "2014", event: "Fundação da Tickmill no Reino Unido" },
+      { year: "2015", event: "Licenciamento pela FCA e CySEC" },
+      { year: "2016", event: "Expansão global com escritório em Seychelles" },
+      { year: "2017", event: "Lançamento de contas ECN Raw Spread" },
+      { year: "2018", event: "Abertura de escritório em Dubai e licenciamento no Oriente Médio" },
+      { year: "2020", event: "Introdução de VPS gratuito para traders ativos" },
+      { year: "2022", event: "Expansão para mercados emergentes na África e Ásia" },
+      { year: "2025", event: "Mais de 500.000 clientes ativos globalmente" }
+    ],
+    "plus500": [
+      { year: "2008", event: "Fundação da Plus500 em Haifa, Israel" },
+      { year: "2009", event: "Licenciamento pela CySEC" },
+      { year: "2013", event: "IPO na Bolsa de Londres (LSE)" },
+      { year: "2014", event: "Licenciamento pela FCA do Reino Unido" },
+      { year: "2015", event: "Expansão para mercado australiano com licença ASIC" },
+      { year: "2017", event: "Alcance de 10 milhões de clientes registrados" },
+      { year: "2019", event: "Patrocínio do time de futebol Atlético de Madrid" },
+      { year: "2021", event: "Expansão de instrumentos para mais de 2.800 ativos" },
+      { year: "2025", event: "Mais de 25 milhões de usuários registrados" }
+    ],
+    "exness": [
+      { year: "2008", event: "Fundação da Exness no Chipre" },
+      { year: "2011", event: "Licenciamento pela CySEC" },
+      { year: "2013", event: "Expansão para Ásia com escritório em Hong Kong" },
+      { year: "2015", event: "Introdução de alavancagem ilimitada" },
+      { year: "2016", event: "Lançamento do programa de afiliados global" },
+      { year: "2018", event: "Licenciamento pela FCA do Reino Unido" },
+      { year: "2020", event: "Expansão massiva para mercados emergentes" },
+      { year: "2022", event: "Alcance de $5 trilhões USD em volume mensal" },
+      { year: "2025", event: "Mais de 2,5 milhões de clientes ativos" }
+    ],
+    "fxtm": [
+      { year: "2011", event: "Fundação da FXTM (ForexTime)" },
+      { year: "2012", event: "Licenciamento pela CySEC" },
+      { year: "2013", event: "Lançamento do programa Invest e Copy Trading" },
+      { year: "2015", event: "Licenciamento pela FCA do Reino Unido" },
+      { year: "2017", event: "Expansão significativa na África e Oriente Médio" },
+      { year: "2018", event: "Licenciamento pela FSCA na África do Sul" },
+      { year: "2020", event: "Alcance de 3 milhões de clientes registrados" },
+      { year: "2023", event: "Expansão de programas educacionais com webinars semanais" },
+      { year: "2025", event: "Mais de 3,5 milhões de clientes globalmente" }
+    ],
+    "admirals": [
+      { year: "2001", event: "Fundação da Admiral Markets na Estônia" },
+      { year: "2010", event: "Licenciamento pela CySEC e expansão europeia" },
+      { year: "2013", event: "Lançamento do MetaTrader Supreme Edition" },
+      { year: "2015", event: "Licenciamento pela FCA do Reino Unido" },
+      { year: "2017", event: "Expansão para mercado australiano com ASIC" },
+      { year: "2018", event: "Rebranding para Admirals" },
+      { year: "2020", event: "Lançamento da plataforma Admirals Connect (Social Trading)" },
+      { year: "2022", event: "Expansão de oferta de ações para 4.500+ instrumentos" },
+      { year: "2025", event: "Mais de 1,5 milhões de clientes em 160 países" }
     ]
   };
 
@@ -1441,251 +1584,6 @@ const CorretoraDetalhe = () => {
         question: "Posso negociar criptomoedas na OctaFX?",
         answer: "Sim, a OctaFX oferece trading de CFDs de 30+ criptomoedas, incluindo Bitcoin, Ethereum e outras altcoins populares. Também aceita depósitos em Bitcoin."
       }
-    ],
-    "tickmill": {
-      brokerData: {
-        name: "Tickmill",
-        fullName: "Tickmill Group",
-        founded: "2014",
-        headquarters: "Londres, Reino Unido",
-        ceo: "Martin Breuer",
-        stockCode: "Empresa Privada",
-        website: "https://www.tickmill.com",
-        email: "support@tickmill.com",
-        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+10 idiomas"],
-        rating: 4.6,
-        verified: true,
-        lastUpdate: "Novembro de 2025"
-      },
-      regulations: [
-        { name: "FCA", country: "Reino Unido", license: "717270", status: "Ativa", compensation: "£85.000" },
-        { name: "CySEC", country: "Chipre", license: "278/15", status: "Ativa", compensation: "€20.000" },
-        { name: "FSA", country: "Seychelles", license: "SD008", status: "Ativa", compensation: "Não aplicável" },
-        { name: "FSC", country: "Maurício", license: "C116016172", status: "Ativa", compensation: "Não aplicável" }
-      ],
-      globalPresence: {
-        offices: 8,
-        countriesServed: 180,
-        mainOffices: [
-          "Londres (Sede Principal)",
-          "Limassol (Chipre)",
-          "Seychelles",
-          "Maurício",
-          "Dubai (EAU)"
-        ]
-      },
-      metrics: {
-        activeClients: "500.000+",
-        monthlyVolume: "$850 bilhões USD",
-        marketCap: "Empresa Privada",
-        annualProfit: "Não divulgado",
-        monthlyTraffic: "3,8 milhões de visitas",
-        yearsActive: "11 anos"
-      }
-    },
-    "plus500": {
-      brokerData: {
-        name: "Plus500",
-        fullName: "Plus500 Ltd.",
-        founded: "2008",
-        headquarters: "Haifa, Israel",
-        ceo: "David Zruia",
-        stockCode: "LSE: PLUS",
-        website: "https://www.plus500.com",
-        email: "support@plus500.com",
-        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+30 idiomas"],
-        rating: 4.5,
-        verified: true,
-        lastUpdate: "Novembro de 2025"
-      },
-      regulations: [
-        { name: "FCA", country: "Reino Unido", license: "509909", status: "Ativa", compensation: "£85.000" },
-        { name: "CySEC", country: "Chipre", license: "250/14", status: "Ativa", compensation: "€20.000" },
-        { name: "ASIC", country: "Austrália", license: "417727", status: "Ativa", compensation: "Não aplicável" },
-        { name: "MAS", country: "Cingapura", license: "CMS100648", status: "Ativa", compensation: "Não aplicável" }
-      ],
-      globalPresence: {
-        offices: 10,
-        countriesServed: 50,
-        mainOffices: [
-          "Haifa (Sede Principal)",
-          "Londres (Reino Unido)",
-          "Limassol (Chipre)",
-          "Sydney (Austrália)",
-          "Cingapura"
-        ]
-      },
-      metrics: {
-        activeClients: "25 milhões+",
-        monthlyVolume: "$2,2 trilhões USD",
-        marketCap: "£2,1 bilhões",
-        annualProfit: "$450 milhões (2024)",
-        monthlyTraffic: "12 milhões de visitas",
-        yearsActive: "17 anos"
-      }
-    },
-    "exness": {
-      brokerData: {
-        name: "Exness",
-        fullName: "Exness Group",
-        founded: "2008",
-        headquarters: "Limassol, Chipre",
-        ceo: "Petr Valov",
-        stockCode: "Empresa Privada",
-        website: "https://www.exness.com",
-        email: "support@exness.com",
-        languages: ["Português", "Inglês", "Espanhol", "Chinês", "Árabe", "+15 idiomas"],
-        rating: 4.7,
-        verified: true,
-        lastUpdate: "Novembro de 2025"
-      },
-      regulations: [
-        { name: "FCA", country: "Reino Unido", license: "730729", status: "Ativa", compensation: "£85.000" },
-        { name: "CySEC", country: "Chipre", license: "178/12", status: "Ativa", compensation: "€20.000" },
-        { name: "FSA", country: "Seychelles", license: "SD025", status: "Ativa", compensation: "Não aplicável" },
-        { name: "FSC", country: "Ilhas Virgens Britânicas", license: "SIBA/L/20/1133", status: "Ativa", compensation: "Não aplicável" }
-      ],
-      globalPresence: {
-        offices: 12,
-        countriesServed: 180,
-        mainOffices: [
-          "Limassol (Sede Principal)",
-          "Londres (Reino Unido)",
-          "Dubai (EAU)",
-          "Hong Kong",
-          "Seychelles",
-          "Bangkok (Tailândia)"
-        ]
-      },
-      metrics: {
-        activeClients: "2,5 milhões+",
-        monthlyVolume: "$5,5 trilhões USD",
-        marketCap: "Empresa Privada",
-        annualProfit: "Não divulgado",
-        monthlyTraffic: "45 milhões de visitas",
-        yearsActive: "17 anos"
-      }
-    },
-    "fxtm": {
-      brokerData: {
-        name: "FXTM",
-        fullName: "ForexTime Limited",
-        founded: "2011",
-        headquarters: "Limassol, Chipre",
-        ceo: "Andrey Dashin",
-        stockCode: "Empresa Privada",
-        website: "https://www.forextime.com",
-        email: "support@forextime.com",
-        languages: ["Português", "Inglês", "Espanhol", "Árabe", "Chinês", "+15 idiomas"],
-        rating: 4.5,
-        verified: true,
-        lastUpdate: "Novembro de 2025"
-      },
-      regulations: [
-        { name: "FCA", country: "Reino Unido", license: "777911", status: "Ativa", compensation: "£85.000" },
-        { name: "CySEC", country: "Chipre", license: "185/12", status: "Ativa", compensation: "€20.000" },
-        { name: "FSCA", country: "África do Sul", license: "46614", status: "Ativa", compensation: "Não aplicável" },
-        { name: "FSC", country: "Maurício", license: "C113012295", status: "Ativa", compensation: "Não aplicável" }
-      ],
-      globalPresence: {
-        offices: 9,
-        countriesServed: 180,
-        mainOffices: [
-          "Limassol (Sede Principal)",
-          "Londres (Reino Unido)",
-          "Lagos (Nigéria)",
-          "Cidade do Cabo (África do Sul)",
-          "Dubai (EAU)"
-        ]
-      },
-      metrics: {
-        activeClients: "3,5 milhões+",
-        monthlyVolume: "$1,8 trilhões USD",
-        marketCap: "Empresa Privada",
-        annualProfit: "Não divulgado",
-        monthlyTraffic: "8,2 milhões de visitas",
-        yearsActive: "14 anos"
-      }
-    },
-    "admirals": {
-      brokerData: {
-        name: "Admirals",
-        fullName: "Admiral Markets Group AS",
-        founded: "2001",
-        headquarters: "Tallinn, Estônia",
-        ceo: "Sergei Bogatenkov",
-        stockCode: "Empresa Privada",
-        website: "https://www.admiralmarkets.com",
-        email: "support@admiralmarkets.com",
-        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+20 idiomas"],
-        rating: 4.6,
-        verified: true,
-        lastUpdate: "Novembro de 2025"
-      },
-      regulations: [
-        { name: "FCA", country: "Reino Unido", license: "595450", status: "Ativa", compensation: "£85.000" },
-        { name: "CySEC", country: "Chipre", license: "201/13", status: "Ativa", compensation: "€20.000" },
-        { name: "ASIC", country: "Austrália", license: "410681", status: "Ativa", compensation: "Não aplicável" },
-        { name: "FSA", country: "Estônia", license: "4.1-1/46", status: "Ativa", compensation: "€20.000" }
-      ],
-      globalPresence: {
-        offices: 14,
-        countriesServed: 160,
-        mainOffices: [
-          "Tallinn (Sede Principal)",
-          "Londres (Reino Unido)",
-          "Limassol (Chipre)",
-          "Sydney (Austrália)",
-          "Berlim (Alemanha)",
-          "Madrid (Espanha)"
-        ]
-      },
-      metrics: {
-        activeClients: "1,5 milhões+",
-        monthlyVolume: "$900 bilhões USD",
-        marketCap: "Empresa Privada",
-        annualProfit: "€180 milhões (2024)",
-        monthlyTraffic: "5,5 milhões de visitas",
-        yearsActive: "24 anos"
-      }
-    }
-  };
-
-  // Dados adicionados aos databases principais acima
-      { name: "MetaTrader 4", available: true },
-      { name: "MetaTrader 5", available: true },
-      { name: "WebTrader", available: true },
-      { name: "Mobile Apps", available: true },
-      { name: "VPS Service", available: true }
-    ],
-    "plus500": [
-      { name: "Plus500 WebTrader (Própria)", available: true },
-      { name: "Plus500 Windows App", available: true },
-      { name: "Plus500 Mobile Apps", available: true },
-      { name: "Plus500 Tablet Apps", available: true }
-    ],
-    "exness": [
-      { name: "MetaTrader 4", available: true },
-      { name: "MetaTrader 5", available: true },
-      { name: "Exness Terminal", available: true },
-      { name: "WebTrader", available: true },
-      { name: "Mobile Apps", available: true },
-      { name: "Exness Trade App", available: true }
-    ],
-    "fxtm": [
-      { name: "MetaTrader 4", available: true },
-      { name: "MetaTrader 5", available: true },
-      { name: "FXTM Trader", available: true },
-      { name: "WebTrader", available: true },
-      { name: "Mobile Apps", available: true }
-    ],
-    "admirals": [
-      { name: "MetaTrader 4", available: true },
-      { name: "MetaTrader 5", available: true },
-      { name: "MetaTrader Supreme Edition", available: true },
-      { name: "WebTrader", available: true },
-      { name: "Mobile Apps", available: true },
-      { name: "Admirals Connect (Social)", available: true }
     ]
   };
 
