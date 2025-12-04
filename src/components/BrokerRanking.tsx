@@ -12,6 +12,11 @@ import interactiveBrokersLogo from "@/assets/interactive-brokers.jpeg";
 import cmcMarketsLogo from "@/assets/cmc-markets.jpeg";
 import avatradeLogo from "@/assets/avatrade.jpeg";
 import octafxLogo from "@/assets/octafx.jpeg";
+import tickmillLogo from "@/assets/tickmill.jpeg";
+import plus500Logo from "@/assets/plus500.jpeg";
+import exnessLogo from "@/assets/exness.jpeg";
+import fxtmLogo from "@/assets/fxtm.jpeg";
+import admiralsLogo from "@/assets/admirals.jpeg";
 
 const brokers = [
   {
@@ -133,6 +138,66 @@ const brokers = [
     rating: 4.4,
     verified: true,
     highlight: "12M+ Registros",
+  },
+  {
+    rank: 11,
+    name: "Tickmill",
+    slug: "tickmill",
+    logo: tickmillLogo,
+    regulation: "FCA, CySEC, FSA",
+    spread: "0.0 pips",
+    minDeposit: "$100",
+    rating: 4.6,
+    verified: true,
+    highlight: "ECN Raw Spread",
+  },
+  {
+    rank: 12,
+    name: "Plus500",
+    slug: "plus500",
+    logo: plus500Logo,
+    regulation: "FCA, CySEC, ASIC, MAS",
+    spread: "0.8 pips",
+    minDeposit: "$100",
+    rating: 4.5,
+    verified: true,
+    highlight: "Listada na LSE",
+  },
+  {
+    rank: 13,
+    name: "Exness",
+    slug: "exness",
+    logo: exnessLogo,
+    regulation: "FCA, CySEC, FSA",
+    spread: "0.0 pips",
+    minDeposit: "$10",
+    rating: 4.7,
+    verified: true,
+    highlight: "Alavancagem Ilimitada",
+  },
+  {
+    rank: 14,
+    name: "FXTM",
+    slug: "fxtm",
+    logo: fxtmLogo,
+    regulation: "FCA, CySEC, FSCA",
+    spread: "0.1 pips",
+    minDeposit: "$10",
+    rating: 4.5,
+    verified: true,
+    highlight: "Copy Trading",
+  },
+  {
+    rank: 15,
+    name: "Admirals",
+    slug: "admirals",
+    logo: admiralsLogo,
+    regulation: "FCA, CySEC, ASIC, FSA",
+    spread: "0.0 pips",
+    minDeposit: "$25",
+    rating: 4.6,
+    verified: true,
+    highlight: "Ações Reais + CFDs",
   },
 ];
 
