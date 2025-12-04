@@ -1,4 +1,4 @@
-import { Shield, Star, ArrowUpRight, ArrowLeft } from "lucide-react";
+import { Shield, Star, ArrowUpRight, ArrowLeft, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -291,10 +291,17 @@ const Corretoras = () => {
               <h1 className="text-3xl md:text-5xl font-bold mb-4">
                 Todas as <span className="text-gradient-bull">Corretoras de Forex</span>
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mb-6">
                 Ranking completo das melhores corretoras regulamentadas globalmente,
                 com análise detalhada de spreads, regulamentação e avaliações.
               </p>
+              
+              <Link to="/corretoras/comparar">
+                <Button className="bg-primary hover:bg-primary/90">
+                  <Scale className="h-4 w-4 mr-2" />
+                  Comparar Corretoras Lado a Lado
+                </Button>
+              </Link>
             </div>
 
             {/* Broker Cards */}

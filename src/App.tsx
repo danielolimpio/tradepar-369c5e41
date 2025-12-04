@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import Corretoras from "./pages/Corretoras";
 import CorretoraDetalhe from "./pages/CorretoraDetalhe";
+import ComparacaoCorretoras from "./pages/ComparacaoCorretoras";
 import Traders from "./pages/Traders";
 import Tecnologia from "./pages/Tecnologia";
 import Estrategias from "./pages/Estrategias";
@@ -34,6 +35,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/corretoras" element={<Corretoras />} />
+          <Route path="/corretoras/comparar" element={<ComparacaoCorretoras />} />
           <Route path="/corretoras/:brokerSlug" element={<CorretoraDetalhe />} />
           <Route path="/traders" element={<Traders />} />
           <Route path="/tecnologia" element={<Tecnologia />} />
