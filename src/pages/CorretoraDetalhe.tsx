@@ -1584,189 +1584,7 @@ const CorretoraDetalhe = () => {
         question: "Posso negociar criptomoedas na OctaFX?",
         answer: "Sim, a OctaFX oferece trading de CFDs de 30+ criptomoedas, incluindo Bitcoin, Ethereum e outras altcoins populares. Também aceita depósitos em Bitcoin."
       }
-    ]
-  };
-
-  const instrumentsDatabase: Record<string, any> = {
-    "tickmill": [
-      { category: "Pares de Moedas", quantity: 80, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
-      { category: "Índices", quantity: 12, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
-      { category: "Commodities", quantity: 15, examples: "Ouro, Prata, Petróleo, Gás Natural" },
-      { category: "Ações", quantity: 150, examples: "Apple, Tesla, Amazon, Google" },
-      { category: "Criptomoedas", quantity: 10, examples: "Bitcoin, Ethereum, Litecoin, Ripple" },
-      { category: "Títulos", quantity: 12, examples: "US Treasury, German Bunds, UK Gilts" }
     ],
-    "plus500": [
-      { category: "Pares de Moedas", quantity: 60, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
-      { category: "Índices", quantity: 30, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
-      { category: "Commodities", quantity: 25, examples: "Ouro, Prata, Petróleo, Gás Natural" },
-      { category: "Ações", quantity: 2400, examples: "Apple, Tesla, Amazon, Google" },
-      { category: "Criptomoedas", quantity: 18, examples: "Bitcoin, Ethereum, Litecoin, Ripple" },
-      { category: "ETFs", quantity: 100, examples: "SPY, QQQ, GLD, IWM" },
-      { category: "Opções", quantity: 250, examples: "S&P 500 Options, ETF Options" }
-    ],
-    "exness": [
-      { category: "Pares de Moedas", quantity: 107, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
-      { category: "Metais", quantity: 10, examples: "Ouro, Prata, Paládio, Platina" },
-      { category: "Energias", quantity: 3, examples: "Petróleo WTI, Petróleo Brent, Gás Natural" },
-      { category: "Índices", quantity: 11, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
-      { category: "Ações", quantity: 95, examples: "Apple, Tesla, Amazon, Google" },
-      { category: "Criptomoedas", quantity: 35, examples: "Bitcoin, Ethereum, Litecoin, Ripple" }
-    ],
-    "fxtm": [
-      { category: "Pares de Moedas", quantity: 60, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
-      { category: "Metais", quantity: 5, examples: "Ouro, Prata, Paládio, Platina" },
-      { category: "Energias", quantity: 3, examples: "Petróleo WTI, Petróleo Brent, Gás Natural" },
-      { category: "Índices", quantity: 13, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
-      { category: "Ações", quantity: 180, examples: "Apple, Tesla, Amazon, Google" },
-      { category: "Criptomoedas", quantity: 15, examples: "Bitcoin, Ethereum, Litecoin, Ripple" }
-    ],
-    "admirals": [
-      { category: "Pares de Moedas", quantity: 80, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
-      { category: "Índices", quantity: 35, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
-      { category: "Commodities", quantity: 20, examples: "Ouro, Prata, Petróleo, Gás Natural" },
-      { category: "Ações", quantity: 4500, examples: "Apple, Tesla, Amazon, Google" },
-      { category: "ETFs", quantity: 300, examples: "SPY, QQQ, GLD, IWM" },
-      { category: "Criptomoedas", quantity: 50, examples: "Bitcoin, Ethereum, Litecoin, Ripple" },
-      { category: "Títulos", quantity: 25, examples: "US Treasury, German Bunds, UK Gilts" }
-    ]
-  };
-
-  const tradingConditionsDatabase: Record<string, any> = {
-    "tickmill": [
-      { condition: "Spread EUR/USD", classic: "1.6 pips", pro: "0.6 pips", vip: "0.0 pips" },
-      { condition: "Comissão por lote", classic: "$0", pro: "$0", vip: "$4" },
-      { condition: "Alavancagem", classic: "1:500", pro: "1:500", vip: "1:500" },
-      { condition: "Tamanho Mínimo", classic: "0.01 lote", pro: "0.01 lote", vip: "0.01 lote" },
-      { condition: "Execução", classic: "Market", pro: "Market", vip: "Raw Spread" }
-    ],
-    "plus500": [
-      { condition: "Spread EUR/USD", retail: "0.8 pips (fixo)", professional: "0.6 pips (fixo)", detail: "Spread variável" },
-      { condition: "Comissão", retail: "Sem comissão", professional: "Sem comissão", detail: "Incluído no spread" },
-      { condition: "Alavancagem", retail: "1:30 (varejo)", professional: "1:300 (profissional)", detail: "ESMA compliance" },
-      { condition: "Tamanho Mínimo", retail: "Variável por ativo", professional: "Variável por ativo", detail: "Micro lotes" },
-      { condition: "Financiamento Overnight", retail: "Aplicável", professional: "Aplicável", detail: "Taxas variáveis" }
-    ],
-    "exness": [
-      { condition: "Spread EUR/USD", standard: "1.0 pips", pro: "0.7 pips", raw: "0.0 pips" },
-      { condition: "Comissão por lote", standard: "$0", pro: "$0", raw: "$3.50" },
-      { condition: "Alavancagem", standard: "Ilimitada", pro: "Ilimitada", raw: "Ilimitada" },
-      { condition: "Tamanho Mínimo", standard: "0.01 lote", pro: "0.01 lote", raw: "0.01 lote" },
-      { condition: "Execução", standard: "Instant", pro: "Market", raw: "Market" }
-    ],
-    "fxtm": [
-      { condition: "Spread EUR/USD", standard: "1.3 pips", ecn: "0.1 pips", ecnzero: "0.0 pips" },
-      { condition: "Comissão por lote", standard: "$0", ecn: "$5", ecnzero: "$7" },
-      { condition: "Alavancagem", standard: "1:1000", ecn: "1:1000", ecnzero: "1:500" },
-      { condition: "Tamanho Mínimo", standard: "0.01 lote", ecn: "0.01 lote", ecnzero: "0.01 lote" },
-      { condition: "Depósito Mínimo", standard: "$10", ecn: "$500", ecnzero: "$500" }
-    ],
-    "admirals": [
-      { condition: "Spread EUR/USD", trade: "0.5 pips", zero: "0.0 pips", invest: "N/A" },
-      { condition: "Comissão por lote", trade: "$0", zero: "$3", invest: "0,02%" },
-      { condition: "Alavancagem Forex", trade: "1:500", zero: "1:500", invest: "1:5" },
-      { condition: "Tamanho Mínimo", trade: "0.01 lote", zero: "0.01 lote", invest: "1 ação" },
-      { condition: "Depósito Mínimo", trade: "$25", zero: "$100", invest: "$1" }
-    ]
-  };
-
-  const paymentMethodsDatabase: Record<string, any> = {
-    "tickmill": [
-      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - sem limite" },
-      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
-      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
-      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
-      { method: "FasaPay", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $5.000" }
-    ],
-    "plus500": [
-      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $40.000" },
-      { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $20.000" },
-      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
-      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $20.000" },
-      { method: "Apple Pay", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" }
-    ],
-    "exness": [
-      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$10 - sem limite" },
-      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
-      { method: "Perfect Money", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
-      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
-      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
-      { method: "Bitcoin", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" }
-    ],
-    "fxtm": [
-      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$10 - sem limite" },
-      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
-      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
-      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
-      { method: "FasaPay", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $5.000" }
-    ],
-    "admirals": [
-      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$25 - sem limite" },
-      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
-      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
-      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
-      { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" }
-    ]
-  };
-
-  const timelineDatabase: Record<string, any> = {
-    "tickmill": [
-      { year: "2014", event: "Fundação da Tickmill no Reino Unido" },
-      { year: "2015", event: "Licenciamento pela FCA e CySEC" },
-      { year: "2016", event: "Expansão global com escritório em Seychelles" },
-      { year: "2017", event: "Lançamento de contas ECN Raw Spread" },
-      { year: "2018", event: "Abertura de escritório em Dubai e licenciamento no Oriente Médio" },
-      { year: "2020", event: "Introdução de VPS gratuito para traders ativos" },
-      { year: "2022", event: "Expansão para mercados emergentes na África e Ásia" },
-      { year: "2025", event: "Mais de 500.000 clientes ativos globalmente" }
-    ],
-    "plus500": [
-      { year: "2008", event: "Fundação da Plus500 em Haifa, Israel" },
-      { year: "2009", event: "Licenciamento pela CySEC" },
-      { year: "2013", event: "IPO na Bolsa de Londres (LSE)" },
-      { year: "2014", event: "Licenciamento pela FCA do Reino Unido" },
-      { year: "2015", event: "Expansão para mercado australiano com licença ASIC" },
-      { year: "2017", event: "Alcance de 10 milhões de clientes registrados" },
-      { year: "2019", event: "Patrocínio do time de futebol Atlético de Madrid" },
-      { year: "2021", event: "Expansão de instrumentos para mais de 2.800 ativos" },
-      { year: "2025", event: "Mais de 25 milhões de usuários registrados" }
-    ],
-    "exness": [
-      { year: "2008", event: "Fundação da Exness no Chipre" },
-      { year: "2011", event: "Licenciamento pela CySEC" },
-      { year: "2013", event: "Expansão para Ásia com escritório em Hong Kong" },
-      { year: "2015", event: "Introdução de alavancagem ilimitada" },
-      { year: "2016", event: "Lançamento do programa de afiliados global" },
-      { year: "2018", event: "Licenciamento pela FCA do Reino Unido" },
-      { year: "2020", event: "Expansão massiva para mercados emergentes" },
-      { year: "2022", event: "Alcance de $5 trilhões USD em volume mensal" },
-      { year: "2025", event: "Mais de 2,5 milhões de clientes ativos" }
-    ],
-    "fxtm": [
-      { year: "2011", event: "Fundação da FXTM (ForexTime)" },
-      { year: "2012", event: "Licenciamento pela CySEC" },
-      { year: "2013", event: "Lançamento do programa Invest e Copy Trading" },
-      { year: "2015", event: "Licenciamento pela FCA do Reino Unido" },
-      { year: "2017", event: "Expansão significativa na África e Oriente Médio" },
-      { year: "2018", event: "Licenciamento pela FSCA na África do Sul" },
-      { year: "2020", event: "Alcance de 3 milhões de clientes registrados" },
-      { year: "2023", event: "Expansão de programas educacionais com webinars semanais" },
-      { year: "2025", event: "Mais de 3,5 milhões de clientes globalmente" }
-    ],
-    "admirals": [
-      { year: "2001", event: "Fundação da Admiral Markets na Estônia" },
-      { year: "2010", event: "Licenciamento pela CySEC e expansão europeia" },
-      { year: "2013", event: "Lançamento do MetaTrader Supreme Edition" },
-      { year: "2015", event: "Licenciamento pela FCA do Reino Unido" },
-      { year: "2017", event: "Expansão para mercado australiano com ASIC" },
-      { year: "2018", event: "Rebranding para Admirals" },
-      { year: "2020", event: "Lançamento da plataforma Admirals Connect (Social Trading)" },
-      { year: "2022", event: "Expansão de oferta de ações para 4.500+ instrumentos" },
-      { year: "2025", event: "Mais de 1,5 milhões de clientes em 160 países" }
-    ]
-  };
-
-  const faqsDatabase: Record<string, any> = {
     "tickmill": [
       {
         question: "A Tickmill é segura e confiável?",
@@ -1896,6 +1714,128 @@ const CorretoraDetalhe = () => {
         question: "O que é o MetaTrader Supreme Edition?",
         answer: "É um plugin exclusivo da Admirals que adiciona mais de 60 funcionalidades extras ao MT4/MT5, incluindo mini terminal, matriz de correlação, alertas de trade e muito mais. É gratuito para clientes Admirals."
       }
+    ]
+  };
+
+  const instrumentsDatabase: Record<string, any> = {
+    "tickmill": [
+      { category: "Pares de Moedas", quantity: 80, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Índices", quantity: 12, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Commodities", quantity: 15, examples: "Ouro, Prata, Petróleo, Gás Natural" },
+      { category: "Ações", quantity: 150, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "Criptomoedas", quantity: 10, examples: "Bitcoin, Ethereum, Litecoin, Ripple" },
+      { category: "Títulos", quantity: 12, examples: "US Treasury, German Bunds, UK Gilts" }
+    ],
+    "plus500": [
+      { category: "Pares de Moedas", quantity: 60, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Índices", quantity: 30, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Commodities", quantity: 25, examples: "Ouro, Prata, Petróleo, Gás Natural" },
+      { category: "Ações", quantity: 2400, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "Criptomoedas", quantity: 18, examples: "Bitcoin, Ethereum, Litecoin, Ripple" },
+      { category: "ETFs", quantity: 100, examples: "SPY, QQQ, GLD, IWM" },
+      { category: "Opções", quantity: 250, examples: "S&P 500 Options, ETF Options" }
+    ],
+    "exness": [
+      { category: "Pares de Moedas", quantity: 107, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Metais", quantity: 10, examples: "Ouro, Prata, Paládio, Platina" },
+      { category: "Energias", quantity: 3, examples: "Petróleo WTI, Petróleo Brent, Gás Natural" },
+      { category: "Índices", quantity: 11, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Ações", quantity: 95, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "Criptomoedas", quantity: 35, examples: "Bitcoin, Ethereum, Litecoin, Ripple" }
+    ],
+    "fxtm": [
+      { category: "Pares de Moedas", quantity: 60, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Metais", quantity: 5, examples: "Ouro, Prata, Paládio, Platina" },
+      { category: "Energias", quantity: 3, examples: "Petróleo WTI, Petróleo Brent, Gás Natural" },
+      { category: "Índices", quantity: 13, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Ações", quantity: 180, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "Criptomoedas", quantity: 15, examples: "Bitcoin, Ethereum, Litecoin, Ripple" }
+    ],
+    "admirals": [
+      { category: "Pares de Moedas", quantity: 80, examples: "EUR/USD, GBP/USD, USD/JPY, EUR/GBP" },
+      { category: "Índices", quantity: 35, examples: "S&P 500, NASDAQ, DAX, FTSE 100" },
+      { category: "Commodities", quantity: 20, examples: "Ouro, Prata, Petróleo, Gás Natural" },
+      { category: "Ações", quantity: 4500, examples: "Apple, Tesla, Amazon, Google" },
+      { category: "ETFs", quantity: 300, examples: "SPY, QQQ, GLD, IWM" },
+      { category: "Criptomoedas", quantity: 50, examples: "Bitcoin, Ethereum, Litecoin, Ripple" },
+      { category: "Títulos", quantity: 25, examples: "US Treasury, German Bunds, UK Gilts" }
+    ]
+  };
+
+  const tradingConditionsDatabase: Record<string, any> = {
+    "tickmill": [
+      { condition: "Spread EUR/USD", classic: "1.6 pips", pro: "0.6 pips", vip: "0.0 pips" },
+      { condition: "Comissão por lote", classic: "$0", pro: "$0", vip: "$4" },
+      { condition: "Alavancagem", classic: "1:500", pro: "1:500", vip: "1:500" },
+      { condition: "Tamanho Mínimo", classic: "0.01 lote", pro: "0.01 lote", vip: "0.01 lote" },
+      { condition: "Execução", classic: "Market", pro: "Market", vip: "Raw Spread" }
+    ],
+    "plus500": [
+      { condition: "Spread EUR/USD", retail: "0.8 pips (fixo)", professional: "0.6 pips (fixo)", detail: "Spread variável" },
+      { condition: "Comissão", retail: "Sem comissão", professional: "Sem comissão", detail: "Incluído no spread" },
+      { condition: "Alavancagem", retail: "1:30 (varejo)", professional: "1:300 (profissional)", detail: "ESMA compliance" },
+      { condition: "Tamanho Mínimo", retail: "Variável por ativo", professional: "Variável por ativo", detail: "Micro lotes" },
+      { condition: "Financiamento Overnight", retail: "Aplicável", professional: "Aplicável", detail: "Taxas variáveis" }
+    ],
+    "exness": [
+      { condition: "Spread EUR/USD", standard: "1.0 pips", pro: "0.7 pips", raw: "0.0 pips" },
+      { condition: "Comissão por lote", standard: "$0", pro: "$0", raw: "$3.50" },
+      { condition: "Alavancagem", standard: "Ilimitada", pro: "Ilimitada", raw: "Ilimitada" },
+      { condition: "Tamanho Mínimo", standard: "0.01 lote", pro: "0.01 lote", raw: "0.01 lote" },
+      { condition: "Execução", standard: "Instant", pro: "Market", raw: "Market" }
+    ],
+    "fxtm": [
+      { condition: "Spread EUR/USD", standard: "1.3 pips", ecn: "0.1 pips", ecnzero: "0.0 pips" },
+      { condition: "Comissão por lote", standard: "$0", ecn: "$5", ecnzero: "$7" },
+      { condition: "Alavancagem", standard: "1:1000", ecn: "1:1000", ecnzero: "1:500" },
+      { condition: "Tamanho Mínimo", standard: "0.01 lote", ecn: "0.01 lote", ecnzero: "0.01 lote" },
+      { condition: "Depósito Mínimo", standard: "$10", ecn: "$500", ecnzero: "$500" }
+    ],
+    "admirals": [
+      { condition: "Spread EUR/USD", trade: "0.5 pips", zero: "0.0 pips", invest: "N/A" },
+      { condition: "Comissão por lote", trade: "$0", zero: "$3", invest: "0,02%" },
+      { condition: "Alavancagem Forex", trade: "1:500", zero: "1:500", invest: "1:5" },
+      { condition: "Tamanho Mínimo", trade: "0.01 lote", zero: "0.01 lote", invest: "1 ação" },
+      { condition: "Depósito Mínimo", trade: "$25", zero: "$100", invest: "$1" }
+    ]
+  };
+
+  const paymentMethodsDatabase: Record<string, any> = {
+    "tickmill": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - sem limite" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" },
+      { method: "FasaPay", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $5.000" }
+    ],
+    "plus500": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $40.000" },
+      { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $20.000" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $20.000" },
+      { method: "Apple Pay", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" }
+    ],
+    "exness": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$10 - sem limite" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Perfect Money", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
+      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" },
+      { method: "Bitcoin", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $50.000" }
+    ],
+    "fxtm": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$10 - sem limite" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
+      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
+      { method: "FasaPay", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $5.000" }
+    ],
+    "admirals": [
+      { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$25 - sem limite" },
+      { method: "Transferência Bancária", time: "3-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+      { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
+      { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" },
+      { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" }
     ]
   };
 
