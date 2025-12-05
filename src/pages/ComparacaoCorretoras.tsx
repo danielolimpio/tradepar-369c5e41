@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Shield, Star, ArrowLeft, Check, X, Plus, Minus, Scale } from "lucide-react";
+import { useState, useRef } from "react";
+import { Star, ArrowLeft, Check, X, Scale, Download, Filter, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -8,6 +8,10 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Helmet } from "react-helmet";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 import icMarketsLogo from "@/assets/ic-markets.jpeg";
 import pepperstoneLogo from "@/assets/pepperstone.jpeg";
@@ -622,8 +626,70 @@ const brokersData: BrokerComparison[] = [
   }
 ];
 
+// Get all unique regulations
+const allRegulations = Array.from(new Set(brokersData.flatMap(b => b.regulation))).sort();
+
+// Deposit range options
+const depositRanges = [
+  { label: "Todos", value: "all" },
+  { label: "$0 - Sem mínimo", value: "0" },
+  { label: "Até $10", value: "10" },
+  { label: "Até $100", value: "100" },
+  { label: "Até $200", value: "200" },
+  { label: "Acima de $200", value: "200+" }
+];
+
+// Spread range options
+const spreadRanges = [
+  { label: "Todos", value: "all" },
+  { label: "0.0 pips", value: "0" },
+  { label: "Até 0.5 pips", value: "0.5" },
+  { label: "Até 1.0 pips", value: "1.0" }
+];
+
+const parseDeposit = (deposit: string): number => {
+  const cleaned = deposit.replace(/[^0-9.]/g, '');
+  return cleaned ? parseFloat(cleaned) : 0;
+};
+
+const parseSpread = (spread: string): number => {
+  const match = spread.match(/[\d.]+/);
+  return match ? parseFloat(match[0]) : 0;
+};
+
 const ComparacaoCorretoras = () => {
   const [selectedBrokers, setSelectedBrokers] = useState<string[]>([]);
+  const [filterRegulation, setFilterRegulation] = useState<string>("all");
+  const [filterDeposit, setFilterDeposit] = useState<string>("all");
+  const [filterSpread, setFilterSpread] = useState<string>("all");
+  const [isExporting, setIsExporting] = useState(false);
+  const tableRef = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
+
+  // Apply filters
+  const filteredBrokers = brokersData.filter(broker => {
+    if (filterRegulation !== "all" && !broker.regulation.includes(filterRegulation)) {
+      return false;
+    }
+    
+    if (filterDeposit !== "all") {
+      const depositValue = parseDeposit(broker.minDeposit);
+      if (filterDeposit === "0" && depositValue !== 0) return false;
+      if (filterDeposit === "10" && depositValue > 10) return false;
+      if (filterDeposit === "100" && depositValue > 100) return false;
+      if (filterDeposit === "200" && depositValue > 200) return false;
+      if (filterDeposit === "200+" && depositValue <= 200) return false;
+    }
+    
+    if (filterSpread !== "all") {
+      const spreadValue = parseSpread(broker.spreadMin);
+      if (filterSpread === "0" && spreadValue !== 0) return false;
+      if (filterSpread === "0.5" && spreadValue > 0.5) return false;
+      if (filterSpread === "1.0" && spreadValue > 1.0) return false;
+    }
+    
+    return true;
+  });
 
   const toggleBroker = (slug: string) => {
     if (selectedBrokers.includes(slug)) {
@@ -634,12 +700,79 @@ const ComparacaoCorretoras = () => {
   };
 
   const clearSelection = () => setSelectedBrokers([]);
+  
+  const clearFilters = () => {
+    setFilterRegulation("all");
+    setFilterDeposit("all");
+    setFilterSpread("all");
+  };
+
+  const hasActiveFilters = filterRegulation !== "all" || filterDeposit !== "all" || filterSpread !== "all";
 
   const selectedBrokersData = brokersData.filter(b => selectedBrokers.includes(b.slug));
 
   const renderBoolean = (value: boolean) => (
     value ? <Check className="h-5 w-5 text-bull mx-auto" /> : <X className="h-5 w-5 text-bear mx-auto" />
   );
+
+  const exportToPDF = async () => {
+    if (!tableRef.current || selectedBrokersData.length < 2) return;
+    
+    setIsExporting(true);
+    toast({
+      title: "Gerando PDF...",
+      description: "Aguarde enquanto preparamos sua comparação.",
+    });
+
+    try {
+      const element = tableRef.current;
+      const canvas = await html2canvas(element, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: '#ffffff'
+      });
+      
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({
+        orientation: 'landscape',
+        unit: 'mm',
+        format: 'a4'
+      });
+      
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+      const imgX = (pdfWidth - imgWidth * ratio) / 2;
+
+      pdf.setFontSize(18);
+      pdf.setTextColor(51, 51, 51);
+      pdf.text('Comparação de Corretoras de Forex', pdfWidth / 2, 15, { align: 'center' });
+      pdf.setFontSize(10);
+      pdf.setTextColor(128, 128, 128);
+      pdf.text(`Gerado em ${new Date().toLocaleDateString('pt-BR')} - melhorcorretoraforex.com`, pdfWidth / 2, 22, { align: 'center' });
+      
+      pdf.addImage(imgData, 'PNG', imgX, 30, imgWidth * ratio * 0.95, imgHeight * ratio * 0.95);
+      
+      const brokerNames = selectedBrokersData.map(b => b.name).join('-');
+      pdf.save(`comparacao-${brokerNames.toLowerCase().replace(/\s+/g, '-')}.pdf`);
+      
+      toast({
+        title: "PDF exportado com sucesso!",
+        description: "O arquivo foi baixado automaticamente.",
+      });
+    } catch (error) {
+      toast({
+        title: "Erro ao exportar",
+        description: "Não foi possível gerar o PDF. Tente novamente.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsExporting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -673,6 +806,76 @@ const ComparacaoCorretoras = () => {
               </p>
             </div>
 
+            {/* Filters */}
+            <Card className="max-w-6xl mx-auto mb-6">
+              <CardHeader className="pb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Filter className="h-5 w-5" />
+                    Filtrar Corretoras
+                  </CardTitle>
+                  {hasActiveFilters && (
+                    <Button variant="ghost" size="sm" onClick={clearFilters}>
+                      <RotateCcw className="h-4 w-4 mr-2" />
+                      Limpar filtros
+                    </Button>
+                  )}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Regulamentação</label>
+                    <Select value={filterRegulation} onValueChange={setFilterRegulation}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Selecionar regulador" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">Todos os reguladores</SelectItem>
+                        {allRegulations.map(reg => (
+                          <SelectItem key={reg} value={reg}>{reg}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Depósito Mínimo</label>
+                    <Select value={filterDeposit} onValueChange={setFilterDeposit}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Selecionar faixa" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {depositRanges.map(range => (
+                          <SelectItem key={range.value} value={range.value}>{range.label}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Spread Mínimo</label>
+                    <Select value={filterSpread} onValueChange={setFilterSpread}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Selecionar faixa" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {spreadRanges.map(range => (
+                          <SelectItem key={range.value} value={range.value}>{range.label}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+                
+                {hasActiveFilters && (
+                  <p className="text-sm text-muted-foreground mt-4">
+                    Mostrando {filteredBrokers.length} de {brokersData.length} corretoras
+                  </p>
+                )}
+              </CardContent>
+            </Card>
+
             {/* Broker Selection */}
             <Card className="max-w-6xl mx-auto mb-8">
               <CardHeader>
@@ -692,7 +895,7 @@ const ComparacaoCorretoras = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
-                  {brokersData.map((broker) => {
+                  {filteredBrokers.map((broker) => {
                     const isSelected = selectedBrokers.includes(broker.slug);
                     const isDisabled = !isSelected && selectedBrokers.length >= 3;
                     
@@ -733,10 +936,20 @@ const ComparacaoCorretoras = () => {
             {selectedBrokersData.length >= 2 ? (
               <Card className="max-w-6xl mx-auto overflow-hidden">
                 <CardHeader>
-                  <CardTitle>Tabela Comparativa</CardTitle>
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <CardTitle>Tabela Comparativa</CardTitle>
+                    <Button 
+                      onClick={exportToPDF} 
+                      disabled={isExporting}
+                      className="bg-primary hover:bg-primary/90"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      {isExporting ? "Exportando..." : "Exportar PDF"}
+                    </Button>
+                  </div>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <div className="overflow-x-auto">
+                  <div className="overflow-x-auto" ref={tableRef}>
                     <Table>
                       <TableHeader>
                         <TableRow className="bg-muted/50">
@@ -756,7 +969,6 @@ const ComparacaoCorretoras = () => {
                         </TableRow>
                       </TableHeader>
                       <TableBody>
-                        {/* Informações Gerais */}
                         <TableRow className="bg-primary/5">
                           <TableCell colSpan={selectedBrokersData.length + 1} className="font-bold text-primary">
                             Informações Gerais
@@ -775,7 +987,6 @@ const ComparacaoCorretoras = () => {
                           {selectedBrokersData.map((b) => <TableCell key={b.slug} className="text-center text-sm">{b.regulation.join(", ")}</TableCell>)}
                         </TableRow>
 
-                        {/* Custos */}
                         <TableRow className="bg-primary/5">
                           <TableCell colSpan={selectedBrokersData.length + 1} className="font-bold text-primary">
                             Custos e Taxas
@@ -802,7 +1013,6 @@ const ComparacaoCorretoras = () => {
                           {selectedBrokersData.map((b) => <TableCell key={b.slug} className="text-center text-sm">{b.withdrawalFee}</TableCell>)}
                         </TableRow>
 
-                        {/* Trading */}
                         <TableRow className="bg-primary/5">
                           <TableCell colSpan={selectedBrokersData.length + 1} className="font-bold text-primary">
                             Trading
@@ -829,7 +1039,6 @@ const ComparacaoCorretoras = () => {
                           {selectedBrokersData.map((b) => <TableCell key={b.slug} className="text-center text-sm">{b.accountTypes.join(", ")}</TableCell>)}
                         </TableRow>
 
-                        {/* Recursos */}
                         <TableRow className="bg-primary/5">
                           <TableCell colSpan={selectedBrokersData.length + 1} className="font-bold text-primary">
                             Recursos e Funcionalidades
@@ -852,7 +1061,6 @@ const ComparacaoCorretoras = () => {
                           {selectedBrokersData.map((b) => <TableCell key={b.slug}>{renderBoolean(b.education)}</TableCell>)}
                         </TableRow>
 
-                        {/* Segurança */}
                         <TableRow className="bg-primary/5">
                           <TableCell colSpan={selectedBrokersData.length + 1} className="font-bold text-primary">
                             Segurança
@@ -867,7 +1075,6 @@ const ComparacaoCorretoras = () => {
                           {selectedBrokersData.map((b) => <TableCell key={b.slug}>{renderBoolean(b.segregatedFunds)}</TableCell>)}
                         </TableRow>
 
-                        {/* Pagamentos */}
                         <TableRow className="bg-primary/5">
                           <TableCell colSpan={selectedBrokersData.length + 1} className="font-bold text-primary">
                             Métodos de Pagamento
@@ -882,7 +1089,6 @@ const ComparacaoCorretoras = () => {
                           {selectedBrokersData.map((b) => <TableCell key={b.slug} className="text-center text-sm">{b.withdrawal.join(", ")}</TableCell>)}
                         </TableRow>
 
-                        {/* Suporte */}
                         <TableRow className="bg-primary/5">
                           <TableCell colSpan={selectedBrokersData.length + 1} className="font-bold text-primary">
                             Suporte
