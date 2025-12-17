@@ -32,8 +32,7 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="/" className="flex items-center group">
+          <a href="/" className="flex-shrink-0 flex items-center group">
             <img 
               src={logo} 
               alt="Tradepar Logo" 
@@ -41,7 +40,6 @@ const Navigation = () => {
             />
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1 flex-1 justify-center">
             {navItems.map((item) => (
               <a
@@ -54,21 +52,20 @@ const Navigation = () => {
               </a>
             ))}
           </div>
-          <Button variant="default" size="sm" className="hidden md:flex glow-bull">
+          <Button variant="default" size="sm" className="hidden md:flex glow-bull flex-shrink-0">
             Começar Agora
           </Button>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-foreground hover:text-primary transition-colors flex-shrink-0"
+            aria-label="Menu"
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-card border-t border-border">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
