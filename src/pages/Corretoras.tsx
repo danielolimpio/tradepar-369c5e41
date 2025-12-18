@@ -1,4 +1,4 @@
-import { Shield, Star, ArrowUpRight, ArrowLeft, Scale } from "lucide-react";
+import { Shield, Star, ArrowUpRight, ArrowLeft, Scale, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -268,44 +268,117 @@ const allBrokers = [
   },
 ];
 
+const getRankBadgeStyle = (rank: number) => {
+  if (rank === 1) return "bg-gradient-to-r from-yellow-500 to-amber-500 text-white border-0";
+  if (rank === 2) return "bg-gradient-to-r from-gray-400 to-gray-500 text-white border-0";
+  if (rank === 3) return "bg-gradient-to-r from-amber-600 to-amber-700 text-white border-0";
+  return "bg-muted text-muted-foreground";
+};
+
 const Corretoras = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
       
-      <main className="pt-24 pb-20">
-        <section className="py-12 md:py-20 relative">
-          <div className="container mx-auto px-4">
+      <main className="pt-20 sm:pt-24 pb-12 sm:pb-20">
+        <section className="py-8 sm:py-12 md:py-20 relative">
+          <div className="container mx-auto px-4 sm:px-6">
             {/* Header */}
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-6 transition-colors">
+            <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12">
+              <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-4 sm:mb-6 transition-colors text-sm sm:text-base">
                 <ArrowLeft className="h-4 w-4" />
                 Voltar para Início
               </Link>
               
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <Shield className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium text-primary">20 Corretoras Verificadas</span>
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 sm:mb-6">
+                <Shield className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+                <span className="text-xs sm:text-sm font-medium text-primary">20 Corretoras Verificadas</span>
               </div>
               
-              <h1 className="text-3xl md:text-5xl font-bold mb-4">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">
                 Todas as <span className="text-gradient-bull">Corretoras de Forex</span>
               </h1>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-4 sm:mb-6 px-2">
                 Ranking completo das melhores corretoras regulamentadas globalmente,
                 com análise detalhada de spreads, regulamentação e avaliações.
               </p>
               
               <Link to="/corretoras/comparar">
-                <Button className="bg-primary hover:bg-primary/90">
+                <Button className="bg-primary hover:bg-primary/90 text-sm sm:text-base">
                   <Scale className="h-4 w-4 mr-2" />
-                  Comparar Corretoras Lado a Lado
+                  Comparar Corretoras
                 </Button>
               </Link>
             </div>
 
-            {/* Broker Cards */}
-            <div className="max-w-5xl mx-auto space-y-6">
+            {/* Mobile Cards Layout */}
+            <div className="block lg:hidden space-y-4 max-w-2xl mx-auto">
+              {allBrokers.map((broker) => (
+                <div
+                  key={broker.rank}
+                  className="bg-card rounded-xl border border-border p-4 shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  {/* Header with Rank and Logo */}
+                  <div className="flex items-start gap-3 mb-4">
+                    <Badge className={`${getRankBadgeStyle(broker.rank)} text-sm font-bold min-w-[2.5rem] justify-center`}>
+                      #{broker.rank}
+                    </Badge>
+                    <div className="flex-1 flex items-center gap-3">
+                      <img
+                        src={broker.logo}
+                        alt={broker.name}
+                        className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg object-contain border border-border bg-white p-1"
+                      />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="font-semibold text-foreground text-sm sm:text-base">{broker.name}</h3>
+                          {broker.verified && (
+                            <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                          )}
+                        </div>
+                        <Badge variant="secondary" className="text-xs mt-1">
+                          {broker.highlight}
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Info Grid */}
+                  <div className="grid grid-cols-2 gap-3 mb-4 text-xs sm:text-sm">
+                    <div className="bg-muted/50 rounded-lg p-2 sm:p-3">
+                      <p className="text-muted-foreground text-xs">Regulação</p>
+                      <p className="font-medium text-foreground truncate text-xs sm:text-sm">{broker.regulation}</p>
+                    </div>
+                    <div className="bg-muted/50 rounded-lg p-2 sm:p-3">
+                      <p className="text-muted-foreground text-xs">Spread</p>
+                      <p className="font-medium text-primary text-xs sm:text-sm">{broker.spread}</p>
+                    </div>
+                    <div className="bg-muted/50 rounded-lg p-2 sm:p-3">
+                      <p className="text-muted-foreground text-xs">Depósito Mín.</p>
+                      <p className="font-medium text-foreground text-xs sm:text-sm">{broker.minDeposit}</p>
+                    </div>
+                    <div className="bg-muted/50 rounded-lg p-2 sm:p-3">
+                      <p className="text-muted-foreground text-xs">Avaliação</p>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 fill-yellow-500" />
+                        <span className="font-medium text-foreground text-xs sm:text-sm">{broker.rating}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Action Button */}
+                  <Link to={`/corretoras/${broker.slug}`} className="block">
+                    <Button className="w-full gap-2" size="sm">
+                      <ArrowUpRight className="w-4 h-4" />
+                      Ver Detalhes
+                    </Button>
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden lg:block max-w-5xl mx-auto space-y-6">
               {allBrokers.map((broker) => (
                 <div key={broker.rank} className="flex items-center gap-4">
                   {/* Rank Badge - Outside */}
@@ -375,9 +448,9 @@ const Corretoras = () => {
             </div>
 
             {/* Info Footer */}
-            <div className="max-w-5xl mx-auto mt-12 p-6 bg-card border border-border rounded-xl">
-              <h3 className="text-lg font-bold mb-2">Metodologia de Avaliação</h3>
-              <p className="text-muted-foreground">
+            <div className="max-w-5xl mx-auto mt-8 sm:mt-12 p-4 sm:p-6 bg-card border border-border rounded-xl">
+              <h3 className="text-base sm:text-lg font-bold mb-2">Metodologia de Avaliação</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Nosso ranking é baseado em análises verificadas de Trustpilot, Sitejabber, 
                 registros oficiais de reguladores como FCA, ASIC, CySEC, e relatórios 
                 atualizados da ESMA. Todas as corretoras listadas possuem regulamentação 
