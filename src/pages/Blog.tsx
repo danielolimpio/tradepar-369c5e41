@@ -1,9 +1,11 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { BookOpen, TrendingUp, Search, Filter } from "lucide-react";
+import { BookOpen, TrendingUp, Search, Filter, Zap, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import heroHFT from "@/assets/blog/estrategias-hft.jpg";
 
 const Blog = () => {
   useEffect(() => {
@@ -89,37 +91,49 @@ const Blog = () => {
               <TrendingUp className="w-6 h-6 text-primary" />
               Em Destaque
             </h2>
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-background to-background border border-border group hover-lift">
-              <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
-                <div className="flex flex-col justify-center">
-                  <div className="inline-flex items-center gap-2 text-primary text-sm font-semibold mb-4">
-                    <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    ARTIGO DESTACADO
+            <Link to="/blog/estrategias/estrategias-avancadas-hft" className="block">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-background to-background border border-border group hover-lift cursor-pointer">
+                <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
+                  <div className="flex flex-col justify-center">
+                    <div className="inline-flex items-center gap-2 text-primary text-sm font-semibold mb-4">
+                      <Zap className="w-4 h-4" />
+                      ARTIGO DESTACADO
+                    </div>
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4 group-hover:text-gradient-bull transition-colors">
+                      Estratégias Avançadas para Trading de Alta Frequência
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Descubra técnicas profissionais de HFT, algoritmos de market making e como 
+                      aproveitar microestruturas de mercado para maximizar seus ganhos no forex.
+                    </p>
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        15 min de leitura
+                      </span>
+                      <span>•</span>
+                      <span>20 Dez 2024</span>
+                      <span>•</span>
+                      <span className="px-2 py-1 rounded-full bg-destructive/10 text-destructive text-xs font-medium">
+                        Avançado
+                      </span>
+                    </div>
+                    <Button className="w-fit gap-2 glow-bull">
+                      Ler Artigo Completo
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-4 group-hover:text-gradient-bull transition-colors">
-                    Estratégias Avançadas para Trading de Alta Frequência
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    Descubra técnicas profissionais de HFT, algoritmos de market making e como 
-                    aproveitar microestruturas de mercado para maximizar seus ganhos no forex.
-                  </p>
-                  <div className="flex items-center gap-6 text-sm text-muted-foreground mb-6">
-                    <span>12 min de leitura</span>
-                    <span>•</span>
-                    <span>15 Jan 2025</span>
-                    <span>•</span>
-                    <span>Avançado</span>
+                  <div className="relative aspect-video md:aspect-square rounded-xl overflow-hidden border border-primary/20">
+                    <img 
+                      src={heroHFT} 
+                      alt="Trader analisando gráficos de trading de alta frequência" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>
-                  <Button className="w-fit gap-2 glow-bull">
-                    Ler Artigo Completo
-                    <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Button>
-                </div>
-                <div className="relative aspect-video md:aspect-square rounded-xl bg-gradient-to-br from-primary/30 to-primary/5 border border-primary/20 flex items-center justify-center">
-                  <TrendingUp className="w-24 h-24 text-primary/30" />
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
