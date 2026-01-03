@@ -14,6 +14,7 @@ import Estrategias from "./pages/Estrategias";
 import Seguranca from "./pages/Seguranca";
 import TermosDeUso from "./pages/TermosDeUso";
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
+import PoliticaCookies from "./pages/PoliticaCookies";
 import Disclaimer from "./pages/Disclaimer";
 import Blog from "./pages/Blog";
 import EstrategiasHFT from "./pages/blog/EstrategiasHFT";
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/seguranca" element={<Seguranca />} />
           <Route path="/termos-de-uso" element={<TermosDeUso />} />
           <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="/politica-cookies" element={<PoliticaCookies />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/estrategias/estrategias-avancadas-hft" element={<EstrategiasHFT />} />

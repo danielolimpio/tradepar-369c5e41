@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LegalSidebar from "@/components/LegalSidebar";
 import { 
   Shield, 
   Eye, 
@@ -48,25 +49,47 @@ const PoliticaPrivacidade = () => {
     }
   };
 
+  const sidebarItems = [
+    { id: "section-1", num: 1, title: "Que informações coletamos?" },
+    { id: "section-2", num: 2, title: "Como processamos suas informações?" },
+    { id: "section-3", num: 3, title: "Bases legais para processamento" },
+    { id: "section-4", num: 4, title: "Compartilhamento de informações" },
+    { id: "section-5", num: 5, title: "Sites de terceiros" },
+    { id: "section-6", num: 6, title: "Retenção de informações" },
+    { id: "section-7", num: 7, title: "Segurança das informações" },
+    { id: "section-8", num: 8, title: "Informações de menores" },
+    { id: "section-9", num: 9, title: "Seus direitos de privacidade" },
+    { id: "section-10", num: 10, title: "Controles de não rastrear" },
+    { id: "section-11", num: 11, title: "Direitos nos EUA" },
+    { id: "section-12", num: 12, title: "Outras regiões" },
+    { id: "section-13", num: 13, title: "Atualizações do aviso" },
+    { id: "section-14", num: 14, title: "Contato sobre este aviso" },
+    { id: "section-15", num: 15, title: "Revisar ou excluir dados" },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       
       <main className="container mx-auto px-4 py-24">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <header className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/30 mb-6 shadow-lg shadow-primary/10">
-              <Shield className="w-10 h-10 text-primary" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-              POLÍTICA DE PRIVACIDADE
-            </h1>
-            <div className="flex items-center justify-center gap-2 text-muted-foreground">
-              <Clock className="w-4 h-4" />
-              <p className="text-lg">Última atualização: 14 de dezembro de 2025</p>
-            </div>
-          </header>
+        {/* Header */}
+        <header className="text-center mb-16 max-w-4xl mx-auto">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/30 mb-6 shadow-lg shadow-primary/10">
+            <Shield className="w-10 h-10 text-primary" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+            POLÍTICA DE PRIVACIDADE
+          </h1>
+          <div className="flex items-center justify-center gap-2 text-muted-foreground">
+            <Clock className="w-4 h-4" />
+            <p className="text-lg">Última atualização: 14 de dezembro de 2025</p>
+          </div>
+        </header>
+
+        <div className="flex gap-8 max-w-7xl mx-auto">
+          <LegalSidebar items={sidebarItems} />
+
+          <div className="flex-1 max-w-4xl">
 
           {/* Intro */}
           <Card className="mb-8 border-primary/20 bg-gradient-to-br from-card to-card/50">
@@ -1110,6 +1133,7 @@ const PoliticaPrivacidade = () => {
             </CardContent>
           </Card>
 
+          </div>
         </div>
       </main>
 
