@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { BookOpen, TrendingUp, Search, Filter, Zap, Clock, ArrowRight } from "lucide-react";
+import { BookOpen, TrendingUp, Search, Filter, Zap, Clock, ArrowRight, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import heroHFT from "@/assets/blog/estrategias-hft.jpg";
+import heroForex from "@/assets/blog/como-investir-forex.jpg";
 
 const Blog = () => {
   useEffect(() => {
@@ -28,6 +29,19 @@ const Blog = () => {
     "Corretoras",
     "Tecnologia",
     "Notícias"
+  ];
+
+  const articles = [
+    {
+      title: "Como Investir em Forex: Guia Completo para Iniciantes em 2026",
+      description: "Aprenda como começar no Forex com segurança, estratégias e dicas práticas para evitar os erros mais comuns de novos traders.",
+      image: heroForex,
+      category: "Tutoriais",
+      readTime: "18 min de leitura",
+      date: "05 Jan 2026",
+      link: "/artigo/como-investir-forex/",
+      level: "Iniciante"
+    }
   ];
 
   return (
@@ -91,7 +105,7 @@ const Blog = () => {
               <TrendingUp className="w-6 h-6 text-primary" />
               Em Destaque
             </h2>
-            <Link to="/blog/estrategias/estrategias-avancadas-hft" className="block">
+            <Link to="/blog/estrategias/estrategias-avancadas-hft/" className="block">
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-background to-background border border-border group hover-lift cursor-pointer">
                 <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
                   <div className="flex flex-col justify-center">
@@ -142,35 +156,45 @@ const Blog = () => {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl font-bold mb-8">Últimos Artigos</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((index) => (
-                <article
-                  key={index}
-                  className="group bg-card border border-border rounded-xl overflow-hidden hover-lift cursor-pointer"
-                >
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-background border-b border-border relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <BookOpen className="w-12 h-12 text-primary/30 group-hover:scale-110 transition-transform" />
+              {articles.map((article, index) => (
+                <Link to={article.link} key={index}>
+                  <article className="group bg-card border border-border rounded-xl overflow-hidden hover-lift cursor-pointer h-full">
+                    <div className="aspect-video relative overflow-hidden border-b border-border">
+                      <img 
+                        src={article.image} 
+                        alt={article.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute top-3 right-3">
+                        <span className="px-3 py-1 rounded-full bg-background/80 backdrop-blur-sm text-xs font-semibold border border-border">
+                          {article.category}
+                        </span>
+                      </div>
+                      <div className="absolute top-3 left-3">
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1 ${
+                          article.level === "Iniciante" 
+                            ? "bg-primary/20 text-primary border border-primary/30" 
+                            : "bg-destructive/20 text-destructive border border-destructive/30"
+                        }`}>
+                          <GraduationCap className="w-3 h-3" />
+                          {article.level}
+                        </span>
+                      </div>
                     </div>
-                    <div className="absolute top-3 right-3">
-                      <span className="px-3 py-1 rounded-full bg-background/80 backdrop-blur-sm text-xs font-semibold border border-border">
-                        Estratégias
-                      </span>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        {article.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                        {article.description}
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-muted-foreground">
+                        <span>{article.readTime}</span>
+                        <span>{article.date}</span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                      Como Otimizar Suas Estratégias de Day Trading
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                      Aprenda técnicas comprovadas para melhorar sua taxa de acerto e gerenciar 
-                      riscos de forma eficiente em operações de curto prazo.
-                    </p>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground">
-                      <span>8 min de leitura</span>
-                      <span>14 Jan 2025</span>
-                    </div>
-                  </div>
-                </article>
+                  </article>
+                </Link>
               ))}
             </div>
           </div>
