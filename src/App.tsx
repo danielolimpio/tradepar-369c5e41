@@ -18,6 +18,7 @@ import PoliticaCookies from "./pages/PoliticaCookies";
 import Disclaimer from "./pages/Disclaimer";
 import Blog from "./pages/Blog";
 import EstrategiasHFT from "./pages/blog/EstrategiasHFT";
+import ComoInvestirForex from "./pages/blog/ComoInvestirForex";
 import Contato from "./pages/Contato";
 import Tutoriais from "./pages/Tutoriais";
 import Ferramentas from "./pages/Ferramentas";
@@ -49,6 +50,9 @@ const App = () => (
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/estrategias/estrategias-avancadas-hft" element={<EstrategiasHFT />} />
+          <Route path="/blog/estrategias/estrategias-avancadas-hft/" element={<EstrategiasHFT />} />
+          <Route path="/artigo/como-investir-forex" element={<ComoInvestirForex />} />
+          <Route path="/artigo/como-investir-forex/" element={<ComoInvestirForex />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/tutoriais" element={<Tutoriais />} />
           <Route path="/ferramentas" element={<Ferramentas />} />
