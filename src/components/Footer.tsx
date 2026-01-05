@@ -1,31 +1,53 @@
-import { Mail, Twitter, Youtube, Github } from "lucide-react";
+import { 
+  Mail, 
+  Twitter, 
+  Youtube, 
+  Github, 
+  Home, 
+  Building2, 
+  Cpu, 
+  LineChart, 
+  Users, 
+  Shield, 
+  BookOpen, 
+  GraduationCap, 
+  Wrench, 
+  Code2, 
+  MessageCircle, 
+  FileText, 
+  Lock, 
+  Cookie, 
+  AlertTriangle, 
+  Phone,
+  LucideIcon
+} from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
+  const footerLinks: Record<string, { label: string; href: string; icon: LucideIcon }[]> = {
     Navegação: [
-      { label: "Home", href: "/" },
-      { label: "Corretoras", href: "/corretoras" },
-      { label: "Tecnologia", href: "/tecnologia" },
-      { label: "Estratégias", href: "/estrategias" },
-      { label: "Traders", href: "/traders" },
-      { label: "Segurança", href: "/seguranca" },
+      { label: "Home", href: "/", icon: Home },
+      { label: "Corretoras", href: "/corretoras", icon: Building2 },
+      { label: "Tecnologia", href: "/tecnologia", icon: Cpu },
+      { label: "Estratégias", href: "/estrategias", icon: LineChart },
+      { label: "Traders", href: "/traders", icon: Users },
+      { label: "Segurança", href: "/seguranca", icon: Shield },
     ],
     Recursos: [
-      { label: "Blog", href: "/blog" },
-      { label: "Tutoriais", href: "/tutoriais" },
-      { label: "Ferramentas", href: "/ferramentas" },
-      { label: "API", href: "/api" },
-      { label: "Comunidade", href: "/comunidade" },
+      { label: "Blog", href: "/blog", icon: BookOpen },
+      { label: "Tutoriais", href: "/tutoriais", icon: GraduationCap },
+      { label: "Ferramentas", href: "/ferramentas", icon: Wrench },
+      { label: "API", href: "/api", icon: Code2 },
+      { label: "Comunidade", href: "/comunidade", icon: MessageCircle },
     ],
     Legal: [
-      { label: "Termos de Uso", href: "/termos-de-uso" },
-      { label: "Política de Privacidade", href: "/politica-privacidade" },
-      { label: "Política de Cookies", href: "/politica-cookies" },
-      { label: "Disclaimer", href: "/disclaimer" },
-      { label: "Contato", href: "/contato" },
+      { label: "Termos de Uso", href: "/termos-de-uso", icon: FileText },
+      { label: "Política de Privacidade", href: "/politica-privacidade", icon: Lock },
+      { label: "Política de Cookies", href: "/politica-cookies", icon: Cookie },
+      { label: "Disclaimer", href: "/disclaimer", icon: AlertTriangle },
+      { label: "Contato", href: "/contato", icon: Phone },
     ],
   };
 
@@ -76,17 +98,20 @@ const Footer = () => {
             <div key={title}>
               <h3 className="font-bold text-sm uppercase tracking-wider mb-4">{title}</h3>
               <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 group"
-                    >
-                      {link.label}
-                      <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                    </a>
-                  </li>
-                ))}
+                {links.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2 group"
+                      >
+                        <Icon className="h-4 w-4 text-primary/70 group-hover:text-primary transition-colors" />
+                        {link.label}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
