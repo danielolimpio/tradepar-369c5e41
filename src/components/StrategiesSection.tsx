@@ -114,9 +114,9 @@ const StrategiesSection = () => {
             Acesse análises detalhadas, backtests reais e casos de sucesso de traders que aplicam essas metodologias no mercado.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors glow-bull">
+            <a href="/estrategias/" className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors glow-bull">
               Explorar Estratégias
-            </button>
+            </a>
             <button className="px-6 py-3 bg-transparent border border-border rounded-lg font-medium hover:bg-accent transition-colors">
               Ver Backtests
             </button>

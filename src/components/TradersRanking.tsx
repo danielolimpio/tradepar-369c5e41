@@ -102,7 +102,7 @@ const TradersRanking = () => {
               <h3 className="text-xl md:text-2xl font-bold mb-2">Junte-se à Comunidade</h3>
               <p className="text-sm md:text-base text-muted-foreground">Crie seu perfil de trader e compartilhe seus resultados verificados.</p>
             </div>
-            <Link to="/traders" className="w-full md:w-auto">
+            <Link to="/traders/" className="w-full md:w-auto">
               <Button size="lg" variant="destructive" className="w-full md:w-auto">Criar Perfil</Button>
             </Link>
           </div>
