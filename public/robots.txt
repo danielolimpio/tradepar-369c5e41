@@ -1,3 +1,6 @@
+# Robots.txt para Tradepar
+# https://tradepar.com.br
+
 User-agent: Googlebot
 Allow: /
 
@@ -10,7 +13,15 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
 User-agent: *
 Allow: /
 
+# Bloquear recursos internos
+Disallow: /*.json$
+Disallow: /assets/*.js.map
+
+# Sitemap
 Sitemap: https://tradepar.com.br/sitemap.xml
