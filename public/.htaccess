@@ -1,25 +1,10 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-
-  # Força HTTPS
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-  # Adiciona barra final se não for arquivo
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} !(.*)/$
-  RewriteRule ^(.*)$ /$1/ [L,R=301]
-
-  # Serve index.html de diretórios existentes
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteCond %{REQUEST_FILENAME}/index.html -f
-  RewriteRule ^(.*)$ $1/index.html [L]
-
-  # Fallback para SPA apenas para rotas dinâmicas (corretoras/:slug)
+  
+  # Se não for arquivo nem diretório, redireciona para index.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} ^/corretoras/[^/]+/?$
   RewriteRule . /index.html [L]
 </IfModule>
 
@@ -45,8 +30,4 @@
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType text/html "access plus 1 hour"
 </IfModule>
-
-# Tipo MIME correto para HTML
-AddType text/html .html

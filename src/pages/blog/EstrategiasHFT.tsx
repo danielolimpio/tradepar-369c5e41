@@ -48,7 +48,7 @@ const EstrategiasHFT = () => {
           content="Descubra técnicas profissionais de HFT, algoritmos de market making e como aproveitar microestruturas de mercado para maximizar seus ganhos no forex." 
         />
         <meta name="keywords" content="HFT, trading de alta frequência, algoritmos, market making, forex, arbitragem" />
-        <link rel="canonical" href="https://tradepar.com.br/blog/estrategias/estrategias-avancadas-hft/" />
+        <link rel="canonical" href="https://tradepar.com/blog/estrategias/estrategias-avancadas-hft" />
       </Helmet>
 
       <Navigation />
@@ -68,12 +68,12 @@ const EstrategiasHFT = () => {
           <div className="relative container mx-auto px-4 py-16 md:py-24">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-              <Link to="/blog/" className="hover:text-primary transition-colors flex items-center gap-1">
+              <Link to="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
                 <ArrowLeft className="w-4 h-4" />
                 Blog
               </Link>
               <ChevronRight className="w-4 h-4" />
-              <Link to="/estrategias/" className="hover:text-primary transition-colors">
+              <Link to="/blog/estrategias" className="hover:text-primary transition-colors">
                 Estratégias
               </Link>
               <ChevronRight className="w-4 h-4" />
@@ -203,7 +203,7 @@ const EstrategiasHFT = () => {
                       Antes de mergulhar no HFT, domine conceitos como <strong className="text-foreground">latência, slippage, order book dynamics e liquidity detection</strong>.
                     </p>
                     <Link 
-                      to="/tecnologia/" 
+                      to="/tecnologia" 
                       className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
                     >
                       Leia nosso guia sobre VPS para trading algorítmico
@@ -294,7 +294,7 @@ const EstrategiasHFT = () => {
                 </p>
 
                 <p className="leading-relaxed">
-                  Esse tipo de estratégia é comum em operações entre exchanges de forex (como <Link to="/corretoras/ic-markets/" className="text-primary hover:underline">IC Markets</Link> e <Link to="/corretoras/pepperstone/" className="text-primary hover:underline">Pepperstone</Link>) ou entre diferentes centros de liquidez. A chave está na <strong className="text-foreground">sincronização temporal</strong>: se seus dados chegarem com 50ms de atraso, o "arbitrage" já virou perda.
+                  Esse tipo de estratégia é comum em operações entre exchanges de forex (como <Link to="/corretoras/ic-markets" className="text-primary hover:underline">IC Markets</Link> e <Link to="/corretoras/pepperstone" className="text-primary hover:underline">Pepperstone</Link>) ou entre diferentes centros de liquidez. A chave está na <strong className="text-foreground">sincronização temporal</strong>: se seus dados chegarem com 50ms de atraso, o "arbitrage" já virou perda.
                 </p>
               </div>
             </div>
@@ -503,7 +503,7 @@ const EstrategiasHFT = () => {
                   <p className="text-muted-foreground mb-4">
                     Se você quer mergulhar no desenvolvimento de estratégias, não deixe de conferir nosso artigo detalhado sobre como programar seu primeiro robô de trading no MetaTrader 5.
                   </p>
-                  <Link to="/tecnologia/">
+                  <Link to="/tecnologia">
                     <Button className="glow-bull">
                       Acessar Guia de Robôs MT5
                       <ExternalLink className="w-4 h-4 ml-2" />
@@ -734,13 +734,13 @@ const EstrategiasHFT = () => {
                   Veja também como combinar HFT com análise macro para operações de swing — uma abordagem híbrida que está ganhando força.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Link to="/estrategias/">
+                  <Link to="/estrategias">
                     <Button className="glow-bull">
                       Ver Estratégias
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
-                  <Link to="/tecnologia/">
+                  <Link to="/tecnologia">
                     <Button variant="outline">
                       Explorar Tecnologia
                     </Button>
@@ -837,7 +837,7 @@ const EstrategiasHFT = () => {
                   Quais brokers permitem HFT no Brasil?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">
-                  Brokers com servidores ECN/STP e API de baixa latência, como <Link to="/corretoras/ic-markets/" className="text-primary hover:underline">IC Markets</Link>, <Link to="/corretoras/pepperstone/" className="text-primary hover:underline">Pepperstone</Link>, LMAX e Darwinex, são compatíveis com HFT. Evite brokers com dealing desk ou restrições a algoritmos.
+                  Brokers com servidores ECN/STP e API de baixa latência, como <Link to="/corretoras/ic-markets" className="text-primary hover:underline">IC Markets</Link>, <Link to="/corretoras/pepperstone" className="text-primary hover:underline">Pepperstone</Link>, LMAX e Darwinex, são compatíveis com HFT. Evite brokers com dealing desk ou restrições a algoritmos.
                 </AccordionContent>
               </AccordionItem>
 
@@ -873,21 +873,21 @@ const EstrategiasHFT = () => {
           <div className="container mx-auto px-4">
             <h3 className="text-2xl font-bold mb-8 text-center">Continue Explorando</h3>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <Link to="/estrategias/" className="group">
+              <Link to="/estrategias" className="group">
                 <div className="bg-background border border-border rounded-xl p-6 hover:border-primary/40 transition-all hover-lift">
                   <Target className="w-8 h-8 text-primary mb-4" />
                   <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">Estratégias</h4>
                   <p className="text-sm text-muted-foreground">Explore todas as estratégias de trading</p>
                 </div>
               </Link>
-              <Link to="/tecnologia/" className="group">
+              <Link to="/tecnologia" className="group">
                 <div className="bg-background border border-border rounded-xl p-6 hover:border-primary/40 transition-all hover-lift">
                   <Cpu className="w-8 h-8 text-primary mb-4" />
                   <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">Tecnologia</h4>
                   <p className="text-sm text-muted-foreground">Ferramentas e infraestrutura para trading</p>
                 </div>
               </Link>
-              <Link to="/corretoras/" className="group">
+              <Link to="/corretoras" className="group">
                 <div className="bg-background border border-border rounded-xl p-6 hover:border-primary/40 transition-all hover-lift">
                   <BarChart3 className="w-8 h-8 text-primary mb-4" />
                   <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">Corretoras</h4>

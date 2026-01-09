@@ -99,16 +99,16 @@ const Contato = () => {
               <div className="bg-gradient-to-br from-primary/10 to-background border border-primary/20 rounded-xl p-6">
                 <h3 className="font-bold mb-4">Links Rápidos</h3>
                 <div className="space-y-3">
-                  <a href="/blog/" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="/blog" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                     → Blog e Artigos
                   </a>
-                  <a href="/corretoras/" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="/corretoras" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                     → Rankings de Corretoras
                   </a>
-                  <a href="/estrategias/" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="/#estrategias" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                     → Estratégias de Trading
                   </a>
-                  <a href="/seguranca/" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="/#seguranca" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                     → Guia de Segurança
                   </a>
                 </div>
@@ -182,7 +182,7 @@ const Contato = () => {
                     />
                     <label htmlFor="privacy" className="text-sm text-muted-foreground">
                       Eu concordo com a{" "}
-                      <a href="/politica-privacidade/" className="text-primary hover:underline">
+                      <a href="/politica-privacidade" className="text-primary hover:underline">
                         Política de Privacidade
                       </a>{" "}
                       e autorizo o uso dos meus dados para responder esta solicitação.
@@ -226,7 +226,7 @@ const Contato = () => {
                     <p className="text-sm text-muted-foreground">
                       Sim, podemos receber comissões de afiliação. No entanto, isso não afeta 
                       nossa avaliação independente e objetiva. Veja nosso{" "}
-                      <a href="/disclaimer/" className="text-primary hover:underline">Disclaimer</a>.
+                      <a href="/disclaimer" className="text-primary hover:underline">Disclaimer</a>.
                     </p>
                   </div>
                 </div>

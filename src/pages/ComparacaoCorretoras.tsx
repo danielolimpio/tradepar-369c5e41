@@ -151,7 +151,7 @@ const ComparacaoCorretoras = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <Link to="/corretoras/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-6 transition-colors">
+              <Link to="/corretoras" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-6 transition-colors">
                 <ArrowLeft className="h-4 w-4" />
                 Voltar para Corretoras
               </Link>

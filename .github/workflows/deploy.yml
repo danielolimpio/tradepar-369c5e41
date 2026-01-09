@@ -23,12 +23,8 @@ jobs:
       - name: Build do projeto
         run: npm run build
 
-      - name: Verificar estrutura de pastas
-        run: |
-          echo "=== Estrutura do dist ==="
-          find dist -type f -name "*.html" | head -30
-          echo "=== Total de arquivos HTML ==="
-          find dist -type f -name "*.html" | wc -l
+      - name: Mostrar arquivos gerados
+        run: ls -la dist/
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

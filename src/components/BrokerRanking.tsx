@@ -73,7 +73,7 @@ const BrokerRanking = () => {
                       </div>
                     </div>
                   </div>
-                  <Link to={`/corretoras/${broker.slug}/`} className="w-full">
+                  <Link to={`/corretoras/${broker.slug}`} className="w-full">
                     <Button variant="outline" size="sm" className="w-full border-primary/30 hover:bg-primary hover:text-primary-foreground">
                       Ver Detalhes <ArrowUpRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -99,7 +99,7 @@ const BrokerRanking = () => {
                       <div><p className="text-muted-foreground mb-0.5 text-xs">Avaliação</p><div className="flex items-center gap-1"><Star className="h-3 w-3 md:h-4 md:w-4 fill-primary text-primary" /><span className="font-medium text-xs md:text-sm">{broker.rating}</span></div></div>
                     </div>
                   </div>
-                  <Link to={`/corretoras/${broker.slug}/`}>
+                  <Link to={`/corretoras/${broker.slug}`}>
                     <Button variant="outline" size="sm" className="flex-shrink-0 border-primary/30 hover:bg-primary hover:text-primary-foreground whitespace-nowrap">
                       Ver Detalhes <ArrowUpRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -111,7 +111,7 @@ const BrokerRanking = () => {
         </div>
 
         <div className="text-center mt-8 md:mt-12">
-          <Link to="/corretoras/">
+          <Link to="/corretoras">
             <Button size="lg" variant="outline" className="border-border hover:bg-accent w-full sm:w-auto">
               Ver Todas as Corretoras <ArrowUpRight className="ml-2 h-4 w-4" />
             </Button>
