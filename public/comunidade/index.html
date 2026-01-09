@@ -5,34 +5,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     
-    <!-- SEO Meta Tags -->
     <title>Comunidade de Traders Forex | Tradepar</title>
     <meta name="description" content="Participe da comunidade Tradepar. Conecte-se com traders, compartilhe estratégias e aprenda com a experiência de outros operadores do mercado forex." />
     <meta name="keywords" content="comunidade forex, traders brasil, grupo trading, fórum forex, comunidade traders" />
     <meta name="author" content="Tradepar" />
     <link rel="canonical" href="https://tradepar.com.br/comunidade/" />
     
-    <!-- Favicons -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tradepar.com.br/comunidade/" />
     <meta property="og:title" content="Comunidade de Traders Forex | Tradepar" />
     <meta property="og:description" content="Participe da comunidade Tradepar. Conecte-se com traders e compartilhe estratégias." />
     <meta property="og:image" content="https://tradepar.com.br/og-image.jpg" />
-    <meta property="og:site_name" content="Tradepar" />
-    <meta property="og:locale" content="pt_BR" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static-styles.css" />
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo"><img src="/favicon.png" alt="Tradepar" width="32" height="32" /><span>Tradepar</span></a>
+          <nav class="nav-desktop">
+            <a href="/corretoras/">Corretoras</a>
+            <a href="/traders/">Traders</a>
+            <a href="/tecnologia/">Tecnologia</a>
+            <a href="/estrategias/">Estratégias</a>
+            <a href="/seguranca/">Segurança</a>
+            <a href="/blog/">Blog</a>
+          </nav>
+          <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav-mobile" id="mobile-nav">
+      <a href="/corretoras/">Corretoras</a>
+      <a href="/traders/">Traders</a>
+      <a href="/tecnologia/">Tecnologia</a>
+      <a href="/estrategias/">Estratégias</a>
+      <a href="/seguranca/">Segurança</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="/">Home</a> &gt; <span>Comunidade</span></nav>
+          <h1>Comunidade Tradepar</h1>
+          <p>Conecte-se com outros traders, compartilhe conhecimento e evolua junto com a maior comunidade de forex do Brasil.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="community-intro">
+            <h2>Por que Participar?</h2>
+            <div class="benefits-grid">
+              <div class="benefit-card">
+                <div class="benefit-icon">👥</div>
+                <h3>Networking</h3>
+                <p>Conecte-se com traders de todos os níveis, desde iniciantes até profissionais com anos de experiência.</p>
+              </div>
+              <div class="benefit-card">
+                <div class="benefit-icon">💡</div>
+                <h3>Troca de Ideias</h3>
+                <p>Compartilhe suas análises e receba feedback. Discuta estratégias e aprenda novas abordagens.</p>
+              </div>
+              <div class="benefit-card">
+                <div class="benefit-icon">📚</div>
+                <h3>Aprendizado Contínuo</h3>
+                <p>Acesso a webinars, tutoriais exclusivos e discussões sobre as últimas tendências do mercado.</p>
+              </div>
+              <div class="benefit-card">
+                <div class="benefit-icon">🤝</div>
+                <h3>Suporte Mútuo</h3>
+                <p>Trading pode ser solitário. Tenha uma comunidade para celebrar vitórias e superar desafios juntos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <h2>Onde Encontrar a Comunidade</h2>
+          <div class="social-grid">
+            <div class="social-card">
+              <div class="social-icon">💬</div>
+              <h3>Telegram</h3>
+              <p>Nosso canal principal de discussão. Análises em tempo real, alertas e bate-papo com a comunidade.</p>
+              <a href="#" class="btn btn-primary">Entrar no Telegram</a>
+              <span class="member-count">Em breve</span>
+            </div>
+
+            <div class="social-card">
+              <div class="social-icon">📺</div>
+              <h3>YouTube</h3>
+              <p>Vídeos educacionais, análises de mercado semanais e entrevistas com traders profissionais.</p>
+              <a href="#" class="btn btn-outline">Seguir no YouTube</a>
+              <span class="member-count">Em breve</span>
+            </div>
+
+            <div class="social-card">
+              <div class="social-icon">📸</div>
+              <h3>Instagram</h3>
+              <p>Dicas rápidas, motivação diária e bastidores do mundo do trading.</p>
+              <a href="#" class="btn btn-outline">Seguir no Instagram</a>
+              <span class="member-count">Em breve</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Regras da Comunidade</h2>
+          <div class="rules-list">
+            <div class="rule-item">
+              <span class="rule-number">1</span>
+              <div>
+                <h4>Respeito Mútuo</h4>
+                <p>Trate todos os membros com respeito. Não toleramos ofensas, discriminação ou comportamento tóxico.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-number">2</span>
+              <div>
+                <h4>Sem Spam ou Promoções</h4>
+                <p>Não é permitido promover serviços pagos, sinais, cursos ou corretoras sem autorização da moderação.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-number">3</span>
+              <div>
+                <h4>Conteúdo Educacional</h4>
+                <p>Foque em compartilhar conhecimento genuíno. Análises devem ser fundamentadas, não apenas "compre" ou "venda".</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-number">4</span>
+              <div>
+                <h4>Disclaimer de Riscos</h4>
+                <p>Lembre-se: nenhum membro pode garantir lucros. Trading envolve riscos. Cada um é responsável por suas decisões.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="newsletter-section">
+            <h2>Newsletter Semanal</h2>
+            <p>Receba análises de mercado, dicas de trading e novidades da comunidade diretamente no seu email.</p>
+            <form class="newsletter-form" action="#" method="POST">
+              <input type="email" name="email" placeholder="Seu melhor email" required />
+              <button type="submit" class="btn btn-primary">Inscrever-se</button>
+            </form>
+            <p class="newsletter-note">Prometemos não enviar spam. Você pode cancelar a qualquer momento.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="logo"><img src="/favicon.png" alt="Tradepar" width="32" height="32" /><span>Tradepar</span></a>
+            <p>O portal mais completo sobre forex e trading para brasileiros.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Corretoras</h4>
+            <ul><li><a href="/corretoras/">Ranking</a></li><li><a href="/corretoras/comparar/">Comparar</a></li></ul>
+          </div>
+          <div class="footer-links">
+            <h4>Aprenda</h4>
+            <ul><li><a href="/estrategias/">Estratégias</a></li><li><a href="/tecnologia/">Plataformas</a></li><li><a href="/blog/">Blog</a></li></ul>
+          </div>
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <ul><li><a href="/termos-de-uso/">Termos</a></li><li><a href="/politica-privacidade/">Privacidade</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p><strong>Aviso de Risco:</strong> Trading de forex envolve alto risco. 74-89% das contas perdem dinheiro.</p>
+          <p>&copy; 2025 Tradepar. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>document.querySelector('.mobile-menu-btn').addEventListener('click', function() { document.getElementById('mobile-nav').classList.toggle('active'); this.classList.toggle('active'); });</script>
   </body>
 </html>

@@ -5,33 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     
-    <!-- SEO Meta Tags -->
     <title>Contato | Tradepar</title>
     <meta name="description" content="Entre em contato com a equipe Tradepar. Tire suas dúvidas sobre forex, corretoras e trading." />
     <meta name="author" content="Tradepar" />
     <link rel="canonical" href="https://tradepar.com.br/contato/" />
     
-    <!-- Favicons -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tradepar.com.br/contato/" />
     <meta property="og:title" content="Contato | Tradepar" />
     <meta property="og:description" content="Entre em contato com a equipe Tradepar." />
     <meta property="og:image" content="https://tradepar.com.br/og-image.jpg" />
-    <meta property="og:site_name" content="Tradepar" />
-    <meta property="og:locale" content="pt_BR" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static-styles.css" />
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo"><img src="/favicon.png" alt="Tradepar" width="32" height="32" /><span>Tradepar</span></a>
+          <nav class="nav-desktop">
+            <a href="/corretoras/">Corretoras</a>
+            <a href="/traders/">Traders</a>
+            <a href="/tecnologia/">Tecnologia</a>
+            <a href="/estrategias/">Estratégias</a>
+            <a href="/seguranca/">Segurança</a>
+            <a href="/blog/">Blog</a>
+          </nav>
+          <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav-mobile" id="mobile-nav">
+      <a href="/corretoras/">Corretoras</a>
+      <a href="/traders/">Traders</a>
+      <a href="/tecnologia/">Tecnologia</a>
+      <a href="/estrategias/">Estratégias</a>
+      <a href="/seguranca/">Segurança</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="/">Home</a> &gt; <span>Contato</span></nav>
+          <h1>Entre em Contato</h1>
+          <p>Tem dúvidas sobre forex, corretoras ou trading? Nossa equipe está pronta para ajudar.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-form-section">
+              <h2>Envie sua Mensagem</h2>
+              <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                  <label for="name">Nome *</label>
+                  <input type="text" id="name" name="name" required placeholder="Seu nome completo" />
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+                </div>
+                
+                <div class="form-group">
+                  <label for="subject">Assunto *</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Selecione um assunto</option>
+                    <option value="duvida-corretora">Dúvida sobre Corretoras</option>
+                    <option value="duvida-trading">Dúvida sobre Trading</option>
+                    <option value="sugestao">Sugestão de Conteúdo</option>
+                    <option value="parceria">Proposta de Parceria</option>
+                    <option value="erro">Reportar Erro no Site</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Mensagem *</label>
+                  <textarea id="message" name="message" rows="6" required placeholder="Descreva sua dúvida ou mensagem em detalhes..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-large">Enviar Mensagem</button>
+              </form>
+            </div>
+
+            <div class="contact-info-section">
+              <h2>Outras Formas de Contato</h2>
+              
+              <div class="contact-info-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>Para assuntos gerais e dúvidas:</p>
+                <a href="mailto:contato@tradepar.com.br">contato@tradepar.com.br</a>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-icon">🤝</div>
+                <h3>Parcerias</h3>
+                <p>Propostas comerciais e parcerias:</p>
+                <a href="mailto:parcerias@tradepar.com.br">parcerias@tradepar.com.br</a>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-icon">⏰</div>
+                <h3>Tempo de Resposta</h3>
+                <p>Respondemos todas as mensagens em até 48 horas úteis.</p>
+              </div>
+
+              <div class="contact-faq">
+                <h3>Perguntas Frequentes</h3>
+                <p>Antes de entrar em contato, verifique se sua dúvida já foi respondida:</p>
+                <ul>
+                  <li><a href="/corretoras/">Ranking de Corretoras</a></li>
+                  <li><a href="/seguranca/">Guia de Segurança</a></li>
+                  <li><a href="/estrategias/">Estratégias de Trading</a></li>
+                  <li><a href="/disclaimer/">Disclaimer e Riscos</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="logo"><img src="/favicon.png" alt="Tradepar" width="32" height="32" /><span>Tradepar</span></a>
+            <p>O portal mais completo sobre forex e trading para brasileiros.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Corretoras</h4>
+            <ul><li><a href="/corretoras/">Ranking</a></li><li><a href="/corretoras/comparar/">Comparar</a></li></ul>
+          </div>
+          <div class="footer-links">
+            <h4>Aprenda</h4>
+            <ul><li><a href="/estrategias/">Estratégias</a></li><li><a href="/tecnologia/">Plataformas</a></li><li><a href="/blog/">Blog</a></li></ul>
+          </div>
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <ul><li><a href="/termos-de-uso/">Termos</a></li><li><a href="/politica-privacidade/">Privacidade</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p><strong>Aviso de Risco:</strong> Trading de forex envolve alto risco. 74-89% das contas perdem dinheiro.</p>
+          <p>&copy; 2025 Tradepar. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>document.querySelector('.mobile-menu-btn').addEventListener('click', function() { document.getElementById('mobile-nav').classList.toggle('active'); this.classList.toggle('active'); });</script>
   </body>
 </html>
