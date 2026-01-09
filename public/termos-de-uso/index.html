@@ -5,33 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     
-    <!-- SEO Meta Tags -->
     <title>Termos de Uso | Tradepar</title>
     <meta name="description" content="Leia os termos de uso do portal Tradepar. Condições de acesso, direitos autorais e responsabilidades do usuário." />
     <meta name="author" content="Tradepar" />
     <link rel="canonical" href="https://tradepar.com.br/termos-de-uso/" />
     
-    <!-- Favicons -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tradepar.com.br/termos-de-uso/" />
     <meta property="og:title" content="Termos de Uso | Tradepar" />
     <meta property="og:description" content="Leia os termos de uso do portal Tradepar." />
     <meta property="og:image" content="https://tradepar.com.br/og-image.jpg" />
-    <meta property="og:site_name" content="Tradepar" />
-    <meta property="og:locale" content="pt_BR" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static-styles.css" />
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo"><img src="/favicon.png" alt="Tradepar" width="32" height="32" /><span>Tradepar</span></a>
+          <nav class="nav-desktop">
+            <a href="/corretoras/">Corretoras</a>
+            <a href="/traders/">Traders</a>
+            <a href="/tecnologia/">Tecnologia</a>
+            <a href="/estrategias/">Estratégias</a>
+            <a href="/seguranca/">Segurança</a>
+            <a href="/blog/">Blog</a>
+          </nav>
+          <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav-mobile" id="mobile-nav">
+      <a href="/corretoras/">Corretoras</a>
+      <a href="/traders/">Traders</a>
+      <a href="/tecnologia/">Tecnologia</a>
+      <a href="/estrategias/">Estratégias</a>
+      <a href="/seguranca/">Segurança</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb"><a href="/">Home</a> &gt; <span>Termos de Uso</span></nav>
+          <h1>Termos de Uso</h1>
+          <p>Última atualização: Janeiro de 2025</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="legal-content">
+            <h2>1. Aceitação dos Termos</h2>
+            <p>Ao acessar e utilizar o site Tradepar (tradepar.com.br), você concorda em cumprir e estar vinculado a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, não deve utilizar nosso site.</p>
+
+            <h2>2. Descrição do Serviço</h2>
+            <p>O Tradepar é um portal informativo sobre o mercado forex e trading. Oferecemos:</p>
+            <ul>
+              <li>Análises e comparativos de corretoras de forex</li>
+              <li>Conteúdo educacional sobre estratégias de trading</li>
+              <li>Informações sobre plataformas e ferramentas de trading</li>
+              <li>Guias de segurança para investidores</li>
+            </ul>
+
+            <h2>3. Natureza Informativa do Conteúdo</h2>
+            <p><strong>O conteúdo deste site é exclusivamente informativo e educacional.</strong> Nenhuma informação aqui apresentada deve ser interpretada como:</p>
+            <ul>
+              <li>Recomendação de investimento</li>
+              <li>Aconselhamento financeiro</li>
+              <li>Oferta de serviços de corretagem</li>
+              <li>Garantia de resultados em operações de trading</li>
+            </ul>
+
+            <h2>4. Isenção de Responsabilidade</h2>
+            <p>O Tradepar não se responsabiliza por:</p>
+            <ul>
+              <li>Decisões de investimento tomadas com base no conteúdo do site</li>
+              <li>Perdas financeiras decorrentes de operações no mercado forex</li>
+              <li>Ações ou omissões de corretoras mencionadas no site</li>
+              <li>Precisão absoluta das informações, que podem mudar sem aviso</li>
+            </ul>
+
+            <h2>5. Propriedade Intelectual</h2>
+            <p>Todo o conteúdo do site, incluindo textos, imagens, logotipos, gráficos e código-fonte, é propriedade do Tradepar ou de seus licenciadores e está protegido por leis de direitos autorais.</p>
+            <p>É proibido:</p>
+            <ul>
+              <li>Reproduzir conteúdo sem autorização prévia</li>
+              <li>Utilizar a marca Tradepar sem permissão</li>
+              <li>Fazer engenharia reversa do site</li>
+            </ul>
+
+            <h2>6. Links para Terceiros</h2>
+            <p>O site pode conter links para sites de terceiros (corretoras, plataformas, etc.). Não temos controle sobre o conteúdo desses sites e não nos responsabilizamos por eles. A inclusão de um link não implica endosso.</p>
+
+            <h2>7. Conduta do Usuário</h2>
+            <p>Ao utilizar nosso site, você concorda em:</p>
+            <ul>
+              <li>Não utilizar o site para fins ilegais</li>
+              <li>Não tentar acessar áreas restritas do sistema</li>
+              <li>Não sobrecarregar nossos servidores com requisições excessivas</li>
+              <li>Fornecer informações verdadeiras quando solicitado</li>
+            </ul>
+
+            <h2>8. Alterações nos Termos</h2>
+            <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. Alterações significativas serão comunicadas através do site. O uso continuado após modificações constitui aceitação dos novos termos.</p>
+
+            <h2>9. Lei Aplicável</h2>
+            <p>Estes termos são regidos pelas leis da República Federativa do Brasil. Qualquer disputa será resolvida nos tribunais de São Paulo, SP.</p>
+
+            <h2>10. Contato</h2>
+            <p>Para dúvidas sobre estes termos, entre em contato através da página de <a href="/contato/">Contato</a>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="logo"><img src="/favicon.png" alt="Tradepar" width="32" height="32" /><span>Tradepar</span></a>
+            <p>O portal mais completo sobre forex e trading para brasileiros.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="/termos-de-uso/">Termos de Uso</a></li>
+              <li><a href="/politica-privacidade/">Política de Privacidade</a></li>
+              <li><a href="/politica-cookies/">Política de Cookies</a></li>
+              <li><a href="/disclaimer/">Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Tradepar. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>document.querySelector('.mobile-menu-btn').addEventListener('click', function() { document.getElementById('mobile-nav').classList.toggle('active'); this.classList.toggle('active'); });</script>
   </body>
 </html>
