@@ -1,33 +1,154 @@
+# =====================================================
+# CONFIGURAÇÃO SEO OTIMIZADA PARA REACT SPA
+# Tradepar - Portal de Forex & Trading
+# =====================================================
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  
-  # Se não for arquivo nem diretório, redireciona para index.html
+
+  # =====================================================
+  # 1. FORÇAR HTTPS (Redirecionamento seguro)
+  # =====================================================
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP_HOST} !^localhost [NC]
+  RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # =====================================================
+  # 2. REMOVER www (Padronização de URL)
+  # =====================================================
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  # =====================================================
+  # 3. ADICIONAR TRAILING SLASH (Padronização SEO)
+  # Exceto para arquivos com extensão
+  # =====================================================
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+  RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+  # =====================================================
+  # 4. SERVIR ARQUIVOS ESTÁTICOS DIRETAMENTE
+  # Se o arquivo existe, serve diretamente
+  # =====================================================
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # =====================================================
+  # 5. SERVIR DIRETÓRIOS COM index.html SE EXISTIR
+  # Para compatibilidade com estrutura estática futura
+  # =====================================================
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+
+  # =====================================================
+  # 6. FALLBACK PARA SPA (React Router)
+  # Todas as outras requisições vão para index.html
+  # =====================================================
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
 
-# Cabeçalhos de Segurança
+# =====================================================
+# CABEÇALHOS DE SEGURANÇA
+# =====================================================
 <IfModule mod_headers.c>
+  # Prevenir MIME type sniffing
   Header set X-Content-Type-Options "nosniff"
+  
+  # Prevenir clickjacking
   Header set X-Frame-Options "SAMEORIGIN"
+  
+  # Habilitar XSS filter
   Header set X-XSS-Protection "1; mode=block"
+  
+  # Política de referrer
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # Content Security Policy básica
+  Header set Content-Security-Policy "frame-ancestors 'self'"
+  
+  # Strict Transport Security (HSTS)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
 
-# Compressão Gzip
+# =====================================================
+# COMPRESSÃO GZIP
+# =====================================================
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/atom+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
 </IfModule>
 
-# Cache para recursos estáticos
+# =====================================================
+# CACHE PARA RECURSOS ESTÁTICOS
+# =====================================================
 <IfModule mod_expires.c>
   ExpiresActive On
+  
+  # Imagens - Cache longo (1 ano)
   ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # Fontes - Cache longo (1 ano)
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  
+  # CSS e JavaScript - Cache médio (1 mês)
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  
+  # HTML - Cache curto (sem cache ou muito curto)
+  ExpiresByType text/html "access plus 0 seconds"
+  
+  # Dados - Sem cache
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 0 seconds"
 </IfModule>
+
+# =====================================================
+# TIPOS MIME CORRETOS
+# =====================================================
+<IfModule mod_mime.c>
+  AddType application/javascript .js
+  AddType text/css .css
+  AddType image/svg+xml .svg
+  AddType application/font-woff .woff
+  AddType application/font-woff2 .woff2
+  AddType application/json .json
+  AddType application/xml .xml
+</IfModule>
+
+# =====================================================
+# CONFIGURAÇÕES DE ERRO
+# =====================================================
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
