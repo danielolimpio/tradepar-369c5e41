@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import icMarketsLogo from "@/assets/ic-markets.jpeg";
 import pepperstoneLogo from "@/assets/pepperstone.jpeg";
 import xmLogo from "@/assets/xm.jpeg";
@@ -278,6 +279,12 @@ const getRankBadgeStyle = (rank: number) => {
 const Corretoras = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEOHead 
+        title="Melhores Corretoras de Forex 2026 - Ranking Completo"
+        description="Ranking das 20 melhores corretoras de Forex regulamentadas. Compare spreads, regulamentação, depósito mínimo e avaliações de traders reais."
+        canonicalPath="/corretoras/"
+        keywords="corretoras forex, melhores corretoras, forex Brasil, corretoras regulamentadas, IC Markets, Pepperstone, XM"
+      />
       <Navigation />
       
       <main className="pt-20 sm:pt-24 pb-12 sm:pb-20">
@@ -303,7 +310,7 @@ const Corretoras = () => {
                 com análise detalhada de spreads, regulamentação e avaliações.
               </p>
               
-              <Link to="/corretoras/comparar">
+              <Link to="/corretoras/comparar/">
                 <Button className="bg-primary hover:bg-primary/90 text-sm sm:text-base">
                   <Scale className="h-4 w-4 mr-2" />
                   Comparar Corretoras
@@ -367,7 +374,7 @@ const Corretoras = () => {
                   </div>
 
                   {/* Action Button */}
-                  <Link to={`/corretoras/${broker.slug}`} className="block">
+                  <Link to={`/corretoras/${broker.slug}/`} className="block">
                     <Button className="w-full gap-2" size="sm">
                       <ArrowUpRight className="w-4 h-4" />
                       Ver Detalhes
@@ -435,7 +442,7 @@ const Corretoras = () => {
                       </div>
 
                       {/* CTA */}
-                      <Link to={`/corretoras/${broker.slug}`}>
+                      <Link to={`/corretoras/${broker.slug}/`}>
                         <Button variant="outline" className="group/btn border-primary/30 hover:bg-primary hover:text-primary-foreground">
                           Ver Detalhes
                           <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />

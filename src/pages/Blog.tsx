@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { BookOpen, TrendingUp, Search, Filter, Zap, Clock, ArrowRight, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,14 +11,6 @@ import heroForex from "@/assets/blog/como-investir-forex.jpg";
 
 const Blog = () => {
   useEffect(() => {
-    document.title = "Blog Tradepar - Análises, Estratégias e Notícias Forex";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Blog do Tradepar com análises de mercado, estratégias de trading forex, notícias financeiras e tutoriais para traders iniciantes e avançados."
-      );
-    }
     window.scrollTo(0, 0);
   }, []);
 
@@ -46,6 +39,12 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEOHead 
+        title="Blog Tradepar - Análises, Estratégias e Notícias Forex"
+        description="Blog do Tradepar com análises de mercado, estratégias de trading forex, notícias financeiras e tutoriais para traders iniciantes e avançados."
+        canonicalPath="/blog/"
+        keywords="blog forex, análise forex, estratégias trading, notícias forex, tutoriais trading"
+      />
       <Navigation />
       
       <main className="container mx-auto px-4 py-24">
