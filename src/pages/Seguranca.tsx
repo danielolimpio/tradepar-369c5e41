@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const securityChecks = [
   {
@@ -248,6 +249,12 @@ const commonScams = [
 const Seguranca = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Segurança no Trading Forex - Como Evitar Fraudes"
+        description="Guia completo de segurança para traders. Aprenda a identificar corretoras confiáveis, evitar golpes e proteger seu capital."
+        canonicalPath="/seguranca"
+        keywords="segurança forex, corretoras reguladas, fraudes forex, proteção capital, FCA, CySEC, ASIC"
+      />
       <Navigation />
       
       {/* Hero Section */}

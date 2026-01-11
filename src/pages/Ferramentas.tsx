@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -219,6 +220,12 @@ const Ferramentas = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEOHead
+        title="Ferramentas de Trading Forex - Calculadoras e Análise"
+        description="Ferramentas profissionais para trading: calculadoras de lote, margem, Fibonacci e análise de mercado."
+        canonicalPath="/ferramentas"
+        keywords="calculadora forex, ferramentas trading, position size, margem, fibonacci, análise mercado"
+      />
       <Navigation />
       
       <main className="flex-1">

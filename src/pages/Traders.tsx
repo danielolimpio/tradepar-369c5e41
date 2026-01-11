@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { TrendingUp, Award, CheckCircle, Target, BarChart3, Percent } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -240,6 +241,12 @@ const getRankBadgeStyle = (rank: number) => {
 const Traders = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEOHead
+        title="Ranking de Traders Forex - Top Performers Verificados"
+        description="Conheça os melhores traders de forex com desempenho verificado. Rankings baseados em retorno, drawdown e consistência."
+        canonicalPath="/traders"
+        keywords="traders forex, ranking traders, copy trading, melhores traders, performance trading"
+      />
       <Navigation />
       
       {/* Hero Section */}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Não Encontrada | Tradepar</title>
+  <meta name="description" content="A página que você está procurando não foi encontrada. Volte para a página inicial do Tradepar.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #e2e8f0;
+    }
+    header {
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1rem 2rem;
+    }
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+    }
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .error-container {
+      text-align: center;
+      max-width: 600px;
+    }
+    .error-code {
+      font-size: 8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .error-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-bottom: 1rem;
+    }
+    .error-message {
+      font-size: 1.125rem;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: #fff;
+      padding: 0.875rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    }
+    .btn-home:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+    }
+    .btn-home svg {
+      width: 20px;
+      height: 20px;
+    }
+    footer {
+      background: rgba(15, 23, 42, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+    .footer-text {
+      color: #64748b;
+      font-size: 0.875rem;
+    }
+    .footer-links {
+      margin-top: 0.75rem;
+    }
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      margin: 0 0.75rem;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: #3b82f6;
+    }
+    @media (max-width: 640px) {
+      .error-code {
+        font-size: 5rem;
+      }
+      .error-title {
+        font-size: 1.5rem;
+      }
+      .error-message {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <img src="/favicon.png" alt="Tradepar">
+        <span class="logo-text">Tradepar</span>
+      </a>
+    </div>
+  </header>
+  
+  <main>
+    <div class="error-container">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Página não encontrada</h1>
+      <p class="error-message">
+        Desculpe, a página que você está procurando não existe ou foi movida. 
+        Verifique se o endereço está correto ou volte para a página inicial.
+      </p>
+      <a href="/" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+        Voltar ao Início
+      </a>
+    </div>
+  </main>
+  
+  <footer>
+    <p class="footer-text">© 2026 Tradepar. Todos os direitos reservados.</p>
+    <div class="footer-links">
+      <a href="/corretoras/">Corretoras</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contato/">Contato</a>
+      <a href="/termos-de-uso/">Termos de Uso</a>
+      <a href="/politica-privacidade/">Privacidade</a>
+    </div>
+  </footer>
+</body>
+</html>
