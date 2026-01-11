@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const platforms = [
   {
@@ -180,6 +181,12 @@ const tradingApis = [
 const Tecnologia = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Tecnologia de Trading - Plataformas MT4, MT5 e Automação"
+        description="Domine as plataformas MT4, MT5, TradingView e ferramentas de automação. Guia completo de tecnologia para traders."
+        canonicalPath="/tecnologia"
+        keywords="MT4, MT5, TradingView, plataformas trading, automação forex, Expert Advisors, API trading"
+      />
       <Navigation />
       
       {/* Hero Section */}

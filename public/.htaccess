@@ -1,5 +1,5 @@
 # =====================================================
-# CONFIGURAÇÃO SEO OTIMIZADA PARA REACT SPA
+# CONFIGURAÇÃO SEO - SITE 100% ESTÁTICO
 # Tradepar - Portal de Forex & Trading
 # =====================================================
 
@@ -37,20 +37,19 @@
   RewriteRule ^ - [L]
 
   # =====================================================
-  # 5. SERVIR DIRETÓRIOS COM index.html SE EXISTIR
-  # Para compatibilidade com estrutura estática futura
+  # 5. SERVIR DIRETÓRIOS COM index.html
+  # Para estrutura estática pré-renderizada
   # =====================================================
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteCond %{REQUEST_FILENAME}/index.html -f
   RewriteRule ^(.*)$ $1/index.html [L]
 
   # =====================================================
-  # 6. FALLBACK PARA SPA (React Router)
-  # Todas as outras requisições vão para index.html
+  # 6. SEM FALLBACK SPA - RETORNA 404 REAL
+  # URLs inexistentes retornam erro 404
   # =====================================================
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  # NÃO há fallback para index.html raiz
+  # Isso garante 404 real para URLs que não existem
 </IfModule>
 
 # =====================================================
@@ -126,8 +125,8 @@
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType text/javascript "access plus 1 month"
   
-  # HTML - Cache curto (sem cache ou muito curto)
-  ExpiresByType text/html "access plus 0 seconds"
+  # HTML - Cache curto (1 hora para permitir atualizações)
+  ExpiresByType text/html "access plus 1 hour"
   
   # Dados - Sem cache
   ExpiresByType application/json "access plus 0 seconds"
@@ -145,10 +144,10 @@
   AddType application/font-woff2 .woff2
   AddType application/json .json
   AddType application/xml .xml
+  AddType text/html .html
 </IfModule>
 
 # =====================================================
-# CONFIGURAÇÕES DE ERRO
+# PÁGINA DE ERRO 404 PERSONALIZADA
 # =====================================================
-ErrorDocument 404 /index.html
-ErrorDocument 403 /index.html
+ErrorDocument 404 /404.html

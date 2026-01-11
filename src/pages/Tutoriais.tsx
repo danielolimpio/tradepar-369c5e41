@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -310,6 +311,12 @@ const Tutoriais = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEOHead
+        title="Tutoriais de Trading Forex - Guias Completos"
+        description="Tutoriais completos de trading forex para todos os níveis. Aprenda análise técnica, estratégias e gestão de risco."
+        canonicalPath="/tutoriais"
+        keywords="tutoriais forex, aprender trading, curso forex, análise técnica, gestão de risco"
+      />
       <Navigation />
       
       <main className="flex-1">

@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const strategies = [
   {
@@ -241,6 +242,12 @@ const riskManagementRules = [
 const Estrategias = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Estratégias de Trading Forex - Scalping, Day Trade, Swing"
+        description="Aprenda estratégias profissionais de trading: scalping, day trade, swing trading e mais. Análise de risco e indicadores."
+        canonicalPath="/estrategias"
+        keywords="estratégias forex, scalping, day trade, swing trading, análise técnica, indicadores trading"
+      />
       <Navigation />
       
       {/* Hero Section */}
