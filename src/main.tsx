@@ -10,7 +10,7 @@ import { Suspense } from "react";
 
 const queryClient = new QueryClient();
 
-// Componente wrapper para os providers
+// Componente wrapper para os providers (sem ScrollToTop - vai direto nas rotas)
 const AppWrapper = ({ children }: { children: React.ReactNode }) => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -23,7 +23,7 @@ const AppWrapper = ({ children }: { children: React.ReactNode }) => (
   </QueryClientProvider>
 );
 
-// Componente wrapper com ScrollToTop
+// Componente wrapper com ScrollToTop (para uso dentro do Router)
 const RouteWrapper = ({ children }: { children: React.ReactNode }) => (
   <>
     <ScrollToTop />
@@ -44,6 +44,7 @@ const wrappedRoutes = routes.map((route) => ({
 export const createRoot = ViteReactSSG(
   { routes: wrappedRoutes, basename: "/" },
   ({ isClient }) => {
+    // Callback executado após a renderização
     if (isClient) {
       console.log("Hydration complete");
     }
