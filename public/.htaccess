@@ -1,6 +1,7 @@
 # =====================================================
 # CONFIGURAÇÃO SEO - SITE 100% ESTÁTICO
 # Tradepar - Portal de Forex & Trading
+# URLs SEM trailing slash + arquivos .html na raiz
 # =====================================================
 
 <IfModule mod_rewrite.c>
@@ -8,7 +9,7 @@
   RewriteBase /
 
   # =====================================================
-  # 1. FORÇAR HTTPS (Redirecionamento seguro)
+  # 1. FORÇAR HTTPS
   # =====================================================
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP_HOST} !^localhost [NC]
@@ -16,62 +17,78 @@
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
   # =====================================================
-  # 2. REMOVER www (Padronização de URL)
+  # 2. REMOVER www
   # =====================================================
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
   # =====================================================
-  # 3. ADICIONAR TRAILING SLASH (Padronização SEO)
-  # Exceto para arquivos com extensão
+  # 3. REMOVER TRAILING SLASH (exceto raiz)
+  # Redireciona /pagina/ para /pagina
   # =====================================================
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
-  RewriteRule ^(.*)$ /$1/ [R=301,L]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} ^(.+)/$
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
 
   # =====================================================
   # 4. SERVIR ARQUIVOS ESTÁTICOS DIRETAMENTE
-  # Se o arquivo existe, serve diretamente
   # =====================================================
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
   # =====================================================
-  # 5. SERVIR DIRETÓRIOS COM index.html
-  # Para estrutura estática pré-renderizada
+  # 5. SERVIR /rota -> /rota.html
+  # Para estrutura com arquivos .html na raiz
   # =====================================================
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteCond %{REQUEST_FILENAME}/index.html -f
-  RewriteRule ^(.*)$ $1/index.html [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+)$ /$1.html [L]
 
   # =====================================================
-  # 6. SEM FALLBACK SPA - RETORNA 404 REAL
-  # URLs inexistentes retornam erro 404
+  # 6. CORRETORAS INDIVIDUAIS
+  # /corretoras/slug -> /corretoras-slug.html
   # =====================================================
-  # NÃO há fallback para index.html raiz
-  # Isso garante 404 real para URLs que não existem
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/corretoras-$1.html -f
+  RewriteRule ^corretoras/([^/]+)$ /corretoras-$1.html [L]
+
+  # =====================================================
+  # 7. BLOG ANINHADO
+  # /blog/estrategias/slug -> /blog-estrategias-slug.html
+  # =====================================================
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/blog-$1-$2.html -f
+  RewriteRule ^blog/([^/]+)/([^/]+)$ /blog-$1-$2.html [L]
+
+  # =====================================================
+  # 8. ARTIGOS
+  # /artigo/slug -> /artigo-slug.html
+  # =====================================================
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/artigo-$1.html -f
+  RewriteRule ^artigo/([^/]+)$ /artigo-$1.html [L]
+
+  # =====================================================
+  # 9. FALLBACK - INDEX.HTML (SPA fallback se necessário)
+  # =====================================================
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ /index.html [L]
 </IfModule>
 
 # =====================================================
 # CABEÇALHOS DE SEGURANÇA
 # =====================================================
 <IfModule mod_headers.c>
-  # Prevenir MIME type sniffing
   Header set X-Content-Type-Options "nosniff"
-  
-  # Prevenir clickjacking
   Header set X-Frame-Options "SAMEORIGIN"
-  
-  # Habilitar XSS filter
   Header set X-XSS-Protection "1; mode=block"
-  
-  # Política de referrer
   Header set Referrer-Policy "strict-origin-when-cross-origin"
-  
-  # Content Security Policy básica
   Header set Content-Security-Policy "frame-ancestors 'self'"
-  
-  # Strict Transport Security (HSTS)
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
 
@@ -103,7 +120,6 @@
 <IfModule mod_expires.c>
   ExpiresActive On
   
-  # Imagens - Cache longo (1 ano)
   ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
@@ -112,7 +128,6 @@
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
   
-  # Fontes - Cache longo (1 ano)
   ExpiresByType font/ttf "access plus 1 year"
   ExpiresByType font/otf "access plus 1 year"
   ExpiresByType font/woff "access plus 1 year"
@@ -120,15 +135,12 @@
   ExpiresByType application/font-woff "access plus 1 year"
   ExpiresByType application/font-woff2 "access plus 1 year"
   
-  # CSS e JavaScript - Cache médio (1 mês)
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType text/javascript "access plus 1 month"
   
-  # HTML - Cache curto (1 hora para permitir atualizações)
   ExpiresByType text/html "access plus 1 hour"
   
-  # Dados - Sem cache
   ExpiresByType application/json "access plus 0 seconds"
   ExpiresByType application/xml "access plus 0 seconds"
 </IfModule>

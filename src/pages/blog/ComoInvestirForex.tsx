@@ -53,10 +53,10 @@ const ComoInvestirForex = () => {
           content="Aprenda como começar no Forex com segurança, estratégias e dicas práticas para evitar os erros mais comuns de novos traders." 
         />
         <meta name="keywords" content="como investir em forex, forex para iniciantes, trading forex, mercado de moedas, guia forex 2026" />
-        <link rel="canonical" href="https://tradepar.com.br/artigo/como-investir-forex/" />
+        <link rel="canonical" href="https://tradepar.com.br/artigo/como-investir-forex" />
         <meta property="og:title" content="Como Investir em Forex: Guia Completo para Iniciantes em 2026" />
         <meta property="og:description" content="Aprenda como começar no Forex com segurança, estratégias e dicas práticas para evitar os erros mais comuns de novos traders." />
-        <meta property="og:url" content="https://tradepar.com.br/artigo/como-investir-forex/" />
+        <meta property="og:url" content="https://tradepar.com.br/artigo/como-investir-forex" />
         <meta property="og:type" content="article" />
       </Helmet>
 
@@ -77,7 +77,7 @@ const ComoInvestirForex = () => {
           <div className="relative container mx-auto px-4 py-16 md:py-24">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-              <Link to="/blog/" className="hover:text-primary transition-colors flex items-center gap-1">
+              <Link to="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
                 <ArrowLeft className="w-4 h-4" />
                 Blog
               </Link>
@@ -839,7 +839,7 @@ const ComoInvestirForex = () => {
             <h3 className="text-xl font-bold mb-6">Artigos Relacionados</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <Link 
-                to="/blog/estrategias/estrategias-avancadas-hft/" 
+                to="/blog/estrategias/estrategias-avancadas-hft" 
                 className="group bg-card border border-border rounded-xl p-6 hover-lift"
               >
                 <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">

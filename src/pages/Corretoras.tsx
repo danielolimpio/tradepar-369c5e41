@@ -282,7 +282,7 @@ const Corretoras = () => {
       <SEOHead 
         title="Melhores Corretoras de Forex 2026 - Ranking Completo"
         description="Ranking das 20 melhores corretoras de Forex regulamentadas. Compare spreads, regulamentação, depósito mínimo e avaliações de traders reais."
-        canonicalPath="/corretoras/"
+        canonicalPath="/corretoras"
         keywords="corretoras forex, melhores corretoras, forex Brasil, corretoras regulamentadas, IC Markets, Pepperstone, XM"
       />
       <Navigation />

@@ -23,8 +23,12 @@ const SEOHead = ({
   articleModifiedTime,
   noIndex = false,
 }: SEOHeadProps) => {
-  // Garantir que o path termine com /
-  const normalizedPath = canonicalPath.endsWith("/") ? canonicalPath : `${canonicalPath}/`;
+  // URLs SEM trailing slash (exceto homepage)
+  const normalizedPath = canonicalPath === "/" 
+    ? "" 
+    : canonicalPath.endsWith("/") 
+      ? canonicalPath.slice(0, -1) 
+      : canonicalPath;
   const canonicalUrl = `https://tradepar.com.br${normalizedPath}`;
   const fullTitle = title.includes("Tradepar") ? title : `${title} | Tradepar`;
 
