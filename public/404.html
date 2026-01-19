@@ -17,45 +17,26 @@
       padding: 0;
       box-sizing: border-box;
     }
+    
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
+      color: #fafafa;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      color: #e2e8f0;
     }
+    
     header {
-      background: rgba(15, 23, 42, 0.95);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-    .header-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: #fff;
-    }
-    .logo img {
-      height: 40px;
+      height: 32px;
       width: auto;
     }
-    .logo-text {
-      font-size: 1.5rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    
     main {
       flex: 1;
       display: flex;
@@ -63,111 +44,120 @@
       justify-content: center;
       padding: 2rem;
     }
+    
     .error-container {
       text-align: center;
-      max-width: 600px;
+      max-width: 500px;
     }
+    
     .error-code {
       font-size: 8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #3b82f6, #06b6d4, #10b981);
+      font-weight: 700;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       line-height: 1;
       margin-bottom: 1rem;
     }
+    
     .error-title {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      color: #f1f5f9;
       margin-bottom: 1rem;
+      color: #fafafa;
     }
+    
     .error-message {
-      font-size: 1.125rem;
-      color: #94a3b8;
+      color: #a1a1aa;
       margin-bottom: 2rem;
       line-height: 1.6;
     }
+    
     .btn-home {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-      color: #fff;
-      padding: 0.875rem 2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
+      padding: 0.875rem 1.5rem;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: #0a0a0a;
       font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+      font-size: 0.875rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(34, 197, 94, 0.3);
     }
+    
     .btn-home:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
     }
-    .btn-home svg {
-      width: 20px;
-      height: 20px;
-    }
+    
     footer {
-      background: rgba(15, 23, 42, 0.95);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
       padding: 1.5rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
       text-align: center;
     }
+    
     .footer-text {
-      color: #64748b;
+      color: #71717a;
       font-size: 0.875rem;
+      margin-bottom: 0.75rem;
     }
+    
     .footer-links {
-      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
+    
     .footer-links a {
-      color: #94a3b8;
-      text-decoration: none;
-      margin: 0 0.75rem;
+      color: #a1a1aa;
       font-size: 0.875rem;
-      transition: color 0.2s;
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
+    
     .footer-links a:hover {
-      color: #3b82f6;
+      color: #22c55e;
     }
+    
     @media (max-width: 640px) {
       .error-code {
         font-size: 5rem;
       }
+      
       .error-title {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
-      .error-message {
-        font-size: 1rem;
+      
+      .footer-links {
+        gap: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <a href="/" class="logo">
-        <img src="/favicon.png" alt="Tradepar">
-        <span class="logo-text">Tradepar</span>
-      </a>
-    </div>
+    <a href="/">
+      <img src="/favicon.png" alt="Tradepar" class="logo">
+    </a>
   </header>
   
   <main>
     <div class="error-container">
       <div class="error-code">404</div>
-      <h1 class="error-title">Página não encontrada</h1>
+      <h1 class="error-title">Página Não Encontrada</h1>
       <p class="error-message">
-        Desculpe, a página que você está procurando não existe ou foi movida. 
-        Verifique se o endereço está correto ou volte para a página inicial.
+        A página que você está procurando pode ter sido movida, excluída ou nunca existiu. 
+        Verifique o endereço digitado ou volte para a página inicial.
       </p>
       <a href="/" class="btn-home">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
         Voltar ao Início
       </a>
@@ -177,11 +167,11 @@
   <footer>
     <p class="footer-text">© 2026 Tradepar. Todos os direitos reservados.</p>
     <div class="footer-links">
-      <a href="/corretoras/">Corretoras</a>
-      <a href="/blog/">Blog</a>
-      <a href="/contato/">Contato</a>
-      <a href="/termos-de-uso/">Termos de Uso</a>
-      <a href="/politica-privacidade/">Privacidade</a>
+      <a href="/corretoras">Corretoras</a>
+      <a href="/blog">Blog</a>
+      <a href="/contato">Contato</a>
+      <a href="/termos-de-uso">Termos de Uso</a>
+      <a href="/politica-privacidade">Privacidade</a>
     </div>
   </footer>
 </body>

@@ -23,8 +23,18 @@ jobs:
       - name: Build do projeto
         run: npm run build
 
+      - name: Instalar Puppeteer
+        run: npm install puppeteer
+
+      - name: Pré-renderização estática (SSG)
+        run: node scripts/prerender.js
+
       - name: Mostrar arquivos gerados
-        run: ls -la dist/
+        run: |
+          echo "=== Arquivos HTML gerados ==="
+          ls -la dist/*.html
+          echo "=== Total de arquivos ==="
+          ls -la dist/
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

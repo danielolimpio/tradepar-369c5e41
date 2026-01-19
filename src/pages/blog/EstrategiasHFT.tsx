@@ -48,7 +48,7 @@ const EstrategiasHFT = () => {
           content="Descubra técnicas profissionais de HFT, algoritmos de market making e como aproveitar microestruturas de mercado para maximizar seus ganhos no forex." 
         />
         <meta name="keywords" content="HFT, trading de alta frequência, algoritmos, market making, forex, arbitragem" />
-        <link rel="canonical" href="https://tradepar.com/blog/estrategias/estrategias-avancadas-hft" />
+        <link rel="canonical" href="https://tradepar.com.br/blog/estrategias/estrategias-avancadas-hft" />
       </Helmet>
 
       <Navigation />

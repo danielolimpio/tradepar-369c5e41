@@ -32,7 +32,7 @@ const Blog = () => {
       category: "Tutoriais",
       readTime: "18 min de leitura",
       date: "05 Jan 2026",
-      link: "/artigo/como-investir-forex/",
+      link: "/artigo/como-investir-forex",
       level: "Iniciante"
     }
   ];
@@ -42,7 +42,7 @@ const Blog = () => {
       <SEOHead 
         title="Blog Tradepar - Análises, Estratégias e Notícias Forex"
         description="Blog do Tradepar com análises de mercado, estratégias de trading forex, notícias financeiras e tutoriais para traders iniciantes e avançados."
-        canonicalPath="/blog/"
+        canonicalPath="/blog"
         keywords="blog forex, análise forex, estratégias trading, notícias forex, tutoriais trading"
       />
       <Navigation />
@@ -104,7 +104,7 @@ const Blog = () => {
               <TrendingUp className="w-6 h-6 text-primary" />
               Em Destaque
             </h2>
-            <Link to="/blog/estrategias/estrategias-avancadas-hft/" className="block">
+            <Link to="/blog/estrategias/estrategias-avancadas-hft" className="block">
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-background to-background border border-border group hover-lift cursor-pointer">
                 <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
                   <div className="flex flex-col justify-center">
