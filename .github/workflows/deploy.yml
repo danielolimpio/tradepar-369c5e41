@@ -32,9 +32,13 @@ jobs:
       - name: Mostrar arquivos gerados
         run: |
           echo "=== Arquivos HTML gerados ==="
-          ls -la dist/*.html
+          ls -la dist/*.html || true
           echo "=== Total de arquivos ==="
-          ls -la dist/
+          ls -la dist/ || true
+          echo "=== Verificando títulos únicos (amostra) ==="
+          for f in dist/tecnologia.html dist/estrategias.html dist/corretoras.html dist/api.html dist/comunidade.html; do
+            [ -f "$f" ] && echo "$f -> $(grep -oE '<title>[^<]*</title>' "$f" | head -1)"
+          done
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
