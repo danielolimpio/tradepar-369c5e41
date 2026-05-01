@@ -374,7 +374,7 @@ const Corretoras = () => {
                   </div>
 
                   {/* Action Button */}
-                  <Link to={`/corretoras/${broker.slug}/`} className="block">
+                  <Link to={`/corretoras/${broker.slug}`} className="block">
                     <Button className="w-full gap-2" size="sm">
                       <ArrowUpRight className="w-4 h-4" />
                       Ver Detalhes
@@ -442,7 +442,7 @@ const Corretoras = () => {
                       </div>
 
                       {/* CTA */}
-                      <Link to={`/corretoras/${broker.slug}/`}>
+                      <Link to={`/corretoras/${broker.slug}`}>
                         <Button variant="outline" className="group/btn border-primary/30 hover:bg-primary hover:text-primary-foreground">
                           Ver Detalhes
                           <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
