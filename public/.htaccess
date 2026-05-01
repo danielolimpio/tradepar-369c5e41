@@ -8,6 +8,10 @@
   RewriteEngine On
   RewriteBase /
 
+  <IfModule mod_dir.c>
+    DirectorySlash Off
+  </IfModule>
+
   # =====================================================
   # 1. FORÇAR HTTPS
   # =====================================================
@@ -26,8 +30,7 @@
   # 3. REMOVER TRAILING SLASH (exceto raiz)
   # Redireciona /pagina/ para /pagina
   # =====================================================
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} ^(.+)/$
+  RewriteCond %{THE_REQUEST} \s/+(.+?)/+\s [NC]
   RewriteRule ^(.+)/$ /$1 [R=301,L]
 
   # =====================================================
