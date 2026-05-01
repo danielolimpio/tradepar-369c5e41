@@ -20,6 +20,10 @@ import tMan8 from "@/assets/traders/t-new1.jpg";
 import tMan9 from "@/assets/traders/t-new2.jpg";
 import tMan10 from "@/assets/traders/t-new3.jpg";
 import tMan11 from "@/assets/traders/t-new4.jpg";
+import tMan12 from "@/assets/traders/t-new5.jpg";
+import tMan13 from "@/assets/traders/t-new6.jpg";
+import tMan14 from "@/assets/traders/t-new7.jpg";
+import tWoman4 from "@/assets/traders/t-new8.jpg";
 
 // Broker logos
 import xm from "@/assets/xm.jpeg";
