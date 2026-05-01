@@ -1,22 +1,41 @@
 import { useEffect, useRef, useState } from "react";
-import { X } from "lucide-react";
+import { X, Volume2, VolumeX } from "lucide-react";
 
 const REAPPEAR_INTERVAL_MS = 60_000; // 1 minuto
 
 const PolarTensorAd = () => {
   const [visible, setVisible] = useState(true);
+  const [muted, setMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const timerRef = useRef<number | null>(null);
 
-  // Tenta dar play sempre que ficar visível (autoplay com muted é permitido)
+  // Tenta tocar com som; se o navegador bloquear, faz fallback para mudo
   useEffect(() => {
-    if (visible && videoRef.current) {
-      const v = videoRef.current;
-      v.muted = true;
-      const p = v.play();
-      if (p && typeof p.catch === "function") p.catch(() => {});
+    if (!visible || !videoRef.current) return;
+    const v = videoRef.current;
+    v.muted = false;
+    v.volume = 1;
+    const p = v.play();
+    if (p && typeof p.catch === "function") {
+      p.catch(() => {
+        // Autoplay com som bloqueado: tocar mudo e mostrar botão para ativar
+        v.muted = true;
+        setMuted(true);
+        v.play().catch(() => {});
+      });
     }
   }, [visible]);
+
+  const toggleMute = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = !v.muted;
+    setMuted(v.muted);
+    if (!v.muted) {
+      v.volume = 1;
+      v.play().catch(() => {});
+    }
+  };
 
   // Quando fechar, reagenda para reaparecer em 1 minuto
   const handleClose = () => {
@@ -46,11 +65,31 @@ const PolarTensorAd = () => {
           ref={videoRef}
           src="/videos/polar-tensor.mp4"
           autoPlay
-          muted
           loop
           playsInline
           className="w-full h-auto block"
         />
+
+        {/* Botão de som (aparece se o navegador bloquear o autoplay com som) */}
+        {muted && (
+          <button
+            onClick={toggleMute}
+            aria-label="Ativar som"
+            className="absolute top-2 left-2 px-3 h-8 flex items-center gap-2 rounded-full bg-black/70 hover:bg-black text-white text-xs font-medium transition-colors"
+          >
+            <VolumeX size={16} />
+            Ativar som
+          </button>
+        )}
+        {!muted && (
+          <button
+            onClick={toggleMute}
+            aria-label="Silenciar"
+            className="absolute top-2 left-2 w-8 h-8 flex items-center justify-center rounded-full bg-black/70 hover:bg-black text-white transition-colors"
+          >
+            <Volume2 size={16} />
+          </button>
+        )}
 
         {/* Botão fechar */}
         <button
