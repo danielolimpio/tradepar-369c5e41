@@ -49,6 +49,7 @@
   # 6. CORRETORAS INDIVIDUAIS
   # /corretoras/slug -> /corretoras-slug.html
   # =====================================================
+  RewriteRule ^corretoras/xm/?$ /corretoras/xm-group [R=301,L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{DOCUMENT_ROOT}/corretoras-$1.html -f
@@ -73,11 +74,18 @@
   RewriteRule ^artigo/([^/]+)$ /artigo-$1.html [L]
 
   # =====================================================
-  # 9. FALLBACK - INDEX.HTML (SPA fallback se necessário)
+  # 9. URLs legadas e inválidas: devolver 404 real
+  # Evita soft 404 e páginas alternativas indevidas
+  # =====================================================
+  RewriteRule ^(hello-world|category(?:/.*)?|author(?:/.*)?|busca)$ - [R=404,L]
+
+  # =====================================================
+  # 10. FALLBACK 404 PARA ROTAS DESCONHECIDAS
+  # Sem fallback SPA em produção: só páginas estáticas indexáveis
   # =====================================================
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ /index.html [L]
+  RewriteRule ^ - [R=404,L]
 </IfModule>
 
 # =====================================================

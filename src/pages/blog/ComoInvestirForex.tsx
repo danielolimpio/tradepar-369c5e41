@@ -368,7 +368,7 @@ const ComoInvestirForex = () => {
 
                 <div className="mt-4">
                   <Link 
-                    to="/corretoras/" 
+                    to="/corretoras" 
                     className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
                   >
                     Veja nosso ranking das melhores corretoras de Forex
@@ -449,7 +449,7 @@ const ComoInvestirForex = () => {
 
                 <div className="mt-4">
                   <Link 
-                    to="/estrategias/" 
+                    to="/estrategias" 
                     className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
                   >
                     Leia nosso guia completo sobre análise técnica no Forex
@@ -818,13 +818,13 @@ const ComoInvestirForex = () => {
                 Explore mais conteúdos educativos, descubra as melhores corretoras e aprenda estratégias comprovadas com a Tradepar.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link to="/corretoras/">
+                <Link to="/corretoras">
                   <Button size="lg" className="glow-bull gap-2">
                     <Shield className="w-5 h-5" />
                     Ver Melhores Corretoras
                   </Button>
                 </Link>
-                <Link to="/estrategias/">
+                <Link to="/estrategias">
                   <Button size="lg" variant="outline" className="gap-2">
                     <Target className="w-5 h-5" />
                     Explorar Estratégias
@@ -850,7 +850,7 @@ const ComoInvestirForex = () => {
                 </p>
               </Link>
               <Link 
-                to="/seguranca/" 
+                to="/seguranca" 
                 className="group bg-card border border-border rounded-xl p-6 hover-lift"
               >
                 <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">

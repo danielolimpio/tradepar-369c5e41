@@ -245,4 +245,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <!-- URLs legadas deliberadamente excluídas: /hello-world, /category/blog, /author/*, /busca -->
 </urlset>
