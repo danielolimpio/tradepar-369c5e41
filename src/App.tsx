@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import PolarTensorAd from "./components/PolarTensorAd";
 import Index from "./pages/Index";
 import Corretoras from "./pages/Corretoras";
 import CorretoraDetalhe from "./pages/CorretoraDetalhe";
@@ -79,6 +80,7 @@ const App = () => (
           {/* 404 - Deve ser a última rota */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <PolarTensorAd />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
