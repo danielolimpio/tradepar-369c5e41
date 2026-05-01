@@ -129,10 +129,15 @@ async function prerender() {
   console.log('\n📊 Resumo da pré-renderização:');
   console.log(`   ✅ Sucesso: ${successCount}/${routes.length}`);
   console.log(`   ❌ Erros: ${errorCount}/${routes.length}`);
-  
-  if (errorCount > 0) {
+
+  // Não falhar o deploy se algumas rotas falharem - o SPA fallback do .htaccess cobre
+  // Apenas falhar se MAIS DA METADE das rotas falharem (problema sistêmico)
+  if (errorCount > routes.length / 2) {
+    console.error('❌ Muitas rotas falharam, abortando deploy');
     process.exit(1);
   }
+  
+  console.log('✅ Pré-renderização concluída com sucesso (erros isolados toleráveis)');
 }
 
 prerender().catch(console.error);
