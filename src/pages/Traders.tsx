@@ -16,6 +16,10 @@ import tMan5 from "@/assets/traders/t-beard.png";
 import tMan6 from "@/assets/traders/t-lourival.jpg";
 import tMan7 from "@/assets/traders/t-sunglasses.jpg";
 import tWoman3 from "@/assets/traders/t-blonde.jpg";
+import tMan8 from "@/assets/traders/t-new1.jpg";
+import tMan9 from "@/assets/traders/t-new2.jpg";
+import tMan10 from "@/assets/traders/t-new3.jpg";
+import tMan11 from "@/assets/traders/t-new4.jpg";
 
 // Broker logos
 import xm from "@/assets/xm.jpeg";
@@ -76,15 +80,15 @@ const allTraders: Array<{
   { rank: 8, name: "Fernanda Alves", avatar: tWoman1, return: "+102.4%", drawdown: "11.7%", trades: 289, winRate: "69%", strategy: "Scalping", verified: true, brokers: [brokers.exness] },
   { rank: 9, name: "Thiago Barros", avatar: tMan5, return: "+98.6%", drawdown: "8.9%", trades: 178, winRate: "74%", strategy: "Swing", verified: true, brokers: [brokers.fpMarkets, brokers.icMarkets] },
   { rank: 10, name: "Camila Duarte", avatar: tWoman2, return: "+95.3%", drawdown: "12.8%", trades: 356, winRate: "67%", strategy: "Day Trade", verified: true, brokers: [brokers.xm, brokers.octafx] },
-  { rank: 11, name: "Rafael Guerra", avatar: tMan6, return: "+92.1%", drawdown: "10.4%", trades: 245, winRate: "71%", strategy: "Position Trading", verified: true, brokers: [brokers.saxo] },
+  { rank: 11, name: "Rafael Guerra", avatar: tMan8, return: "+92.1%", drawdown: "10.4%", trades: 245, winRate: "71%", strategy: "Position Trading", verified: true, brokers: [brokers.saxo] },
   { rank: 12, name: "Larissa Pacheco", avatar: tWoman3, return: "+88.7%", drawdown: "9.3%", trades: 201, winRate: "72%", strategy: "Swing", verified: true, brokers: [brokers.avatrade, brokers.pepperstone] },
   { rank: 13, name: "Diego Marinho", avatar: tMan7, return: "+85.4%", drawdown: "14.1%", trades: 423, winRate: "64%", strategy: "Scalping", verified: true, brokers: [brokers.exness] },
   { rank: 14, name: "Patrícia Vieira", avatar: tWoman1, return: "+82.9%", drawdown: "11.2%", trades: 312, winRate: "68%", strategy: "Day Trade", verified: true, brokers: [brokers.fxtm, brokers.hotforex] },
-  { rank: 15, name: "Lucas Henrique", avatar: tMan1, return: "+79.6%", drawdown: "8.7%", trades: 167, winRate: "75%", strategy: "Swing", verified: true, brokers: [brokers.icMarkets] },
+  { rank: 15, name: "Lucas Henrique", avatar: tMan9, return: "+79.6%", drawdown: "8.7%", trades: 167, winRate: "75%", strategy: "Swing", verified: true, brokers: [brokers.icMarkets] },
   { rank: 16, name: "Amanda Cardoso", avatar: tWoman2, return: "+76.2%", drawdown: "13.5%", trades: 389, winRate: "66%", strategy: "Scalping", verified: true, brokers: [brokers.pepperstone, brokers.tickmill] },
-  { rank: 17, name: "Gustavo Nunes", avatar: tMan3, return: "+73.8%", drawdown: "10.9%", trades: 278, winRate: "69%", strategy: "Day Trade", verified: true, brokers: [brokers.deriv] },
+  { rank: 17, name: "Gustavo Nunes", avatar: tMan10, return: "+73.8%", drawdown: "10.9%", trades: 278, winRate: "69%", strategy: "Day Trade", verified: true, brokers: [brokers.deriv] },
   { rank: 18, name: "Isabela Oliveira", avatar: tWoman3, return: "+70.5%", drawdown: "9.1%", trades: 192, winRate: "73%", strategy: "Position Trading", verified: true, brokers: [brokers.admirals, brokers.xm] },
-  { rank: 19, name: "Rodrigo Queiroz", avatar: tMan4, return: "+67.3%", drawdown: "12.6%", trades: 334, winRate: "67%", strategy: "Swing", verified: true, brokers: [brokers.plus500] },
+  { rank: 19, name: "Rodrigo Queiroz", avatar: tMan11, return: "+67.3%", drawdown: "12.6%", trades: 334, winRate: "67%", strategy: "Swing", verified: true, brokers: [brokers.plus500] },
   { rank: 20, name: "Beatriz Werneck", avatar: tWoman1, return: "+64.1%", drawdown: "11.4%", trades: 256, winRate: "70%", strategy: "Day Trade", verified: true, brokers: [brokers.exness, brokers.roboforex] },
 ];
 
