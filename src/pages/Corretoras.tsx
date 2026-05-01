@@ -310,7 +310,7 @@ const Corretoras = () => {
                 com análise detalhada de spreads, regulamentação e avaliações.
               </p>
               
-              <Link to="/corretoras/comparar/">
+              <Link to="/corretoras/comparar">
                 <Button className="bg-primary hover:bg-primary/90 text-sm sm:text-base">
                   <Scale className="h-4 w-4 mr-2" />
                   Comparar Corretoras
