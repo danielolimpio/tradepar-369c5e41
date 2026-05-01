@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
@@ -32,24 +33,24 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/" className="flex-shrink-0 flex items-center group">
+          <Link to="/" className="flex-shrink-0 flex items-center group">
             <img 
               src={logo} 
               alt="Tradepar Logo" 
               className="h-8 w-auto md:h-10 transition-transform group-hover:scale-105"
             />
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-1 flex-1 justify-center">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group px-4"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </div>
           <Button variant="default" size="sm" className="hidden md:flex glow-bull flex-shrink-0">
@@ -70,14 +71,14 @@ const Navigation = () => {
         <div className="md:hidden bg-card border-t border-border">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Button variant="default" size="sm" className="w-full glow-bull">
               Começar Agora
