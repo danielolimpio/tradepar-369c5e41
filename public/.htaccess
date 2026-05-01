@@ -49,6 +49,7 @@
   # 6. CORRETORAS INDIVIDUAIS
   # /corretoras/slug -> /corretoras-slug.html
   # =====================================================
+  RewriteRule ^corretoras/xm/?$ /corretoras/xm-group [R=301,L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{DOCUMENT_ROOT}/corretoras-$1.html -f
