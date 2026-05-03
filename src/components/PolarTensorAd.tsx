@@ -1,10 +1,26 @@
 import { useEffect, useRef, useState } from "react";
 import { X, Volume2, VolumeX } from "lucide-react";
 
+const SESSION_KEYS = {
+  initialShown: "tradepar-polar-ad-initial-shown",
+  exitShown: "tradepar-polar-ad-exit-shown",
+};
+
 const PolarTensorAd = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   const [muted, setMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const hasShownInitially = window.sessionStorage.getItem(SESSION_KEYS.initialShown) === "true";
+
+    if (!hasShownInitially) {
+      window.sessionStorage.setItem(SESSION_KEYS.initialShown, "true");
+      setVisible(true);
+    }
+  }, []);
 
   // Tenta tocar com som; se o navegador bloquear, faz fallback para mudo
   useEffect(() => {
@@ -34,10 +50,33 @@ const PolarTensorAd = () => {
     }
   };
 
-  // Fecha o banner permanentemente nesta sessão
   const handleClose = () => {
     setVisible(false);
   };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleExitIntent = (event: MouseEvent) => {
+      const hasShownExitIntent = window.sessionStorage.getItem(SESSION_KEYS.exitShown) === "true";
+
+      if (hasShownExitIntent || visible) return;
+
+      const isLeavingTopEdge = event.clientY <= 8;
+      const isRealExit = !event.relatedTarget && !event.toElement;
+
+      if (!isLeavingTopEdge || !isRealExit) return;
+
+      window.sessionStorage.setItem(SESSION_KEYS.exitShown, "true");
+      setVisible(true);
+    };
+
+    document.addEventListener("mouseout", handleExitIntent);
+
+    return () => {
+      document.removeEventListener("mouseout", handleExitIntent);
+    };
+  }, [visible]);
 
   if (!visible) return null;
 
