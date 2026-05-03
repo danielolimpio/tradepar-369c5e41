@@ -21,6 +21,7 @@ import {
   Phone,
   LucideIcon
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -65,13 +66,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <a href="/" className="flex items-center mb-4 group">
+            <Link to="/" className="flex items-center mb-4 group">
               <img 
                 src={logo} 
                 alt="Tradepar Logo" 
                 className="h-8 w-auto transition-transform group-hover:scale-105"
               />
-            </a>
+            </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-sm">
               O portal de referência em forex com rankings de corretoras verificadas, estratégias profissionais
               e tecnologia de ponta para traders de todos os níveis.
@@ -102,13 +103,13 @@ const Footer = () => {
                   const Icon = link.icon;
                   return (
                     <li key={link.label}>
-                      <a
-                        href={link.href}
+                      <Link
+                        to={link.href}
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2 group"
                       >
                         <Icon className="h-4 w-4 text-primary/70 group-hover:text-primary transition-colors" />
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   );
                 })}

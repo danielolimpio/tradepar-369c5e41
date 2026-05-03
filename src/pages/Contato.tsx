@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Link } from "react-router-dom";
 
 const Contato = () => {
   useEffect(() => {
@@ -99,12 +100,12 @@ const Contato = () => {
               <div className="bg-gradient-to-br from-primary/10 to-background border border-primary/20 rounded-xl p-6">
                 <h3 className="font-bold mb-4">Links Rápidos</h3>
                 <div className="space-y-3">
-                  <a href="/blog" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to="/blog" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                     → Blog e Artigos
-                  </a>
-                  <a href="/corretoras" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  </Link>
+                  <Link to="/corretoras" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                     → Rankings de Corretoras
-                  </a>
+                  </Link>
                   <a href="/#estrategias" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                     → Estratégias de Trading
                   </a>
@@ -182,9 +183,9 @@ const Contato = () => {
                     />
                     <label htmlFor="privacy" className="text-sm text-muted-foreground">
                       Eu concordo com a{" "}
-                      <a href="/politica-privacidade" className="text-primary hover:underline">
+                        <Link to="/politica-privacidade" className="text-primary hover:underline">
                         Política de Privacidade
-                      </a>{" "}
+                        </Link>{" "}
                       e autorizo o uso dos meus dados para responder esta solicitação.
                     </label>
                   </div>
@@ -226,7 +227,7 @@ const Contato = () => {
                     <p className="text-sm text-muted-foreground">
                       Sim, podemos receber comissões de afiliação. No entanto, isso não afeta 
                       nossa avaliação independente e objetiva. Veja nosso{" "}
-                      <a href="/disclaimer" className="text-primary hover:underline">Disclaimer</a>.
+                      <Link to="/disclaimer" className="text-primary hover:underline">Disclaimer</Link>.
                     </p>
                   </div>
                 </div>
