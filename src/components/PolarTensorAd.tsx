@@ -1,13 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { X, Volume2, VolumeX } from "lucide-react";
 
-const REAPPEAR_INTERVAL_MS = 60_000; // 1 minuto
-
 const PolarTensorAd = () => {
   const [visible, setVisible] = useState(true);
   const [muted, setMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const timerRef = useRef<number | null>(null);
 
   // Tenta tocar com som; se o navegador bloquear, faz fallback para mudo
   useEffect(() => {
@@ -37,20 +34,10 @@ const PolarTensorAd = () => {
     }
   };
 
-  // Quando fechar, reagenda para reaparecer em 1 minuto
+  // Fecha o banner permanentemente nesta sessão
   const handleClose = () => {
     setVisible(false);
-    if (timerRef.current) window.clearTimeout(timerRef.current);
-    timerRef.current = window.setTimeout(() => {
-      setVisible(true);
-    }, REAPPEAR_INTERVAL_MS);
   };
-
-  useEffect(() => {
-    return () => {
-      if (timerRef.current) window.clearTimeout(timerRef.current);
-    };
-  }, []);
 
   if (!visible) return null;
 
