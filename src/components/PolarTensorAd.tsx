@@ -63,7 +63,7 @@ const PolarTensorAd = () => {
       if (hasShownExitIntent || visible) return;
 
       const isLeavingTopEdge = event.clientY <= 8;
-      const isRealExit = !event.relatedTarget && !event.toElement;
+      const isRealExit = !event.relatedTarget;
 
       if (!isLeavingTopEdge || !isRealExit) return;
 
@@ -99,6 +99,7 @@ const PolarTensorAd = () => {
         {/* Botão de som (aparece se o navegador bloquear o autoplay com som) */}
         {muted && (
           <button
+            type="button"
             onClick={toggleMute}
             aria-label="Ativar som"
             className="absolute top-2 left-2 px-3 h-8 flex items-center gap-2 rounded-full bg-black/70 hover:bg-black text-white text-xs font-medium transition-colors"
@@ -109,6 +110,7 @@ const PolarTensorAd = () => {
         )}
         {!muted && (
           <button
+            type="button"
             onClick={toggleMute}
             aria-label="Silenciar"
             className="absolute top-2 left-2 w-8 h-8 flex items-center justify-center rounded-full bg-black/70 hover:bg-black text-white transition-colors"
@@ -119,6 +121,7 @@ const PolarTensorAd = () => {
 
         {/* Botão fechar */}
         <button
+          type="button"
           onClick={handleClose}
           aria-label="Fechar anúncio"
           className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center rounded-full bg-black/70 hover:bg-black text-white transition-colors"
