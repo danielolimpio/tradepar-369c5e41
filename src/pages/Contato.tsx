@@ -74,7 +74,7 @@ const Contato = () => {
                       Horário de atendimento: Seg-Sex, 9h-18h (BRT)
                     </p>
                     <p className="text-primary text-sm font-medium">
-                      +55 (11) 9999-9999
+                      +55 (12) 98251-9116
                     </p>
                   </div>
                 </div>
