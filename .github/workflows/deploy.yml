@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar o repositório
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configurar Node.js 18
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
 
@@ -29,6 +29,18 @@ jobs:
       - name: Pré-renderização estática (SSG)
         run: node scripts/prerender.js
 
+      - name: Garantir arquivos estáticos obrigatórios
+        run: |
+          cp public/.htaccess dist/.htaccess
+          cp public/404.html dist/404.html
+          echo "=== Verificando .htaccess e assets ==="
+          test -f dist/.htaccess
+          test -f dist/404.html
+          test -d dist/assets
+          test "$(find dist/assets -type f | wc -l)" -gt 0
+          ls -la dist/.htaccess dist/404.html
+          echo "Assets gerados: $(find dist/assets -type f | wc -l)"
+
       - name: Mostrar arquivos gerados
         run: |
           echo "=== Arquivos HTML gerados ==="
@@ -40,15 +52,22 @@ jobs:
             [ -f "$f" ] && echo "$f -> $(grep -oE '<title>[^<]*</title>' "$f" | head -1)"
           done
 
+      - name: Instalar lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
       - name: Deploy FTP para Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          port: 21
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          local-dir: ./dist/
-          server-dir: /
-          dangerous-clean-slate: true
-          dry-run: false
-          log-level: verbose
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_PORT: 21
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+        run: |
+          lftp -e "
+          set ssl:verify-certificate no;
+          set net:max-retries 2;
+          set net:timeout 20;
+          open -u $FTP_USER,$FTP_PASS -p $FTP_PORT $FTP_HOST;
+          lcd dist;
+          mirror --reverse --delete --verbose --ignore-time --parallel=2 ./ /;
+          bye
+          "
