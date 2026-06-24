@@ -637,48 +637,6 @@ const CorretoraDetalhe = () => {
         yearsActive: "25 anos"
       }
     },
-    "plus500": {
-      brokerData: {
-        name: "Plus500",
-        fullName: "Plus500 Ltd.",
-        founded: "2008",
-        headquarters: "Haifa, Israel",
-        ceo: "David Zruia",
-        stockCode: "LSE: PLUS",
-        website: "https://www.plus500.com",
-        email: "support@plus500.com",
-        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+30 idiomas"],
-        rating: 4.4,
-        verified: true,
-        lastUpdate: "Junho de 2026"
-      },
-      regulations: [
-        { name: "FCA", country: "Reino Unido", license: "509909", status: "Ativa", compensation: "£85.000" },
-        { name: "CySEC", country: "Chipre", license: "250/14", status: "Ativa", compensation: "€20.000" },
-        { name: "ASIC", country: "Austrália", license: "417727", status: "Ativa", compensation: "Não aplicável" },
-        { name: "MAS", country: "Cingapura", license: "CMS100648-1", status: "Ativa", compensation: "Não aplicável" },
-        { name: "FSCA", country: "África do Sul", license: "47546", status: "Ativa", compensation: "Não aplicável" }
-      ],
-      globalPresence: {
-        offices: 10,
-        countriesServed: 50,
-        mainOffices: [
-          "Haifa (Sede Principal)",
-          "Londres (Reino Unido)",
-          "Limassol (Chipre)",
-          "Sydney (Austrália)",
-          "Cingapura"
-        ]
-      },
-      metrics: {
-        activeClients: "26 milhões+ registrados",
-        monthlyVolume: "$55 bilhões USD",
-        marketCap: "£1,6 bilhões",
-        annualProfit: "$380 milhões (2025)",
-        monthlyTraffic: "12 milhões de visitas",
-        yearsActive: "18 anos"
-      }
-    },
     "roboforex": {
       brokerData: {
         name: "RoboForex",
@@ -1741,17 +1699,6 @@ const CorretoraDetalhe = () => {
       { year: "2022", event: "Expansão de oferta de ações para 4.500+ instrumentos" },
       { year: "2025", event: "Mais de 1,5 milhões de clientes em 160 países" }
     ],
-    "plus500": [
-      { year: "2008", event: "Fundação da Plus500 em Haifa, Israel" },
-      { year: "2009", event: "Licenciamento pela CySEC" },
-      { year: "2013", event: "IPO na Bolsa de Londres (LSE: PLUS)" },
-      { year: "2014", event: "Licenciamento pela FCA do Reino Unido" },
-      { year: "2017", event: "Alcance de 10 milhões de clientes registrados" },
-      { year: "2020", event: "Expansão para futuros nos EUA via aquisição da Cunningham Commodities" },
-      { year: "2023", event: "Expansão para opções e ETFs em mercados regulados" },
-      { year: "2025", event: "Lançamento do Plus500 Invest (ações reais) em mais regiões" },
-      { year: "2026", event: "Mais de 26 milhões de clientes registrados globalmente" }
-    ],
     "roboforex": [
       { year: "2009", event: "Fundação da RoboForex em Belize" },
       { year: "2013", event: "Licenciamento pela CySEC" },
@@ -2185,32 +2132,6 @@ const CorretoraDetalhe = () => {
       {
         question: "O que é o MetaTrader Supreme Edition?",
         answer: "É um plugin exclusivo da Admirals que adiciona mais de 60 funcionalidades extras ao MT4/MT5, incluindo mini terminal, matriz de correlação, alertas de trade e muito mais. É gratuito para clientes Admirals."
-      }
-    ],
-    "plus500": [
-      {
-        question: "A Plus500 é segura?",
-        answer: "Sim. A Plus500 opera sob regulamentação de FCA (UK), CySEC (Chipre), ASIC (Austrália), MAS (Cingapura) e FSCA (África do Sul), com segregação de fundos de clientes em bancos tier-1 e proteção de saldo negativo para contas de varejo nas jurisdições aplicáveis."
-      },
-      {
-        question: "Qual é o depósito mínimo?",
-        answer: "O depósito mínimo na Plus500 é de $100 (varia por país). Recomendamos começar com valor maior para gerenciar risco adequadamente."
-      },
-      {
-        question: "Brasileiros podem abrir conta?",
-        answer: "Sim. O cadastro é 100% online, em português, e exige apenas documento de identidade, CPF e comprovante de residência."
-      },
-      {
-        question: "Qual a alavancagem máxima?",
-        answer: "Até 1:30 (varejo) / 1:300 (profissional), conforme a entidade regulatória da sua conta e o seu perfil (varejo ou profissional)."
-      },
-      {
-        question: "Existe conta demo gratuita?",
-        answer: "Sim. A Plus500 oferece conta demo ilimitada com saldo virtual, replicando as condições reais de mercado para testar estratégias sem risco."
-      },
-      {
-        question: "Quais plataformas estão disponíveis?",
-        answer: "Plus500 WebTrader proprietária, app Windows e apps mobile iOS/Android, todas com versões desktop, web e mobile."
       }
     ],
     "roboforex": [
