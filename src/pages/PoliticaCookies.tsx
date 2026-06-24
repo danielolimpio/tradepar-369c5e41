@@ -62,7 +62,7 @@ const PoliticaCookies = () => {
           </h1>
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <Clock className="w-4 h-4" />
-            <p className="text-lg">Última atualização: 14 de dezembro de 2025</p>
+            <p className="text-lg">Última atualização: 15 de junho de 2026</p>
           </div>
         </header>
 
