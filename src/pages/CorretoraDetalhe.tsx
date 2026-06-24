@@ -28,7 +28,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+15 idiomas"],
         rating: 4.8,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "FCA", country: "Reino Unido", license: "113942", status: "Ativa", compensation: "£85.000" },
@@ -53,7 +53,7 @@ const CorretoraDetalhe = () => {
         marketCap: "£3,2 bilhões",
         annualProfit: "£467 milhões (2024)",
         monthlyTraffic: "8,5 milhões de visitas",
-        yearsActive: "51 anos"
+        yearsActive: "52 anos"
       }
     },
     "saxo-bank": {
@@ -69,7 +69,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Dinamarquês", "Alemão", "Francês", "+20 idiomas"],
         rating: 4.7,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "FSA", country: "Dinamarca", license: "8171", status: "Ativa", compensation: "€20.000" },
@@ -96,7 +96,7 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "€320 milhões (2024)",
         monthlyTraffic: "4,5 milhões de visitas",
-        yearsActive: "33 anos"
+        yearsActive: "34 anos"
       }
     },
     "interactive-brokers": {
@@ -112,7 +112,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Russo", "Chinês", "Japonês", "+12 idiomas"],
         rating: 4.6,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "SEC", country: "Estados Unidos", license: "8-47257", status: "Ativa", compensation: "$500.000" },
@@ -139,7 +139,7 @@ const CorretoraDetalhe = () => {
         marketCap: "$50 bilhões USD",
         annualProfit: "$1,8 bilhão USD (2024)",
         monthlyTraffic: "8 milhões de visitas",
-        yearsActive: "47 anos"
+        yearsActive: "48 anos"
       }
     },
     "cmc-markets": {
@@ -155,7 +155,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Alemão", "Francês", "Espanhol", "Russo", "Chinês", "Japonês", "Árabe", "+6 idiomas"],
         rating: 4.5,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "FCA", country: "Reino Unido", license: "173730", status: "Ativa", compensation: "£85.000" },
@@ -182,7 +182,7 @@ const CorretoraDetalhe = () => {
         marketCap: "£1,2 bilhões",
         annualProfit: "£285 milhões (2024)",
         monthlyTraffic: "4,2 milhões de visitas",
-        yearsActive: "36 anos"
+        yearsActive: "37 anos"
       }
     },
     "pepperstone": {
@@ -198,7 +198,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+12 idiomas"],
         rating: 4.7,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "ASIC", country: "Austrália", license: "414530", status: "Ativa", compensation: "Não aplicável" },
@@ -239,7 +239,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Chinês", "Árabe", "+15 idiomas"],
         rating: 4.8,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "ASIC", country: "Austrália", license: "335692", status: "Ativa", compensation: "Não aplicável" },
@@ -264,7 +264,7 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "Não divulgado",
         monthlyTraffic: "5,8 milhões de visitas",
-        yearsActive: "18 anos"
+        yearsActive: "20 anos"
       }
     },
     "fp-markets": {
@@ -280,7 +280,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Chinês", "Tailandês", "Vietnamita", "+8 idiomas"],
         rating: 4.7,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "ASIC", country: "Austrália", license: "286354", status: "Ativa", compensation: "Não aplicável" },
@@ -303,7 +303,7 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "Não divulgado",
         monthlyTraffic: "4,8 milhões de visitas",
-        yearsActive: "20 anos"
+        yearsActive: "21 anos"
       }
     },
     "xm-group": {
@@ -319,7 +319,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Italiano", "Árabe", "Chinês", "+22 idiomas"],
         rating: 4.6,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "CySEC", country: "Chipre", license: "120/10", status: "Ativa", compensation: "€20.000" },
@@ -345,7 +345,7 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "Não divulgado",
         monthlyTraffic: "12 milhões de visitas",
-        yearsActive: "16 anos"
+        yearsActive: "18 anos"
       }
     },
     "avatrade": {
@@ -361,7 +361,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Italiano", "Árabe", "Chinês", "Japonês", "+10 idiomas"],
         rating: 4.5,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "Central Bank", country: "Irlanda", license: "C53877", status: "Ativa", compensation: "€20.000" },
@@ -388,7 +388,7 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "Não divulgado",
         monthlyTraffic: "6,2 milhões de visitas",
-        yearsActive: "19 anos"
+        yearsActive: "20 anos"
       }
     },
     "octafx": {
@@ -404,7 +404,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "Tailandês", "Chinês", "Vietnamita", "+20 idiomas"],
         rating: 4.4,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "FSC", country: "Maurício", license: "GB21027161", status: "Ativa", compensation: "Não aplicável" },
@@ -429,7 +429,7 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "Não divulgado",
         monthlyTraffic: "9,5 milhões de visitas",
-        yearsActive: "14 anos"
+        yearsActive: "15 anos"
       }
     },
     "tickmill": {
@@ -445,7 +445,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+10 idiomas"],
         rating: 4.6,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "FCA", country: "Reino Unido", license: "717270", status: "Ativa", compensation: "£85.000" },
@@ -470,7 +470,7 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "Não divulgado",
         monthlyTraffic: "3,8 milhões de visitas",
-        yearsActive: "11 anos"
+        yearsActive: "12 anos"
       }
     },
     "plus500": {
@@ -486,7 +486,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+30 idiomas"],
         rating: 4.5,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "FCA", country: "Reino Unido", license: "509909", status: "Ativa", compensation: "£85.000" },
@@ -511,7 +511,7 @@ const CorretoraDetalhe = () => {
         marketCap: "£1,5 bilhões",
         annualProfit: "$350 milhões (2024)",
         monthlyTraffic: "12 milhões de visitas",
-        yearsActive: "17 anos"
+        yearsActive: "18 anos"
       }
     },
     "exness": {
@@ -527,7 +527,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Árabe", "Chinês", "+15 idiomas"],
         rating: 4.7,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "FCA", country: "Reino Unido", license: "730729", status: "Ativa", compensation: "£85.000" },
@@ -552,7 +552,7 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "$900 milhões (2024)",
         monthlyTraffic: "25 milhões de visitas",
-        yearsActive: "17 anos"
+        yearsActive: "18 anos"
       }
     },
     "fxtm": {
@@ -568,7 +568,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Árabe", "Chinês", "+12 idiomas"],
         rating: 4.5,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "FCA", country: "Reino Unido", license: "777911", status: "Ativa", compensation: "£85.000" },
@@ -593,7 +593,7 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "Não divulgado",
         monthlyTraffic: "8 milhões de visitas",
-        yearsActive: "14 anos"
+        yearsActive: "15 anos"
       }
     },
     "admirals": {
@@ -609,7 +609,7 @@ const CorretoraDetalhe = () => {
         languages: ["Português", "Inglês", "Espanhol", "Alemão", "Francês", "+15 idiomas"],
         rating: 4.6,
         verified: true,
-        lastUpdate: "Novembro de 2025"
+        lastUpdate: "Junho de 2026"
       },
       regulations: [
         { name: "FCA", country: "Reino Unido", license: "595450", status: "Ativa", compensation: "£85.000" },
@@ -634,7 +634,211 @@ const CorretoraDetalhe = () => {
         marketCap: "Empresa Privada",
         annualProfit: "€180 milhões (2024)",
         monthlyTraffic: "5,5 milhões de visitas",
-        yearsActive: "24 anos"
+        yearsActive: "25 anos"
+      }
+    },
+    "roboforex": {
+      brokerData: {
+        name: "RoboForex",
+        fullName: "RoboForex Ltd.",
+        founded: "2009",
+        headquarters: "Belize City, Belize",
+        ceo: "Denis Golomedov",
+        stockCode: "Empresa Privada",
+        website: "https://www.roboforex.com",
+        email: "info@roboforex.com",
+        languages: ["Português", "Inglês", "Espanhol", "Russo", "Árabe", "Chinês", "+25 idiomas"],
+        rating: 4.4,
+        verified: true,
+        lastUpdate: "Junho de 2026"
+      },
+      regulations: [
+        { name: "FSC", country: "Belize", license: "000138/437", status: "Ativa", compensation: "Não aplicável" },
+        { name: "CySEC", country: "Chipre", license: "191/13", status: "Ativa", compensation: "€20.000" },
+        { name: "FSCA", country: "África do Sul", license: "46809", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 9,
+        countriesServed: 169,
+        mainOffices: [
+          "Belize City (Sede Principal)",
+          "Limassol (Chipre)",
+          "Hong Kong",
+          "Kuala Lumpur (Malásia)",
+          "Joanesburgo (África do Sul)"
+        ]
+      },
+      metrics: {
+        activeClients: "3,5 milhões+",
+        monthlyVolume: "$320 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "6,2 milhões de visitas",
+        yearsActive: "17 anos"
+      }
+    },
+    "hotforex-hfm": {
+      brokerData: {
+        name: "HotForex (HFM)",
+        fullName: "HF Markets Group",
+        founded: "2010",
+        headquarters: "Port Louis, Maurício",
+        ceo: "George Koumantaris",
+        stockCode: "Empresa Privada",
+        website: "https://www.hfm.com",
+        email: "support@hfm.com",
+        languages: ["Português", "Inglês", "Espanhol", "Árabe", "Chinês", "+27 idiomas"],
+        rating: 4.5,
+        verified: true,
+        lastUpdate: "Junho de 2026"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "801701", status: "Ativa", compensation: "£85.000" },
+        { name: "CySEC", country: "Chipre", license: "183/12", status: "Ativa", compensation: "€20.000" },
+        { name: "FSCA", country: "África do Sul", license: "46632", status: "Ativa", compensation: "Não aplicável" },
+        { name: "DFSA", country: "Dubai", license: "F004885", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSA", country: "Seychelles", license: "SD015", status: "Ativa", compensation: "Não aplicável" },
+        { name: "CMA", country: "Quênia", license: "155", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 11,
+        countriesServed: 190,
+        mainOffices: [
+          "Port Louis (Sede Principal)",
+          "Limassol (Chipre)",
+          "Londres (Reino Unido)",
+          "Dubai (EAU)",
+          "Joanesburgo (África do Sul)",
+          "Nairobi (Quênia)"
+        ]
+      },
+      metrics: {
+        activeClients: "3,5 milhões+",
+        monthlyVolume: "$450 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "5,5 milhões de visitas",
+        yearsActive: "16 anos"
+      }
+    },
+    "alpari": {
+      brokerData: {
+        name: "Alpari",
+        fullName: "Alpari International",
+        founded: "1998",
+        headquarters: "Port Louis, Maurício",
+        ceo: "Andrey Vedikhin",
+        stockCode: "Empresa Privada",
+        website: "https://www.alpari.com",
+        email: "support@alpari.com",
+        languages: ["Português", "Inglês", "Espanhol", "Russo", "Árabe", "Chinês", "+18 idiomas"],
+        rating: 4.2,
+        verified: true,
+        lastUpdate: "Junho de 2026"
+      },
+      regulations: [
+        { name: "FSC", country: "Maurício", license: "C113012295", status: "Ativa", compensation: "Não aplicável" },
+        { name: "FSA", country: "São Vicente e Granadinas", license: "20389 IBC 2012", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 7,
+        countriesServed: 150,
+        mainOffices: [
+          "Port Louis (Sede Principal)",
+          "Moscou (Rússia)",
+          "Limassol (Chipre)",
+          "Dubai (EAU)",
+          "Kuala Lumpur (Malásia)"
+        ]
+      },
+      metrics: {
+        activeClients: "1 milhão+",
+        monthlyVolume: "$120 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "2,8 milhões de visitas",
+        yearsActive: "28 anos"
+      }
+    },
+    "city-index": {
+      brokerData: {
+        name: "City Index",
+        fullName: "City Index (StoneX Group)",
+        founded: "1983",
+        headquarters: "Londres, Reino Unido",
+        ceo: "Sean O'Connor (StoneX)",
+        stockCode: "NASDAQ: SNEX (StoneX)",
+        website: "https://www.cityindex.com",
+        email: "support@cityindex.com",
+        languages: ["Português", "Inglês", "Espanhol", "Alemão", "Chinês", "+12 idiomas"],
+        rating: 4.6,
+        verified: true,
+        lastUpdate: "Junho de 2026"
+      },
+      regulations: [
+        { name: "FCA", country: "Reino Unido", license: "113942", status: "Ativa", compensation: "£85.000" },
+        { name: "ASIC", country: "Austrália", license: "345646", status: "Ativa", compensation: "Não aplicável" },
+        { name: "MAS", country: "Cingapura", license: "200400922K", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 12,
+        countriesServed: 140,
+        mainOffices: [
+          "Londres (Sede Principal)",
+          "Sydney (Austrália)",
+          "Cingapura",
+          "Xangai (China)",
+          "Nova York (StoneX HQ)"
+        ]
+      },
+      metrics: {
+        activeClients: "250.000+",
+        monthlyVolume: "$1,2 trilhões USD",
+        marketCap: "$4,1 bilhões (StoneX Group)",
+        annualProfit: "$280 milhões (segmento retail 2025)",
+        monthlyTraffic: "3,1 milhões de visitas",
+        yearsActive: "43 anos"
+      }
+    },
+    "deriv": {
+      brokerData: {
+        name: "Deriv",
+        fullName: "Deriv Group (ex-Binary.com)",
+        founded: "1999",
+        headquarters: "Limassol, Chipre",
+        ceo: "Jean-Yves Sireau",
+        stockCode: "Empresa Privada",
+        website: "https://www.deriv.com",
+        email: "support@deriv.com",
+        languages: ["Português", "Inglês", "Espanhol", "Francês", "Árabe", "Chinês", "+20 idiomas"],
+        rating: 4.3,
+        verified: true,
+        lastUpdate: "Junho de 2026"
+      },
+      regulations: [
+        { name: "MFSA", country: "Malta", license: "IS/70156", status: "Ativa", compensation: "€20.000" },
+        { name: "LFSA", country: "Malásia (Labuan)", license: "MB/18/0024", status: "Ativa", compensation: "Não aplicável" },
+        { name: "BVI FSC", country: "Ilhas Virgens Britânicas", license: "SIBA/L/18/1114", status: "Ativa", compensation: "Não aplicável" },
+        { name: "VFSC", country: "Vanuatu", license: "15008", status: "Ativa", compensation: "Não aplicável" }
+      ],
+      globalPresence: {
+        offices: 12,
+        countriesServed: 180,
+        mainOffices: [
+          "Limassol (Sede Principal)",
+          "Cyberjaya (Malásia)",
+          "Dubai (EAU)",
+          "Paraguai (Asunción)",
+          "Minsk (Bielorrússia)"
+        ]
+      },
+      metrics: {
+        activeClients: "2,5 milhões+",
+        monthlyVolume: "$110 bilhões USD",
+        marketCap: "Empresa Privada",
+        annualProfit: "Não divulgado",
+        monthlyTraffic: "9 milhões de visitas",
+        yearsActive: "27 anos"
       }
     }
   };
@@ -1151,6 +1355,175 @@ const CorretoraDetalhe = () => {
         { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$25 - $10.000" }
       ]
     },
+    "roboforex": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "R StocksTrader", available: true },
+        { name: "cTrader", available: true },
+        { name: "Mobile Apps (iOS/Android)", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "40+ pares" },
+        { type: "Ações", count: "12.000+" },
+        { type: "Índices", count: "30+" },
+        { type: "Commodities", count: "15+" },
+        { type: "Criptomoedas", count: "26+" },
+        { type: "ETFs", count: "1.000+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$10 (Pro-Cent) / $100 (ECN)" },
+        { label: "Spread EUR/USD", value: "A partir de 0,0 pips (ECN)" },
+        { label: "Alavancagem Máxima", value: "Até 1:2000" },
+        { label: "Comissão", value: "$2 por lote (ECN) / $0 (Pro)" },
+        { label: "Swap Overnight", value: "Variável (competitivo)" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4/MT5)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$10 - sem limite" },
+        { method: "Transferência Bancária", time: "1-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$10 - $10.000" },
+        { method: "Criptomoedas (BTC/USDT)", time: "10-30 min", fees: "Taxa da rede", limits: "$10+" }
+      ]
+    },
+    "hotforex-hfm": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "HFM App (Própria)", available: true },
+        { name: "WebTrader", available: true },
+        { name: "HFcopy (Copy Trading)", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "50+ pares" },
+        { type: "Ações", count: "1.000+" },
+        { type: "Índices", count: "23+" },
+        { type: "Commodities", count: "10+" },
+        { type: "Criptomoedas", count: "20+" },
+        { type: "ETFs", count: "60+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$0 (Cent) / $100 (Premium)" },
+        { label: "Spread EUR/USD", value: "A partir de 0,0 pips (Zero)" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:2000 (offshore)" },
+        { label: "Comissão", value: "$3 por lote (Zero) / $0 (Premium)" },
+        { label: "Swap Overnight", value: "Variável; contas islâmicas disponíveis" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT4/MT5)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$5 - sem limite" },
+        { method: "Transferência Bancária", time: "2-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" },
+        { method: "Criptomoedas", time: "10-60 min", fees: "Taxa da rede", limits: "$10+" }
+      ]
+    },
+    "alpari": {
+      platforms: [
+        { name: "MetaTrader 4", available: true },
+        { name: "MetaTrader 5", available: true },
+        { name: "Alpari Mobile", available: true },
+        { name: "WebTrader", available: true },
+        { name: "PAMM (Gestão de Capital)", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "60+ pares" },
+        { type: "Ações CFDs", count: "100+" },
+        { type: "Índices", count: "12+" },
+        { type: "Commodities", count: "8+" },
+        { type: "Criptomoedas", count: "10+" },
+        { type: "Metais", count: "4+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$5 (Nano) / $100 (Standard) / $500 (ECN)" },
+        { label: "Spread EUR/USD", value: "A partir de 0,3 pips (ECN)" },
+        { label: "Alavancagem Máxima", value: "Até 1:1000" },
+        { label: "Comissão", value: "$5 por lote (Pro/ECN) / $0 (Standard)" },
+        { label: "Swap Overnight", value: "Variável; contas swap-free disponíveis" },
+        { label: "Lote Mínimo", value: "0,01 lotes (Nano: 0,001)" },
+        { label: "Expert Advisors", value: "Sim (MT4/MT5)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$5 - sem limite" },
+        { method: "Transferência Bancária", time: "2-5 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" },
+        { method: "Perfect Money", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" }
+      ]
+    },
+    "city-index": {
+      platforms: [
+        { name: "Web Trader (Própria)", available: true },
+        { name: "MetaTrader 4", available: true },
+        { name: "AT Pro (Avançada)", available: true },
+        { name: "TradingView", available: true },
+        { name: "Mobile Apps (iOS/Android)", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "84+ pares" },
+        { type: "Ações CFDs", count: "4.500+" },
+        { type: "Índices", count: "21+" },
+        { type: "Commodities", count: "25+" },
+        { type: "Criptomoedas", count: "8+" },
+        { type: "Títulos", count: "10+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$0 (sem mínimo)" },
+        { label: "Spread EUR/USD", value: "A partir de 0,5 pips" },
+        { label: "Alavancagem Máxima", value: "1:30 (varejo) / 1:200 (profissional)" },
+        { label: "Comissão", value: "$0 em CFDs (spread incluso)" },
+        { label: "Swap Overnight", value: "Variável (competitivo)" },
+        { label: "Lote Mínimo", value: "0,01 lotes" },
+        { label: "Expert Advisors", value: "Sim (MT4)" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$100 - sem limite" },
+        { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "PayPal", time: "Instantâneo", fees: "Gratuito", limits: "$100 - $10.000" }
+      ]
+    },
+    "deriv": {
+      platforms: [
+        { name: "Deriv Trader", available: true },
+        { name: "Deriv MT5", available: true },
+        { name: "Deriv X", available: true },
+        { name: "Deriv cTrader", available: true },
+        { name: "Deriv Bot (Trading Automatizado)", available: true },
+        { name: "SmartTrader", available: true }
+      ],
+      instruments: [
+        { type: "Forex", count: "50+ pares" },
+        { type: "Índices Sintéticos", count: "30+ (exclusivos Deriv)" },
+        { type: "Ações CFDs", count: "100+" },
+        { type: "Commodities", count: "10+" },
+        { type: "Criptomoedas", count: "25+" },
+        { type: "ETFs", count: "20+" }
+      ],
+      tradingConditions: [
+        { label: "Depósito Mínimo", value: "$5" },
+        { label: "Spread EUR/USD", value: "A partir de 0,2 pips (Raw)" },
+        { label: "Alavancagem Máxima", value: "Até 1:1000" },
+        { label: "Comissão", value: "$3,5 por lote (Raw) / $0 (Standard)" },
+        { label: "Swap Overnight", value: "Variável; contas swap-free disponíveis" },
+        { label: "Lote Mínimo", value: "0,01 lotes (micro)" },
+        { label: "Expert Advisors", value: "Sim (MT5) e Deriv Bot" },
+        { label: "Scalping", value: "Permitido" }
+      ],
+      paymentMethods: [
+        { method: "Cartão de Crédito/Débito", time: "Instantâneo", fees: "Gratuito", limits: "$5 - sem limite" },
+        { method: "Transferência Bancária", time: "1-3 dias úteis", fees: "Gratuito", limits: "Sem limite" },
+        { method: "Skrill", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" },
+        { method: "Neteller", time: "Instantâneo", fees: "Gratuito", limits: "$5 - $10.000" },
+        { method: "Criptomoedas (BTC/ETH/USDT)", time: "10-60 min", fees: "Taxa da rede", limits: "$5+" }
+      ]
+    },
   };
 
   const currentPlatformData = platformsDatabase[currentSlug] || platformsDatabase["ig-group"];
@@ -1325,6 +1698,52 @@ const CorretoraDetalhe = () => {
       { year: "2020", event: "Lançamento da plataforma Admirals Connect (Social Trading)" },
       { year: "2022", event: "Expansão de oferta de ações para 4.500+ instrumentos" },
       { year: "2025", event: "Mais de 1,5 milhões de clientes em 160 países" }
+    ],
+    "roboforex": [
+      { year: "2009", event: "Fundação da RoboForex em Belize" },
+      { year: "2013", event: "Licenciamento pela CySEC" },
+      { year: "2015", event: "Lançamento da plataforma R StocksTrader" },
+      { year: "2018", event: "Expansão para CFDs de mais de 12.000 ações globais" },
+      { year: "2020", event: "Introdução de CopyFX (Copy Trading proprietário)" },
+      { year: "2022", event: "Lançamento de cTrader e contas Pro-Cent" },
+      { year: "2024", event: "Reestruturação de contas com alavancagem até 1:2000" },
+      { year: "2026", event: "Mais de 3,5 milhões de clientes em 169+ países" }
+    ],
+    "hotforex-hfm": [
+      { year: "2010", event: "Fundação da HotForex no Chipre" },
+      { year: "2012", event: "Licenciamento pela CySEC" },
+      { year: "2015", event: "Licenciamento pela FCA, FSCA e DFSA" },
+      { year: "2018", event: "Lançamento do HFcopy (Copy Trading)" },
+      { year: "2022", event: "Rebranding para HFM (HF Markets)" },
+      { year: "2024", event: "Lançamento de ações fracionárias e novos ETFs" },
+      { year: "2026", event: "Mais de 3,5 milhões de clientes em 190+ países" }
+    ],
+    "alpari": [
+      { year: "1998", event: "Fundação da Alpari na Rússia" },
+      { year: "2004", event: "Expansão internacional e lançamento de contas Micro" },
+      { year: "2011", event: "Introdução de PAMM (gestão profissional de capital)" },
+      { year: "2015", event: "Reestruturação após crise do franco suíço; nova sede em Maurício" },
+      { year: "2019", event: "Lançamento de cripto CFDs" },
+      { year: "2023", event: "Modernização das plataformas mobile e desktop" },
+      { year: "2026", event: "Mais de 1 milhão de clientes ativos globalmente" }
+    ],
+    "city-index": [
+      { year: "1983", event: "Fundação da City Index em Londres" },
+      { year: "2006", event: "Aquisição da IFX Markets, expandindo o portfólio de CFDs" },
+      { year: "2014", event: "Aquisição pela GAIN Capital" },
+      { year: "2020", event: "Integração ao grupo StoneX (NASDAQ: SNEX)" },
+      { year: "2022", event: "Modernização da plataforma Web Trader e mobile" },
+      { year: "2024", event: "Expansão do oferecimento de ações CFDs para 4.500+ ativos" },
+      { year: "2026", event: "Mais de 250.000 clientes ativos sob StoneX Group" }
+    ],
+    "deriv": [
+      { year: "1999", event: "Fundação como Regent Markets / Binary.com" },
+      { year: "2017", event: "Lançamento dos Índices Sintéticos (24/7 trading)" },
+      { year: "2020", event: "Rebranding para Deriv.com" },
+      { year: "2021", event: "Lançamento da Deriv X (plataforma proprietária)" },
+      { year: "2023", event: "Adição de Deriv MT5 e Deriv cTrader" },
+      { year: "2024", event: "Expansão na América Latina com escritório no Paraguai" },
+      { year: "2026", event: "Mais de 2,5 milhões de clientes em 180+ países" }
     ]
   };
 
@@ -1714,6 +2133,136 @@ const CorretoraDetalhe = () => {
         question: "O que é o MetaTrader Supreme Edition?",
         answer: "É um plugin exclusivo da Admirals que adiciona mais de 60 funcionalidades extras ao MT4/MT5, incluindo mini terminal, matriz de correlação, alertas de trade e muito mais. É gratuito para clientes Admirals."
       }
+    ],
+    "roboforex": [
+      {
+        question: "A RoboForex é segura?",
+        answer: "Sim. A RoboForex opera sob regulamentação de CySEC (Chipre), FSC (Belize) e FSCA (África do Sul), com segregação de fundos de clientes em bancos tier-1 e proteção de saldo negativo para contas de varejo nas jurisdições aplicáveis."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "O depósito mínimo na RoboForex é de $10 (Pro-Cent) ou $100 (ECN). Recomendamos começar com valor maior para gerenciar risco adequadamente."
+      },
+      {
+        question: "Brasileiros podem abrir conta?",
+        answer: "Sim. O cadastro é 100% online, em português, e exige apenas documento de identidade, CPF e comprovante de residência."
+      },
+      {
+        question: "Qual a alavancagem máxima?",
+        answer: "Até até 1:2000, conforme a entidade regulatória da sua conta e o seu perfil (varejo ou profissional)."
+      },
+      {
+        question: "Existe conta demo gratuita?",
+        answer: "Sim. A RoboForex oferece conta demo ilimitada com saldo virtual, replicando as condições reais de mercado para testar estratégias sem risco."
+      },
+      {
+        question: "Quais plataformas estão disponíveis?",
+        answer: "MetaTrader 4, MetaTrader 5, R StocksTrader e cTrader, todas com versões desktop, web e mobile."
+      }
+    ],
+    "hotforex-hfm": [
+      {
+        question: "A HotForex (HFM) é segura?",
+        answer: "Sim. A HotForex (HFM) opera sob regulamentação de FCA (UK), CySEC (Chipre), FSCA (África do Sul), DFSA (Dubai), FSA (Seychelles) e CMA (Quênia), com segregação de fundos de clientes em bancos tier-1 e proteção de saldo negativo para contas de varejo nas jurisdições aplicáveis."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "O depósito mínimo na HotForex (HFM) é $0 na conta Cent ou $100 na Premium. Recomendamos começar com valor maior para gerenciar risco adequadamente."
+      },
+      {
+        question: "Brasileiros podem abrir conta?",
+        answer: "Sim. O cadastro é 100% online, em português, e exige apenas documento de identidade, CPF e comprovante de residência."
+      },
+      {
+        question: "Qual a alavancagem máxima?",
+        answer: "Até 1:30 (varejo) / até 1:2000 (offshore), conforme a entidade regulatória da sua conta e o seu perfil (varejo ou profissional)."
+      },
+      {
+        question: "Existe conta demo gratuita?",
+        answer: "Sim. A HotForex (HFM) oferece conta demo ilimitada com saldo virtual, replicando as condições reais de mercado para testar estratégias sem risco."
+      },
+      {
+        question: "Quais plataformas estão disponíveis?",
+        answer: "MetaTrader 4, MetaTrader 5 e o app proprietário HFM com HFcopy, todas com versões desktop, web e mobile."
+      }
+    ],
+    "alpari": [
+      {
+        question: "A Alpari é segura?",
+        answer: "Sim. A Alpari opera sob regulamentação de FSC (Maurício) e FSA de São Vicente e Granadinas, com segregação de fundos de clientes em bancos tier-1 e proteção de saldo negativo para contas de varejo nas jurisdições aplicáveis."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "O depósito mínimo na Alpari é $5 (Nano), $100 (Standard) ou $500 (ECN). Recomendamos começar com valor maior para gerenciar risco adequadamente."
+      },
+      {
+        question: "Brasileiros podem abrir conta?",
+        answer: "Sim. O cadastro é 100% online, em português, e exige apenas documento de identidade, CPF e comprovante de residência."
+      },
+      {
+        question: "Qual a alavancagem máxima?",
+        answer: "Até até 1:1000, conforme a entidade regulatória da sua conta e o seu perfil (varejo ou profissional)."
+      },
+      {
+        question: "Existe conta demo gratuita?",
+        answer: "Sim. A Alpari oferece conta demo ilimitada com saldo virtual, replicando as condições reais de mercado para testar estratégias sem risco."
+      },
+      {
+        question: "Quais plataformas estão disponíveis?",
+        answer: "MetaTrader 4, MetaTrader 5, WebTrader e app mobile próprio, todas com versões desktop, web e mobile."
+      }
+    ],
+    "city-index": [
+      {
+        question: "A City Index é segura?",
+        answer: "Sim. A City Index opera sob regulamentação de FCA (UK), ASIC (Austrália) e MAS (Cingapura), todas autoridades tier-1 — faz parte do grupo StoneX, listado na NASDAQ, com segregação de fundos de clientes em bancos tier-1 e proteção de saldo negativo para contas de varejo nas jurisdições aplicáveis."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "O depósito mínimo na City Index é sem mínimo declarado ($0). Recomendamos começar com valor maior para gerenciar risco adequadamente."
+      },
+      {
+        question: "Brasileiros podem abrir conta?",
+        answer: "Sim. O cadastro é 100% online, em português, e exige apenas documento de identidade, CPF e comprovante de residência."
+      },
+      {
+        question: "Qual a alavancagem máxima?",
+        answer: "Até 1:30 (varejo) / 1:200 (profissional), conforme a entidade regulatória da sua conta e o seu perfil (varejo ou profissional)."
+      },
+      {
+        question: "Existe conta demo gratuita?",
+        answer: "Sim. A City Index oferece conta demo ilimitada com saldo virtual, replicando as condições reais de mercado para testar estratégias sem risco."
+      },
+      {
+        question: "Quais plataformas estão disponíveis?",
+        answer: "Web Trader proprietária, MetaTrader 4, AT Pro e integração com TradingView, todas com versões desktop, web e mobile."
+      }
+    ],
+    "deriv": [
+      {
+        question: "A Deriv é segura?",
+        answer: "Sim. A Deriv opera sob regulamentação de MFSA (Malta), LFSA (Labuan), BVI FSC e VFSC (Vanuatu), com segregação de fundos de clientes em bancos tier-1 e proteção de saldo negativo para contas de varejo nas jurisdições aplicáveis."
+      },
+      {
+        question: "Qual é o depósito mínimo?",
+        answer: "O depósito mínimo na Deriv é $5. Recomendamos começar com valor maior para gerenciar risco adequadamente."
+      },
+      {
+        question: "Brasileiros podem abrir conta?",
+        answer: "Sim. O cadastro é 100% online, em português, e exige apenas documento de identidade, CPF e comprovante de residência."
+      },
+      {
+        question: "Qual a alavancagem máxima?",
+        answer: "Até até 1:1000, conforme a entidade regulatória da sua conta e o seu perfil (varejo ou profissional)."
+      },
+      {
+        question: "Existe conta demo gratuita?",
+        answer: "Sim. A Deriv oferece conta demo ilimitada com saldo virtual, replicando as condições reais de mercado para testar estratégias sem risco."
+      },
+      {
+        question: "Quais plataformas estão disponíveis?",
+        answer: "Deriv Trader, Deriv MT5, Deriv X, Deriv cTrader e Deriv Bot para automação, todas com versões desktop, web e mobile."
+      }
     ]
   };
 
@@ -1845,10 +2394,10 @@ const CorretoraDetalhe = () => {
   return (
     <>
       <Helmet>
-        <title>{`${brokerData.name} — Perfil Completo 2025 | Spreads, Depósito Mínimo e Avaliação | TradePar`}</title>
+        <title>{`${brokerData.name} — Perfil Completo 2026 | Spreads, Depósito Mínimo e Avaliação | TradePar`}</title>
         <meta
           name="description"
-          content={`Descubra tudo sobre ${brokerData.name} em 2025: regulamentação, spreads, depósito mínimo, segurança e avaliações reais. Guia completo para traders brasileiros.`}
+          content={`Descubra tudo sobre ${brokerData.name} em 2026: regulamentação, spreads, depósito mínimo, segurança e avaliações reais. Guia completo para traders brasileiros.`}
         />
         <meta
           name="keywords"
@@ -1861,7 +2410,7 @@ const CorretoraDetalhe = () => {
 
         <meta
           property="og:title"
-          content={`${brokerData.name} — Perfil Completo 2025 | Análise Detalhada`}
+          content={`${brokerData.name} — Perfil Completo 2026 | Análise Detalhada`}
         />
         <meta
           property="og:description"
@@ -1892,7 +2441,7 @@ const CorretoraDetalhe = () => {
               "@type": "Organization",
               name: "TradePar",
             },
-            datePublished: "2025-11-20",
+            datePublished: "2026-06-15",
           })}
         </script>
       </Helmet>

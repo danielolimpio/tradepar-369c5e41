@@ -132,35 +132,35 @@ const Comunidade = () => {
 
   const upcomingEvents = [
     {
-      title: "Webinar: Estratégias para 2025",
-      date: "25 Jan 2025",
+      title: "Webinar: Outlook do Forex no 2º semestre de 2026",
+      date: "08 Jul 2026",
       time: "19:00 BRT",
       speaker: "Carlos Mendes",
-      attendees: 324,
+      attendees: 412,
       type: "Webinar"
     },
     {
       title: "Workshop: Trading Algorítmico com Python",
-      date: "02 Fev 2025",
+      date: "16 Jul 2026",
       time: "14:00 BRT",
       speaker: "Ana Rodrigues",
-      attendees: 156,
+      attendees: 218,
       type: "Workshop"
     },
     {
       title: "Live Trading Session: Análise de Mercado",
-      date: "08 Fev 2025",
+      date: "23 Jul 2026",
       time: "10:00 BRT",
       speaker: "Pedro Santos",
-      attendees: 589,
+      attendees: 687,
       type: "Live Trading"
     },
     {
       title: "Masterclass: Psicologia do Trading",
-      date: "15 Fev 2025",
+      date: "30 Jul 2026",
       time: "20:00 BRT",
       speaker: "Lucia Fernandes",
-      attendees: 412,
+      attendees: 524,
       type: "Masterclass"
     }
   ];
