@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import heroHFT from "@/assets/blog/estrategias-hft.jpg";
 import heroForex from "@/assets/blog/como-investir-forex.jpg";
+import heroIA from "@/assets/blog/ia-forex-hero.jpg";
 
 const Blog = () => {
   useEffect(() => {
@@ -25,6 +26,16 @@ const Blog = () => {
   ];
 
   const articles = [
+    {
+      title: "Inteligência Artificial no Forex 2026: Como Traders Brasileiros Estão Usando IA para Operar",
+      description: "Robôs com IA, análise preditiva e machine learning estão mudando o jogo. Descubra o que funciona, o que é marketing e como aplicar com segurança em 2026.",
+      image: heroIA,
+      category: "Tecnologia",
+      readTime: "16 min de leitura",
+      date: "27 Jun 2026",
+      link: "/artigo/inteligencia-artificial-forex-2026",
+      level: "Intermediário"
+    },
     {
       title: "Como Investir em Forex: Guia Completo para Iniciantes em 2026",
       description: "Aprenda como começar no Forex com segurança, estratégias e dicas práticas para evitar os erros mais comuns de novos traders.",
