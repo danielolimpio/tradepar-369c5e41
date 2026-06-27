@@ -19,6 +19,7 @@ import Disclaimer from "./pages/Disclaimer";
 import Blog from "./pages/Blog";
 import EstrategiasHFT from "./pages/blog/EstrategiasHFT";
 import ComoInvestirForex from "./pages/blog/ComoInvestirForex";
+import IAForex2026 from "./pages/blog/IAForex2026";
 import Contato from "./pages/Contato";
 import Tutoriais from "./pages/Tutoriais";
 import Ferramentas from "./pages/Ferramentas";
@@ -68,6 +69,7 @@ const App = () => (
           
           {/* Artigos */}
           <Route path="/artigo/como-investir-forex" element={<ComoInvestirForex />} />
+          <Route path="/artigo/inteligencia-artificial-forex-2026" element={<IAForex2026 />} />
           
           {/* Outras Páginas */}
           <Route path="/contato" element={<Contato />} />
