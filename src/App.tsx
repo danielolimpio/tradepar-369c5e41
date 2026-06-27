@@ -79,7 +79,7 @@ const App = () => (
           {/* 404 - Deve ser a última rota */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <PolarTensorAd />
+        
       </BrowserRouter>
 
     </TooltipProvider>
