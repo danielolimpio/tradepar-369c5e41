@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import PolarTensorAd from "./components/PolarTensorAd";
 import Index from "./pages/Index";
 import Corretoras from "./pages/Corretoras";
 import CorretoraDetalhe from "./pages/CorretoraDetalhe";
@@ -20,6 +19,7 @@ import Disclaimer from "./pages/Disclaimer";
 import Blog from "./pages/Blog";
 import EstrategiasHFT from "./pages/blog/EstrategiasHFT";
 import ComoInvestirForex from "./pages/blog/ComoInvestirForex";
+import IAForex2026 from "./pages/blog/IAForex2026";
 import Contato from "./pages/Contato";
 import Tutoriais from "./pages/Tutoriais";
 import Ferramentas from "./pages/Ferramentas";
@@ -69,6 +69,7 @@ const App = () => (
           
           {/* Artigos */}
           <Route path="/artigo/como-investir-forex" element={<ComoInvestirForex />} />
+          <Route path="/artigo/inteligencia-artificial-forex-2026" element={<IAForex2026 />} />
           
           {/* Outras Páginas */}
           <Route path="/contato" element={<Contato />} />
@@ -80,8 +81,9 @@ const App = () => (
           {/* 404 - Deve ser a última rota */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <PolarTensorAd />
+        
       </BrowserRouter>
+
     </TooltipProvider>
   </QueryClientProvider>
 );
