@@ -81,6 +81,7 @@ const App = () => (
         </Routes>
         <PolarTensorAd />
       </BrowserRouter>
+
     </TooltipProvider>
   </QueryClientProvider>
 );
