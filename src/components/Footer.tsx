@@ -35,6 +35,7 @@ const Footer = () => {
       { label: "Estratégias", href: "/estrategias", icon: LineChart },
       { label: "Traders", href: "/traders", icon: Users },
       { label: "Segurança", href: "/seguranca", icon: Shield },
+      { label: "Quem Somos", href: "/quem-somos", icon: User },
     ],
     Recursos: [
       { label: "Blog", href: "/blog", icon: BookOpen },
