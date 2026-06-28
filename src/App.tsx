@@ -26,6 +26,7 @@ import Ferramentas from "./pages/Ferramentas";
 import API from "./pages/API";
 import Comunidade from "./pages/Comunidade";
 import NotFound from "./pages/NotFound";
+import QuemSomos from "./pages/QuemSomos";
 
 const queryClient = new QueryClient();
 
