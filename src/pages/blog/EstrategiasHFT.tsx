@@ -103,18 +103,7 @@ const EstrategiasHFT = () => {
 
             {/* Article Meta */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4 text-primary" />
-                <span>Equipe Tradepar</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-primary" />
-                <span>20 Dez 2024</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary" />
-                <span>15 min de leitura</span>
-              </div>
+              <AuthorByline date="20 Dez 2024" readTime="15 min" />
               <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-destructive/10 border border-destructive/20 text-destructive">
                 <TrendingUp className="w-4 h-4" />
                 <span className="font-medium">Nível Avançado</span>
