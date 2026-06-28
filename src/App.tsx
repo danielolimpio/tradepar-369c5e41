@@ -78,6 +78,7 @@ const App = () => (
           <Route path="/ferramentas" element={<Ferramentas />} />
           <Route path="/api" element={<API />} />
           <Route path="/comunidade" element={<Comunidade />} />
+          <Route path="/quem-somos" element={<QuemSomos />} />
           
           {/* 404 - Deve ser a última rota */}
           <Route path="*" element={<NotFound />} />
