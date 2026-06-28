@@ -23,6 +23,7 @@ const Navigation = () => {
     { label: "Estratégias", href: "/estrategias" },
     { label: "Traders", href: "/traders" },
     { label: "Segurança", href: "/seguranca" },
+    { label: "Quem Somos", href: "/quem-somos" },
   ];
 
   return (

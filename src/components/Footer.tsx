@@ -19,6 +19,7 @@ import {
   Cookie, 
   AlertTriangle, 
   Phone,
+  User,
   LucideIcon
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -35,6 +36,7 @@ const Footer = () => {
       { label: "Estratégias", href: "/estrategias", icon: LineChart },
       { label: "Traders", href: "/traders", icon: Users },
       { label: "Segurança", href: "/seguranca", icon: Shield },
+      { label: "Quem Somos", href: "/quem-somos", icon: User },
     ],
     Recursos: [
       { label: "Blog", href: "/blog", icon: BookOpen },

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AuthorByline from "@/components/AuthorByline";
+import AuthorBio from "@/components/AuthorBio";
+import RelatedArticles from "@/components/RelatedArticles";
 import { 
   Clock, 
   Calendar, 
@@ -100,18 +103,7 @@ const EstrategiasHFT = () => {
 
             {/* Article Meta */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4 text-primary" />
-                <span>Equipe Tradepar</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-primary" />
-                <span>20 Dez 2024</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary" />
-                <span>15 min de leitura</span>
-              </div>
+              <AuthorByline date="20 Dez 2024" readTime="15 min" />
               <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-destructive/10 border border-destructive/20 text-destructive">
                 <TrendingUp className="w-4 h-4" />
                 <span className="font-medium">Nível Avançado</span>
@@ -852,20 +844,11 @@ const EstrategiasHFT = () => {
             </Accordion>
           </section>
 
-          {/* Author Section */}
-          <section className="border-t border-border pt-8">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center">
-                <User className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg">Equipe Tradepar</h4>
-                <p className="text-muted-foreground text-sm">
-                  Especialistas em forex, trading algorítmico e análise de mercados financeiros.
-                </p>
-              </div>
-            </div>
-          </section>
+          {/* Author Bio */}
+          <AuthorBio />
+
+          {/* Related Articles */}
+          <RelatedArticles currentSlug="estrategias-avancadas-hft" />
         </article>
 
         {/* Related Articles CTA */}

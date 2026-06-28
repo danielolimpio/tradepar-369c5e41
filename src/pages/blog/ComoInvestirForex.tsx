@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AuthorByline from "@/components/AuthorByline";
+import AuthorBio from "@/components/AuthorBio";
+import RelatedArticles from "@/components/RelatedArticles";
 import { 
   Clock, 
   Calendar, 
@@ -104,18 +107,7 @@ const ComoInvestirForex = () => {
 
             {/* Article Meta */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4 text-primary" />
-                <span>Equipe Tradepar</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-primary" />
-                <span>05 Jan 2026</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary" />
-                <span>18 min de leitura</span>
-              </div>
+              <AuthorByline date="05 Jan 2026" readTime="18 min" />
               <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary">
                 <GraduationCap className="w-4 h-4" />
                 <span className="font-medium">Nível Iniciante</span>
@@ -834,34 +826,11 @@ const ComoInvestirForex = () => {
             </div>
           </section>
 
+          {/* Author Bio */}
+          <AuthorBio />
+
           {/* Related Articles */}
-          <section>
-            <h3 className="text-xl font-bold mb-6">Artigos Relacionados</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link 
-                to="/blog/estrategias/estrategias-avancadas-hft" 
-                className="group bg-card border border-border rounded-xl p-6 hover-lift"
-              >
-                <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">
-                  Estratégias Avançadas para Trading de Alta Frequência
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Descubra técnicas profissionais de HFT e algoritmos de market making.
-                </p>
-              </Link>
-              <Link 
-                to="/seguranca" 
-                className="group bg-card border border-border rounded-xl p-6 hover-lift"
-              >
-                <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">
-                  Guia de Segurança no Trading
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Proteja seus investimentos e evite golpes no mercado Forex.
-                </p>
-              </Link>
-            </div>
-          </section>
+          <RelatedArticles currentSlug="como-investir-forex" />
         </article>
       </main>
 
