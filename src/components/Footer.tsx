@@ -19,6 +19,7 @@ import {
   Cookie, 
   AlertTriangle, 
   Phone,
+  User,
   LucideIcon
 } from "lucide-react";
 import { Link } from "react-router-dom";
