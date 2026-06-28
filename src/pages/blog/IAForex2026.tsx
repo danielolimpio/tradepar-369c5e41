@@ -111,18 +111,7 @@ const IAForex2026 = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4 text-primary" />
-                <span>Equipe Tradepar</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-primary" />
-                <span>27 Jun 2026</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary" />
-                <span>16 min de leitura</span>
-              </div>
+              <AuthorByline date="27 Jun 2026" readTime="16 min" />
               <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary">
                 <Brain className="w-4 h-4" />
                 <span className="font-medium">Intermediário</span>
