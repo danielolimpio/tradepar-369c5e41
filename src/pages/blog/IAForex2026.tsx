@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AuthorByline from "@/components/AuthorByline";
+import AuthorBio from "@/components/AuthorBio";
+import RelatedArticles from "@/components/RelatedArticles";
 import {
   Clock,
   Calendar,
