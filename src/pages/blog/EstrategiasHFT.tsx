@@ -844,20 +844,11 @@ const EstrategiasHFT = () => {
             </Accordion>
           </section>
 
-          {/* Author Section */}
-          <section className="border-t border-border pt-8">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center">
-                <User className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg">Equipe Tradepar</h4>
-                <p className="text-muted-foreground text-sm">
-                  Especialistas em forex, trading algorítmico e análise de mercados financeiros.
-                </p>
-              </div>
-            </div>
-          </section>
+          {/* Author Bio */}
+          <AuthorBio />
+
+          {/* Related Articles */}
+          <RelatedArticles currentSlug="estrategias-avancadas-hft" />
         </article>
 
         {/* Related Articles CTA */}
