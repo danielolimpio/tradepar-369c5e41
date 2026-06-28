@@ -826,34 +826,11 @@ const ComoInvestirForex = () => {
             </div>
           </section>
 
+          {/* Author Bio */}
+          <AuthorBio />
+
           {/* Related Articles */}
-          <section>
-            <h3 className="text-xl font-bold mb-6">Artigos Relacionados</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link 
-                to="/blog/estrategias/estrategias-avancadas-hft" 
-                className="group bg-card border border-border rounded-xl p-6 hover-lift"
-              >
-                <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">
-                  Estratégias Avançadas para Trading de Alta Frequência
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Descubra técnicas profissionais de HFT e algoritmos de market making.
-                </p>
-              </Link>
-              <Link 
-                to="/seguranca" 
-                className="group bg-card border border-border rounded-xl p-6 hover-lift"
-              >
-                <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">
-                  Guia de Segurança no Trading
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Proteja seus investimentos e evite golpes no mercado Forex.
-                </p>
-              </Link>
-            </div>
-          </section>
+          <RelatedArticles currentSlug="como-investir-forex" />
         </article>
       </main>
 
