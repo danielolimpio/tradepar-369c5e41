@@ -100,25 +100,27 @@ const IAForex2026 = () => {
               <span className="text-foreground">IA no Forex</span>
             </nav>
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6">
-              <Sparkles className="w-4 h-4" />
-              TECNOLOGIA & MERCADO
-            </div>
+            <div className="text-center flex flex-col items-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6">
+                <Sparkles className="w-4 h-4" />
+                TECNOLOGIA & MERCADO
+              </div>
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl leading-tight">
-              Inteligência Artificial no Forex 2026:{" "}
-              <span className="text-gradient-bull">Como Traders Brasileiros Estão Usando IA para Operar</span>
-            </h1>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl leading-tight">
+                Inteligência Artificial no Forex 2026:{" "}
+                <span className="text-gradient-bull">Como Traders Brasileiros Estão Usando IA para Operar</span>
+              </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">
-              Robôs com IA, análise preditiva e machine learning estão mudando o jogo. Descubra o que realmente funciona, o que é marketing, e como aplicar essas ferramentas no seu dia a dia operacional sem cair em armadilhas.
-            </p>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">
+                Robôs com IA, análise preditiva e machine learning estão mudando o jogo. Descubra o que realmente funciona, o que é marketing, e como aplicar essas ferramentas no seu dia a dia operacional sem cair em armadilhas.
+              </p>
 
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <AuthorByline date="27 Jun 2026" readTime="16 min" />
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary">
-                <Brain className="w-4 h-4" />
-                <span className="font-medium">Intermediário</span>
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+                <AuthorByline date="27 Jun 2026" readTime="16 min" />
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary">
+                  <Brain className="w-4 h-4" />
+                  <span className="font-medium">Intermediário</span>
+                </div>
               </div>
             </div>
           </div>

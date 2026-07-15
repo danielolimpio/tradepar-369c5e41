@@ -93,29 +93,31 @@ const ComoInvestirForex = () => {
               <span className="text-foreground">Forex para Iniciantes</span>
             </nav>
 
-            {/* Category Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6">
-              <GraduationCap className="w-4 h-4" />
-              GUIA PARA INICIANTES
-            </div>
-
-            {/* Title */}
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl leading-tight">
-              Como Investir em Forex:{" "}
-              <span className="text-gradient-bull">Guia Completo para Iniciantes em 2026</span>
-            </h1>
-
-            {/* Meta Description */}
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">
-              Aprenda como começar no Forex com segurança, estratégias e dicas práticas para evitar os erros mais comuns de novos traders.
-            </p>
-
-            {/* Article Meta */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <AuthorByline date="05 Jan 2026" readTime="18 min" />
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary">
+            <div className="text-center flex flex-col items-center">
+              {/* Category Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6">
                 <GraduationCap className="w-4 h-4" />
-                <span className="font-medium">Nível Iniciante</span>
+                GUIA PARA INICIANTES
+              </div>
+
+              {/* Title */}
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl leading-tight">
+                Como Investir em Forex:{" "}
+                <span className="text-gradient-bull">Guia Completo para Iniciantes em 2026</span>
+              </h1>
+
+              {/* Meta Description */}
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">
+                Aprenda como começar no Forex com segurança, estratégias e dicas práticas para evitar os erros mais comuns de novos traders.
+              </p>
+
+              {/* Article Meta */}
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+                <AuthorByline date="05 Jan 2026" readTime="18 min" />
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary">
+                  <GraduationCap className="w-4 h-4" />
+                  <span className="font-medium">Nível Iniciante</span>
+                </div>
               </div>
             </div>
           </div>
