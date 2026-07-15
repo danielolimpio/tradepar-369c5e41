@@ -147,13 +147,12 @@ const Blog = () => {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
-                  <div className="relative aspect-video md:aspect-square rounded-xl overflow-hidden border border-primary/20">
+                  <div className="relative aspect-[1280/853] rounded-xl overflow-hidden border border-primary/20 max-w-lg w-full mx-auto self-center">
                     <img 
                       src={heroHFT} 
                       alt="Trader analisando gráficos de trading de alta frequência" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>
                 </div>
               </div>
