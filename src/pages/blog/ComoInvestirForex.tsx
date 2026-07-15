@@ -41,6 +41,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import heroImage from "@/assets/blog/como-investir-forex.jpg";
+import middleImage from "@/assets/blog/como-investir-forex-middle.jpg";
 
 const ComoInvestirForex = () => {
   useEffect(() => {
@@ -525,6 +526,15 @@ const ComoInvestirForex = () => {
           </section>
 
           {/* Trader Psychology */}
+          <figure className="my-12 -mx-4 md:mx-0">
+            <img
+              src={middleImage}
+              alt="Psicologia do trader: o fator mais subestimado no Forex"
+              loading="lazy"
+              className="w-full rounded-2xl border border-border"
+            />
+          </figure>
+
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
               <Brain className="w-8 h-8 text-primary" />

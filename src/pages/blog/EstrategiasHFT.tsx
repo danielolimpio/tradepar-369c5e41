@@ -36,6 +36,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import heroImage from "@/assets/blog/estrategias-hft.jpg";
+import middleImage from "@/assets/blog/estrategias-hft-middle.jpg";
 
 const EstrategiasHFT = () => {
   useEffect(() => {
@@ -356,6 +357,15 @@ const EstrategiasHFT = () => {
           </section>
 
           {/* Building Algorithm */}
+          <figure className="my-12 -mx-4 md:mx-0">
+            <img
+              src={middleImage}
+              alt="Como construir um algoritmo de HFT do zero: passo a passo realista"
+              loading="lazy"
+              className="w-full rounded-2xl border border-border"
+            />
+          </figure>
+
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
               <Code className="w-8 h-8 text-primary" />
