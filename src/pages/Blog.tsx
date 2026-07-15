@@ -168,7 +168,7 @@ const Blog = () => {
               {articles.map((article, index) => (
                 <Link to={article.link} key={index}>
                   <article className="group bg-card border border-border rounded-xl overflow-hidden hover-lift cursor-pointer h-full">
-                    <div className="aspect-video relative overflow-hidden border-b border-border">
+                    <div className="aspect-[1280/853] relative overflow-hidden border-b border-border">
                       <img 
                         src={article.image} 
                         alt={article.title}
@@ -179,8 +179,8 @@ const Blog = () => {
                           {article.category}
                         </span>
                       </div>
-                      <div className="absolute top-3 left-3">
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1 ${
+                      <div className="absolute bottom-3 right-3">
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1 backdrop-blur-sm ${
                           article.level === "Iniciante" 
                             ? "bg-primary/20 text-primary border border-primary/30" 
                             : "bg-destructive/20 text-destructive border border-destructive/30"
