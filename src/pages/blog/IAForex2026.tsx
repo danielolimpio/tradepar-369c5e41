@@ -73,18 +73,22 @@ const IAForex2026 = () => {
       <Navigation />
 
       <main className="pt-20">
-        {/* Hero Section */}
-        <header className="relative overflow-hidden">
-          <div className="absolute inset-0">
+        {/* Cover Image */}
+        <div className="container mx-auto px-4 pt-8">
+          <figure className="max-w-5xl mx-auto">
             <img
               src={heroImage}
-              alt="Trader profissional analisando gráficos de forex com dashboard de inteligência artificial em múltiplos monitores"
-              className="w-full h-full object-cover opacity-30"
+              alt="Inteligência Artificial no Forex 2026: Como Traders Brasileiros Estão Usando IA para Operar"
+              className="w-full rounded-2xl border border-border"
               width={1536}
               height={896}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
-          </div>
+          </figure>
+        </div>
+
+        {/* Hero Section */}
+        <header className="relative overflow-hidden">
+
 
           <div className="relative container mx-auto px-4 py-16 md:py-24">
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">

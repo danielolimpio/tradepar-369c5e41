@@ -36,6 +36,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import heroImage from "@/assets/blog/estrategias-hft.jpg";
+import middleImage from "@/assets/blog/estrategias-hft-middle.jpg";
 
 const EstrategiasHFT = () => {
   useEffect(() => {
@@ -57,16 +58,20 @@ const EstrategiasHFT = () => {
       <Navigation />
 
       <main className="pt-20">
+        {/* Cover Image */}
+        <div className="container mx-auto px-4 pt-8">
+          <figure className="max-w-5xl mx-auto">
+            <img
+              src={heroImage}
+              alt="Estratégias Avançadas para Trading de Alta Frequência"
+              className="w-full rounded-2xl border border-border"
+            />
+          </figure>
+        </div>
+
         {/* Hero Section */}
         <header className="relative overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src={heroImage} 
-              alt="Trader analisando gráficos de trading de alta frequência" 
-              className="w-full h-full object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
-          </div>
+          
           
           <div className="relative container mx-auto px-4 py-16 md:py-24">
             {/* Breadcrumb */}
@@ -352,6 +357,15 @@ const EstrategiasHFT = () => {
           </section>
 
           {/* Building Algorithm */}
+          <figure className="my-12 -mx-4 md:mx-0">
+            <img
+              src={middleImage}
+              alt="Como construir um algoritmo de HFT do zero: passo a passo realista"
+              loading="lazy"
+              className="w-full rounded-2xl border border-border"
+            />
+          </figure>
+
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
               <Code className="w-8 h-8 text-primary" />
