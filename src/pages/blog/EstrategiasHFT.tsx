@@ -57,16 +57,20 @@ const EstrategiasHFT = () => {
       <Navigation />
 
       <main className="pt-20">
+        {/* Cover Image */}
+        <div className="container mx-auto px-4 pt-8">
+          <figure className="max-w-5xl mx-auto">
+            <img
+              src={heroImage}
+              alt="Estratégias Avançadas para Trading de Alta Frequência"
+              className="w-full rounded-2xl border border-border"
+            />
+          </figure>
+        </div>
+
         {/* Hero Section */}
         <header className="relative overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src={heroImage} 
-              alt="Trader analisando gráficos de trading de alta frequência" 
-              className="w-full h-full object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
-          </div>
+          
           
           <div className="relative container mx-auto px-4 py-16 md:py-24">
             {/* Breadcrumb */}
