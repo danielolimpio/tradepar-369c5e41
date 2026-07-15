@@ -88,30 +88,32 @@ const EstrategiasHFT = () => {
               <span className="text-foreground">HFT</span>
             </nav>
 
-            {/* Category Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6">
-              <Zap className="w-4 h-4" />
-              ESTRATÉGIAS AVANÇADAS
-            </div>
+            <div className="text-center flex flex-col items-center">
+              {/* Category Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6">
+                <Zap className="w-4 h-4" />
+                ESTRATÉGIAS AVANÇADAS
+              </div>
 
-            {/* Title */}
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl leading-tight">
-              Estratégias Avançadas para Trading de{" "}
-              <span className="text-gradient-bull">Alta Frequência</span>
-            </h1>
+              {/* Title */}
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl leading-tight">
+                Estratégias Avançadas para Trading de{" "}
+                <span className="text-gradient-bull">Alta Frequência</span>
+              </h1>
 
-            {/* Meta Description */}
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">
-              Descubra técnicas profissionais de HFT, algoritmos de market making e como 
-              aproveitar microestruturas de mercado para maximizar seus ganhos no forex.
-            </p>
+              {/* Meta Description */}
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">
+                Descubra técnicas profissionais de HFT, algoritmos de market making e como 
+                aproveitar microestruturas de mercado para maximizar seus ganhos no forex.
+              </p>
 
-            {/* Article Meta */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <AuthorByline date="20 Dez 2024" readTime="15 min" />
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-destructive/10 border border-destructive/20 text-destructive">
-                <TrendingUp className="w-4 h-4" />
-                <span className="font-medium">Nível Avançado</span>
+              {/* Article Meta */}
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+                <AuthorByline date="20 Dez 2024" readTime="15 min" />
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-destructive/10 border border-destructive/20 text-destructive">
+                  <TrendingUp className="w-4 h-4" />
+                  <span className="font-medium">Nível Avançado</span>
+                </div>
               </div>
             </div>
           </div>
