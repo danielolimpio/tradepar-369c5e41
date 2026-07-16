@@ -449,7 +449,7 @@ const ComparacaoCorretoras = () => {
             ) : (
               <Card className="max-w-6xl mx-auto">
                 <CardContent className="py-16 text-center">
-                  <Scale className="h-16 w-16 mx-auto mb-4 text-muted-foreground/50" />
+                  <Scale className="h-16 w-16 mx-auto mb-4 text-muted-foreground" aria-hidden="true" />
                   <h3 className="text-xl font-semibold mb-2">Selecione pelo menos 2 corretoras</h3>
                   <p className="text-muted-foreground">
                     Clique nas corretoras acima para adicionar à comparação (máximo 3).
