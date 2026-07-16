@@ -1,0 +1,36 @@
+# Tradepar
+
+> Tradepar é um hub financeiro especializado em Forex, desenvolvido por traders para traders. Oferece comparação de corretoras, análise de traders, tecnologia de trading, estratégias, tutoriais, ferramentas e conteúdo educacional premium para quem opera ou quer começar no mercado de câmbio internacional.
+
+Tradepar reúne informações técnicas, comparativas e educacionais sobre o mercado Forex. O objetivo é ajudar investidores brasileiros a escolher corretoras, entender estratégias, dominar tecnologia de trading e acessar conteúdo de qualidade com transparância e segurança. Todo o conteúdo é publicado com fins educacionais e não constitui recomendação de investimento.
+
+## Pages
+
+- [/](/): Página inicial do Tradepar com destaques, acesso rápido a corretoras, artigos e recursos para traders.
+- [/quem-somos](/quem-somos): Sobre Daniel Olímpio, criador do TradePar, sua trajetória e missão com o projeto.
+- [/corretoras](/corretoras): Lista de corretoras de Forex analisadas, com destaques, notas e filtros.
+- [/corretoras/comparar](/corretoras/comparar): Ferramenta de comparação lado a lado de corretoras de Forex.
+- [/corretoras/xtb](/corretoras/xtb): Exemplo de página detalhada de uma corretora específica (outras corretoras seguem o mesmo padrão de URL).
+- [/traders](/traders): Ranking e perfil de traders e estrategistas do mercado Forex.
+- [/tecnologia](/tecnologia): Conteúdo sobre tecnologia, plataformas, APIs, HFT e infraestrutura para trading.
+- [/estrategias](/estrategias): Estratégias de trading para Forex, desde básicas até avançadas.
+- [/seguranca](/seguranca): Guia de segurança para proteger capital, dados e contas de trading.
+- [/tutoriais](/tutoriais): Tutoriais práticos para usar ferramentas, plataformas e conceitos do Forex.
+- [/ferramentas](/ferramentas): Calculadoras, conversores e utilitários para traders de Forex.
+- [/api](/api): Documentação e informações sobre a API do Tradepar.
+- [/comunidade](/comunidade): Informações sobre a comunidade de traders do Tradepar.
+- [/contato](/contato): Formulário e canais de contato com a equipe do Tradepar.
+
+## Blog
+
+- [/blog](/blog): Índice do blog com artigos educacionais sobre Forex, trading e finanças.
+- [/artigo/como-investir-forex](/artigo/como-investir-forex): Guia completo para iniciantes em Forex em 2026.
+- [/artigo/inteligencia-artificial-forex-2026](/artigo/inteligencia-artificial-forex-2026): Como a inteligência artificial está transformando o trading de Forex em 2026.
+- [/blog/estrategias/estrategias-avancadas-hft](/blog/estrategias/estrategias-avancadas-hft): Estratégias avançadas de alta frequência (HFT) para Forex.
+
+## Legal
+
+- [/termos-de-uso](/termos-de-uso): Termos de uso do site e dos serviços do Tradepar.
+- [/politica-privacidade](/politica-privacidade): Política de privacidade e tratamento de dados pessoais.
+- [/politica-cookies](/politica-cookies): Política de cookies e tecnologias de rastreamento.
+- [/disclaimer](/disclaimer): Aviso de risco e isenção de responsabilidade sobre investimentos.
