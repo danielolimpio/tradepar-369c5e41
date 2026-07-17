@@ -520,6 +520,12 @@ const Ferramentas = () => {
         </section>
       </main>
 
+      <CalculatorsDialog
+        open={activeCalc !== null}
+        onOpenChange={(v) => !v && setActiveCalc(null)}
+        calculator={activeCalc}
+      />
+
       <Footer />
     </div>
   );
