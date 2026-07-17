@@ -1,15 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Calculator, 
-  TrendingUp, 
-  BarChart3, 
-  PieChart, 
+import CalculatorsDialog, { CalculatorKey } from "@/components/calculators/CalculatorsDialog";
+import {
+  Calculator,
+  TrendingUp,
+  BarChart3,
+  PieChart,
   Activity,
   Calendar,
   DollarSign,
@@ -24,22 +25,33 @@ import {
   FileSpreadsheet,
   Brain,
   Network,
-  Shield
+  Shield,
 } from "lucide-react";
 
 const Ferramentas = () => {
+  const [activeCalc, setActiveCalc] = useState<CalculatorKey | null>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const calculatorTools = [
+  const calculatorTools: {
+    icon: typeof Calculator;
+    title: string;
+    description: string;
+    features: string[];
+    category: string;
+    color: string;
+    key: CalculatorKey;
+  }[] = [
     {
       icon: Calculator,
       title: "Calculadora de Position Size",
       description: "Calcule o tamanho ideal de posição baseado no seu capital, stop loss e tolerância ao risco",
       features: ["Gerenciamento de risco", "Múltiplas moedas", "Conversão automática"],
       category: "Essencial",
-      color: "text-primary"
+      color: "text-primary",
+      key: "position-size",
     },
     {
       icon: DollarSign,
@@ -47,7 +59,8 @@ const Ferramentas = () => {
       description: "Estime ganhos e perdas potenciais antes de abrir uma posição",
       features: ["Cálculo em tempo real", "Todas as moedas", "Níveis de stop/take profit"],
       category: "Essencial",
-      color: "text-chart-2"
+      color: "text-chart-2",
+      key: "profit-loss",
     },
     {
       icon: Percent,
@@ -55,7 +68,8 @@ const Ferramentas = () => {
       description: "Calcule margem necessária e alavancagem ideal para suas operações",
       features: ["Múltiplas alavancagens", "Margem livre", "Margin call alert"],
       category: "Essencial",
-      color: "text-chart-3"
+      color: "text-chart-3",
+      key: "margin",
     },
     {
       icon: Target,
@@ -63,7 +77,8 @@ const Ferramentas = () => {
       description: "Determine níveis automáticos de Fibonacci para retrações e extensões",
       features: ["Retração automática", "Extensões", "Confluências"],
       category: "Análise Técnica",
-      color: "text-chart-4"
+      color: "text-chart-4",
+      key: "fibonacci",
     },
     {
       icon: ArrowUpDown,
@@ -71,16 +86,18 @@ const Ferramentas = () => {
       description: "Calcule pontos de pivô clássicos, Woodie, Camarilla e Fibonacci",
       features: ["4 metodologias", "Múltiplos timeframes", "Alertas"],
       category: "Análise Técnica",
-      color: "text-chart-5"
+      color: "text-chart-5",
+      key: "pivot",
     },
     {
       icon: Coins,
       title: "Conversor de Moedas em Tempo Real",
       description: "Converta entre mais de 150 pares de moedas com taxas em tempo real",
-      features: ["150+ moedas", "Taxas ao vivo", "Histórico de conversões"],
+      features: ["Taxas ao vivo", "Fonte BCE", "Atualização instantânea"],
       category: "Utilidade",
-      color: "text-primary"
-    }
+      color: "text-primary",
+      key: "converter",
+    },
   ];
 
   const analysisTools = [
@@ -305,7 +322,7 @@ const Ferramentas = () => {
                             </Badge>
                           ))}
                         </div>
-                        <Button className="w-full glow-bull">
+                        <Button className="w-full glow-bull" onClick={() => setActiveCalc(tool.key)}>
                           <Calculator className="h-4 w-4 mr-2" />
                           Usar Calculadora
                         </Button>
@@ -502,6 +519,12 @@ const Ferramentas = () => {
           </div>
         </section>
       </main>
+
+      <CalculatorsDialog
+        open={activeCalc !== null}
+        onOpenChange={(v) => !v && setActiveCalc(null)}
+        calculator={activeCalc}
+      />
 
       <Footer />
     </div>
