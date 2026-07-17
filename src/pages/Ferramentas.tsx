@@ -322,7 +322,7 @@ const Ferramentas = () => {
                             </Badge>
                           ))}
                         </div>
-                        <Button className="w-full glow-bull">
+                        <Button className="w-full glow-bull" onClick={() => setActiveCalc(tool.key)}>
                           <Calculator className="h-4 w-4 mr-2" />
                           Usar Calculadora
                         </Button>
