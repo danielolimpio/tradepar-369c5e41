@@ -1,15 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Calculator, 
-  TrendingUp, 
-  BarChart3, 
-  PieChart, 
+import CalculatorsDialog, { CalculatorKey } from "@/components/calculators/CalculatorsDialog";
+import {
+  Calculator,
+  TrendingUp,
+  BarChart3,
+  PieChart,
   Activity,
   Calendar,
   DollarSign,
@@ -24,10 +25,12 @@ import {
   FileSpreadsheet,
   Brain,
   Network,
-  Shield
+  Shield,
 } from "lucide-react";
 
 const Ferramentas = () => {
+  const [activeCalc, setActiveCalc] = useState<CalculatorKey | null>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
