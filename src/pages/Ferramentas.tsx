@@ -35,14 +35,23 @@ const Ferramentas = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const calculatorTools = [
+  const calculatorTools: {
+    icon: typeof Calculator;
+    title: string;
+    description: string;
+    features: string[];
+    category: string;
+    color: string;
+    key: CalculatorKey;
+  }[] = [
     {
       icon: Calculator,
       title: "Calculadora de Position Size",
       description: "Calcule o tamanho ideal de posição baseado no seu capital, stop loss e tolerância ao risco",
       features: ["Gerenciamento de risco", "Múltiplas moedas", "Conversão automática"],
       category: "Essencial",
-      color: "text-primary"
+      color: "text-primary",
+      key: "position-size",
     },
     {
       icon: DollarSign,
@@ -50,7 +59,8 @@ const Ferramentas = () => {
       description: "Estime ganhos e perdas potenciais antes de abrir uma posição",
       features: ["Cálculo em tempo real", "Todas as moedas", "Níveis de stop/take profit"],
       category: "Essencial",
-      color: "text-chart-2"
+      color: "text-chart-2",
+      key: "profit-loss",
     },
     {
       icon: Percent,
@@ -58,7 +68,8 @@ const Ferramentas = () => {
       description: "Calcule margem necessária e alavancagem ideal para suas operações",
       features: ["Múltiplas alavancagens", "Margem livre", "Margin call alert"],
       category: "Essencial",
-      color: "text-chart-3"
+      color: "text-chart-3",
+      key: "margin",
     },
     {
       icon: Target,
@@ -66,7 +77,8 @@ const Ferramentas = () => {
       description: "Determine níveis automáticos de Fibonacci para retrações e extensões",
       features: ["Retração automática", "Extensões", "Confluências"],
       category: "Análise Técnica",
-      color: "text-chart-4"
+      color: "text-chart-4",
+      key: "fibonacci",
     },
     {
       icon: ArrowUpDown,
@@ -74,16 +86,18 @@ const Ferramentas = () => {
       description: "Calcule pontos de pivô clássicos, Woodie, Camarilla e Fibonacci",
       features: ["4 metodologias", "Múltiplos timeframes", "Alertas"],
       category: "Análise Técnica",
-      color: "text-chart-5"
+      color: "text-chart-5",
+      key: "pivot",
     },
     {
       icon: Coins,
       title: "Conversor de Moedas em Tempo Real",
       description: "Converta entre mais de 150 pares de moedas com taxas em tempo real",
-      features: ["150+ moedas", "Taxas ao vivo", "Histórico de conversões"],
+      features: ["Taxas ao vivo", "Fonte BCE", "Atualização instantânea"],
       category: "Utilidade",
-      color: "text-primary"
-    }
+      color: "text-primary",
+      key: "converter",
+    },
   ];
 
   const analysisTools = [
