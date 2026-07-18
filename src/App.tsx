@@ -27,6 +27,8 @@ import API from "./pages/API";
 import Comunidade from "./pages/Comunidade";
 import NotFound from "./pages/NotFound";
 import QuemSomos from "./pages/QuemSomos";
+import GlossarioForex from "./pages/GlossarioForex";
+import PerguntasFrequentes from "./pages/PerguntasFrequentes";
 
 const queryClient = new QueryClient();
 
@@ -79,6 +81,8 @@ const App = () => (
           <Route path="/api" element={<API />} />
           <Route path="/comunidade" element={<Comunidade />} />
           <Route path="/quem-somos" element={<QuemSomos />} />
+          <Route path="/glossario-forex" element={<GlossarioForex />} />
+          <Route path="/perguntas-frequentes" element={<PerguntasFrequentes />} />
           
           {/* 404 - Deve ser a última rota */}
           <Route path="*" element={<NotFound />} />
