@@ -24,6 +24,7 @@ const Navigation = () => {
     { label: "Traders", href: "/traders" },
     { label: "Segurança", href: "/seguranca" },
     { label: "Blog", href: "/blog" },
+    { label: "Glossário", href: "/glossario-forex" },
     { label: "Quem Somos", href: "/quem-somos" },
   ];
 
