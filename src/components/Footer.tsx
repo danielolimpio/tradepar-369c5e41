@@ -42,6 +42,8 @@ const Footer = () => {
       { label: "Blog", href: "/blog", icon: BookOpen },
       { label: "Tutoriais", href: "/tutoriais", icon: GraduationCap },
       { label: "Ferramentas", href: "/ferramentas", icon: Wrench },
+      { label: "Glossário Forex", href: "/glossario-forex", icon: BookOpen },
+      { label: "Perguntas Frequentes", href: "/perguntas-frequentes", icon: MessageCircle },
       { label: "API", href: "/api", icon: Code2 },
       { label: "Comunidade", href: "/comunidade", icon: MessageCircle },
     ],
