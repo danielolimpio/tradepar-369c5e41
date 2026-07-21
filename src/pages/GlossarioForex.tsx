@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { glossario, totalTermos } from "@/data/glossario";
+import { glossario, totalTermos, slugify } from "@/data/glossario";
 import { Link } from "react-router-dom";
 
 const GlossarioForex = () => {
@@ -66,10 +66,15 @@ const GlossarioForex = () => {
               </h2>
               <dl className="grid gap-4 md:grid-cols-2">
                 {section.terms.map((t) => (
-                  <div key={t.term} className="p-5 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors">
-                    <dt className="font-bold text-foreground mb-2">{t.term}</dt>
-                    <dd className="text-sm text-muted-foreground leading-relaxed">{t.def}</dd>
-                  </div>
+                  <Link
+                    key={t.term}
+                    to={`/glossario-forex/${slugify(t.term)}`}
+                    className="group block p-5 bg-card border border-border rounded-lg hover:border-primary/60 transition-colors"
+                  >
+                    <dt className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{t.term}</dt>
+                    <dd className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{t.def}</dd>
+                    <span className="mt-3 inline-block text-xs font-semibold text-primary">Ver página completa →</span>
+                  </Link>
                 ))}
               </dl>
             </section>

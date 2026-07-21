@@ -28,6 +28,7 @@ import Comunidade from "./pages/Comunidade";
 import NotFound from "./pages/NotFound";
 import QuemSomos from "./pages/QuemSomos";
 import GlossarioForex from "./pages/GlossarioForex";
+import GlossarioTermo from "./pages/GlossarioTermo";
 import PerguntasFrequentes from "./pages/PerguntasFrequentes";
 
 const queryClient = new QueryClient();
@@ -82,6 +83,7 @@ const App = () => (
           <Route path="/comunidade" element={<Comunidade />} />
           <Route path="/quem-somos" element={<QuemSomos />} />
           <Route path="/glossario-forex" element={<GlossarioForex />} />
+          <Route path="/glossario-forex/:slug" element={<GlossarioTermo />} />
           <Route path="/perguntas-frequentes" element={<PerguntasFrequentes />} />
           
           {/* 404 - Deve ser a última rota */}

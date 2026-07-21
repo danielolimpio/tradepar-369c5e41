@@ -4,6 +4,18 @@
 export type Term = { term: string; def: string };
 export type Section = { letter: string; terms: Term[] };
 
+// Slugify em português para URLs SEO-friendly
+export const slugify = (str: string): string =>
+  str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+
+
 export const glossario: Section[] = [
   {
     letter: "A",
@@ -274,3 +286,20 @@ export const glossario: Section[] = [
 
 // Estatística: total de termos
 export const totalTermos = glossario.reduce((acc, s) => acc + s.terms.length, 0);
+
+// Lista plana com slugs (usada nas páginas individuais e sitemap)
+export const allTerms: Array<Term & { slug: string; letter: string }> = glossario.flatMap((s) =>
+  s.terms.map((t) => ({ ...t, slug: slugify(t.term), letter: s.letter }))
+);
+
+export const findTermBySlug = (slug: string) => allTerms.find((t) => t.slug === slug);
+
+// Retorna termos relacionados (mesma letra + fallback aleatório determinístico)
+export const getRelatedTerms = (slug: string, count = 6) => {
+  const current = findTermBySlug(slug);
+  if (!current) return [];
+  const sameLetter = allTerms.filter((t) => t.letter === current.letter && t.slug !== slug);
+  const others = allTerms.filter((t) => t.letter !== current.letter && t.slug !== slug);
+  return [...sameLetter, ...others].slice(0, count);
+};
+
