@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import BrokerRanking from "@/components/BrokerRanking";
+import BlogSection from "@/components/BlogSection";
 import TechnologySection from "@/components/TechnologySection";
 import StrategiesSection from "@/components/StrategiesSection";
 import TradersRanking from "@/components/TradersRanking";
@@ -20,6 +21,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <BrokerRanking />
+      <BlogSection />
       <TechnologySection />
       <StrategiesSection />
       <TradersRanking />
